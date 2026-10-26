@@ -61,7 +61,7 @@ INSTRUCCIO = """Comprova l'entrada contra els articles i respon amb aquest JSON 
 
 def llegeix_articles(entrada, maia):
     out = []
-    for d in entrada["documents"][:3]:
+    for d in entrada["documents"]:
         p = os.path.join(maia, d)
         try:
             t = open(p, encoding="utf-8").read()
