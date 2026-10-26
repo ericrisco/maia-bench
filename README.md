@@ -7,6 +7,8 @@ serveix per avaluar qualsevol model.
 
 > **Estat: en construcció.** Encara no hi ha preguntes ni resultats. Aquest README descriu el que es vol construir.
 
+> **D'on surt el corpus:** vegeu [com s'ha creat el corpus](docs/origen-del-corpus.md): el procés, una foto amb recomptes i les seves limitacions.
+
 ## Què mesura
 
 | Part | Pregunta | Correcció |
