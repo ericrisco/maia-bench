@@ -5,7 +5,7 @@ Benchmark per mesurar **quant sap un model d'Andorra** i **com de bé parla ando
 Neix del projecte [maia](https://github.com/ericrisco/maia) (Gemma 4 especialitzat en Andorra), però és independent:
 serveix per avaluar qualsevol model.
 
-> **Estat: en construcció.** Encara no hi ha preguntes ni resultats. Aquest README descriu el que es vol construir.
+> **Estat: en construcció.** El dataset de coneixement s'està escrivint; encara no hi ha resultats de cap model.
 
 > **D'on surt el corpus:** vegeu [com s'ha creat el corpus](docs/origen-del-corpus.md): el procés, una foto amb recomptes i les seves limitacions.
 
@@ -37,19 +37,32 @@ Els resultats **oficials** fan servir sempre el jutge fixat (model i versió ano
 4. **Mateixes condicions per a tots els models:** mateix prompt, temperatura 0.
 5. **Contaminació.** Cada pregunta es compara amb les dades d'entrenament de maia i es descarta si s'hi assembla massa.
 
-## Pendent de decidir abans de publicar
+## Tot és públic
 
-- **Llicència** del repositori i de les dades (depèn dels termes de les fonts del corpus; encara no s'ha triat).
-- **Quina part és pública.** Si les preguntes són públiques, els models futurs les veuran: es preveu reservar un tram
-  privat i afegir una marca (*canary string*) per poder detectar contaminació.
-- **Les peces de parla reservades** per a la perplexitat provenen de fonts amb redistribució `pendent` o `no`: no es
-  poden publicar senceres.
+El benchmark es publica sencer: preguntes, contextos, respostes de referència, fets clau i codi. **No hi ha part privada**
+(decidit el 2026-10-26; les proves privades es deixen per a altres benchmarks). La contaminació es mitiga amb versions
+congelades, una marca de contaminació (*canary string*) i preguntes «no vistes» sobre fitxes que mai han entrat a un
+entrenament. L'únic que **no** es pot publicar és el text de les peces de parla de la prova de perplexitat (les fonts no
+en permeten la redistribució): se'n publica un manifest i un carregador.
+
+## Pendent de decidir
+
+- **Llicència** del codi i de les dades (depèn dels termes de les fonts del corpus).
+- **Quan es fa públic el repositori** i on s'allotja la pàgina de resultats.
+
+## Dataset de coneixement
+
+Es construeix pregunta a pregunta (un commit per pregunta) a la branca `dataset`. Cada entrada té una pregunta, un
+context detallat i la resposta de referència. Format a [`docs/format.md`](docs/format.md); es valida amb
+`tools/valida.py`. Previstes: 925 preguntes (9 per subtema, i 2 «no vistes» per cada fitxa reservada).
 
 ## Estructura prevista
 
 ```
 maia-bench/
-├── coneixement/    test, obertes, trampes, no vistes
-├── llengua/        dialectal, perplexitat, cega
-└── avalua/         codi que passa el benchmark a un model i en treu la taula
+├── coneixement/    un fitxer per subtema (test, obertes, trampes) i nv-*.jsonl (no vistes)
+├── llengua/        dialectal, perplexitat (manifest), cega
+├── reserva/        fitxes i peces de parla que no entren mai a un entrenament
+├── tools/          valida.py, afegeix.py
+└── avalua/         codi que passa el benchmark a un model i en treu la taula (pendent)
 ```
