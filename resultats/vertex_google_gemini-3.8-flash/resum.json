@@ -1,0 +1,70 @@
+{
+ "model": "vertex:google/gemini-3.8-flash",
+ "origen": "",
+ "dataset": "ec314f7d6239",
+ "preguntes_dataset": 926,
+ "respostes": 9,
+ "puntuades": 9,
+ "complet": false,
+ "jutge": "vertex:google/gemini-3.8-flash",
+ "versio_jutge": "j1",
+ "prompt": "p1",
+ "temperatura": 0,
+ "mateix_model_que_jutge": true,
+ "data": "2026-10-27",
+ "coneixement": {
+  "n": 9,
+  "nota": 0.6667,
+  "ic95": [
+   0.3333,
+   0.8889
+  ]
+ },
+ "per_tipus": {
+  "oberta": {
+   "n": 2,
+   "nota": 0.5,
+   "ic95": [
+    0.0,
+    1.0
+   ]
+  },
+  "test": {
+   "n": 6,
+   "nota": 0.6667,
+   "ic95": [
+    0.3333,
+    1.0
+   ]
+  },
+  "trampa": {
+   "n": 1,
+   "nota": 1.0,
+   "ic95": [
+    1.0,
+    1.0
+   ]
+  }
+ },
+ "vistes": {
+  "n": 9,
+  "nota": 0.6667,
+  "ic95": [
+   0.3333,
+   0.8889
+  ]
+ },
+ "no_vistes": {
+  "n": 0
+ },
+ "per_domini": {
+  "costums": {
+   "n": 9,
+   "nota": 0.6667,
+   "ic95": [
+    0.3333,
+    0.8889
+   ]
+  }
+ }
+}

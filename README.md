@@ -5,7 +5,7 @@ Benchmark per mesurar **quant sap un model d'Andorra** i **com de bé parla ando
 Neix del projecte [maia](https://github.com/ericrisco/maia) (Gemma 4 especialitzat en Andorra), però és independent:
 serveix per avaluar qualsevol model.
 
-> **Estat: en construcció.** El dataset de coneixement s'està escrivint; encara no hi ha resultats de cap model.
+> **Estat:** el dataset de coneixement (926 preguntes) està fet i verificat. La part de llengua està en construcció.
 
 > **D'on surt el corpus:** vegeu [com s'ha creat el corpus](docs/origen-del-corpus.md): el procés, una foto amb recomptes i les seves limitacions.
 
@@ -73,3 +73,20 @@ maia-bench/
 ├── tools/          valida.py, afegeix.py
 └── avalua/         codi que passa el benchmark a un model i en treu la taula (pendent)
 ```
+
+## Avaluar un model
+
+```bash
+# 1. Respostes (el model només veu la pregunta). Reprenible.
+python3 tools/executa.py --model ollama:gemma4:e4b
+# 2. Puntuació: tests automàtics; obertes i trampes amb el jutge (Gemini 3.8 Flash a Vertex)
+python3 tools/puntua.py resultats/ollama_gemma4_e4b
+# 3. Pàgina de resultats (web/index.html)
+python3 tools/web.py
+```
+
+Models: `ollama:<model>` (local), `openai:<model>` (`OPENAI_API_KEY`), `anthropic:<model>` (`ANTHROPIC_API_KEY`),
+`openrouter:<model>` (`OPENROUTER_API_KEY`), `vertex:google/<model>` (`gcloud` autenticat, `GCP_PROJECT`).
+Opcions útils: `--limit 20` per provar, `--fils 4`, `--origen "Andorra · model del projecte"`.
+
+La pàgina es publica a GitHub Pages amb `.github/workflows/pages.yml` cada cop que canvia `web/` a `main`.

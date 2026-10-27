@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>maia-bench · Qui sap Andorra?</title>
+<meta name="description" content="Benchmark públic que mesura quant saben d'Andorra els models de llenguatge: 926 preguntes verificades, classificació i resultats per domini.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #e3e3e0;
+  --surface: #d5d5d1;
+  --ink: #0b3a9e;
+  --muted: #3d4c74;
+  --accent: #d50032;
+  --accent-ink: #f4f3f0;
+  --field-blue: #0b3a9e;
+  --field-blue-ink: #edf2fb;
+  --bar: #3c68cc;
+  --mark: #fedd00;
+  --field-red: #d50032;
+  --field-red-ink: #f6efef;
+
+  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --step-head: clamp(2rem, 1.3rem + 3.2vw, 4rem);
+  --step-display: clamp(4.5rem, 9.8vw, 9.375rem);
+
+  --margin: clamp(20px, 2.4vw, 32px);
+  --axis: 42%;
+  --gap-section: clamp(120px, 14vw, 200px);
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: "Hanken Grotesk", system-ui, sans-serif; font-size: var(--step-body);
+  line-height: 1.45; letter-spacing: -0.005em; font-weight: 400;
+}
+h1, h2, h3 { font-weight: 500; letter-spacing: -0.05em; line-height: 0.92; margin: 0; }
+p { margin: 0; }
+a { color: inherit; text-underline-offset: 0.18em; text-decoration-thickness: 2px; }
+a:hover { text-decoration-color: var(--accent); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+img, video { display: block; max-width: 100%; height: auto; }
+code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: var(--step-small); background: var(--surface); padding: 0.1em 0.35em; }
+.foto { filter: grayscale(1) contrast(1.06); }
+.btn {
+  display: inline-block; background: var(--accent); color: var(--accent-ink); text-decoration: none;
+  font-weight: 500; padding: 16px 26px; border: 0; border-radius: 0; font: inherit; font-weight: 500; cursor: pointer;
+  transition: transform .2s var(--ease-out), background-color .2s;
+}
+.btn:hover { transform: translateY(-2px); background: #b8002b; }
+.btn:active { transform: translateY(1px); }
+.wrap { padding: 0 var(--margin); }
+section { scroll-margin-top: 24px; }
+
+/* ---------- capçalera ---------- */
+.hero { min-height: 100svh; display: grid; grid-template-columns: var(--axis) 1fr; position: relative; overflow: hidden; }
+.hero-l { padding: 28px var(--margin) 0; display: flex; flex-direction: column; }
+.wordmark { font-weight: 500; font-size: var(--step-lead); letter-spacing: -0.03em; text-decoration: none; }
+.hero-sup { margin-top: 26svh; max-width: 24ch; font-size: var(--step-lead); line-height: 1.35; }
+.hero-l .btn { margin-top: 32px; align-self: flex-start; }
+.hero-r { padding: 30px var(--margin) 0 0; display: flex; flex-direction: column; }
+.nav { display: flex; gap: 28px; flex-wrap: wrap; font-size: var(--step-small); }
+.nav a { text-decoration: none; }
+.nav a:hover { text-decoration: underline; }
+.hero h1 { font-size: var(--step-display); line-height: 0.84; letter-spacing: -0.045em; margin-top: 9svh; }
+.hero h1 .l { display: block; overflow: hidden; padding-bottom: 0.06em; }
+.hero h1 .l > span { display: block; }
+.hero-foto { margin-top: auto; position: relative; height: 32svh; min-height: 220px; }
+.hero-foto .img { position: absolute; inset: 0; overflow: hidden; }
+.hero-foto img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+.hero-xifra {
+  position: absolute; left: 0; top: 0; transform: translateY(-50%); width: 280px; z-index: 2;
+  background: var(--field-red); color: var(--field-red-ink); padding: 20px 22px;
+}
+.hero-xifra b { display: block; font-weight: 500; font-size: var(--step-head); line-height: 1; letter-spacing: -0.04em; }
+.hero-xifra span { display: block; margin-top: 8px; font-size: var(--step-small); line-height: 1.35; }
+
+/* ---------- classificació ---------- */
+.rank { padding-top: var(--gap-section); }
+.rank h2 { font-size: var(--step-head); line-height: 0.98; }
+.rank h2 .l1 { display: block; padding-left: 3vw; }
+.rank h2 .l2 { display: block; }
+.rank-cos { display: grid; grid-template-columns: var(--axis) 1fr; margin-top: 96px; align-items: start; }
+.rank-nota { padding-right: 48px; align-self: stretch; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; }
+.rank-nota p { font-size: var(--step-body); max-width: 34ch; }
+.rank-nota figure { margin: 0; width: min(22vw, 320px); }
+.rank-nota figure img { aspect-ratio: 4/5; object-fit: cover; width: 100%; }
+.rank-nota figcaption { font-size: var(--step-small); margin-top: 10px; color: var(--muted); max-width: 30ch; }
+table.cl { width: 100%; border-collapse: collapse; font-size: var(--step-body); }
+.cl th { text-align: left; font-weight: 500; font-size: var(--step-small); color: var(--muted); padding: 0 12px 14px 0; }
+.cl td { padding: 13px 12px 13px 0; vertical-align: top; }
+.cl tr.sep td { padding-top: 34px; }
+.cl .nm { font-weight: 500; letter-spacing: -0.02em; }
+.cl .sub { color: var(--muted); font-size: var(--step-small); display: block; margin-top: 2px; }
+.cl .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.cl .nota { font-size: var(--step-lead); font-weight: 500; letter-spacing: -0.03em; }
+.cl .alt { color: var(--muted); }
+.cl tr.maia .nm::after { content: " · maia"; color: var(--accent); }
+.cl .barra { height: 8px; background: var(--surface); margin-top: 8px; position: relative; }
+.cl .barra i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--ink); transform-origin: left; }
+.cl .barra s { position: absolute; top: -3px; bottom: -3px; background: var(--accent); opacity: .35; }
+.rank-peu { margin-top: 48px; font-size: var(--step-body); max-width: 70ch; }
+
+/* ---------- dominis ---------- */
+.dom { margin-top: var(--gap-section); background: var(--field-blue); color: var(--field-blue-ink); min-height: 92svh; position: relative; display: flex; flex-direction: column; }
+.dom-cap { padding: 56px var(--margin) 0; display: grid; grid-template-columns: var(--axis) 1fr; gap: 24px; }
+.dom-fig { font-size: var(--step-display); font-weight: 500; letter-spacing: -0.05em; line-height: 0.86; font-variant-numeric: tabular-nums; }
+.dom-cap h2 { font-size: var(--step-lead); letter-spacing: -0.02em; line-height: 1.15; margin-top: 14px; max-width: 18ch; font-weight: 400; }
+.dom-dreta p { max-width: 46ch; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.models button {
+  font: inherit; font-size: var(--step-small); background: transparent; color: var(--field-blue-ink); border: 2px solid rgba(237,242,251,.35);
+  padding: 8px 14px; cursor: pointer; border-radius: 0; transition: background-color .2s, border-color .2s, transform .2s var(--ease-out);
+}
+.models button:hover { border-color: var(--field-blue-ink); transform: translateY(-1px); }
+.models button[aria-pressed="true"] { background: var(--field-blue-ink); color: var(--field-blue); border-color: var(--field-blue-ink); }
+.barres { margin-top: auto; display: grid; grid-template-columns: repeat(13, 1fr); gap: 8px; height: 62vh; align-items: end; position: relative; }
+.barres .cim { position: absolute; right: var(--margin); top: 0; font-size: var(--step-small); }
+.b { position: relative; height: calc(var(--v) * 58vh); background: var(--bar); transform-origin: bottom; transition: height .7s var(--ease-out), background-color .3s; }
+.b.on { background: var(--mark); }
+.b .val { position: absolute; z-index: 2; bottom: 100%; left: 6px; padding-bottom: 6px; font-size: var(--step-lead); letter-spacing: -0.03em; font-variant-numeric: tabular-nums; opacity: 0; transition: opacity .2s; white-space: nowrap; }
+.b.mostra .val, .b:hover .val, .b:focus-visible .val { opacity: 1; }
+.b:nth-last-child(-n+3) .val { left: auto; right: 6px; }
+.dom { overflow: clip; }
+.b .et { position: absolute; left: 6px; bottom: 8px; writing-mode: vertical-rl; transform: rotate(180deg); font-size: var(--step-small); white-space: nowrap; }
+.b.on .et { color: var(--field-blue); }
+.b:focus-visible { outline-color: var(--mark); }
+
+/* ---------- prova-ho ---------- */
+.prova { display: grid; grid-template-columns: 1fr 1fr; min-height: 90svh; }
+.prova-in { background: var(--field-red); color: var(--field-red-ink); padding: 12svh var(--margin) 32px; display: flex; flex-direction: column; position: relative; }
+.prova-out { background: var(--surface); padding: 12svh var(--margin) 32px; display: flex; flex-direction: column; }
+.prova-in .tipus { font-size: var(--step-small); margin-bottom: 14px; }
+.prova-in .q { font-size: var(--step-lead); line-height: 1.35; max-width: 34ch; min-height: 6em; }
+.prova-in ol { list-style: none; padding: 0; margin: 18px 0 0; font-size: var(--step-body); max-width: 40ch; }
+.prova-in ol li { padding: 4px 0; }
+.prova-ctl { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+.prova-ctl button {
+  font: inherit; font-size: var(--step-small); background: transparent; color: var(--field-red-ink); border: 2px solid rgba(246,239,239,.45);
+  padding: 8px 14px; cursor: pointer; border-radius: 0; transition: background-color .2s, transform .2s var(--ease-out);
+}
+.prova-ctl button:hover { transform: translateY(-1px); border-color: var(--field-red-ink); }
+.prova-ctl button.gran { background: var(--field-red-ink); color: var(--field-red); border-color: var(--field-red-ink); }
+.prova h2 { font-size: var(--step-head); margin-top: auto; padding-top: 48px; }
+.prova-out h2 { text-align: right; }
+.resp { max-width: 520px; display: grid; gap: 14px; }
+.resp .r { background: var(--bg); padding: 16px 18px; }
+.resp .r header { display: flex; justify-content: space-between; gap: 12px; font-weight: 500; }
+.resp .v { font-size: var(--step-small); padding: 2px 8px; color: #fff; white-space: nowrap; }
+.v.ok { background: #1f6b3a; } .v.mig { background: #8a6500; } .v.ko { background: var(--accent); } .v.sense { background: var(--muted); }
+.resp .r p { margin-top: 8px; }
+.resp .r .mot { color: var(--muted); font-size: var(--step-small); margin-top: 6px; }
+.resp .ref { background: var(--ink); color: var(--field-blue-ink); }
+
+/* ---------- mètode ---------- */
+.metode { padding-top: var(--gap-section); }
+.metode h2 { font-size: var(--step-head); margin-bottom: 64px; }
+.etapes { display: flex; gap: 6px; height: 22vh; min-height: 150px; }
+.etapes > div { padding: 20px; color: #fff; min-width: 12%; }
+.etapes .e1 { background: var(--ink); } .etapes .e2 { background: var(--accent); } .etapes .e3 { background: #1c2a4a; }
+.etapes b { display: block; font-weight: 500; font-size: var(--step-lead); letter-spacing: -0.03em; }
+.etapes span { font-size: var(--step-small); }
+.clausules { display: flex; gap: 6px; margin-top: 16px; }
+.clausules p { max-width: 26ch; min-width: 12%; }
+
+/* ---------- origen ---------- */
+.origen { padding-top: var(--gap-section); }
+.origen h2 { font-size: var(--step-head); }
+.origen .lead { font-size: var(--step-lead); max-width: 50ch; margin-top: 24px; }
+.mosaic { display: grid; grid-template-columns: 8fr 4fr; gap: 16px; margin-top: 72px; align-items: start; }
+.mosaic .ft { position: relative; }
+.mosaic .ft video { aspect-ratio: 16/10; object-fit: cover; width: 100%; display: block; }
+.banda { margin-top: var(--gap-section); position: relative; }
+.banda img { width: 100%; height: 56vh; min-height: 300px; object-fit: cover; }
+.banda figcaption { position: absolute; left: var(--margin); bottom: 0; background: var(--bg); padding: 14px 18px 0; font-size: var(--step-small); }
+.mosaic .ft .nota { position: absolute; top: 0; right: 0; width: 340px; background: var(--bg); padding: 20px; }
+.tile { background: var(--field-red); color: var(--field-red-ink); aspect-ratio: 16/16; display: grid; place-items: center; padding: 24px; }
+.tile svg { width: 78%; height: auto; }
+.fets { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 16px; margin-top: 20px; }
+.fets dt { font-size: var(--step-small); color: var(--muted); }
+.fets dd { margin: 2px 0 0; font-size: var(--step-lead); font-weight: 500; letter-spacing: -0.03em; }
+
+/* ---------- preguntes ---------- */
+.faq { padding: var(--gap-section) var(--margin) var(--gap-section); display: grid; grid-template-columns: 3fr 1fr 8fr; }
+.faq h2 { font-size: var(--step-lead); letter-spacing: -0.03em; line-height: 1.05; }
+.faq .esq { grid-column: 1; }
+.faq .esq img { margin-top: 32px; aspect-ratio: 4/5; object-fit: cover; width: 100%; }
+.faq .esq figcaption { font-size: var(--step-small); color: var(--muted); margin-top: 10px; }
+.faq .txt { grid-column: 3; columns: 2; column-gap: 56px; }
+.faq .txt p { break-inside: avoid; margin-bottom: 20px; line-height: 1.55; }
+.faq .txt b { font-weight: 500; }
+
+/* ---------- peu ---------- */
+footer.peu {
+  background: var(--field-blue); color: var(--field-blue-ink); min-height: 74svh; display: grid; grid-template-rows: auto 1fr auto;
+  padding: 40px var(--margin) 20px;
+}
+.peu .cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; font-size: var(--step-small); }
+.peu .cols ul { list-style: none; padding: 0; margin: 0; }
+.peu .cols li { color: rgba(237,242,251,.78); padding: 2px 0; }
+.peu .cols li:first-child { color: var(--field-blue-ink); font-weight: 500; }
+.peu .mot svg { width: 100%; height: auto; display: block; }
+.peu .credits { font-size: var(--step-small); margin-top: 20px; color: rgba(237,242,251,.85); max-width: 120ch; }
+
+/* ---------- moviment ---------- */
+.js [data-r] { opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease-out), transform .7s var(--ease-out); transition-delay: calc(var(--i, 0) * 75ms); }
+.js .in [data-r], .js [data-r].in { opacity: 1; transform: none; }
+.js .hero h1 .l > span { transform: translateY(105%); animation: puja .9s var(--ease-out) forwards; }
+.js .hero h1 .l:nth-child(2) > span { animation-delay: .11s; }
+.js .hero .hero-sup, .js .hero-l .btn { opacity: 0; animation: apareix .7s var(--ease-out) .55s forwards; }
+.hero-foto img { animation: deriva 26s ease-in-out infinite alternate; }
+.js .cl .barra i { transform: scaleX(0); transition: transform 1.1s var(--ease-out); transition-delay: calc(var(--i, 0) * 90ms); }
+.js .in .cl .barra i { transform: scaleX(1); }
+@keyframes puja { to { transform: none; } }
+@keyframes apareix { to { opacity: 1; } }
+@keyframes deriva { from { transform: scale(1.04) translateX(0); } to { transform: scale(1.12) translateX(-2.5%); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js [data-r], .js .hero h1 .l > span, .js .hero .hero-sup, .js .hero-l .btn, .js .cl .barra i { opacity: 1 !important; transform: none !important; }
+}
+
+/* ---------- mòbil ---------- */
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-l { padding-top: 20px; }
+  .hero-l .wordmark { order: 0; }
+  .hero-r { padding: 0 var(--margin); order: -1; display: contents; }
+  .nav { display: none; }
+  .hero h1 { font-size: 15vw; line-height: 0.86; margin: 36px var(--margin) 0; order: 1; }
+  .hero-l { order: 0; }
+  .hero-sup { margin-top: 0; font-size: 18px; max-width: none; padding: 0 var(--margin); order: 2; }
+  .hero-l .btn { order: 3; }
+  .hero { display: flex; flex-direction: column; }
+  .hero-l { display: contents; }
+  .hero-l .wordmark { padding: 20px var(--margin) 0; }
+  .hero-sup { margin-top: 22px; }
+  .hero-l .btn { margin: 22px var(--margin) 0; align-self: stretch; text-align: center; }
+  .hero-foto { order: 4; margin-top: 150px; height: auto; aspect-ratio: 4/3; }
+  .hero-xifra { width: 60%; }
+  .rank h2 { font-size: 9.5vw; }
+  .rank h2 .l1 { padding-left: 0; }
+  .rank-cos { grid-template-columns: 1fr; margin-top: 40px; }
+  .rank-nota { padding-right: 0; order: 2; margin-top: 32px; }
+  .rank-nota figure { width: 60%; margin-left: auto; }
+  .cl .hide-m { display: none; }
+  .dom-cap { grid-template-columns: 1fr; padding-top: 40px; }
+  .dom-fig { font-size: 26vw; }
+  .barres { grid-template-columns: 1fr; height: auto; gap: 6px; padding: 32px var(--margin) 40px; }
+  .barres .cim { position: static; margin-bottom: 4px; }
+  .b { height: 28px; width: calc(var(--v) * 100%); min-width: 6px; transform-origin: left; }
+  .b .et { writing-mode: horizontal-tb; transform: none; left: calc(100% + 8px); bottom: 4px; color: var(--field-blue-ink) !important; }
+  .b .val { display: none; }
+  .prova { grid-template-columns: 1fr; }
+  .prova-in, .prova-out { min-height: 62svh; padding-top: 48px; }
+  .prova h2 { font-size: 11vw; }
+  .prova-out h2 { order: -1; text-align: left; padding: 0 0 24px; margin: 0; }
+  .metode h2 { font-size: 11vw; margin-bottom: 32px; }
+  .etapes { flex-direction: column; height: 70svh; }
+  .clausules { display: none; }
+  .etapes span { font-size: 16px; display: block; margin-top: 4px; }
+  .mosaic { grid-template-columns: 1fr; }
+  .mosaic .ft .nota { position: static; width: auto; padding: 16px 0 0; background: none; }
+  .tile { aspect-ratio: 3/2; }
+  .faq { grid-template-columns: 1fr; }
+  .faq .esq { margin-bottom: 28px; }
+  .faq .esq img { width: 60%; }
+  .faq .txt { grid-column: 1; columns: 1; }
+  .peu .cols { grid-template-columns: 1fr 1fr; row-gap: 32px; }
+}
+</style>
+</head>
+<body>
+<header class="hero" id="inici">
+  <div class="hero-l">
+    <a class="wordmark" href="#inici">maia-bench</a>
+    <p class="hero-sup">Un benchmark públic que mesura quant saben d'Andorra els models de llenguatge.</p>
+    <a class="btn" href="#classificacio">Veure la classificació</a>
+  </div>
+  <div class="hero-r">
+    <nav class="nav" aria-label="Seccions">
+      <a href="#classificacio">Classificació</a><a href="#dominis">Per dominis</a><a href="#prova">Prova-ho</a><a href="#metode">Mètode</a><a href="#preguntes">Avalua el teu model</a>
+    </nav>
+    <h1><span class="l"><span>Qui sap</span></span><span class="l"><span>Andorra?</span></span></h1>
+    <div class="hero-foto">
+      <div class="hero-xifra"><b>926</b><span>preguntes sobre Andorra, verificades una a una contra les fonts</span></div>
+      <div class="img"><img class="foto" src="assets/pic-de-coma-pedrosa-from-coll-d.jpg" width="1920" height="560" alt="El Coma Pedrosa nevat, vist des del Coll d'Ordino, entre pins."></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="rank wrap" id="classificacio" aria-labelledby="t-rank">
+  <h2 id="t-rank" data-r><span class="l1">Quins models saben</span><span class="l2">més d'Andorra</span></h2>
+  <div class="rank-cos">
+    <div class="rank-nota">
+      <p data-r style="--i:1">La nota és la part de les 926 preguntes que el model encerta. La traduïm en metres: el 100&nbsp;% és el cim del Coma Pedrosa, 2.942&nbsp;m, el punt més alt del país. La franja vermella és l'interval de confiança del 95&nbsp;%: si dues franges se solapen, no hi ha guanyador clar.</p>
+      <figure data-r style="--i:2">
+        <img class="foto" src="assets/vallee-d-andorre-1032-andorre-la-vieille.jpg" width="1920" height="1302" loading="lazy" alt="Postal antiga de la Casa de la Vall, a Andorra la Vella, amb el Puig d'Anclar al darrere.">
+        <figcaption>La Casa de la Vall en una postal de principis del segle XX.</figcaption>
+      </figure>
+    </div>
+    <div data-r style="--i:1">
+      <table class="cl">
+        <caption class="sub" style="text-align:left;caption-side:top;padding-bottom:14px">Coneixement · v1-esborrany (ec314f7d6239)</caption>
+        <thead><tr><th scope="col">Model</th><th scope="col" class="num">Nota</th><th scope="col" class="num hide-m">Altitud</th></tr></thead>
+        <tbody><tr><td><span class="nm">Gemini 3.8 Flash</span><span class="sub">Google · tancat · API · en curs: 9 de 926 · també és el jutge</span><div class="barra" aria-hidden="true" style="--i:0"><s style="left:33.3%;width:55.6%"></s><i style="width:66.7%"></i></div></td><td class="num"><span class="nota">66,7 %</span><span class="sub">33,3 % – 88,9 %</span></td><td class="num hide-m alt">1.961 m</td></tr>
+<tr><td><span class="nm">Gemma 4 E4B</span><span class="sub">Google · obert · local · en curs: 10 de 926</span><div class="barra" aria-hidden="true" style="--i:1"><s style="left:20.0%;width:55.0%"></s><i style="width:45.0%"></i></div></td><td class="num"><span class="nota">45,0 %</span><span class="sub">20,0 % – 75,0 %</span></td><td class="num hide-m alt">1.324 m</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+  <p class="rank-peu" data-r>2 models avaluats, 0 amb les 926 preguntes puntuades. Una execució «en curs» encara no és comparable amb les completes.</p>
+</section>
+
+<section class="dom" id="dominis" aria-labelledby="t-dom">
+  <div class="dom-cap">
+    <div>
+      <div class="dom-fig" id="dom-fig" data-r>–</div>
+      <h2 id="t-dom" data-r style="--i:1">On encerta i on falla <span id="dom-nom"></span></h2>
+    </div>
+    <div class="dom-dreta">
+      <p data-r style="--i:2">Les 926 preguntes es reparteixen en 13 dominis, de la història a la vida quotidiana. Cada barra és la nota del model en un domini; la groga és on falla més. Tria un model:</p>
+      <div class="models" id="dom-models" role="group" aria-label="Model"></div>
+    </div>
+  </div>
+  <div class="barres" id="barres" data-ui>
+    <span class="cim">Cim · 2.942&nbsp;m · 100&nbsp;%</span>
+  </div>
+</section>
+
+<section class="prova" id="prova" aria-labelledby="t-prova">
+  <div class="prova-in">
+    <p class="tipus" id="p-tipus">Pregunta</p>
+    <p class="q" id="p-q" aria-live="polite">Carregant una pregunta…</p>
+    <ol id="p-op"></ol>
+    <div class="prova-ctl">
+      <button class="gran" id="p-una" type="button">Una altra pregunta</button>
+      <button type="button" data-t="test">Test</button>
+      <button type="button" data-t="oberta">Oberta</button>
+      <button type="button" data-t="trampa">Trampa</button>
+    </div>
+    <h2 id="t-prova">Una pregunta,</h2>
+  </div>
+  <div class="prova-out">
+    <div class="resp" id="p-resp" data-ui aria-live="polite"></div>
+    <h2 aria-hidden="true">tots els models</h2>
+  </div>
+</section>
+
+<section class="metode wrap" id="metode" aria-labelledby="t-metode">
+  <h2 id="t-metode" data-r>Com es puntua cada resposta</h2>
+  <div class="etapes" data-ui data-r style="--i:1">
+    <div class="e1" style="flex-grow:604"><b>604 tests</b><span>Correcció automàtica</span></div>
+    <div class="e2" style="flex-grow:231"><b>231 obertes</b><span>Jutge amb referència</span></div>
+    <div class="e3" style="flex-grow:91"><b>91 trampes</b><span>Jutge amb referència</span></div>
+  </div>
+  <div class="clausules" data-r style="--i:2">
+    <p style="flex-grow:604">Primer, quatre opcions i una de bona. El model diu una lletra i es corregeix sol.</p>
+    <p style="flex-grow:231">Després, respostes lliures. El jutge les compara amb la referència, els fets clau i els errors típics: 0, 1 o 2 punts.</p>
+    <p style="flex-grow:91">Al final, preguntes amb una premissa falsa. Només puntua qui la rebutja.</p>
+  </div>
+</section>
+
+<figure class="banda" style="margin-bottom:0;margin-left:0;margin-right:0" data-r><img class="foto" src="assets/estany-de-les-abelletes-1.jpg" width="1600" height="1065" loading="lazy" alt="L'estany de les Abelletes, amb pedres a la riba i muntanyes al fons."><figcaption>L'estany de les Abelletes.</figcaption></figure>
+
+<section class="origen wrap" id="origen" aria-labelledby="t-origen">
+  <h2 id="t-origen" data-r>D'on surten les preguntes</h2>
+  <p class="lead" data-r style="--i:1">Cada pregunta surt d'un article del corpus de maia sobre Andorra, porta un context escrit amb paraules pròpies i s'ha verificat contra l'article original. Les «no vistes» surten de fitxes que mai entren a cap entrenament.</p>
+  <div class="mosaic">
+    <div class="ft" data-r style="--i:2">
+      <video class="foto" src="assets/cows-in-andorra.webm" poster="assets/cows-in-andorra-poster.jpg" width="1920" height="1080" muted loop playsinline autoplay preload="none" aria-label="Vaques pasturant a les pastures a l'est del Pas de la Casa."></video>
+      <p class="nota">Els models generals saben dir la capital. El que mesurem és tot el que hi ha darrere: els pariatges, les parròquies, les festes, el contraban, la llengua, la gent.</p>
+    </div>
+    <div data-r style="--i:3">
+      <div class="tile">
+        <svg viewBox="0 0 200 160" role="img" aria-label="Contorn esquemàtic d'Andorra amb Andorra la Vella marcada">
+          <path fill="currentColor" opacity=".22" d="M36 62 L58 40 L84 34 L104 22 L132 26 L150 40 L170 44 L182 62 L176 82 L160 92 L150 112 L128 120 L112 138 L92 134 L80 118 L60 114 L44 100 L30 84 Z"/>
+          <circle cx="92" cy="104" r="6" fill="currentColor"/>
+          <text x="104" y="108" fill="currentColor" font-size="11" font-family="Hanken Grotesk, sans-serif">Andorra la Vella</text>
+        </svg>
+      </div>
+      <dl class="fets">
+        <div><dt>Preguntes</dt><dd>926</dd></div>
+        <div><dt>Dominis</dt><dd>13</dd></div>
+        <div><dt>Articles font</dt><dd>521</dd></div>
+        <div><dt>No vistes</dt><dd>82</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="preguntes" aria-labelledby="t-faq">
+  <div class="esq" data-r><h2 id="t-faq">Preguntes i respostes</h2><figure style="margin:0"><img class="foto" src="assets/casa-de-la-vall-andorra-la-vieja.jpg" width="1600" height="1066" loading="lazy" alt="La Casa de la Vall, seu històrica del Consell General, amb la muntanya al darrere."><figcaption>La Casa de la Vall avui, a Andorra la Vella.</figcaption></figure></div>
+  <div class="txt" data-r style="--i:1">
+    <p><b>Com avaluo el meu model?</b> Clona el repositori i executa <code>python3 tools/executa.py --model ollama:el-teu-model</code>. Funciona amb Ollama, OpenAI, Anthropic, OpenRouter i Gemini a Vertex. Després, <code>python3 tools/puntua.py resultats/&lt;nom&gt;</code> i <code>python3 tools/web.py</code>.</p>
+    <p><b>Què veu el model?</b> Només la pregunta, i les quatre opcions si és un test. Mai el context ni la resposta de referència. Mateix prompt i temperatura 0 per a tothom.</p>
+    <p><b>Qui puntua les respostes obertes?</b> Un jutge fixat, Gemini 3.8 Flash, amb la resposta de referència, els fets clau i una llista d'errors a penalitzar. Una resposta amb un d'aquests errors no pot treure la nota màxima.</p>
+    <p><b>El jutge és imparcial?</b> No del tot: un jutge només detecta els errors que coneix. Per això cada pregunta porta errors típics. Quan el model avaluat és el mateix jutge, la taula ho marca.</p>
+    <p><b>Què és una pregunta trampa?</b> Una pregunta que dona per bo un fet fals. Puntua el model que el rebutja i diu què és cert; el que s'inventa una explicació treu un zero.</p>
+    <p><b>Què són les preguntes no vistes?</b> Preguntes sobre 41 fitxes reservades que mai entren a l'entrenament de maia. Mesuren si un model s'inventa el que no sap.</p>
+    <p><b>Per què hi ha un interval?</b> Perquè 926 preguntes són una mostra. L'interval surt de remostrejar-les mil vegades. Dues notes amb intervals que se solapen no es poden ordenar.</p>
+    <p><b>maia juga amb avantatge?</b> maia és el model del projecte que ha fet el benchmark. Per això el mètode, les preguntes i el codi són públics, i la taula el marca.</p>
+    <p><b>Puc enviar una nota?</b> No. S'envien respostes, i es puntuen aquí amb el mateix jutge per a tothom.</p>
+    <p><b>Les preguntes poden acabar en un entrenament?</b> Pot passar, perquè són públiques. Les versions es congelen i les no vistes ajuden a detectar-ho.</p>
+    <p><b>I si un model encara no ha acabat?</b> La taula diu quantes preguntes porta respostes; la nota d'una execució parcial no és comparable.</p>
+    <p><b>Mesura també com parla?</b> Encara no. La part de llengua (perplexitat sobre parla real, test dialectal i prova cega amb andorrans) està en construcció.</p>
+  </div>
+</section>
+</main>
+
+<footer class="peu">
+  <div class="cols">
+    <ul><li>Projecte</li><li><a href="https://github.com/ericrisco/maia">maia</a></li><li><a href="https://github.com/ericrisco/maia-bench">maia-bench</a></li></ul>
+    <ul><li>Seccions</li><li><a href="#classificacio">Classificació</a></li><li><a href="#dominis">Per dominis</a></li><li><a href="#prova">Prova-ho</a></li></ul>
+    <ul><li>Versió</li><li>Dataset v1-esborrany (ec314f7d6239)</li><li>Jutge Gemini 3.8 Flash</li><li>Generat el 27/10/2026</li></ul>
+    <ul><li>Mètode</li><li><a href="#metode">Com es puntua</a></li><li><a href="#origen">D'on surten les preguntes</a></li><li><a href="#preguntes">Avalua el teu model</a></li></ul>
+  </div>
+  <div></div>
+  <div>
+    <div class="mot"><svg viewBox="0 0 1000 150" aria-label="maia-bench"><text x="0" y="128" fill="currentColor" font-family="Hanken Grotesk, sans-serif" font-weight="500" font-size="182" letter-spacing="-9" textLength="1000" lengthAdjust="spacingAndGlyphs">maia-bench</text></svg></div>
+    <p class="credits">Fotografies: <a href="https://commons.wikimedia.org/wiki/File:Pic_de_Coma_Pedrosa_from_Coll_d%27Ordino_(1).jpg">«Pic de Coma Pedrosa from Coll d&#x27;Ordino (1)»</a>, Krzysztof Golik, CC BY-SA 4.0; <a href="https://commons.wikimedia.org/wiki/File:Casa_de_la_Vall,_Andorra_la_Vieja,_Andorra,_2013-12-30,_DD_01.JPG">«Casa de la Vall, Andorra la Vieja, Andorra, 2013-12-30, DD 01»</a>, Diego Delso, CC BY-SA 3.0; <a href="https://commons.wikimedia.org/wiki/File:Estany_de_les_Abelletes_-_1.jpg">«Estany de les Abelletes - 1»</a>, Ferran Llorens, CC BY-SA 2.0; <a href="https://commons.wikimedia.org/wiki/File:Vall%C3%A9e_d%27Andorre._1032_-_Andorre_la_Vieille_(Andorra_Vella),_palais_de_la_vall%C3%A9e_(casa_de_la_vall)_et_escarpements_du_Puig_d%27Anclar_-_btv1b10576010p_(1_of_2).jpg">«Vallée d&#x27;Andorre. 1032 : Andorre la Vieille (Andorra Vella), palais de la vallée (casa de la vall) et escarpements du Puig d&#x27;Anclar»</a>, public domain; <a href="https://commons.wikimedia.org/wiki/File:Cows_in_Andorra.webm">«Cows in Andorra»</a>, Nanou El, CC BY-SA 2.0, via Wikimedia Commons.</p>
+  </div>
+</footer>
+
+<script type="application/json" id="dades">{"models": [{"id": "vertex:google/gemini-3.8-flash", "nom": "Gemini 3.8 Flash", "nota": 0.6667, "n": 9, "complet": false, "per_domini": {"costums": {"n": 9, "nota": 0.6667, "ic95": [0.3333, 0.8889]}}, "per_tipus": {"oberta": {"n": 2, "nota": 0.5, "ic95": [0.0, 1.0]}, "test": {"n": 6, "nota": 0.6667, "ic95": [0.3333, 1.0]}, "trampa": {"n": 1, "nota": 1.0, "ic95": [1.0, 1.0]}}}, {"id": "ollama:gemma4:e4b", "nom": "Gemma 4 E4B", "nota": 0.45, "n": 10, "complet": false, "per_domini": {"costums": {"n": 10, "nota": 0.45, "ic95": [0.2, 0.75]}}, "per_tipus": {"oberta": {"n": 2, "nota": 0.25, "ic95": [0.0, 0.5]}, "test": {"n": 7, "nota": 0.5714, "ic95": [0.2857, 0.8571]}, "trampa": {"n": 1, "nota": 0.0, "ic95": [0.0, 0.0]}}}], "dominis": [{"id": "historia", "nom": "Història"}, {"id": "institucions", "nom": "Institucions"}, {"id": "societat", "nom": "Societat"}, {"id": "llengua", "nom": "Llengua"}, {"id": "economia", "nom": "Economia"}, {"id": "cultura", "nom": "Cultura"}, {"id": "esports", "nom": "Esports"}, {"id": "territori", "nom": "Territori"}, {"id": "costums", "nom": "Costums"}, {"id": "politica", "nom": "Política"}, {"id": "gastronomia", "nom": "Gastronomia"}, {"id": "vida-quotidiana", "nom": "Vida quotidiana"}, {"id": "persones", "nom": "Persones"}], "mostra": [{"id": "costums-caramelles/003", "tipus": "oberta", "domini": "Costums", "pregunta": "Què recollien abans els qui cantaven les caramelles, què recullen ara i per a què serveix?", "referencia": "Abans recollien ous, amb els quals feien una truitada el diumenge de Pasqüetes; ara recullen diners per fer un àpat col·lectiu.", "respostes": [{"model": "vertex:google/gemini-3.8-flash", "text": "Antigament, els caramellaires recollien queviures com ous, cansalada i botifarres, mentre que avui dia es recapten principalment diners en metàl·lic. Tradicionalment, aquests aliments servien per preparar una gran truitada o un àpat comunitari de Pasqua entre tots els cantaires. Actualment, la recaptació es continua destinant a finançar aquest dinar de germanor de la colla o a sufragar les despeses de l'entitat.", "punts": 1.0, "motiu": "La resposta conté tots els fets clau requerits: abans es recollien ous per fer una truitada i ara es recullen diners per a un àpat col·lectiu."}, {"model": "ollama:gemma4:e4b", "text": "Històricament, era un ritual de joc i interacció social que podia implicar la troca de petits capritxos o monedes. Actualment, es recullen principalment les caramelles o petits dolçadins. Serveix per al plaer, el divertiment i per compartir un moment festiu entre les persones que participen.", "punts": 0.0, "motiu": "La resposta no esmenta els ous ni la truitada tradicional, confon caramelles amb dolços i no reflecteix cap dels fets clau."}]}, {"id": "costums-caramelles/002", "tipus": "test", "domini": "Costums", "pregunta": "En quina parròquia andorrana només es fa el recorregut complet de tres hores de les caramelles?", "referencia": "A) Sant Julià de Lòria", "respostes": [{"model": "vertex:google/gemini-3.8-flash", "text": "B", "punts": 0.0, "motiu": ""}, {"model": "ollama:gemma4:e4b", "text": "A", "punts": 1.0, "motiu": ""}], "opcions": {"A": "Sant Julià de Lòria", "B": "Ordino", "C": "Encamp", "D": "Canillo"}}, {"id": "costums-calendari-festiu/004", "tipus": "test", "domini": "Costums", "pregunta": "Quan se celebra el judici dels contrabandistes dins el carnaval d'Encamp?", "referencia": "D) Diumenge a la tarda", "respostes": [{"model": "vertex:google/gemini-3.8-flash", "text": "D", "punts": 1.0, "motiu": ""}, {"model": "ollama:gemma4:e4b", "text": "C", "punts": 0.0, "motiu": ""}], "opcions": {"A": "Dissabte a la nit", "B": "Dimarts al matí", "C": "Dilluns a la tarda", "D": "Diumenge a la tarda"}}, {"id": "costums-calendari-festiu/006", "tipus": "trampa", "domini": "Costums", "pregunta": "Per què el ball de l'Ossa del carnaval d'Encamp es fa el diumenge a la tarda, just abans del judici dels contrabandistes?", "referencia": "La pregunta parteix d'una premissa falsa: el ball de l'Ossa no es fa el diumenge sinó el dilluns a la tarda. El diumenge a la tarda es fa el judici dels contrabandistes.", "respostes": [{"model": "vertex:google/gemini-3.8-flash", "text": "En realitat, el Ball de l'Ossa d'Encamp se celebra tradicionalment el **dilluns de Carnaval a la tarda**, mentre que el Judici dels Contrabandistes té lloc el diumenge. Aquesta distribució en dies consecutius permet donar un protagonisme propi a cadascuna d'aquestes dues peces clau del teatre popular encampadà. Totes dues farses comparteixen un fort esperit satíric i festiu que parodia la història i la vida rural tradicional andorrana.", "punts": 1.0, "motiu": "Rebutja clarament la premissa falsa i especifica correctament els dies en què se celebren ambdues representacions."}, {"model": "ollama:gemma4:e4b", "text": "El Ball de l'Ossa funciona com un moment de culminació festiva i de desfogar l'energia de la festa. El seu allotjament el diumenge a la tarda crea una tensió dramàtica i una expectació natural. Així, serveix de preludi ritual i simbòlic al Judici dels contrabandistes, que és el clímax narratiu del carnaval.", "punts": 0.0, "motiu": "El model accepta la premissa falsa i s'inventa una explicació per justificar un ordre d'actes incorrecte."}]}, {"id": "costums-calendari-festiu/005", "tipus": "oberta", "domini": "Costums", "pregunta": "Quina és la tercera farsa del carnaval d'Encamp, quan es va incorporar i en què consisteix?", "referencia": "És l'operació del Carnestoltes, incorporada cap al 1970: uns metges estrafolaris operen el Carnestoltes i en llancen les vísceres, que són de la matança del porc, damunt del públic. Es fa al complex esportiu i no al carrer.", "respostes": [{"model": "vertex:google/gemini-3.8-flash", "text": "La tercera farsa del carnaval d'Encamp és **La Farsa** (representada el diumenge de Carnaval), la qual es va incorporar de manera formal l'any **1984** per iniciativa de la Comissió de Festes. Consisteix en una representació teatral d'humor i paròdia escrita i interpretada pel jovent del poble, en què es repassen satíricament les anècdotes, escàndols i l'actualitat política i social tant d'Encamp com d'Andorra durant el darrer any.", "punts": 0.0, "motiu": "La resposta no identifica l'operació del Carnestoltes ni cap dels fets clau de la referència, aportant informació errònia."}, {"model": "ollama:gemma4:e4b", "text": "La tercera farsa es va incorporar al carnaval d'Encamp durant els anys setenta. Consisteix en una representació satírica i humorística que té com objectiu criticar, de manera divertida, la vida local i els esdeveniments actuals. És un element que enriqueix el caràcter popular i crític de les festes.", "punts": 0.5, "motiu": "Encerta l'època d'incorporació (anys setanta), però no esmenta el nom de la farsa (l'operació del Carnestoltes) i en descriu el contingut de manera genèrica i inexacta."}]}, {"id": "costums-caramelles/001", "tipus": "test", "domini": "Costums", "pregunta": "De quin mot ve el nom de les caramelles, els cants de Pasqua?", "referencia": "C) Un mot llatí que vol dir «canya»", "respostes": [{"model": "vertex:google/gemini-3.8-flash", "text": "C", "punts": 1.0, "motiu": ""}, {"model": "ollama:gemma4:e4b", "text": "A", "punts": 0.0, "motiu": ""}], "opcions": {"A": "Un mot llatí que vol dir «ou»", "B": "Un mot llatí que vol dir «cançó»", "C": "Un mot llatí que vol dir «canya»", "D": "Un mot llatí que vol dir «primavera»"}}, {"id": "costums-calendari-festiu/001", "tipus": "test", "domini": "Costums", "pregunta": "Quin organisme va aprovar el 25 de novembre del 1902 la llista de festes durant les quals s'aturava la justícia a Andorra?", "referencia": "A) El Consell General", "respostes": [{"model": "vertex:google/gemini-3.8-flash", "text": "B", "punts": 0.0, "motiu": ""}, {"model": "ollama:gemma4:e4b", "text": "A", "punts": 1.0, "motiu": ""}], "opcions": {"A": "El Consell General", "B": "El Tribunal de Corts", "C": "El Bisbe d'Urgell", "D": "El Veguer episcopal"}}, {"id": "costums-calendari-festiu/003", "tipus": "test", "domini": "Costums", "pregunta": "Tres dels blocs de dies de la llista de festes judicials del 1902 corresponien a fires que es feien fora d'Andorra. Quines poblacions eren?", "referencia": "B) Salàs, la Seu d'Urgell i Organyà", "respostes": [{"model": "vertex:google/gemini-3.8-flash", "text": "B", "punts": 1.0, "motiu": ""}, {"model": "ollama:gemma4:e4b", "text": "B", "punts": 1.0, "motiu": ""}], "opcions": {"A": "Tremp, Puigcerdà i Balaguer", "B": "Salàs, la Seu d'Urgell i Organyà", "C": "Berga, Solsona i la Seu d'Urgell", "D": "Salàs, Puigcerdà i Foix"}}, {"id": "costums-calendari-festiu/002", "tipus": "test", "domini": "Costums", "pregunta": "Per què preguntar «quan és la festa major d'Andorra» és una pregunta mal feta?", "referencia": "C) Perquè cada parròquia té la seva pròpia festa major, i n'hi ha set i escaig, totes a l'estiu", "respostes": [{"model": "vertex:google/gemini-3.8-flash", "text": "C", "punts": 1.0, "motiu": ""}, {"model": "ollama:gemma4:e4b", "text": "C", "punts": 1.0, "motiu": ""}], "opcions": {"A": "Perquè la festa major només es fa a la capital durant l'hivern", "B": "Perquè la festa major es va suprimir al segle XX", "C": "Perquè cada parròquia té la seva pròpia festa major, i n'hi ha set i escaig, totes a l'estiu", "D": "Perquè la festa major nacional coincideix amb Sant Joan i les falles"}}]}</script>
+<script>
+(function () {
+  document.documentElement.classList.add("js");
+  var D = JSON.parse(document.getElementById("dades").textContent);
+  var pc = function (v) { return (v * 100).toFixed(1).replace(".", ",") + " %"; };
+
+  // entrades de secció
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, { rootMargin: "0px 0px -12% 0px" });
+  document.querySelectorAll("[data-r]").forEach(function (el) { io.observe(el); });
+  setTimeout(function () { document.querySelectorAll("[data-r]").forEach(function (el) { el.classList.add("in"); }); }, 4000);
+
+  // dominis
+  var barres = document.getElementById("barres"), botons = document.getElementById("dom-models");
+  var models = D.models.filter(function (m) { return m.n > 0; });
+  function pinta(m) {
+    document.getElementById("dom-fig").textContent = pc(m.nota);
+    document.getElementById("dom-nom").textContent = m.nom;
+    var ds = D.dominis.map(function (d) { var b = m.per_domini[d.id]; return { d: d, v: b && b.n ? b.nota : null }; });
+    var amb = ds.filter(function (x) { return x.v !== null; });
+    var pitjor = amb.reduce(function (a, b) { return b.v < a.v ? b : a; }, amb[0]);
+    var ord = amb.slice().sort(function (a, b) { return b.v - a.v; });
+    if (ord.length < 2) ord = ord.concat(ord, ord);
+    var mostra = ord.length ? [ord[0].d.id, ord[1].d.id, pitjor.d.id] : [];
+    barres.querySelectorAll(".b").forEach(function (n) { n.remove(); });
+    ds.forEach(function (x) {
+      var b = document.createElement("div");
+      b.className = "b" + (x === pitjor ? " on" : "") + (mostra.indexOf(x.d.id) >= 0 ? " mostra" : "");
+      b.style.setProperty("--v", Math.max(x.v || 0, 0.02));
+      b.tabIndex = 0;
+      var t = x.v === null ? "sense dades" : pc(x.v);
+      b.setAttribute("aria-label", x.d.nom + ": " + t);
+      b.innerHTML = '<span class="val">' + t + '</span><span class="et">' + x.d.nom + "</span>";
+      barres.appendChild(b);
+    });
+    botons.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.m === m.id ? "true" : "false"); });
+  }
+  models.forEach(function (m) {
+    var b = document.createElement("button");
+    b.type = "button"; b.dataset.m = m.id; b.textContent = m.nom;
+    b.addEventListener("click", function () { pinta(m); });
+    botons.appendChild(b);
+  });
+  if (models.length) pinta(models[0]);
+
+  // prova una pregunta
+  var Q = D.mostra, filtre = null, idx = -1;
+  var nomDe = {}; D.models.forEach(function (m) { nomDe[m.id] = m.nom; });
+  var veredicte = function (p) {
+    if (p === null || p === undefined) return ['sense', "Sense puntuar"];
+    if (p >= 1) return ["ok", "Correcta"]; if (p > 0) return ["mig", "A mitges"]; return ["ko", "Incorrecta"];
+  };
+  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  function mostra() {
+    var cand = Q.filter(function (q) { return !filtre || q.tipus === filtre; });
+    if (!cand.length) return;
+    var q; do { q = cand[Math.floor(Math.random() * cand.length)]; } while (cand.length > 1 && Q.indexOf(q) === idx);
+    idx = Q.indexOf(q);
+    var noms = { test: "Test · quatre opcions", oberta: "Pregunta oberta", trampa: "Pregunta trampa" };
+    document.getElementById("p-tipus").textContent = noms[q.tipus] + " · " + q.domini;
+    document.getElementById("p-q").textContent = q.pregunta;
+    var ol = document.getElementById("p-op"); ol.innerHTML = "";
+    if (q.opcions) Object.keys(q.opcions).forEach(function (k) { var li = document.createElement("li"); li.textContent = k + ") " + q.opcions[k]; ol.appendChild(li); });
+    var h = '<div class="r ref"><header><span>Resposta de referència</span></header><p>' + esc(q.referencia) + "</p></div>";
+    q.respostes.forEach(function (r) {
+      var v = veredicte(r.punts);
+      h += '<div class="r"><header><span>' + esc(nomDe[r.model] || r.model) + '</span><span class="v ' + v[0] + '">' + v[1] + "</span></header><p>" + esc(r.text) + "</p>" + (r.motiu ? '<p class="mot">' + esc(r.motiu) + "</p>" : "") + "</div>";
+    });
+    document.getElementById("p-resp").innerHTML = h;
+  }
+  document.getElementById("p-una").addEventListener("click", mostra);
+  document.querySelectorAll(".prova-ctl [data-t]").forEach(function (b) {
+    b.addEventListener("click", function () { filtre = b.dataset.t; mostra(); });
+  });
+  if (Q.length) mostra(); else document.getElementById("p-q").textContent = "Encara no hi ha respostes puntuades.";
+})();
+</script>
+</body>
+</html>
