@@ -1,0 +1,10 @@
+{"id": "costums-calendari-festiu/002", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "costums-calendari-festiu/001", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "costums-calendari-festiu/003", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "costums-calendari-festiu/004", "tipus": "test", "lletra": "C", "punts": 0.0}
+{"id": "costums-caramelles/001", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "costums-caramelles/002", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "costums-danses/001", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "costums-calendari-festiu/005", "tipus": "oberta", "nota": 1, "punts": 0.5, "motiu": "Encerta l'època d'incorporació (anys setanta), però no esmenta el nom de la farsa (l'operació del Carnestoltes) i en descriu el contingut de manera genèrica i inexacta.", "jutge": "vertex:google/gemini-3.8-flash"}
+{"id": "costums-calendari-festiu/006", "tipus": "trampa", "nota": 0, "punts": 0.0, "motiu": "El model accepta la premissa falsa i s'inventa una explicació per justificar un ordre d'actes incorrecte.", "jutge": "vertex:google/gemini-3.8-flash"}
+{"id": "costums-caramelles/003", "tipus": "oberta", "nota": 0, "punts": 0.0, "motiu": "La resposta no esmenta els ous ni la truitada tradicional, confon caramelles amb dolços i no reflecteix cap dels fets clau.", "jutge": "vertex:google/gemini-3.8-flash"}
