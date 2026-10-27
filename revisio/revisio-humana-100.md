@@ -1,6 +1,7 @@
 # Revisió humana: 100 preguntes del benchmark maia-bench
 
 Revisor: Eric Risco. Data: 2026-10-27. Resultat: les 100 preguntes de la mostra, **OK** (cap a canviar ni a descartar).
+Forma del veredicte: el revisor va donar un OK global per a tota la mostra («revisades, estan bé»; «ja l'he revisada, pots marcar-la com revisada»), no marques pregunta per pregunta. Els «OK» de sota reflecteixen aquest veredicte global.
 Mostra aleatòria (llavor 20261027) de les 926 preguntes de coneixement/, després de la verificació automàtica completa.
 
 Per a cada pregunta, marca: **OK** (correcta i fonamentada), **CANVIAR** (cal arreglar-la, escriu què) o **DESCARTAR**.
