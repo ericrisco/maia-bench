@@ -56,6 +56,13 @@ Es construeix pregunta a pregunta (un commit per pregunta) a la branca `dataset`
 context detallat i la resposta de referència. Format a [`docs/format.md`](docs/format.md); es valida amb
 `tools/valida.py`. Previstes: 925 preguntes (9 per subtema, i 2 «no vistes» per cada fitxa reservada).
 
+## Documentació
+
+- [Com s'ha creat el corpus](docs/origen-del-corpus.md)
+- [Spec — què mesura el benchmark](docs/specs/andorranitat-benchmark.md)
+- [Spec — plataforma: execució, resultats públics i part privada](docs/specs/maia-bench-platform.md)
+- `reserva/` — els 41 articles i les 6 peces de parla que **no s'entrenen mai** (n'hi ha una còpia a maia, que han de coincidir).
+
 ## Estructura prevista
 
 ```
