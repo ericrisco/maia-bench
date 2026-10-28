@@ -66,7 +66,7 @@ def nom_model(model):
 
 
 def pct(v):
-    return f"{v * 100:.1f}".replace(".", ",") + " %"
+    return f"{v * 100:.1f}".replace(".", ",") + "\u00a0%"
 
 
 def metres(v):
@@ -87,7 +87,17 @@ def carrega():
     return models
 
 
-def files_taula(models, total):
+def estat(m, total):
+    """Paraula d'estat de la fila i la seva classe: complet, només tests o en curs."""
+    if m["complet"]:
+        return "Complet", "e-ok"
+    if m["comparable"]:
+        return "Tests", "e-tests"
+    return f"En curs · {m['puntuades']}", "e-curs"
+
+
+def files_tauler(models, total):
+    """La taula completa com un tauler de files; cada fila s'obre amb el detall per tipus."""
     out = []
     for i, m in enumerate(models):
         nom, sub = nom_model(m["model"])
@@ -95,28 +105,78 @@ def files_taula(models, total):
         if not c.get("n"):
             continue
         lo, hi = c["ic95"]
-        avisos = []
+        paraula, cls = estat(m, total)
+        tipus = []
+        for t, etiqueta in (("test", "Tests"), ("oberta", "Obertes"), ("trampa", "Trampes")):
+            b = m["per_tipus"].get(t) or {}
+            tipus.append(f"{etiqueta} {pct(b['nota'])} ({b['n']})" if b.get("n") else f"{etiqueta}: jutge pendent")
+        avisos = [sub]
         if m.get("origen"):
-            avisos.append(html.escape(m["origen"]))
-        if m.get("nomes_tests") and not m["comparable"]:
-            avisos.append(f"en curs: {m['puntuades']} tests, encara no comparable")
-        elif m.get("nomes_tests"):
-            avisos.append(f"només tests ({m['puntuades']}), jutge pendent")
-        elif not m["complet"]:
-            avisos.append(f"en curs: {m['puntuades']} de {total}")
+            avisos.append(m["origen"])
         if m.get("mateix_model_que_jutge"):
             avisos.append("també és el jutge")
-        sep = ' class="sep"' if i and i % 4 == 0 else ""
-        cls = ' class="maia"' if "maia" in m["model"].lower() else ""
+        if not m["comparable"]:
+            avisos.append("encara no comparable")
+        obert = " open" if i == 0 else ""
         out.append(
-            f'<tr{sep or cls}><td><span class="nm">{html.escape(nom)}</span>'
-            f'<span class="sub">{html.escape(sub)}{" · " if avisos else ""}{" · ".join(avisos)}</span>'
-            f'<div class="barra" aria-hidden="true" style="--i:{i}"><s style="left:{lo * 100:.1f}%;width:{(hi - lo) * 100:.1f}%"></s>'
-            f'<i style="width:{c["nota"] * 100:.1f}%"></i></div></td>'
-            f'<td class="num"><span class="nota">{pct(c["nota"])}</span>'
-            f'<span class="sub">{pct(lo)} – {pct(hi)}</span></td>'
-            f'<td class="num hide-m alt">{metres(c["nota"])}</td></tr>')
-    return "\n".join(out) or '<tr><td colspan="3">Encara no hi ha cap model puntuat.</td></tr>'
+            f'<details class="fila" name="taula"{obert}><summary>'
+            f'<span class="f-nom">{html.escape(nom)}</span>'
+            f'<span class="f-n num">{pct(c["nota"])}</span>'
+            f'<span class="f-ic num hide-m">{pct(lo)} – {pct(hi)}</span>'
+            f'<span class="f-m num hide-m">{metres(c["nota"])}</span>'
+            f'<span class="f-e {cls}">{html.escape(paraula)}</span></summary>'
+            f'<div class="f-det"><p>{html.escape(" · ".join(avisos))}</p>'
+            f'<p>{html.escape(" · ".join(tipus))}</p></div></details>')
+    return "\n".join(out) or '<p>Encara no hi ha cap model puntuat.</p>'
+
+
+def barres_cim(models):
+    """El gràfic principal: una barra per model que s'aixeca des de baix; el 100 % és el cim del Coma Pedrosa."""
+    out = []
+    for i, m in enumerate(m for m in models if m["coneixement"].get("n")):
+        nom, _ = nom_model(m["model"])
+        c = m["coneixement"]
+        lo, hi = c["ic95"]
+        cls = "b" + (" lider" if i == 0 else "") + ("" if m["comparable"] else " curs")
+        etiqueta = f'{html.escape(nom)}: {pct(c["nota"])}, interval {pct(lo)} – {pct(hi)}' + (
+            "" if m["comparable"] else ", en curs")
+        valor = f'<b class="bv num">{pct(c["nota"])}</b>' if i < 3 else f'<span class="bi num">{pct(c["nota"])}</span>'
+        out.append(
+            f'<div class="{cls}" style="--v:{c["nota"]:.4f};--lo:{lo:.4f};--hi:{hi:.4f}" tabindex="0" '
+            f'aria-label="{etiqueta}" data-tip="{etiqueta}">{valor}<i class="ic"></i>'
+            f'<span class="bn">{html.escape(nom)}</span></div>')
+    return "\n".join(out)
+
+
+def hero_barres(models, n=8):
+    """Les columnes de la primera pantalla: el fons de cada columna és el cim (100 %), la barra és la nota."""
+    out = []
+    for i, m in enumerate([m for m in models if m["comparable"]][:n]):
+        nom, _ = nom_model(m["model"])
+        c = m["coneixement"]
+        out.append(f'<li style="--v:{c["nota"]:.4f};--i:{i}"><b class="num">{pct(c["nota"])}</b>'
+                   f'<span class="hb"><i></i></span><span class="hn">{html.escape(nom)}<span class="hv"> · {pct(c["nota"])}</span></span></li>')
+    return "\n".join(out)
+
+
+def tiles_dominis(models):
+    comp = [m for m in models if m["comparable"]]
+    if not comp:
+        return ""
+    sel = comp[0]["model"]
+    out = []
+    for d, nom in DOMINIS:
+        vals = [(m["model"], (m["per_domini"].get(d) or {}).get("nota")) for m in comp]
+        v = dict(vals).get(sel)
+        mini = "".join(f'<i class="{"sel" if mid == sel else ""}" data-m="{html.escape(mid)}" '
+                       f'title="{html.escape(nom_model(mid)[0])}: {pct(x) if x is not None else "sense dades"}" '
+                       f'style="--v:{(x or 0):.4f}"></i>' for mid, x in vals)
+        nsel = (comp[0]["per_domini"].get(d) or {}).get("n", 0)
+        millor = max((x for x in vals if x[1] is not None), key=lambda x: x[1], default=None)
+        mtxt = f"Millor: {html.escape(nom_model(millor[0])[0])}, {pct(millor[1])}" if millor else "Sense dades"
+        out.append(f'<div class="dt" data-d="{d}"><h3>{nom}</h3><b class="dv num">{pct(v) if v is not None else "–"}</b>'
+                   f'<div class="mini" data-ui aria-hidden="true">{mini}</div><p class="dn"><span class="dnn">{nsel} preguntes</span> · {mtxt}</p></div>')
+    return "\n".join(out)
 
 
 def mostra_preguntes(models, dataset):
@@ -177,8 +237,10 @@ def main():
 
     dades = {
         "models": [{"id": m["model"], "nom": nom_model(m["model"])[0], "nota": m["coneixement"].get("nota", 0),
-                    "n": m["coneixement"].get("n", 0), "complet": m["complet"],
-                    "per_domini": m["per_domini"], "per_tipus": m["per_tipus"]} for m in models],
+                    "n": m["coneixement"].get("n", 0), "complet": m["complet"], "comparable": m["comparable"],
+                    "per_domini": {d: (v.get("nota") if v.get("n") else None) for d, v in m["per_domini"].items()},
+                    "per_domini_n": {d: v.get("n", 0) for d, v in m["per_domini"].items()}}
+                   for m in models],
         "dominis": [{"id": d, "nom": n} for d, n in DOMINIS],
         "mostra": mostra_preguntes(models, dataset),
     }
@@ -192,7 +254,15 @@ def main():
             "Una execució «en curs» encara no és comparable amb les completes.")
     jutge = nom_model(JUTGE)[0]
     subst = {
-        "__FILES__": files_taula(models, len(rows)),
+        "__FILES__": files_tauler(models, len(rows)),
+        "__BARRES__": barres_cim(models),
+        "__HERO_BARRES__": hero_barres(models),
+        "__DOMINIS__": tiles_dominis(models),
+        "__N_MODELS__": str(len(models)),
+        "__N_COMPARABLES__": str(sum(1 for m in models if m["comparable"])),
+        "__MILLOR_NOM__": html.escape(nom_model(models[0]["model"])[0]) if models else "–",
+        "__MILLOR_NOTA__": pct(models[0]["coneixement"]["nota"]) if models else "–",
+        "__MILLOR_M__": metres(models[0]["coneixement"]["nota"]) if models else "–",
         "__VERSIO__": html.escape(versio), "__AVIS__": html.escape(avis), "__JUTGE__": html.escape(jutge),
         "__DATA__": datetime.date.today().strftime("%d/%m/%Y"),
         "__N_TEST__": str(tipus["test"]), "__N_OBERTA__": str(tipus["oberta"]), "__N_TRAMPA__": str(tipus["trampa"]),

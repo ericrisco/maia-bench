@@ -4,355 +4,398 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>maia-bench · Qui sap Andorra?</title>
-<meta name="description" content="Benchmark públic que mesura quant saben d'Andorra els models de llenguatge: 926 preguntes verificades, classificació i resultats per domini.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+<meta name="description" content="Benchmark públic que mesura quant saben d'Andorra els models de llenguatge: 926 preguntes verificades, classificació amb interval de confiança i resultats per domini.">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #e3e3e0;
-  --surface: #d5d5d1;
-  --ink: #0b3a9e;
-  --muted: #3d4c74;
-  --accent: #d50032;
-  --accent-ink: #f4f3f0;
-  --field-blue: #0b3a9e;
-  --field-blue-ink: #edf2fb;
-  --bar: #3c68cc;
-  --mark: #fedd00;
-  --field-red: #d50032;
-  --field-red-ink: #f6efef;
-
-  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --bg: #111111;
+  --surface: #1c1c1c;
+  --surface-2: #262626;
+  --bar: #4a4a4a;
+  --bar-curs: #2e2e2e;
+  --ink: #f2f2f2;
+  --muted: #c8c8c8;
+  --accent: #fedd00;
+  --accent-ink: #111111;
+  --blau: #1f4fd1;
+  --blau-ink: #ffffff;
+  --vermell: #d50032;
+  --vermell-ink: #ffffff;
+  --gap: 8px;
+  --m: 16px;
+  --step-small: clamp(0.875rem, 0.85rem + 0.1vw, 0.9375rem);
   --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
   --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
   --step-head: clamp(2rem, 1.3rem + 3.2vw, 4rem);
-  --step-display: clamp(4.5rem, 9.8vw, 9.375rem);
-
-  --margin: clamp(20px, 2.4vw, 32px);
-  --axis: 42%;
-  --gap-section: clamp(120px, 14vw, 200px);
-  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --ease: cubic-bezier(.2, .7, .2, 1);
 }
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
-body {
-  margin: 0; background: var(--bg); color: var(--ink);
-  font-family: "Hanken Grotesk", system-ui, sans-serif; font-size: var(--step-body);
-  line-height: 1.45; letter-spacing: -0.005em; font-weight: 400;
-}
-h1, h2, h3 { font-weight: 500; letter-spacing: -0.05em; line-height: 0.92; margin: 0; }
-p { margin: 0; }
-a { color: inherit; text-underline-offset: 0.18em; text-decoration-thickness: 2px; }
-a:hover { text-decoration-color: var(--accent); }
-:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: "General Sans", system-ui, sans-serif; font-size: var(--step-body); line-height: 1.45; -webkit-font-smoothing: antialiased; }
 img, video { display: block; max-width: 100%; height: auto; }
-code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: var(--step-small); background: var(--surface); padding: 0.1em 0.35em; }
-.foto { filter: grayscale(1) contrast(1.06); }
-.btn {
-  display: inline-block; background: var(--accent); color: var(--accent-ink); text-decoration: none;
-  font-weight: 500; padding: 16px 26px; border: 0; border-radius: 0; font: inherit; font-weight: 500; cursor: pointer;
-  transition: transform .2s var(--ease-out), background-color .2s;
+a { color: inherit; }
+.num { font-variant-numeric: tabular-nums; }
+h1, h2, h3 { margin: 0; font-weight: 700; letter-spacing: -0.02em; line-height: 0.95; }
+h2 { font-size: var(--step-head); }
+h3 { font-size: var(--step-lead); font-weight: 500; letter-spacing: -0.01em; line-height: 1.1; }
+p { margin: 0; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+::selection { background: var(--accent); color: var(--accent-ink); }
+.foto { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05); }
+.tile { background: var(--surface); padding: 22px; min-width: 0; }
+section { margin-top: 120px; }
+.taula { margin-top: 64px; }
+
+/* ── first screen ── */
+.hero { padding: var(--m); display: grid; grid-template-columns: repeat(12, 1fr); grid-template-rows: 170px 64px minmax(560px, calc(100svh - 170px - 64px - 2 * var(--m) - 2 * var(--gap))); gap: var(--gap); }
+.band { grid-column: 1 / -1; background: var(--surface); overflow: hidden; display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+.band > span { font-size: clamp(120px, 13.6vw, 210px); font-weight: 700; letter-spacing: -0.04em; line-height: 1; transform: translateY(-4%); }
+.links { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap); }
+.links a { background: var(--surface); padding: 20px 22px; text-decoration: none; font-weight: 500; transition: background .2s var(--ease), color .2s var(--ease); }
+.links a:hover { background: var(--accent); color: var(--accent-ink); }
+.rail-l { grid-column: 1 / 3; display: grid; grid-template-rows: 1fr auto; gap: var(--gap); min-height: 0; }
+.rail-l figure { margin: 0; min-height: 0; overflow: hidden; position: relative; }
+.rail-l figcaption { position: absolute; left: 0; top: 0; right: 0; padding: 12px 14px; background: var(--bg); font-size: var(--step-small); color: var(--muted); }
+.fets { list-style: none; margin: 0; display: grid; gap: 10px; font-size: var(--step-small); }
+.fets b { display: block; font-size: var(--step-lead); font-weight: 500; }
+.centre { grid-column: 3 / 11; display: grid; grid-template-rows: 1fr auto; gap: var(--gap); min-height: 0; }
+.hchart { background: var(--surface); padding: 22px; display: flex; flex-direction: column; gap: 18px; min-height: 0; }
+.hchart p { color: var(--muted); font-size: var(--step-small); }
+.hchart .cimlbl { color: var(--ink); font-size: var(--step-body); font-weight: 500; }
+.hchart ol { --h: clamp(200px, 32vh, 340px); list-style: none; margin: auto 0 0; padding: 0; display: grid; grid-template-columns: repeat(8, 1fr); gap: var(--gap); align-items: end; }
+.hchart li { display: grid; grid-template-rows: auto var(--h) 2.6em; gap: 8px; min-width: 0; position: relative; }
+.hchart li b { font-weight: 500; font-size: var(--step-lead); white-space: nowrap; }
+.hb { background: var(--surface-2); position: relative; border-radius: 4px 4px 0 0; }
+.hb i { position: absolute; left: 0; right: 0; bottom: 0; height: calc(var(--v) * 100%); background: var(--bar); border-radius: 4px 4px 0 0; transform-origin: bottom; animation: puja 1.1s var(--ease) both; animation-delay: calc(var(--i) * 60ms); }
+.hchart li:first-child .hb i { background: var(--accent); }
+.hn { font-weight: 500; font-size: var(--step-small); line-height: 1.2; overflow: hidden; }
+@keyframes creix { from { transform: scaleX(0); } }
+.statement { background: var(--bg); padding: 4px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: end; }
+.statement h1 { font-size: var(--step-head); }
+.statement p { font-size: var(--step-lead); max-width: 34ch; line-height: 1.25; }
+.rail-r { grid-column: 11 / 13; display: grid; grid-template-rows: repeat(5, 1fr); gap: var(--gap); min-height: 0; }
+.rail-r > * { padding: 16px; font-size: var(--step-small); line-height: 1.3; }
+.rail-r b { display: block; font-size: var(--step-lead); font-weight: 500; line-height: 1.1; margin-bottom: 4px; }
+.r1 { background: #3a3a3a; } .r2 { background: #303030; } .r3 { background: #262626; } .r4 { background: #1c1c1c; }
+.accio { background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 700; font-size: var(--step-lead) !important; display: flex; align-items: flex-end; transition: transform .2s var(--ease); }
+.accio:hover { transform: translateY(-3px); }
+.accio:active { transform: translateY(0); }
+
+/* ── classificació: barres fins al cim ── */
+.cim { position: relative; min-height: 90svh; display: grid; grid-template-rows: auto 1fr; }
+.cim-cap { padding: 0 var(--m); display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gap); align-items: end; }
+.cim-cap .fig { grid-column: 1 / 6; font-size: clamp(88px, 10vw, 168px); font-weight: 700; letter-spacing: -0.04em; line-height: .9; }
+.cim-cap .claim { grid-column: 1 / 6; }
+.cim-cap .claim h2 { font-size: var(--step-head); margin-top: 18px; }
+.cim-cap .peu { grid-column: 7 / 13; color: var(--ink); max-width: 52ch; align-self: end; }
+.cim-cap .peu span { color: var(--muted); display: block; margin-top: 10px; font-size: var(--step-small); }
+.barres { --alt: 58vh; position: relative; display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: var(--gap); align-items: end; height: calc(var(--alt) + 60px); margin: 40px var(--m) 72px; }
+.barres .top { position: absolute; left: 0; bottom: calc(var(--alt) + 8px); font-size: var(--step-body); font-weight: 500; color: var(--ink); }
+.b { position: relative; height: calc(var(--v) * var(--alt)); background: var(--bar); border-radius: 4px 4px 0 0; transform-origin: bottom; transition: background .2s var(--ease); outline-offset: -3px; }
+.b.lider { background: var(--accent); color: var(--accent-ink); }
+.b.curs { background: var(--bar-curs); }
+.b:hover, .b:focus-visible { background: #6a6a6a; }
+.b.lider:hover, .b.lider:focus-visible { background: #ffe94d; }
+.b .ic { position: absolute; left: 50%; width: 6px; margin-left: -3px; bottom: calc((var(--lo) - var(--v)) * var(--alt) + 100%); height: calc((var(--hi) - var(--lo)) * var(--alt)); background: var(--ink); opacity: .9; border-radius: 3px; }
+.b.lider .ic { background: var(--accent-ink); }
+.bv { position: absolute; left: 0; right: 0; bottom: calc(100% + (var(--hi) - var(--v)) * var(--alt) + 10px); text-align: center; font-size: var(--step-lead); font-weight: 500; color: var(--ink); white-space: nowrap; }
+.bn { position: absolute; left: 0; right: 0; top: calc(100% + 10px); font-size: var(--step-small); font-weight: 500; line-height: 1.15; color: var(--ink); overflow-wrap: anywhere; }
+.b.curs .bn { color: var(--muted); }
+.bi { position: absolute; left: 0; right: 0; bottom: 10px; white-space: nowrap; text-align: center; font-size: var(--step-small); font-weight: 500; }
+.b.curs .bi { color: var(--muted); }
+.barres.in .b { animation: puja 1s var(--ease) both; }
+@keyframes puja { from { transform: scaleY(0); } }
+.tip { position: fixed; z-index: 10; pointer-events: none; background: var(--ink); color: var(--bg); padding: 10px 12px; font-size: var(--step-small); font-weight: 500; max-width: 260px; box-shadow: 0 6px 24px rgba(0,0,0,.4); /* taste-skill-ignore: el tooltip flota */ opacity: 0; transition: opacity .12s; }
+.tip.on { opacity: 1; }
+
+/* ── taula ── */
+.taula h2 { padding: 0 var(--m); margin-bottom: 40px; }
+.tauler { display: grid; gap: 4px; padding: 0 var(--m); }
+.fila { background: var(--surface); }
+.fila summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gap); align-items: center; min-height: 72px; padding: 0 0 0 20px; font-size: var(--step-lead); font-weight: 500; transition: background .2s var(--ease); }
+.fila summary::-webkit-details-marker { display: none; }
+.fila summary:hover { background: var(--surface-2); }
+.f-nom { grid-column: 1 / 6; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.f-n { grid-column: 6 / 8; }
+.f-ic { grid-column: 8 / 10; color: var(--ink); font-size: var(--step-body); }
+.f-m { grid-column: 10 / 11; color: var(--muted); font-size: var(--step-body); }
+.f-e { grid-column: 11 / 13; align-self: stretch; display: flex; align-items: center; padding: 0 18px; font-size: var(--step-body); }
+.e-ok { background: var(--blau); color: var(--blau-ink); }
+.e-tests { background: #3a3a3a; color: var(--ink); }
+.e-curs { background: #2a1a1d; color: #f0b9c4; }
+.fila[open] { background: var(--accent); color: var(--accent-ink); }
+.fila[open] summary { min-height: 120px; font-size: var(--step-head); font-weight: 700; }
+.fila[open] summary:hover { background: transparent; }
+.fila[open] .f-ic, .fila[open] .f-m { color: var(--accent-ink); }
+.f-det { padding: 0 20px 24px; display: grid; gap: 6px; font-size: var(--step-body); }
+.taula .nota-peu { padding: 24px var(--m) 0; max-width: calc(52ch + 2 * var(--m)); color: var(--muted); font-size: var(--step-small); }
+
+/* ── marquee ── */
+.marquee { margin-top: 120px; overflow: hidden; background: var(--accent); color: var(--accent-ink); padding: 18px 0; }
+.marquee div { display: flex; width: max-content; animation: corre 38s linear infinite; }
+.marquee span { font-size: clamp(88px, 10vw, 168px); font-weight: 700; letter-spacing: -0.03em; line-height: 1; padding-right: .5em; white-space: nowrap; }
+.marquee:hover div { animation-play-state: paused; }
+@keyframes corre { to { transform: translateX(-50%); } }
+
+/* ── dominis ── */
+.dominis .ctl { padding: 0 var(--m); margin-bottom: var(--gap); display: flex; flex-wrap: wrap; gap: 6px; }
+.ctl button, .prova button { font: inherit; font-size: var(--step-small); font-weight: 500; border: 0; border-radius: 0; background: var(--surface); color: var(--ink); padding: 10px 14px; cursor: pointer; transition: background .15s var(--ease), transform .15s var(--ease); }
+.ctl button:hover, .prova button:hover { background: var(--surface-2); }
+.ctl button:active, .prova button:active { transform: translateY(1px); }
+.ctl button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.dboard { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap); padding: 0 var(--m); }
+.dcap { grid-column: span 2; background: var(--accent); color: var(--accent-ink); padding: 22px; display: flex; flex-direction: column; justify-content: space-between; gap: 24px; min-height: 240px; }
+.dcap h2 { font-size: var(--step-head); }
+.dcap p { max-width: 44ch; }
+.dt { background: var(--surface); padding: 22px; display: grid; grid-template-rows: auto auto 1fr auto; gap: 10px; min-height: 240px; transition: background .3s var(--ease); }
+.dv { font-size: var(--step-head); font-weight: 700; letter-spacing: -0.03em; line-height: 1; }
+.mini { display: flex; align-items: end; gap: 3px; height: 64px; }
+.mini i { flex: 1; height: calc(var(--v) * 100%); background: var(--bar); border-radius: 2px 2px 0 0; transition: background .2s var(--ease); }
+.mini i.sel { background: var(--accent); }
+.dn { color: var(--muted); font-size: var(--step-body); line-height: 1.3; }
+.hv { display: none; }
+.dnn { color: var(--muted); font-size: var(--step-body); font-weight: 400; letter-spacing: 0; }
+.dt.pitjor { background: #2a1a1d; }
+.dfoto { margin: 0; overflow: hidden; position: relative; min-height: 240px; }
+.dfoto figcaption { position: absolute; left: 0; bottom: 0; padding: 10px 14px; background: var(--bg); font-size: var(--step-small); color: var(--muted); }
+
+/* ── prova-ho ── */
+.prova .pboard { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gap); padding: 0 var(--m); }
+.pq { grid-column: 1 / 6; background: var(--surface); padding: 22px; display: flex; flex-direction: column; gap: 22px; }
+.pq h2 { font-size: var(--step-head); }
+.pq .tipus { color: var(--muted); font-size: var(--step-body); }
+.pq .q { font-size: var(--step-lead); line-height: 1.25; font-weight: 500; }
+.pq ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.pq ol li { background: var(--surface-2); padding: 10px 14px; }
+.pq .btns { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+.prova button.gran { background: var(--accent); color: var(--accent-ink); }
+.prova button.gran:hover { background: #ffe94d; }
+.presp { grid-column: 6 / 13; display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--gap); align-content: start; }
+.r { background: var(--surface); padding: 18px 20px; display: grid; gap: 8px; align-content: start; font-size: var(--step-body); }
+.r header { display: flex; justify-content: space-between; gap: 10px; font-weight: 500; }
+.r.ref { grid-column: 1 / -1; background: var(--blau); color: var(--blau-ink); }
+.r .v { padding: 2px 8px; font-size: var(--step-small); }
+.v.ok { background: var(--accent); color: var(--accent-ink); } .v.mig { background: #3a3a3a; } .v.ko { background: var(--vermell); color: var(--vermell-ink); } .v.sense { background: #2e2e2e; }
+.r .mot { color: var(--muted); font-size: var(--step-small); }
+
+/* ── mètode ── */
+.metode h2 { padding: 0 var(--m); margin-bottom: 64px; }
+.etapes { display: flex; gap: 6px; height: 22vh; min-height: 160px; padding: 0 var(--m); }
+.etapes > div { flex-basis: 0; min-width: 12%; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; }
+.etapes b { font-size: var(--step-lead); font-weight: 500; }
+.e1 { background: var(--blau); color: var(--blau-ink); } .e2 { background: var(--accent); color: var(--accent-ink); } .e3 { background: var(--vermell); color: var(--vermell-ink); }
+.clausules { display: flex; gap: 6px; padding: 18px var(--m) 0; }
+.clausules p { flex-basis: 0; min-width: 12%; font-size: var(--step-body); padding-right: 20px; }
+
+/* ── origen ── */
+.oboard { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 180px; gap: var(--gap); padding: 0 var(--m); }
+.ocap { grid-column: 1 / 7; grid-row: span 2; background: var(--surface); padding: 22px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px; }
+.ocap p { font-size: var(--step-lead); line-height: 1.25; max-width: 36ch; }
+.ovid { grid-column: 7 / 13; grid-row: span 2; overflow: hidden; margin: 0; position: relative; }
+.ofet { grid-column: span 3; background: var(--surface-2); padding: 22px; display: flex; flex-direction: column; justify-content: space-between; }
+.ofet b { font-size: var(--step-head); font-weight: 700; letter-spacing: -0.03em; line-height: 1; }
+.ofoto { grid-column: 1 / 7; grid-row: span 2; overflow: hidden; margin: 0; position: relative; }
+.otext { grid-column: 7 / 13; grid-row: span 2; background: var(--blau); color: var(--blau-ink); padding: 22px; display: flex; align-items: flex-end; }
+.otext p { font-size: var(--step-lead); line-height: 1.25; max-width: 38ch; }
+.cap-foto { position: absolute; left: 0; top: 0; padding: 10px 14px; background: var(--bg); font-size: var(--step-small); color: var(--muted); }
+
+/* ── faq ── */
+.faq .fgrid { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gap); padding: 0 var(--m); }
+.faq .esq { grid-column: 1 / 5; }
+.faq .esq > div { position: sticky; top: 24px; display: grid; gap: var(--gap); }
+.faq .esq h2 { font-size: var(--step-head); padding: 0 0 24px; }
+.faq .esq figure { margin: 0; aspect-ratio: 4 / 3; overflow: hidden; position: relative; }
+.faq .dreta { grid-column: 5 / 13; display: grid; gap: var(--gap); align-content: start; }
+.faq details { background: var(--surface); transition: background .2s var(--ease); }
+.faq summary { list-style: none; cursor: pointer; min-height: 72px; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px; font-size: var(--step-lead); font-weight: 500; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary:hover { background: var(--surface-2); }
+.mes { position: relative; width: 16px; height: 16px; flex: none; }
+.mes::before, .mes::after { content: ""; position: absolute; left: 0; top: 6.5px; width: 16px; height: 3px; background: currentColor; transition: transform .2s var(--ease); }
+.mes::after { transform: rotate(90deg); }
+.faq details[open] { background: var(--accent); color: var(--accent-ink); }
+.faq details[open] summary:hover { background: transparent; }
+.faq details[open] .mes::after { transform: rotate(0deg); }
+.faq details p { padding: 0 24px 24px; font-size: var(--step-body); max-width: 52ch; }
+.faq code { font-family: ui-monospace, Menlo, monospace; font-size: .92em; background: rgba(0,0,0,.12); padding: 1px 4px; }
+
+/* ── peu ── */
+footer { margin-top: 120px; background: var(--surface); padding: 40px var(--m) 24px; }
+.blocs { display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; height: 34svh; min-height: 220px; align-items: end; }
+.blocs span { display: flex; align-items: flex-start; padding-top: 10px; justify-content: center; padding-bottom: 6px; font-size: clamp(88px, 10vw, 168px); font-weight: 700; line-height: .8; letter-spacing: -0.03em; color: var(--bg); }
+.peu-cols { margin-top: 56px; display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gap); font-size: var(--step-small); }
+.peu-cols ul { list-style: none; margin: 0; padding: 0; grid-column: span 2; display: grid; gap: 6px; align-content: start; }
+.peu-cols ul li:first-child { color: var(--muted); }
+.peu-cols .credits { grid-column: 9 / 13; color: var(--muted); font-size: var(--step-small); }
+.peu-fi { margin-top: 40px; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: var(--step-small); color: var(--muted); }
+.peu-fi a.btn { background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 500; padding: 10px 14px; }
+
+/* ── entrades ── */
+[data-r] { opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease), transform .7s var(--ease); transition-delay: calc(var(--i, 0) * 80ms); }
+[data-r].in { opacity: 1; transform: none; }
+
+@media (max-width: 900px) {
+  :root { --gap: 6px; --m: 16px; }
+  section, .marquee, footer { margin-top: 112px; }
+  .hero { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  .band { grid-column: 1 / -1; height: 110px; }
+  .band > span { font-size: 15.5vw; }
+  .links { grid-column: 1 / -1; grid-template-columns: 1fr 1fr; }
+  .centre { grid-column: 1 / -1; grid-row: 3; }
+  .hchart ol { --h: 220px; gap: 4px; }
+  .hchart li { grid-template-rows: var(--h); gap: 0; }
+  .hchart li b { display: none; }
+  .hv { display: inline; }
+  .hn { position: absolute; left: 50%; bottom: 8px; transform: translateX(-50%) rotate(180deg); writing-mode: vertical-rl; white-space: nowrap; max-height: calc(var(--h) - 16px); color: var(--ink); }
+  .hchart li:first-child .hn { color: var(--accent-ink); }
+  .statement { grid-template-columns: 1fr; gap: 12px; padding: 12px 0 0; }
+  .statement p { font-size: var(--step-lead); }
+  .rail-l { grid-column: 1 / -1; grid-row: 5; grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  .rail-l figure { aspect-ratio: 3 / 4; }
+  .rail-r { grid-column: 1 / -1; grid-row: 4; grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
+  .rail-r .accio { grid-column: 1 / -1; min-height: 72px; }
+  .cim { min-height: 0; }
+  .cim-cap { grid-template-columns: 1fr; }
+  .cim-cap .fig, .cim-cap .claim, .cim-cap .peu { grid-column: 1; }
+  .cim-cap .fig { font-size: 26vw; }
+  .cim-cap .peu { margin-top: 18px; }
+  .barres { --alt: 100%; grid-auto-flow: row; grid-auto-rows: 28px; grid-auto-columns: auto; gap: 6px; height: auto; align-items: stretch; margin: 32px var(--m) 0; }
+  .barres .top { display: none; }
+  .b { height: auto; width: calc(var(--v) * 100%); border-radius: 0 4px 4px 0; transform-origin: left; }
+  .barres.in .b { animation-name: creix; }
+  .b .ic, .bi { display: none; }
+  .bv { position: absolute; right: 8px; left: auto; bottom: auto; top: 50%; transform: translateY(-50%); font-size: var(--step-small); text-align: right; color: inherit; }
+  .bn { transform: translateY(-50%); left: 8px; right: auto; top: 50%; bottom: auto; white-space: nowrap; color: var(--ink); }
+  .b.curs .bn { color: var(--ink); }
+  .b.lider .bn { color: var(--accent-ink); }
+  .fila summary { grid-template-columns: 1fr auto auto; min-height: 64px; font-size: var(--step-body); padding-left: 14px; }
+  .f-nom, .f-n, .f-e { grid-column: auto; }
+  .hide-m { display: none; }
+  .f-e { padding: 0 12px; font-size: var(--step-small); }
+  .fila[open] summary { min-height: 96px; font-size: var(--step-lead); }
+  .f-det { font-size: var(--step-body); padding: 0 14px 20px; }
+  .dboard { grid-template-columns: 1fr 1fr; }
+  .dcap { grid-column: 1 / -1; min-height: 0; }
+  .dt { grid-column: 1 / -1; min-height: 0; padding: 16px; grid-template-columns: 1fr auto; grid-template-rows: auto auto auto; }
+  .dt h3 { grid-column: 1; align-self: center; }
+  .dt .dv { grid-column: 2; grid-row: 1; }
+  .dt .mini { grid-column: 1 / -1; height: 96px; }
+  .dt .dn { display: none; }
+  .dfoto { grid-column: 1 / -1; aspect-ratio: 4 / 3; min-height: 0; }
+  .prova .pboard { grid-template-columns: 1fr; }
+  .pq, .presp { grid-column: 1; }
+  .presp { grid-template-columns: 1fr; }
+  .etapes { flex-direction: column; height: 70svh; }
+  .etapes > div { min-height: 72px; min-width: 0; }
+  .clausules { flex-direction: column; gap: 10px; }
+  .oboard { grid-template-columns: 1fr 1fr; grid-auto-rows: auto; }
+  .ocap, .ovid, .ofoto, .otext { grid-column: 1 / -1; grid-row: auto; }
+  .ovid, .ofoto { aspect-ratio: 4 / 3; }
+  .ofet { grid-column: 1 / -1; flex-direction: row; align-items: baseline; justify-content: flex-start; gap: 16px; padding: 16px; }
+  .ofet b, .ofet span { font-size: var(--step-lead); letter-spacing: -0.01em; }
+  .faq .esq, .faq .dreta { grid-column: 1 / -1; }
+  .faq .esq > div { position: static; }
+  .faq summary { font-size: var(--step-body); min-height: 64px; padding: 12px 20px; }
+  .faq details p { font-size: var(--step-body); padding: 0 20px 20px; }
+  .blocs { height: 22svh; min-height: 0; grid-template-columns: repeat(5, 1fr); grid-auto-rows: 1fr; }
+  .blocs span { font-size: 15vw; }
+  .peu-cols ul { grid-column: span 6; }
+  .peu-cols .credits { grid-column: 1 / -1; margin-top: 16px; }
 }
-.btn:hover { transform: translateY(-2px); background: #b8002b; }
-.btn:active { transform: translateY(1px); }
-.wrap { padding: 0 var(--margin); }
-section { scroll-margin-top: 24px; }
-
-/* ---------- capçalera ---------- */
-.hero { min-height: 100svh; display: grid; grid-template-columns: var(--axis) 1fr; position: relative; overflow: hidden; }
-.hero-l { padding: 28px var(--margin) 0; display: flex; flex-direction: column; }
-.wordmark { font-weight: 500; font-size: var(--step-lead); letter-spacing: -0.03em; text-decoration: none; }
-.hero-sup { margin-top: 26svh; max-width: 24ch; font-size: var(--step-lead); line-height: 1.35; }
-.hero-l .btn { margin-top: 32px; align-self: flex-start; }
-.hero-r { padding: 30px var(--margin) 0 0; display: flex; flex-direction: column; }
-.nav { display: flex; gap: 28px; flex-wrap: wrap; font-size: var(--step-small); }
-.nav a { text-decoration: none; }
-.nav a:hover { text-decoration: underline; }
-.hero h1 { font-size: var(--step-display); line-height: 0.84; letter-spacing: -0.045em; margin-top: 9svh; }
-.hero h1 .l { display: block; overflow: hidden; padding-bottom: 0.06em; }
-.hero h1 .l > span { display: block; }
-.hero-foto { margin-top: auto; position: relative; height: 32svh; min-height: 220px; }
-.hero-foto .img { position: absolute; inset: 0; overflow: hidden; }
-.hero-foto img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
-.hero-xifra {
-  position: absolute; left: 0; top: 0; transform: translateY(-50%); width: 280px; z-index: 2;
-  background: var(--field-red); color: var(--field-red-ink); padding: 20px 22px;
-}
-.hero-xifra b { display: block; font-weight: 500; font-size: var(--step-head); line-height: 1; letter-spacing: -0.04em; }
-.hero-xifra span { display: block; margin-top: 8px; font-size: var(--step-small); line-height: 1.35; }
-
-/* ---------- classificació ---------- */
-.rank { padding-top: var(--gap-section); }
-.rank h2 { font-size: var(--step-head); line-height: 0.98; }
-.rank h2 .l1 { display: block; padding-left: 3vw; }
-.rank h2 .l2 { display: block; }
-.rank-cos { display: grid; grid-template-columns: var(--axis) 1fr; margin-top: 96px; align-items: start; }
-.rank-nota { padding-right: 48px; align-self: stretch; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; }
-.rank-nota p { font-size: var(--step-body); max-width: 34ch; }
-.rank-nota figure { margin: 0; width: min(22vw, 320px); }
-.rank-nota figure img { aspect-ratio: 4/5; object-fit: cover; width: 100%; }
-.rank-nota figcaption { font-size: var(--step-small); margin-top: 10px; color: var(--muted); max-width: 30ch; }
-table.cl { width: 100%; border-collapse: collapse; font-size: var(--step-body); }
-.cl th { text-align: left; font-weight: 500; font-size: var(--step-small); color: var(--muted); padding: 0 12px 14px 0; }
-.cl td { padding: 13px 12px 13px 0; vertical-align: top; }
-.cl tr.sep td { padding-top: 34px; }
-.cl .nm { font-weight: 500; letter-spacing: -0.02em; }
-.cl .sub { color: var(--muted); font-size: var(--step-small); display: block; margin-top: 2px; }
-.cl .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.cl .nota { font-size: var(--step-lead); font-weight: 500; letter-spacing: -0.03em; }
-.cl .alt { color: var(--muted); }
-.cl tr.maia .nm::after { content: " · maia"; color: var(--accent); }
-.cl .barra { height: 8px; background: var(--surface); margin-top: 8px; position: relative; }
-.cl .barra i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--ink); transform-origin: left; }
-.cl .barra s { position: absolute; top: -3px; bottom: -3px; background: var(--accent); opacity: .35; }
-.rank-peu { margin-top: 48px; font-size: var(--step-body); max-width: 70ch; }
-
-/* ---------- dominis ---------- */
-.dom { margin-top: var(--gap-section); background: var(--field-blue); color: var(--field-blue-ink); min-height: 92svh; position: relative; display: flex; flex-direction: column; }
-.dom-cap { padding: 56px var(--margin) 0; display: grid; grid-template-columns: var(--axis) 1fr; gap: 24px; }
-.dom-fig { font-size: var(--step-display); font-weight: 500; letter-spacing: -0.05em; line-height: 0.86; font-variant-numeric: tabular-nums; }
-.dom-cap h2 { font-size: var(--step-lead); letter-spacing: -0.02em; line-height: 1.15; margin-top: 14px; max-width: 18ch; font-weight: 400; }
-.dom-dreta p { max-width: 46ch; }
-.models { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
-.models button {
-  font: inherit; font-size: var(--step-small); background: transparent; color: var(--field-blue-ink); border: 2px solid rgba(237,242,251,.35);
-  padding: 8px 14px; cursor: pointer; border-radius: 0; transition: background-color .2s, border-color .2s, transform .2s var(--ease-out);
-}
-.models button:hover { border-color: var(--field-blue-ink); transform: translateY(-1px); }
-.models button[aria-pressed="true"] { background: var(--field-blue-ink); color: var(--field-blue); border-color: var(--field-blue-ink); }
-.barres { margin-top: auto; display: grid; grid-template-columns: repeat(13, 1fr); gap: 8px; height: 62vh; align-items: end; position: relative; }
-.barres .cim { position: absolute; right: var(--margin); top: 0; font-size: var(--step-small); }
-.b { position: relative; height: calc(var(--v) * 58vh); background: var(--bar); transform-origin: bottom; transition: height .7s var(--ease-out), background-color .3s; }
-.b.on { background: var(--mark); }
-.b .val { position: absolute; z-index: 2; bottom: 100%; left: 6px; padding-bottom: 6px; font-size: var(--step-lead); letter-spacing: -0.03em; font-variant-numeric: tabular-nums; opacity: 0; transition: opacity .2s; white-space: nowrap; }
-.b.mostra .val, .b:hover .val, .b:focus-visible .val { opacity: 1; }
-.b:nth-last-child(-n+3) .val { left: auto; right: 6px; }
-.dom { overflow: clip; }
-.b .et { position: absolute; left: 6px; bottom: 8px; writing-mode: vertical-rl; transform: rotate(180deg); font-size: var(--step-small); white-space: nowrap; }
-.b.on .et { color: var(--field-blue); }
-.b:focus-visible { outline-color: var(--mark); }
-
-/* ---------- prova-ho ---------- */
-.prova { display: grid; grid-template-columns: 1fr 1fr; min-height: 90svh; }
-.prova-in { background: var(--field-red); color: var(--field-red-ink); padding: 12svh var(--margin) 32px; display: flex; flex-direction: column; position: relative; }
-.prova-out { background: var(--surface); padding: 12svh var(--margin) 32px; display: flex; flex-direction: column; }
-.prova-in .tipus { font-size: var(--step-small); margin-bottom: 14px; }
-.prova-in .q { font-size: var(--step-lead); line-height: 1.35; max-width: 34ch; min-height: 6em; }
-.prova-in ol { list-style: none; padding: 0; margin: 18px 0 0; font-size: var(--step-body); max-width: 40ch; }
-.prova-in ol li { padding: 4px 0; }
-.prova-ctl { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
-.prova-ctl button {
-  font: inherit; font-size: var(--step-small); background: transparent; color: var(--field-red-ink); border: 2px solid rgba(246,239,239,.45);
-  padding: 8px 14px; cursor: pointer; border-radius: 0; transition: background-color .2s, transform .2s var(--ease-out);
-}
-.prova-ctl button:hover { transform: translateY(-1px); border-color: var(--field-red-ink); }
-.prova-ctl button.gran { background: var(--field-red-ink); color: var(--field-red); border-color: var(--field-red-ink); }
-.prova h2 { font-size: var(--step-head); margin-top: auto; padding-top: 48px; }
-.prova-out h2 { text-align: right; }
-.resp { max-width: 520px; display: grid; gap: 14px; }
-.resp .r { background: var(--bg); padding: 16px 18px; }
-.resp .r header { display: flex; justify-content: space-between; gap: 12px; font-weight: 500; }
-.resp .v { font-size: var(--step-small); padding: 2px 8px; color: #fff; white-space: nowrap; }
-.v.ok { background: #1f6b3a; } .v.mig { background: #8a6500; } .v.ko { background: var(--accent); } .v.sense { background: var(--muted); }
-.resp .r p { margin-top: 8px; }
-.resp .r .mot { color: var(--muted); font-size: var(--step-small); margin-top: 6px; }
-.resp .ref { background: var(--ink); color: var(--field-blue-ink); }
-
-/* ---------- mètode ---------- */
-.metode { padding-top: var(--gap-section); }
-.metode h2 { font-size: var(--step-head); margin-bottom: 64px; }
-.etapes { display: flex; gap: 6px; height: 22vh; min-height: 150px; }
-.etapes > div { padding: 20px; color: #fff; min-width: 12%; }
-.etapes .e1 { background: var(--ink); } .etapes .e2 { background: var(--accent); } .etapes .e3 { background: #1c2a4a; }
-.etapes b { display: block; font-weight: 500; font-size: var(--step-lead); letter-spacing: -0.03em; }
-.etapes span { font-size: var(--step-small); }
-.clausules { display: flex; gap: 6px; margin-top: 16px; }
-.clausules p { max-width: 26ch; min-width: 12%; }
-
-/* ---------- origen ---------- */
-.origen { padding-top: var(--gap-section); }
-.origen h2 { font-size: var(--step-head); }
-.origen .lead { font-size: var(--step-lead); max-width: 50ch; margin-top: 24px; }
-.mosaic { display: grid; grid-template-columns: 8fr 4fr; gap: 16px; margin-top: 72px; align-items: start; }
-.mosaic .ft { position: relative; }
-.mosaic .ft video { aspect-ratio: 16/10; object-fit: cover; width: 100%; display: block; }
-.banda { margin-top: var(--gap-section); position: relative; }
-.banda img { width: 100%; height: 56vh; min-height: 300px; object-fit: cover; }
-.banda figcaption { position: absolute; left: var(--margin); bottom: 0; background: var(--bg); padding: 14px 18px 0; font-size: var(--step-small); }
-.mosaic .ft .nota { position: absolute; top: 0; right: 0; width: 340px; background: var(--bg); padding: 20px; }
-.tile { background: var(--field-red); color: var(--field-red-ink); aspect-ratio: 16/16; display: grid; place-items: center; padding: 24px; }
-.tile svg { width: 78%; height: auto; }
-.fets { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 16px; margin-top: 20px; }
-.fets dt { font-size: var(--step-small); color: var(--muted); }
-.fets dd { margin: 2px 0 0; font-size: var(--step-lead); font-weight: 500; letter-spacing: -0.03em; }
-
-/* ---------- preguntes ---------- */
-.faq { padding: var(--gap-section) var(--margin) var(--gap-section); display: grid; grid-template-columns: 3fr 1fr 8fr; }
-.faq h2 { font-size: var(--step-lead); letter-spacing: -0.03em; line-height: 1.05; }
-.faq .esq { grid-column: 1; }
-.faq .esq img { margin-top: 32px; aspect-ratio: 4/5; object-fit: cover; width: 100%; }
-.faq .esq figcaption { font-size: var(--step-small); color: var(--muted); margin-top: 10px; }
-.faq .txt { grid-column: 3; columns: 2; column-gap: 56px; }
-.faq .txt p { break-inside: avoid; margin-bottom: 20px; line-height: 1.55; }
-.faq .txt b { font-weight: 500; }
-
-/* ---------- peu ---------- */
-footer.peu {
-  background: var(--field-blue); color: var(--field-blue-ink); min-height: 74svh; display: grid; grid-template-rows: auto 1fr auto;
-  padding: 40px var(--margin) 20px;
-}
-.peu .cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; font-size: var(--step-small); }
-.peu .cols ul { list-style: none; padding: 0; margin: 0; }
-.peu .cols li { color: rgba(237,242,251,.78); padding: 2px 0; }
-.peu .cols li:first-child { color: var(--field-blue-ink); font-weight: 500; }
-.peu .mot svg { width: 100%; height: auto; display: block; }
-.peu .credits { font-size: var(--step-small); margin-top: 20px; color: rgba(237,242,251,.85); max-width: 120ch; }
-
-/* ---------- moviment ---------- */
-.js [data-r] { opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease-out), transform .7s var(--ease-out); transition-delay: calc(var(--i, 0) * 75ms); }
-.js .in [data-r], .js [data-r].in { opacity: 1; transform: none; }
-.js .hero h1 .l > span { transform: translateY(105%); animation: puja .9s var(--ease-out) forwards; }
-.js .hero h1 .l:nth-child(2) > span { animation-delay: .11s; }
-.js .hero .hero-sup, .js .hero-l .btn { opacity: 0; animation: apareix .7s var(--ease-out) .55s forwards; }
-.hero-foto img { animation: deriva 26s ease-in-out infinite alternate; }
-.js .cl .barra i { transform: scaleX(0); transition: transform 1.1s var(--ease-out); transition-delay: calc(var(--i, 0) * 90ms); }
-.js .in .cl .barra i { transform: scaleX(1); }
-@keyframes puja { to { transform: none; } }
-@keyframes apareix { to { opacity: 1; } }
-@keyframes deriva { from { transform: scale(1.04) translateX(0); } to { transform: scale(1.12) translateX(-2.5%); } }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
-  .js [data-r], .js .hero h1 .l > span, .js .hero .hero-sup, .js .hero-l .btn, .js .cl .barra i { opacity: 1 !important; transform: none !important; }
-}
-
-/* ---------- mòbil ---------- */
-@media (max-width: 860px) {
-  .hero { grid-template-columns: 1fr; min-height: auto; }
-  .hero-l { padding-top: 20px; }
-  .hero-l .wordmark { order: 0; }
-  .hero-r { padding: 0 var(--margin); order: -1; display: contents; }
-  .nav { display: none; }
-  .hero h1 { font-size: 15vw; line-height: 0.86; margin: 36px var(--margin) 0; order: 1; }
-  .hero-l { order: 0; }
-  .hero-sup { margin-top: 0; font-size: 18px; max-width: none; padding: 0 var(--margin); order: 2; }
-  .hero-l .btn { order: 3; }
-  .hero { display: flex; flex-direction: column; }
-  .hero-l { display: contents; }
-  .hero-l .wordmark { padding: 20px var(--margin) 0; }
-  .hero-sup { margin-top: 22px; }
-  .hero-l .btn { margin: 22px var(--margin) 0; align-self: stretch; text-align: center; }
-  .hero-foto { order: 4; margin-top: 150px; height: auto; aspect-ratio: 4/3; }
-  .hero-xifra { width: 60%; }
-  .rank h2 { font-size: 9.5vw; }
-  .rank h2 .l1 { padding-left: 0; }
-  .rank-cos { grid-template-columns: 1fr; margin-top: 40px; }
-  .rank-nota { padding-right: 0; order: 2; margin-top: 32px; }
-  .rank-nota figure { width: 60%; margin-left: auto; }
-  .cl .hide-m { display: none; }
-  .dom-cap { grid-template-columns: 1fr; padding-top: 40px; }
-  .dom-fig { font-size: 26vw; }
-  .barres { grid-template-columns: 1fr; height: auto; gap: 6px; padding: 32px var(--margin) 40px; }
-  .barres .cim { position: static; margin-bottom: 4px; }
-  .b { height: 28px; width: calc(var(--v) * 100%); min-width: 6px; transform-origin: left; }
-  .b .et { writing-mode: horizontal-tb; transform: none; left: calc(100% + 8px); bottom: 4px; color: var(--field-blue-ink) !important; }
-  .b .val { display: none; }
-  .prova { grid-template-columns: 1fr; }
-  .prova-in, .prova-out { min-height: 62svh; padding-top: 48px; }
-  .prova h2 { font-size: 11vw; }
-  .prova-out h2 { order: -1; text-align: left; padding: 0 0 24px; margin: 0; }
-  .metode h2 { font-size: 11vw; margin-bottom: 32px; }
-  .etapes { flex-direction: column; height: 70svh; }
-  .clausules { display: none; }
-  .etapes span { font-size: 16px; display: block; margin-top: 4px; }
-  .mosaic { grid-template-columns: 1fr; }
-  .mosaic .ft .nota { position: static; width: auto; padding: 16px 0 0; background: none; }
-  .tile { aspect-ratio: 3/2; }
-  .faq { grid-template-columns: 1fr; }
-  .faq .esq { margin-bottom: 28px; }
-  .faq .esq img { width: 60%; }
-  .faq .txt { grid-column: 1; columns: 1; }
-  .peu .cols { grid-template-columns: 1fr 1fr; row-gap: 32px; }
+  [data-r] { opacity: 1; transform: none; }
+  html { scroll-behavior: auto; }
 }
 </style>
 </head>
 <body>
+
 <header class="hero" id="inici">
-  <div class="hero-l">
-    <a class="wordmark" href="#inici">maia-bench</a>
-    <p class="hero-sup">Un benchmark públic que mesura quant saben d'Andorra els models de llenguatge.</p>
-    <a class="btn" href="#classificacio">Veure la classificació</a>
+  <div class="band" aria-hidden="true"><span>maia-bench</span></div>
+  <nav class="links" aria-label="Seccions">
+    <a href="#classificacio">Classificació</a><a href="#dominis">Per dominis</a><a href="#prova">Prova-ho</a><a href="#metode">Mètode</a>
+  </nav>
+  <div class="rail-l">
+    <figure><img class="foto" src="assets/pic-de-coma-pedrosa-from-coll-d.jpg" width="1920" height="560" alt="El Coma Pedrosa nevat, vist des del Coll d'Ordino."><figcaption>Coma Pedrosa, 2.942 m: el 100 %.</figcaption></figure>
+    <ul class="fets tile">
+      <li><b class="num">__N_TOTAL__</b>preguntes</li>
+      <li><b>13</b>dominis</li>
+      <li><b class="num">__N_MODELS__</b>models avaluats</li>
+    </ul>
   </div>
-  <div class="hero-r">
-    <nav class="nav" aria-label="Seccions">
-      <a href="#classificacio">Classificació</a><a href="#dominis">Per dominis</a><a href="#prova">Prova-ho</a><a href="#metode">Mètode</a><a href="#preguntes">Avalua el teu model</a>
-    </nav>
-    <h1><span class="l"><span>Qui sap</span></span><span class="l"><span>Andorra?</span></span></h1>
-    <div class="hero-foto">
-      <div class="hero-xifra"><b>926</b><span>preguntes sobre Andorra, verificades una a una contra les fonts</span></div>
-      <div class="img"><img class="foto" src="assets/pic-de-coma-pedrosa-from-coll-d.jpg" width="1920" height="560" alt="El Coma Pedrosa nevat, vist des del Coll d'Ordino, entre pins."></div>
+  <div class="centre">
+    <div class="hchart" data-ui>
+      <p class="cimlbl">El fons de cada columna és el cim del Coma Pedrosa, 2.942 m: el 100 %. Els vuit primers, tests puntuats.</p>
+      <ol>__HERO_BARRES__</ol>
     </div>
+    <div class="statement">
+      <h1>Qui sap Andorra?</h1>
+      <p>Un benchmark públic que mesura quant saben d'Andorra els models de llenguatge.</p>
+    </div>
+  </div>
+  <div class="rail-r">
+    <div class="r1"><b class="num">__MILLOR_NOTA__</b>__MILLOR_NOM__, el primer</div>
+    <div class="r2"><b class="num">__MILLOR_M__</b>d'altitud, si el cim és el 100 %</div>
+    <div class="r3"><b class="num">__N_COMPARABLES__</b>models amb tots els tests</div>
+    <div class="r4"><b>IC 95 %</b>a cada nota</div>
+    <a class="accio" href="#classificacio">Veure la classificació</a>
   </div>
 </header>
 
 <main>
-<section class="rank wrap" id="classificacio" aria-labelledby="t-rank">
-  <h2 id="t-rank" data-r><span class="l1">Quins models saben</span><span class="l2">més d'Andorra</span></h2>
-  <div class="rank-cos">
-    <div class="rank-nota">
-      <p data-r style="--i:1">La nota és la part de les 926 preguntes que el model encerta. La traduïm en metres: el 100&nbsp;% és el cim del Coma Pedrosa, 2.942&nbsp;m, el punt més alt del país. La franja vermella és l'interval de confiança del 95&nbsp;%: si dues franges se solapen, no hi ha guanyador clar.</p>
-      <figure data-r style="--i:2">
-        <img class="foto" src="assets/vallee-d-andorre-1032-andorre-la-vieille.jpg" width="1920" height="1302" loading="lazy" alt="Postal antiga de la Casa de la Vall, a Andorra la Vella, amb el Puig d'Anclar al darrere.">
-        <figcaption>La Casa de la Vall en una postal de principis del segle XX.</figcaption>
-      </figure>
-    </div>
-    <div data-r style="--i:1">
-      <table class="cl">
-        <caption class="sub" style="text-align:left;caption-side:top;padding-bottom:14px">Coneixement · __VERSIO__</caption>
-        <thead><tr><th scope="col">Model</th><th scope="col" class="num">Nota</th><th scope="col" class="num hide-m">Altitud</th></tr></thead>
-        <tbody>__FILES__</tbody>
-      </table>
-    </div>
-  </div>
-  <p class="rank-peu" data-r>__AVIS__</p>
-</section>
-
-<section class="dom" id="dominis" aria-labelledby="t-dom">
-  <div class="dom-cap">
-    <div>
-      <div class="dom-fig" id="dom-fig" data-r>–</div>
-      <h2 id="t-dom" data-r style="--i:1">On encerta i on falla <span id="dom-nom"></span></h2>
-    </div>
-    <div class="dom-dreta">
-      <p data-r style="--i:2">Les 926 preguntes es reparteixen en 13 dominis, de la història a la vida quotidiana. Cada barra és la nota del model en un domini; la groga és on falla més. Tria un model:</p>
-      <div class="models" id="dom-models" role="group" aria-label="Model"></div>
-    </div>
+<section class="cim" id="classificacio" aria-labelledby="t-rank">
+  <div class="cim-cap">
+    <p class="fig num" data-r>__MILLOR_NOTA__</p>
+    <div class="claim" data-r style="--i:1"><h2 id="t-rank">Qui en sap més</h2></div>
+    <p class="peu" data-r style="--i:2">Cada barra és un model. L'alçada és la part de les preguntes que encerta: el 100 % seria el cim del Coma Pedrosa, 2.942 m. La línia clara de dalt és l'interval de confiança del 95 %; si dues se solapen, no hi ha guanyador clar.<span>__AVIS__</span></p>
   </div>
   <div class="barres" id="barres" data-ui>
-    <span class="cim">Cim · 2.942&nbsp;m · 100&nbsp;%</span>
+    <span class="top">Cim · 2.942 m · 100 %</span>
+    __BARRES__
+  </div>
+</section>
+
+<section class="taula" id="taula" aria-labelledby="t-taula">
+  <h2 id="t-taula" data-r>La taula, model a model</h2>
+  <div class="tauler" data-ui>
+__FILES__
+  </div>
+  <p class="nota-peu">Dataset __VERSIO__ · jutge __JUTGE__ · generat el __DATA__.</p>
+</section>
+
+<div class="marquee" aria-hidden="true"><div><span>Qui sap Andorra? · __N_TOTAL__ preguntes · 13 dominis · 2.942 m ·&nbsp;</span><span>Qui sap Andorra? · __N_TOTAL__ preguntes · 13 dominis · 2.942 m ·&nbsp;</span></div></div>
+
+<section class="dominis" id="dominis" aria-labelledby="t-dom">
+  <div class="ctl" id="dom-models" role="group" aria-label="Tria un model"></div>
+  <div class="dboard" id="dboard">
+    <div class="dcap"><h2 id="t-dom">On encerten i on fallen</h2><p>La xifra gran és la nota del model triat en cada domini. Les barretes són tots els models amb els tests complets, en l'ordre de la classificació; la groga és el model triat. Passa per sobre d'una barreta per veure quin model és. En fosc, on el model triat falla més.</p></div>
+    __DOMINIS__
+    <figure class="dfoto"><img class="foto" src="assets/vallee-d-andorre-1032-andorre-la-vieille.jpg" width="1920" height="1302" loading="lazy" alt="Postal antiga de la Casa de la Vall, a Andorra la Vella."><figcaption>La Casa de la Vall, postal de principis del segle XX.</figcaption></figure>
   </div>
 </section>
 
 <section class="prova" id="prova" aria-labelledby="t-prova">
-  <div class="prova-in">
-    <p class="tipus" id="p-tipus">Pregunta</p>
-    <p class="q" id="p-q" aria-live="polite">Carregant una pregunta…</p>
-    <ol id="p-op"></ol>
-    <div class="prova-ctl">
-      <button class="gran" id="p-una" type="button">Una altra pregunta</button>
-      <button type="button" data-t="test">Test</button>
-      <button type="button" data-t="oberta">Oberta</button>
-      <button type="button" data-t="trampa">Trampa</button>
+  <div class="pboard">
+    <div class="pq">
+      <h2 id="t-prova">Prova-ho</h2>
+      <p class="tipus" id="p-tipus">Pregunta</p>
+      <p class="q" id="p-q" aria-live="polite">Carregant una pregunta…</p>
+      <ol id="p-op"></ol>
+      <div class="btns">
+        <button class="gran" id="p-una" type="button">Una altra pregunta</button>
+        <button type="button" data-t="test">Test</button>
+        <button type="button" data-t="oberta">Oberta</button>
+        <button type="button" data-t="trampa">Trampa</button>
+      </div>
     </div>
-    <h2 id="t-prova">Una pregunta,</h2>
-  </div>
-  <div class="prova-out">
-    <div class="resp" id="p-resp" data-ui aria-live="polite"></div>
-    <h2 aria-hidden="true">tots els models</h2>
+    <div class="presp" id="p-resp" data-ui aria-live="polite"></div>
   </div>
 </section>
 
-<section class="metode wrap" id="metode" aria-labelledby="t-metode">
+<section class="metode" id="metode" aria-labelledby="t-metode">
   <h2 id="t-metode" data-r>Com es puntua cada resposta</h2>
   <div class="etapes" data-ui data-r style="--i:1">
     <div class="e1" style="flex-grow:__N_TEST__"><b>__N_TEST__ tests</b><span>Correcció automàtica</span></div>
@@ -361,130 +404,122 @@ footer.peu {
   </div>
   <div class="clausules" data-r style="--i:2">
     <p style="flex-grow:__N_TEST__">Primer, quatre opcions i una de bona. El model diu una lletra i es corregeix sol.</p>
-    <p style="flex-grow:__N_OBERTA__">Després, respostes lliures. El jutge les compara amb la referència, els fets clau i els errors típics: 0, 1 o 2 punts.</p>
-    <p style="flex-grow:__N_TRAMPA__">Al final, preguntes amb una premissa falsa. Només puntua qui la rebutja.</p>
+    <p style="flex-grow:__N_OBERTA__">Després, respostes lliures. El jutge les compara amb la referència: 0, 1 o 2 punts.</p>
+    <p style="flex-grow:__N_TRAMPA__">Al final, una premissa falsa. Només puntua qui la rebutja.</p>
   </div>
 </section>
 
-<figure class="banda" style="margin-bottom:0;margin-left:0;margin-right:0" data-r><img class="foto" src="assets/estany-de-les-abelletes-1.jpg" width="1600" height="1065" loading="lazy" alt="L'estany de les Abelletes, amb pedres a la riba i muntanyes al fons."><figcaption>L'estany de les Abelletes.</figcaption></figure>
-
-<section class="origen wrap" id="origen" aria-labelledby="t-origen">
-  <h2 id="t-origen" data-r>D'on surten les preguntes</h2>
-  <p class="lead" data-r style="--i:1">Cada pregunta surt d'un article del corpus de maia sobre Andorra, porta un context escrit amb paraules pròpies i s'ha verificat contra l'article original. Les «no vistes» surten de fitxes que mai entren a cap entrenament.</p>
-  <div class="mosaic">
-    <div class="ft" data-r style="--i:2">
-      <video class="foto" src="assets/cows-in-andorra.webm" poster="assets/cows-in-andorra-poster.jpg" width="1920" height="1080" muted loop playsinline autoplay preload="none" aria-label="Vaques pasturant a les pastures a l'est del Pas de la Casa."></video>
-      <p class="nota">Els models generals saben dir la capital. El que mesurem és tot el que hi ha darrere: els pariatges, les parròquies, les festes, el contraban, la llengua, la gent.</p>
-    </div>
-    <div data-r style="--i:3">
-      <div class="tile">
-        <svg viewBox="0 0 200 160" role="img" aria-label="Contorn esquemàtic d'Andorra amb Andorra la Vella marcada">
-          <path fill="currentColor" opacity=".22" d="M36 62 L58 40 L84 34 L104 22 L132 26 L150 40 L170 44 L182 62 L176 82 L160 92 L150 112 L128 120 L112 138 L92 134 L80 118 L60 114 L44 100 L30 84 Z"/>
-          <circle cx="92" cy="104" r="6" fill="currentColor"/>
-          <text x="104" y="108" fill="currentColor" font-size="11" font-family="Hanken Grotesk, sans-serif">Andorra la Vella</text>
-        </svg>
-      </div>
-      <dl class="fets">
-        <div><dt>Preguntes</dt><dd>__N_TOTAL__</dd></div>
-        <div><dt>Dominis</dt><dd>13</dd></div>
-        <div><dt>Articles font</dt><dd>__N_ARTICLES__</dd></div>
-        <div><dt>No vistes</dt><dd>__N_NOVISTES__</dd></div>
-      </dl>
-    </div>
+<section class="origen" id="origen" aria-labelledby="t-origen">
+  <div class="oboard">
+    <div class="ocap"><h2 id="t-origen">D'on surten les preguntes</h2><p>Cada pregunta surt d'un article sobre Andorra, porta un context escrit amb paraules pròpies i s'ha verificat contra l'original.</p></div>
+    <figure class="ovid"><video class="foto" src="assets/cows-in-andorra.webm" poster="assets/cows-in-andorra-poster.jpg" width="1920" height="1080" muted loop playsinline autoplay preload="none" aria-label="Vaques pasturant a prop del Pas de la Casa."></video><figcaption class="cap-foto">Pastures a l'est del Pas de la Casa.</figcaption></figure>
+    <div class="ofet"><b class="num">__N_TOTAL__</b><span>preguntes</span></div>
+    <div class="ofet" style="background:#303030"><b>13</b><span>dominis</span></div>
+    <div class="ofet"><b class="num">__N_ARTICLES__</b><span>articles font</span></div>
+    <div class="ofet" style="background:#303030"><b class="num">__N_NOVISTES__</b><span>preguntes no vistes</span></div>
+    <figure class="ofoto"><img class="foto" src="assets/estany-de-les-abelletes-1.jpg" width="1600" height="1065" loading="lazy" alt="L'estany de les Abelletes, amb muntanyes al fons."><figcaption class="cap-foto">L'estany de les Abelletes.</figcaption></figure>
+    <div class="otext"><p>Els models generals saben dir la capital. El que mesurem és tot el que hi ha darrere: els pariatges, les parròquies, les festes, el contraban, la llengua, la gent.</p></div>
   </div>
 </section>
 
 <section class="faq" id="preguntes" aria-labelledby="t-faq">
-  <div class="esq" data-r><h2 id="t-faq">Preguntes i respostes</h2><figure style="margin:0"><img class="foto" src="assets/casa-de-la-vall-andorra-la-vieja.jpg" width="1600" height="1066" loading="lazy" alt="La Casa de la Vall, seu històrica del Consell General, amb la muntanya al darrere."><figcaption>La Casa de la Vall avui, a Andorra la Vella.</figcaption></figure></div>
-  <div class="txt" data-r style="--i:1">
-    <p><b>Com avaluo el meu model?</b> Clona el repositori i executa <code>python3 tools/executa.py --model ollama:el-teu-model</code>. Funciona amb Ollama, OpenAI, Anthropic, OpenRouter i Gemini a Vertex. Després, <code>python3 tools/puntua.py resultats/&lt;nom&gt;</code> i <code>python3 tools/web.py</code>.</p>
-    <p><b>Què veu el model?</b> Només la pregunta, i les quatre opcions si és un test. Mai el context ni la resposta de referència. Mateix prompt i temperatura 0 per a tothom.</p>
-    <p><b>Qui puntua les respostes obertes?</b> Un jutge fixat, __JUTGE__, amb la resposta de referència, els fets clau i una llista d'errors a penalitzar. Una resposta amb un d'aquests errors no pot treure la nota màxima.</p>
-    <p><b>El jutge és imparcial?</b> No del tot: un jutge només detecta els errors que coneix. Per això cada pregunta porta errors típics. Quan el model avaluat és el mateix jutge, la taula ho marca.</p>
-    <p><b>Què és una pregunta trampa?</b> Una pregunta que dona per bo un fet fals. Puntua el model que el rebutja i diu què és cert; el que s'inventa una explicació treu un zero.</p>
-    <p><b>Què són les preguntes no vistes?</b> Preguntes sobre __N_FITXES__ fitxes reservades que mai entren a l'entrenament de maia. Mesuren si un model s'inventa el que no sap.</p>
-    <p><b>Per què hi ha un interval?</b> Perquè 926 preguntes són una mostra. L'interval surt de remostrejar-les mil vegades. Dues notes amb intervals que se solapen no es poden ordenar.</p>
-    <p><b>maia juga amb avantatge?</b> maia és el model del projecte que ha fet el benchmark. Per això el mètode, les preguntes i el codi són públics, i la taula el marca.</p>
-    <p><b>Puc enviar una nota?</b> No. S'envien respostes, i es puntuen aquí amb el mateix jutge per a tothom.</p>
-    <p><b>Les preguntes poden acabar en un entrenament?</b> Pot passar, perquè són públiques. Les versions es congelen i les no vistes ajuden a detectar-ho.</p>
-    <p><b>I si un model encara no ha acabat?</b> La taula diu quantes preguntes porta respostes; la nota d'una execució parcial no és comparable.</p>
-    <p><b>Mesura també com parla?</b> Encara no. La part de llengua (perplexitat sobre parla real, test dialectal i prova cega amb andorrans) està en construcció.</p>
+  <div class="fgrid">
+    <div class="esq"><div>
+      <h2 id="t-faq">Preguntes i respostes</h2>
+      <figure><img class="foto" src="assets/casa-de-la-vall-andorra-la-vieja.jpg" width="1600" height="1066" loading="lazy" alt="La Casa de la Vall amb la muntanya al darrere."><figcaption class="cap-foto">La Casa de la Vall avui.</figcaption></figure>
+    </div></div>
+    <div class="dreta">
+      <details name="faq" open><summary>Com avaluo el meu model?<span class="mes"></span></summary><p>Clona el repositori i executa <code>python3 tools/executa.py --model ollama:el-teu-model</code>. Funciona amb Ollama, Ollama Cloud, OpenAI, Anthropic, OpenRouter i Vertex. Després, <code>python3 tools/puntua.py resultats/&lt;nom&gt;</code> i <code>python3 tools/web.py</code>.</p></details>
+      <details name="faq"><summary>Què veu el model?<span class="mes"></span></summary><p>Només la pregunta, i les quatre opcions si és un test. Mai el context ni la resposta de referència. Mateix prompt i temperatura 0 per a tothom.</p></details>
+      <details name="faq"><summary>Qui puntua les respostes obertes?<span class="mes"></span></summary><p>Un jutge fixat, __JUTGE__, amb la resposta de referència, els fets clau i una llista d'errors a penalitzar. Una resposta amb un d'aquests errors no pot treure la nota màxima.</p></details>
+      <details name="faq"><summary>El jutge és imparcial?<span class="mes"></span></summary><p>No del tot: un jutge només detecta els errors que coneix. Per això cada pregunta porta errors típics. Quan el model avaluat és el mateix jutge, la taula ho marca.</p></details>
+      <details name="faq"><summary>Què és una pregunta trampa?<span class="mes"></span></summary><p>Una pregunta que dona per bo un fet fals. Puntua el model que el rebutja i diu què és cert; el que s'inventa una explicació treu un zero.</p></details>
+      <details name="faq"><summary>Què són les preguntes no vistes?<span class="mes"></span></summary><p>Preguntes sobre __N_FITXES__ fitxes reservades que mai entren a l'entrenament de maia. Mesuren si un model s'inventa el que no sap.</p></details>
+      <details name="faq"><summary>Per què hi ha un interval?<span class="mes"></span></summary><p>Perquè les preguntes són una mostra. L'interval surt de remostrejar-les mil vegades. Dues notes amb intervals que se solapen no es poden ordenar.</p></details>
+      <details name="faq"><summary>Per què ara només compten els tests?<span class="mes"></span></summary><p>Les obertes i les trampes les puntua el jutge, i aquesta passada encara no s'ha fet. Quan es faci, la nota inclourà les 926 preguntes.</p></details>
+      <details name="faq"><summary>maia juga amb avantatge?<span class="mes"></span></summary><p>maia és el model del projecte que ha fet el benchmark. Per això el mètode, les preguntes i el codi són públics, i la taula el marca.</p></details>
+      <details name="faq"><summary>Mesura també com parla?<span class="mes"></span></summary><p>Encara no. La part de llengua (perplexitat sobre parla real, test dialectal i prova cega amb andorrans) està en construcció.</p></details>
+    </div>
   </div>
 </section>
 </main>
 
-<footer class="peu">
-  <div class="cols">
+<footer>
+  <div class="blocs" aria-label="maia-bench" role="img">
+    <span style="height:78%;background:#f2f2f2">m</span><span style="height:64%;background:#b4b4b4">a</span><span style="height:92%;background:#fedd00">i</span><span style="height:70%;background:#f2f2f2">a</span><span style="height:60%;background:#8a8a8a">-</span><span style="height:100%;background:#1f4fd1;color:#fff">b</span><span style="height:74%;background:#f2f2f2">e</span><span style="height:66%;background:#b4b4b4">n</span><span style="height:84%;background:#d50032;color:#fff">c</span><span style="height:96%;background:#f2f2f2">h</span>
+  </div>
+  <div class="peu-cols">
     <ul><li>Projecte</li><li><a href="https://github.com/ericrisco/maia">maia</a></li><li><a href="https://github.com/ericrisco/maia-bench">maia-bench</a></li></ul>
     <ul><li>Seccions</li><li><a href="#classificacio">Classificació</a></li><li><a href="#dominis">Per dominis</a></li><li><a href="#prova">Prova-ho</a></li></ul>
-    <ul><li>Versió</li><li>Dataset __VERSIO__</li><li>Jutge __JUTGE__</li><li>Generat el __DATA__</li></ul>
     <ul><li>Mètode</li><li><a href="#metode">Com es puntua</a></li><li><a href="#origen">D'on surten les preguntes</a></li><li><a href="#preguntes">Avalua el teu model</a></li></ul>
-  </div>
-  <div></div>
-  <div>
-    <div class="mot"><svg viewBox="0 0 1000 150" aria-label="maia-bench"><text x="0" y="128" fill="currentColor" font-family="Hanken Grotesk, sans-serif" font-weight="500" font-size="182" letter-spacing="-9" textLength="1000" lengthAdjust="spacingAndGlyphs">maia-bench</text></svg></div>
+    <ul><li>Versió</li><li>Dataset __VERSIO__</li><li>Jutge __JUTGE__</li><li>Generat el __DATA__</li></ul>
     <p class="credits">__CREDITS__</p>
   </div>
+  <div class="peu-fi"><span>maia-bench · un projecte de maia</span><a class="btn" href="#inici">Tornar a dalt</a></div>
 </footer>
 
+<div class="tip" id="tip" role="tooltip"></div>
 <script type="application/json" id="dades">__DADES__</script>
 <script>
 (function () {
-  document.documentElement.classList.add("js");
   var D = JSON.parse(document.getElementById("dades").textContent);
-  var pc = function (v) { return (v * 100).toFixed(1).replace(".", ",") + " %"; };
+  var pc = function (v) { return (v * 100).toFixed(1).replace(".", ",") + "\u00a0%"; };
+  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
 
-  // entrades de secció
-  var io = new IntersectionObserver(function (es) {
+  // entrades
+  var io = "IntersectionObserver" in window ? new IntersectionObserver(function (es) {
     es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
-  }, { rootMargin: "0px 0px -12% 0px" });
-  document.querySelectorAll("[data-r]").forEach(function (el) { io.observe(el); });
-  setTimeout(function () { document.querySelectorAll("[data-r]").forEach(function (el) { el.classList.add("in"); }); }, 4000);
+  }, { threshold: 0.15 }) : null;
+  document.querySelectorAll("[data-r], .barres").forEach(function (el) { io ? io.observe(el) : el.classList.add("in"); });
+  setTimeout(function () { document.querySelectorAll("[data-r], .barres").forEach(function (el) { el.classList.add("in"); }); }, 4000);
 
-  // dominis
-  var barres = document.getElementById("barres"), botons = document.getElementById("dom-models");
-  var models = D.models.filter(function (m) { return m.n > 0; });
-  function pinta(m) {
-    document.getElementById("dom-fig").textContent = pc(m.nota);
-    document.getElementById("dom-nom").textContent = m.nom;
-    var ds = D.dominis.map(function (d) { var b = m.per_domini[d.id]; return { d: d, v: b && b.n ? b.nota : null }; });
-    var amb = ds.filter(function (x) { return x.v !== null; });
-    var pitjor = amb.reduce(function (a, b) { return b.v < a.v ? b : a; }, amb[0]);
-    var ord = amb.slice().sort(function (a, b) { return b.v - a.v; });
-    if (ord.length < 2) ord = ord.concat(ord, ord);
-    var mostra = ord.length ? [ord[0].d.id, ord[1].d.id, pitjor.d.id] : [];
-    barres.querySelectorAll(".b").forEach(function (n) { n.remove(); });
-    ds.forEach(function (x) {
-      var b = document.createElement("div");
-      b.className = "b" + (x === pitjor ? " on" : "") + (mostra.indexOf(x.d.id) >= 0 ? " mostra" : "");
-      b.style.setProperty("--v", Math.max(x.v || 0, 0.02));
-      b.tabIndex = 0;
-      var t = x.v === null ? "sense dades" : pc(x.v);
-      b.setAttribute("aria-label", x.d.nom + ": " + t);
-      b.innerHTML = '<span class="val">' + t + '</span><span class="et">' + x.d.nom + "</span>";
-      barres.appendChild(b);
+  // tooltip de les barres
+  var tip = document.getElementById("tip");
+  function mou(e, el) {
+    tip.textContent = el.dataset.tip; tip.classList.add("on");
+    var r = el.getBoundingClientRect();
+    var x = e && e.clientX ? e.clientX : r.left + r.width / 2, y = e && e.clientY ? e.clientY : r.top;
+    tip.style.left = Math.min(window.innerWidth - tip.offsetWidth - 8, Math.max(8, x - tip.offsetWidth / 2)) + "px";
+    tip.style.top = Math.max(8, y - tip.offsetHeight - 14) + "px";
+  }
+  document.querySelectorAll(".b").forEach(function (b) {
+    b.addEventListener("mousemove", function (e) { mou(e, b); });
+    b.addEventListener("focus", function () { mou(null, b); });
+    ["mouseleave", "blur"].forEach(function (ev) { b.addEventListener(ev, function () { tip.classList.remove("on"); }); });
+  });
+
+  // dominis: tria un model
+  var comp = D.models.filter(function (m) { return m.comparable; });
+  var botons = document.getElementById("dom-models");
+  function tria(m) {
+    var pitjor = null;
+    document.querySelectorAll(".dt").forEach(function (t) {
+      var v = m.per_domini[t.dataset.d];
+      t.querySelector(".dv").textContent = v === null || v === undefined ? "–" : pc(v);
+      t.querySelector(".dnn").textContent = ((m.per_domini_n || {})[t.dataset.d] || 0) + " preguntes";
+      t.querySelectorAll(".mini i").forEach(function (i) { i.classList.toggle("sel", i.dataset.m === m.id); });
+      t.classList.remove("pitjor");
+      if (v !== null && v !== undefined && (!pitjor || v < pitjor.v)) pitjor = { t: t, v: v };
     });
+    if (pitjor) pitjor.t.classList.add("pitjor");
     botons.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.m === m.id ? "true" : "false"); });
   }
-  models.forEach(function (m) {
-    var b = document.createElement("button");
-    b.type = "button"; b.dataset.m = m.id; b.textContent = m.nom;
-    b.addEventListener("click", function () { pinta(m); });
-    botons.appendChild(b);
+  comp.forEach(function (m) {
+    var b = document.createElement("button"); b.type = "button"; b.dataset.m = m.id; b.textContent = m.nom;
+    b.addEventListener("click", function () { tria(m); }); botons.appendChild(b);
   });
-  if (models.length) pinta(models[0]);
+  if (comp.length) tria(comp[0]);
 
-  // prova una pregunta
+  // prova-ho
   var Q = D.mostra, filtre = null, idx = -1;
   var nomDe = {}; D.models.forEach(function (m) { nomDe[m.id] = m.nom; });
   var veredicte = function (p) {
-    if (p === null || p === undefined) return ['sense', "Sense puntuar"];
+    if (p === null || p === undefined) return ["sense", "Sense puntuar"];
     if (p >= 1) return ["ok", "Correcta"]; if (p > 0) return ["mig", "A mitges"]; return ["ko", "Incorrecta"];
   };
-  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
   function mostra() {
     var cand = Q.filter(function (q) { return !filtre || q.tipus === filtre; });
-    if (!cand.length) return;
+    if (!cand.length) { document.getElementById("p-q").textContent = "Encara no hi ha preguntes d'aquest tipus puntuades."; document.getElementById("p-op").innerHTML = ""; document.getElementById("p-resp").innerHTML = ""; return; }
     var q; do { q = cand[Math.floor(Math.random() * cand.length)]; } while (cand.length > 1 && Q.indexOf(q) === idx);
     idx = Q.indexOf(q);
     var noms = { test: "Test · quatre opcions", oberta: "Pregunta oberta", trampa: "Pregunta trampa" };
@@ -500,7 +535,7 @@ footer.peu {
     document.getElementById("p-resp").innerHTML = h;
   }
   document.getElementById("p-una").addEventListener("click", mostra);
-  document.querySelectorAll(".prova-ctl [data-t]").forEach(function (b) {
+  document.querySelectorAll(".prova [data-t]").forEach(function (b) {
     b.addEventListener("click", function () { filtre = b.dataset.t; mostra(); });
   });
   if (Q.length) mostra(); else document.getElementById("p-q").textContent = "Encara no hi ha respostes puntuades.";
