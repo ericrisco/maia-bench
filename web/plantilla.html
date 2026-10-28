@@ -1,10 +1,14 @@
 <!doctype html>
-<html lang="ca">
+<html lang="__LANG__">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>maia-bench · Qui sap Andorra?</title>
-<meta name="description" content="Benchmark públic que mesura quant saben d'Andorra els models de llenguatge: 926 preguntes verificades, classificació amb interval de confiança i resultats per domini.">
+__T:titol__
+<meta name="description" content="__T:meta__">
+<link rel="alternate" hreflang="en" href="index.html">
+<link rel="alternate" hreflang="ca" href="ca.html">
+<link rel="alternate" hreflang="es" href="es.html">
+<link rel="alternate" hreflang="x-default" href="index.html">
 <link rel="preconnect" href="https://api.fontshare.com">
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,700&display=swap" rel="stylesheet">
@@ -49,10 +53,13 @@ section { margin-top: 120px; }
 .taula { margin-top: 64px; }
 
 /* ── first screen ── */
-.hero { padding: var(--m); display: grid; grid-template-columns: repeat(12, 1fr); grid-template-rows: 170px 64px minmax(560px, calc(100svh - 170px - 64px - 2 * var(--m) - 2 * var(--gap))); gap: var(--gap); }
+.hero { padding: var(--m); display: grid; grid-template-columns: repeat(12, 1fr); grid-template-rows: 170px 64px minmax(max(560px, calc(100svh - 170px - 64px - 2 * var(--m) - 2 * var(--gap))), auto); gap: var(--gap); }
 .band { grid-column: 1 / -1; background: var(--surface); overflow: hidden; display: flex; align-items: center; justify-content: center; white-space: nowrap; }
 .band > span { font-size: clamp(120px, 13.6vw, 210px); font-weight: 700; letter-spacing: -0.04em; line-height: 1; transform: translateY(-4%); }
-.links { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap); }
+.links { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, 1fr) auto; gap: var(--gap); }
+.idiomes { display: flex; gap: var(--gap); }
+.idiomes a { min-width: 64px; text-align: center; }
+.idiomes a[aria-current] { background: var(--ink); color: var(--bg); }
 .links a { background: var(--surface); padding: 20px 22px; text-decoration: none; font-weight: 500; transition: background .2s var(--ease), color .2s var(--ease); }
 .links a:hover { background: var(--accent); color: var(--accent-ink); }
 .rail-l { grid-column: 1 / 3; display: grid; grid-template-rows: 1fr auto; gap: var(--gap); min-height: 0; }
@@ -64,7 +71,7 @@ section { margin-top: 120px; }
 .hchart { background: var(--surface); padding: 22px; display: flex; flex-direction: column; gap: 18px; min-height: 0; }
 .hchart p { color: var(--muted); font-size: var(--step-small); }
 .hchart .cimlbl { color: var(--ink); font-size: var(--step-body); font-weight: 500; }
-.hchart ol { --h: clamp(200px, 32vh, 340px); list-style: none; margin: auto 0 0; padding: 0; display: grid; grid-template-columns: repeat(8, 1fr); gap: var(--gap); align-items: end; }
+.hchart ol { --h: clamp(180px, 27vh, 300px); list-style: none; margin: auto 0 0; padding: 0; display: grid; grid-template-columns: repeat(8, 1fr); gap: var(--gap); align-items: end; }
 .hchart li { display: grid; grid-template-rows: auto var(--h) 2.6em; gap: 8px; min-width: 0; position: relative; }
 .hchart li b { font-weight: 500; font-size: var(--step-lead); white-space: nowrap; }
 .hb { background: var(--surface-2); position: relative; border-radius: 4px 4px 0 0; }
@@ -72,7 +79,7 @@ section { margin-top: 120px; }
 .hchart li:first-child .hb i { background: var(--accent); }
 .hn { font-weight: 500; font-size: var(--step-small); line-height: 1.2; overflow: hidden; }
 @keyframes creix { from { transform: scaleX(0); } }
-.statement { background: var(--bg); padding: 4px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: end; }
+.statement { background: var(--bg); padding: 4px 0 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: end; }
 .statement h1 { font-size: var(--step-head); }
 .statement p { font-size: var(--step-lead); max-width: 34ch; line-height: 1.25; }
 .rail-r { grid-column: 11 / 13; display: grid; grid-template-rows: repeat(5, 1fr); gap: var(--gap); min-height: 0; }
@@ -243,6 +250,8 @@ footer { margin-top: 120px; background: var(--surface); padding: 40px var(--m) 2
   .band { grid-column: 1 / -1; height: 110px; }
   .band > span { font-size: 15.5vw; }
   .links { grid-column: 1 / -1; grid-template-columns: 1fr 1fr; }
+  .idiomes { grid-column: 1 / -1; }
+  .idiomes a { flex: 1; }
   .centre { grid-column: 1 / -1; grid-row: 3; }
   .hchart ol { --h: 220px; gap: 4px; }
   .hchart li { grid-template-rows: var(--h); gap: 0; }
@@ -315,33 +324,34 @@ footer { margin-top: 120px; background: var(--surface); padding: 40px var(--m) 2
 
 <header class="hero" id="inici">
   <div class="band" aria-hidden="true"><span>maia-bench</span></div>
-  <nav class="links" aria-label="Seccions">
-    <a href="#classificacio">Classificació</a><a href="#dominis">Per dominis</a><a href="#prova">Prova-ho</a><a href="#metode">Mètode</a>
+  <nav class="links" __T:aria_seccions__>
+    __T:nav__
+    <span class="idiomes">__IDIOMES__</span>
   </nav>
   <div class="rail-l">
-    <figure><img class="foto" src="assets/pic-de-coma-pedrosa-from-coll-d.jpg" width="1920" height="560" alt="El Coma Pedrosa nevat, vist des del Coll d'Ordino."><figcaption>Coma Pedrosa, 2.942 m: el 100 %.</figcaption></figure>
+    <figure><img class="foto" src="assets/pic-de-coma-pedrosa-from-coll-d.jpg" width="1920" height="560" alt="__T:alt_coma__">__T:cap_coma__</figure>
     <ul class="fets tile">
-      <li><b class="num">__N_TOTAL__</b>preguntes</li>
-      <li><b>13</b>dominis</li>
-      <li><b class="num">__N_MODELS__</b>models avaluats</li>
+      <li><b class="num">__N_TOTAL____T:f_preguntes__
+      __T:f_dominis__
+      <li><b class="num">__N_MODELS____T:f_models__
     </ul>
   </div>
   <div class="centre">
     <div class="hchart" data-ui>
-      <p class="cimlbl">El fons de cada columna és el cim del Coma Pedrosa, 2.942 m: el 100 %. Els vuit primers, tests puntuats.</p>
+      <p class="cimlbl">__T:cimlbl__</p>
       <ol>__HERO_BARRES__</ol>
     </div>
     <div class="statement">
-      <h1>Qui sap Andorra?</h1>
-      <p>Un benchmark públic que mesura quant saben d'Andorra els models de llenguatge.</p>
+      __T:h1__
+      __T:sup__
     </div>
   </div>
   <div class="rail-r">
-    <div class="r1"><b class="num">__MILLOR_NOTA__</b>__MILLOR_NOM__, el primer</div>
-    <div class="r2"><b class="num">__MILLOR_M__</b>d'altitud, si el cim és el 100 %</div>
-    <div class="r3"><b class="num">__N_COMPARABLES__</b>models amb tots els tests</div>
-    <div class="r4"><b>IC 95 %</b>a cada nota</div>
-    <a class="accio" href="#classificacio">Veure la classificació</a>
+    <div class="r1"><b class="num">__MILLOR_NOTA__</b>__MILLOR_NOM____T:r1__
+    <div class="r2"><b class="num">__MILLOR_M____T:r2__
+    <div class="r3"><b class="num">__N_COMPARABLES____T:r3__
+    <div class="r4">__T:r4__
+    <a class="accio" __T:accio__
   </div>
 </header>
 
@@ -349,46 +359,46 @@ footer { margin-top: 120px; background: var(--surface); padding: 40px var(--m) 2
 <section class="cim" id="classificacio" aria-labelledby="t-rank">
   <div class="cim-cap">
     <p class="fig num" data-r>__MILLOR_NOTA__</p>
-    <div class="claim" data-r style="--i:1"><h2 id="t-rank">Qui en sap més</h2></div>
-    <p class="peu" data-r style="--i:2">Cada barra és un model. L'alçada és la part de les preguntes que encerta: el 100 % seria el cim del Coma Pedrosa, 2.942 m. La línia clara de dalt és l'interval de confiança del 95 %; si dues se solapen, no hi ha guanyador clar.<span>__AVIS__</span></p>
+    <div class="claim" data-r style="--i:1">__T:h_rank__</div>
+    <p class="peu" data-r style="--i:2">__T:rank_txt__<span>__AVIS__</span></p>
   </div>
   <div class="barres" id="barres" data-ui>
-    <span class="top">Cim · 2.942 m · 100 %</span>
+    __T:cim__
     __BARRES__
   </div>
 </section>
 
 <section class="taula" id="taula" aria-labelledby="t-taula">
-  <h2 id="t-taula" data-r>La taula, model a model</h2>
+  __T:h_taula__
   <div class="tauler" data-ui>
 __FILES__
   </div>
-  <p class="nota-peu">Dataset __VERSIO__ · jutge __JUTGE__ · generat el __DATA__.</p>
+  __T:nota_peu__
 </section>
 
-<div class="marquee" aria-hidden="true"><div><span>Qui sap Andorra? · __N_TOTAL__ preguntes · 13 dominis · 2.942 m ·&nbsp;</span><span>Qui sap Andorra? · __N_TOTAL__ preguntes · 13 dominis · 2.942 m ·&nbsp;</span></div></div>
+<div class="marquee" aria-hidden="true"><div>__T:marquee__</div></div>
 
 <section class="dominis" id="dominis" aria-labelledby="t-dom">
-  <div class="ctl" id="dom-models" role="group" aria-label="Tria un model"></div>
+  <div class="ctl" id="dom-models" role="group" __T:aria_tria__></div>
   <div class="dboard" id="dboard">
-    <div class="dcap"><h2 id="t-dom">On encerten i on fallen</h2><p>La xifra gran és la nota del model triat en cada domini. Les barretes són tots els models amb els tests complets, en l'ordre de la classificació; la groga és el model triat. Passa per sobre d'una barreta per veure quin model és. En fosc, on el model triat falla més.</p></div>
+    <div class="dcap">__T:h_dom____T:dom_txt__</div>
     __DOMINIS__
-    <figure class="dfoto"><img class="foto" src="assets/vallee-d-andorre-1032-andorre-la-vieille.jpg" width="1920" height="1302" loading="lazy" alt="Postal antiga de la Casa de la Vall, a Andorra la Vella."><figcaption>La Casa de la Vall, postal de principis del segle XX.</figcaption></figure>
+    <figure class="dfoto"><img class="foto" src="assets/vallee-d-andorre-1032-andorre-la-vieille.jpg" width="1920" height="1302" loading="lazy" alt="__T:alt_postal__">__T:cap_postal__</figure>
   </div>
 </section>
 
 <section class="prova" id="prova" aria-labelledby="t-prova">
   <div class="pboard">
     <div class="pq">
-      <h2 id="t-prova">Prova-ho</h2>
-      <p class="tipus" id="p-tipus">Pregunta</p>
-      <p class="q" id="p-q" aria-live="polite">Carregant una pregunta…</p>
+      __T:h_prova__
+      __T:p_tipus__
+      <p class="q" id="p-q" aria-live="polite">__T:carregant__</p>
       <ol id="p-op"></ol>
       <div class="btns">
-        <button class="gran" id="p-una" type="button">Una altra pregunta</button>
-        <button type="button" data-t="test">Test</button>
-        <button type="button" data-t="oberta">Oberta</button>
-        <button type="button" data-t="trampa">Trampa</button>
+        <button class="gran" id="p-una" __T:b_altra__
+        <button type="button" __T:b_test__
+        <button type="button" __T:b_oberta__
+        <button type="button" __T:b_trampa__
       </div>
     </div>
     <div class="presp" id="p-resp" data-ui aria-live="polite"></div>
@@ -396,49 +406,49 @@ __FILES__
 </section>
 
 <section class="metode" id="metode" aria-labelledby="t-metode">
-  <h2 id="t-metode" data-r>Com es puntua cada resposta</h2>
+  __T:h_metode__
   <div class="etapes" data-ui data-r style="--i:1">
-    <div class="e1" style="flex-grow:__N_TEST__"><b>__N_TEST__ tests</b><span>Correcció automàtica</span></div>
-    <div class="e2" style="flex-grow:__N_OBERTA__"><b>__N_OBERTA__ obertes</b><span>Jutge amb referència</span></div>
-    <div class="e3" style="flex-grow:__N_TRAMPA__"><b>__N_TRAMPA__ trampes</b><span>Jutge amb referència</span></div>
+    <div class="e1" style="flex-grow:__N_TEST__">__T:e1__</div>
+    <div class="e2" style="flex-grow:__N_OBERTA__">__T:e2__</div>
+    <div class="e3" style="flex-grow:__N_TRAMPA__">__T:e3__</div>
   </div>
   <div class="clausules" data-r style="--i:2">
-    <p style="flex-grow:__N_TEST__">Primer, quatre opcions i una de bona. El model diu una lletra i es corregeix sol.</p>
-    <p style="flex-grow:__N_OBERTA__">Després, respostes lliures. El jutge les compara amb la referència: 0, 1 o 2 punts.</p>
-    <p style="flex-grow:__N_TRAMPA__">Al final, una premissa falsa. Només puntua qui la rebutja.</p>
+    <p style="flex-grow:__N_TEST__">__T:c1__</p>
+    <p style="flex-grow:__N_OBERTA__">__T:c2__</p>
+    <p style="flex-grow:__N_TRAMPA__">__T:c3__</p>
   </div>
 </section>
 
 <section class="origen" id="origen" aria-labelledby="t-origen">
   <div class="oboard">
-    <div class="ocap"><h2 id="t-origen">D'on surten les preguntes</h2><p>Cada pregunta surt d'un article sobre Andorra, porta un context escrit amb paraules pròpies i s'ha verificat contra l'original.</p></div>
-    <figure class="ovid"><video class="foto" src="assets/cows-in-andorra.webm" poster="assets/cows-in-andorra-poster.jpg" width="1920" height="1080" muted loop playsinline autoplay preload="none" aria-label="Vaques pasturant a prop del Pas de la Casa."></video><figcaption class="cap-foto">Pastures a l'est del Pas de la Casa.</figcaption></figure>
-    <div class="ofet"><b class="num">__N_TOTAL__</b><span>preguntes</span></div>
-    <div class="ofet" style="background:#303030"><b>13</b><span>dominis</span></div>
-    <div class="ofet"><b class="num">__N_ARTICLES__</b><span>articles font</span></div>
-    <div class="ofet" style="background:#303030"><b class="num">__N_NOVISTES__</b><span>preguntes no vistes</span></div>
-    <figure class="ofoto"><img class="foto" src="assets/estany-de-les-abelletes-1.jpg" width="1600" height="1065" loading="lazy" alt="L'estany de les Abelletes, amb muntanyes al fons."><figcaption class="cap-foto">L'estany de les Abelletes.</figcaption></figure>
-    <div class="otext"><p>Els models generals saben dir la capital. El que mesurem és tot el que hi ha darrere: els pariatges, les parròquies, les festes, el contraban, la llengua, la gent.</p></div>
+    <div class="ocap">__T:h_origen____T:origen_txt__</div>
+    <figure class="ovid"><video class="foto" src="assets/cows-in-andorra.webm" poster="assets/cows-in-andorra-poster.jpg" width="1920" height="1080" muted loop playsinline autoplay preload="none" aria-label="__T:alt_vaques__"></video><figcaption class="cap-foto">__T:cap_vaques__</figure>
+    <div class="ofet"><b class="num">__N_TOTAL____T:o_preguntes__
+    <div class="ofet" style="background:#303030">__T:o_dominis__
+    <div class="ofet"><b class="num">__N_ARTICLES____T:o_articles__
+    <div class="ofet" style="background:#303030"><b class="num">__N_NOVISTES____T:o_novistes__
+    <figure class="ofoto"><img class="foto" src="assets/estany-de-les-abelletes-1.jpg" width="1600" height="1065" loading="lazy" alt="__T:alt_estany__"><figcaption class="cap-foto">__T:cap_estany__</figure>
+    <div class="otext">__T:otext__</div>
   </div>
 </section>
 
 <section class="faq" id="preguntes" aria-labelledby="t-faq">
   <div class="fgrid">
     <div class="esq"><div>
-      <h2 id="t-faq">Preguntes i respostes</h2>
-      <figure><img class="foto" src="assets/casa-de-la-vall-andorra-la-vieja.jpg" width="1600" height="1066" loading="lazy" alt="La Casa de la Vall amb la muntanya al darrere."><figcaption class="cap-foto">La Casa de la Vall avui.</figcaption></figure>
+      __T:h_faq__
+      <figure><img class="foto" src="assets/casa-de-la-vall-andorra-la-vieja.jpg" width="1600" height="1066" loading="lazy" alt="__T:alt_casa__"><figcaption class="cap-foto">__T:cap_casa__</figure>
     </div></div>
     <div class="dreta">
-      <details name="faq" open><summary>Com avaluo el meu model?<span class="mes"></span></summary><p>Clona el repositori i executa <code>python3 tools/executa.py --model ollama:el-teu-model</code>. Funciona amb Ollama, Ollama Cloud, OpenAI, Anthropic, OpenRouter i Vertex. Després, <code>python3 tools/puntua.py resultats/&lt;nom&gt;</code> i <code>python3 tools/web.py</code>.</p></details>
-      <details name="faq"><summary>Què veu el model?<span class="mes"></span></summary><p>Només la pregunta, i les quatre opcions si és un test. Mai el context ni la resposta de referència. Mateix prompt i temperatura 0 per a tothom.</p></details>
-      <details name="faq"><summary>Qui puntua les respostes obertes?<span class="mes"></span></summary><p>Un jutge fixat, __JUTGE__, amb la resposta de referència, els fets clau i una llista d'errors a penalitzar. Una resposta amb un d'aquests errors no pot treure la nota màxima.</p></details>
-      <details name="faq"><summary>El jutge és imparcial?<span class="mes"></span></summary><p>No del tot: un jutge només detecta els errors que coneix. Per això cada pregunta porta errors típics. Quan el model avaluat és el mateix jutge, la taula ho marca.</p></details>
-      <details name="faq"><summary>Què és una pregunta trampa?<span class="mes"></span></summary><p>Una pregunta que dona per bo un fet fals. Puntua el model que el rebutja i diu què és cert; el que s'inventa una explicació treu un zero.</p></details>
-      <details name="faq"><summary>Què són les preguntes no vistes?<span class="mes"></span></summary><p>Preguntes sobre __N_FITXES__ fitxes reservades que mai entren a l'entrenament de maia. Mesuren si un model s'inventa el que no sap.</p></details>
-      <details name="faq"><summary>Per què hi ha un interval?<span class="mes"></span></summary><p>Perquè les preguntes són una mostra. L'interval surt de remostrejar-les mil vegades. Dues notes amb intervals que se solapen no es poden ordenar.</p></details>
-      <details name="faq"><summary>Per què ara només compten els tests?<span class="mes"></span></summary><p>Les obertes i les trampes les puntua el jutge, i aquesta passada encara no s'ha fet. Quan es faci, la nota inclourà les 926 preguntes.</p></details>
-      <details name="faq"><summary>maia juga amb avantatge?<span class="mes"></span></summary><p>maia és el model del projecte que ha fet el benchmark. Per això el mètode, les preguntes i el codi són públics, i la taula el marca.</p></details>
-      <details name="faq"><summary>Mesura també com parla?<span class="mes"></span></summary><p>Encara no. La part de llengua (perplexitat sobre parla real, test dialectal i prova cega amb andorrans) està en construcció.</p></details>
+      <details name="faq" open>__T:q1__<span class="mes"></span></summary>__T:a1__</details>
+      <details name="faq">__T:q2__<span class="mes"></span></summary>__T:a2__</details>
+      <details name="faq">__T:q3__<span class="mes"></span></summary>__T:a3__</details>
+      <details name="faq">__T:q4__<span class="mes"></span></summary>__T:a4__</details>
+      <details name="faq">__T:q5__<span class="mes"></span></summary>__T:a5__</details>
+      <details name="faq">__T:q6__<span class="mes"></span></summary>__T:a6__</details>
+      <details name="faq">__T:q7__<span class="mes"></span></summary>__T:a7__</details>
+      <details name="faq">__T:q8__<span class="mes"></span></summary>__T:a8__</details>
+      <details name="faq">__T:q9__<span class="mes"></span></summary>__T:a9__</details>
+      <details name="faq">__T:q10__<span class="mes"></span></summary>__T:a10__</details>
     </div>
   </div>
 </section>
@@ -449,13 +459,13 @@ __FILES__
     <span style="height:78%;background:#f2f2f2">m</span><span style="height:64%;background:#b4b4b4">a</span><span style="height:92%;background:#fedd00">i</span><span style="height:70%;background:#f2f2f2">a</span><span style="height:60%;background:#8a8a8a">-</span><span style="height:100%;background:#1f4fd1;color:#fff">b</span><span style="height:74%;background:#f2f2f2">e</span><span style="height:66%;background:#b4b4b4">n</span><span style="height:84%;background:#d50032;color:#fff">c</span><span style="height:96%;background:#f2f2f2">h</span>
   </div>
   <div class="peu-cols">
-    <ul><li>Projecte</li><li><a href="https://github.com/ericrisco/maia">maia</a></li><li><a href="https://github.com/ericrisco/maia-bench">maia-bench</a></li></ul>
-    <ul><li>Seccions</li><li><a href="#classificacio">Classificació</a></li><li><a href="#dominis">Per dominis</a></li><li><a href="#prova">Prova-ho</a></li></ul>
-    <ul><li>Mètode</li><li><a href="#metode">Com es puntua</a></li><li><a href="#origen">D'on surten les preguntes</a></li><li><a href="#preguntes">Avalua el teu model</a></li></ul>
-    <ul><li>Versió</li><li>Dataset __VERSIO__</li><li>Jutge __JUTGE__</li><li>Generat el __DATA__</li></ul>
+    __T:peu_projecte__<li><a href="https://github.com/ericrisco/maia">maia</a></li><li><a href="https://github.com/ericrisco/maia-bench">maia-bench</a></li></ul>
+    __T:peu_seccions__
+    __T:peu_metode__
+    __T:peu_versio__
     <p class="credits">__CREDITS__</p>
   </div>
-  <div class="peu-fi"><span>maia-bench · un projecte de maia</span><a class="btn" href="#inici">Tornar a dalt</a></div>
+  <div class="peu-fi">__T:peu_fi__</div>
 </footer>
 
 <div class="tip" id="tip" role="tooltip"></div>
@@ -463,7 +473,8 @@ __FILES__
 <script>
 (function () {
   var D = JSON.parse(document.getElementById("dades").textContent);
-  var pc = function (v) { return (v * 100).toFixed(1).replace(".", ",") + "\u00a0%"; };
+  var T = D.t;
+  var pc = function (v) { return (v * 100).toFixed(1).replace(".", D.dec) + "\u00a0%"; };
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
 
   // entrades
@@ -496,7 +507,7 @@ __FILES__
     document.querySelectorAll(".dt").forEach(function (t) {
       var v = m.per_domini[t.dataset.d];
       t.querySelector(".dv").textContent = v === null || v === undefined ? "–" : pc(v);
-      t.querySelector(".dnn").textContent = ((m.per_domini_n || {})[t.dataset.d] || 0) + " preguntes";
+      t.querySelector(".dnn").textContent = ((m.per_domini_n || {})[t.dataset.d] || 0) + " " + T.preguntes;
       t.querySelectorAll(".mini i").forEach(function (i) { i.classList.toggle("sel", i.dataset.m === m.id); });
       t.classList.remove("pitjor");
       if (v !== null && v !== undefined && (!pitjor || v < pitjor.v)) pitjor = { t: t, v: v };
@@ -514,20 +525,19 @@ __FILES__
   var Q = D.mostra, filtre = null, idx = -1;
   var nomDe = {}; D.models.forEach(function (m) { nomDe[m.id] = m.nom; });
   var veredicte = function (p) {
-    if (p === null || p === undefined) return ["sense", "Sense puntuar"];
-    if (p >= 1) return ["ok", "Correcta"]; if (p > 0) return ["mig", "A mitges"]; return ["ko", "Incorrecta"];
+    if (p === null || p === undefined) return ["sense", T.sense];
+    if (p >= 1) return ["ok", T.ok]; if (p > 0) return ["mig", T.mig]; return ["ko", T.ko];
   };
   function mostra() {
     var cand = Q.filter(function (q) { return !filtre || q.tipus === filtre; });
-    if (!cand.length) { document.getElementById("p-q").textContent = "Encara no hi ha preguntes d'aquest tipus puntuades."; document.getElementById("p-op").innerHTML = ""; document.getElementById("p-resp").innerHTML = ""; return; }
+    if (!cand.length) { document.getElementById("p-q").textContent = T.cap_tipus; document.getElementById("p-op").innerHTML = ""; document.getElementById("p-resp").innerHTML = ""; return; }
     var q; do { q = cand[Math.floor(Math.random() * cand.length)]; } while (cand.length > 1 && Q.indexOf(q) === idx);
     idx = Q.indexOf(q);
-    var noms = { test: "Test · quatre opcions", oberta: "Pregunta oberta", trampa: "Pregunta trampa" };
-    document.getElementById("p-tipus").textContent = noms[q.tipus] + " · " + q.domini;
+    document.getElementById("p-tipus").textContent = T[q.tipus] + " · " + q.domini + (T.ca ? " · " + T.ca : "");
     document.getElementById("p-q").textContent = q.pregunta;
     var ol = document.getElementById("p-op"); ol.innerHTML = "";
     if (q.opcions) Object.keys(q.opcions).forEach(function (k) { var li = document.createElement("li"); li.textContent = k + ") " + q.opcions[k]; ol.appendChild(li); });
-    var h = '<div class="r ref"><header><span>Resposta de referència</span></header><p>' + esc(q.referencia) + "</p></div>";
+    var h = '<div class="r ref"><header><span>' + T.ref + '</span></header><p>' + esc(q.referencia) + "</p></div>";
     q.respostes.forEach(function (r) {
       var v = veredicte(r.punts);
       h += '<div class="r"><header><span>' + esc(nomDe[r.model] || r.model) + '</span><span class="v ' + v[0] + '">' + v[1] + "</span></header><p>" + esc(r.text) + "</p>" + (r.motiu ? '<p class="mot">' + esc(r.motiu) + "</p>" : "") + "</div>";
@@ -538,7 +548,7 @@ __FILES__
   document.querySelectorAll(".prova [data-t]").forEach(function (b) {
     b.addEventListener("click", function () { filtre = b.dataset.t; mostra(); });
   });
-  if (Q.length) mostra(); else document.getElementById("p-q").textContent = "Encara no hi ha respostes puntuades.";
+  if (Q.length) mostra(); else document.getElementById("p-q").textContent = T.cap;
 })();
 </script>
 </body>

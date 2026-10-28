@@ -23,7 +23,7 @@ jobs:
       url: ${{ steps.desplega.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - run: rm -f web/plantilla.html
+      - run: rm -f web/plantilla.html web/textos.json
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -1,0 +1,407 @@
+{
+ "titol": {
+  "en": "<title>maia-bench · Who knows Andorra?</title>",
+  "ca": "<title>maia-bench · Qui sap Andorra?</title>",
+  "es": "<title>maia-bench · ¿Quién sabe de Andorra?</title>"
+ },
+ "meta": {
+  "en": "A public benchmark measuring how much language models know about Andorra: 926 verified questions, a ranking with confidence intervals and results by domain.",
+  "ca": "Benchmark públic que mesura quant saben d'Andorra els models de llenguatge: 926 preguntes verificades, classificació amb interval de confiança i resultats per domini.",
+  "es": "Benchmark público que mide cuánto saben de Andorra los modelos de lenguaje: 926 preguntas verificadas, clasificación con intervalo de confianza y resultados por dominio."
+ },
+ "aria_seccions": {
+  "en": "aria-label=\"Sections\"",
+  "ca": "aria-label=\"Seccions\"",
+  "es": "aria-label=\"Secciones\""
+ },
+ "nav": {
+  "en": "<a href=\"#classificacio\">Ranking</a><a href=\"#dominis\">By domain</a><a href=\"#prova\">Try it</a><a href=\"#metode\">Method</a>",
+  "ca": "<a href=\"#classificacio\">Classificació</a><a href=\"#dominis\">Per dominis</a><a href=\"#prova\">Prova-ho</a><a href=\"#metode\">Mètode</a>",
+  "es": "<a href=\"#classificacio\">Clasificación</a><a href=\"#dominis\">Por dominios</a><a href=\"#prova\">Pruébalo</a><a href=\"#metode\">Método</a>"
+ },
+ "alt_coma": {
+  "en": "Snow-covered Coma Pedrosa, seen from the Coll d'Ordino.",
+  "ca": "El Coma Pedrosa nevat, vist des del Coll d'Ordino.",
+  "es": "El Coma Pedrosa nevado, visto desde el Coll d'Ordino."
+ },
+ "cap_coma": {
+  "en": "<figcaption>Coma Pedrosa, 2,942 m: the 100 %.</figcaption>",
+  "ca": "<figcaption>Coma Pedrosa, 2.942 m: el 100 %.</figcaption>",
+  "es": "<figcaption>Coma Pedrosa, 2.942 m: el 100 %.</figcaption>"
+ },
+ "f_preguntes": {
+  "en": "</b>questions</li>",
+  "ca": "</b>preguntes</li>",
+  "es": "</b>preguntas</li>"
+ },
+ "f_dominis": {
+  "en": "<li><b>13</b>domains</li>",
+  "ca": "<li><b>13</b>dominis</li>",
+  "es": "<li><b>13</b>dominios</li>"
+ },
+ "f_models": {
+  "en": "</b>models evaluated</li>",
+  "ca": "</b>models avaluats</li>",
+  "es": "</b>modelos evaluados</li>"
+ },
+ "cimlbl": {
+  "en": "The background of each column is the summit of Coma Pedrosa, 2,942 m: the 100 %. Top eight, multiple-choice scored.",
+  "ca": "El fons de cada columna és el cim del Coma Pedrosa, 2.942 m: el 100 %. Els vuit primers, tests puntuats.",
+  "es": "El fondo de cada columna es la cima del Coma Pedrosa, 2.942 m: el 100 %. Los ocho primeros, tests puntuados."
+ },
+ "h1": {
+  "en": "<h1>Who knows Andorra?</h1>",
+  "ca": "<h1>Qui sap Andorra?</h1>",
+  "es": "<h1>¿Quién sabe de Andorra?</h1>"
+ },
+ "sup": {
+  "en": "<p>A public benchmark that measures how much language models know about Andorra.</p>",
+  "ca": "<p>Un benchmark públic que mesura quant saben d'Andorra els models de llenguatge.</p>",
+  "es": "<p>Un benchmark público que mide cuánto saben de Andorra los modelos de lenguaje.</p>"
+ },
+ "r1": {
+  "en": ", first place</div>",
+  "ca": ", el primer</div>",
+  "es": ", el primero</div>"
+ },
+ "r2": {
+  "en": "</b>of altitude, if the summit is 100 %</div>",
+  "ca": "</b>d'altitud, si el cim és el 100 %</div>",
+  "es": "</b>de altitud, si la cima es el 100 %</div>"
+ },
+ "r3": {
+  "en": "</b>models with every test scored</div>",
+  "ca": "</b>models amb tots els tests</div>",
+  "es": "</b>modelos con todos los tests</div>"
+ },
+ "r4": {
+  "en": "<b>95 % CI</b>on every score</div>",
+  "ca": "<b>IC 95 %</b>a cada nota</div>",
+  "es": "<b>IC 95 %</b>en cada nota</div>"
+ },
+ "accio": {
+  "en": "href=\"#classificacio\">See the ranking</a>",
+  "ca": "href=\"#classificacio\">Veure la classificació</a>",
+  "es": "href=\"#classificacio\">Ver la clasificación</a>"
+ },
+ "h_rank": {
+  "en": "<h2 id=\"t-rank\">Who knows most</h2>",
+  "ca": "<h2 id=\"t-rank\">Qui en sap més</h2>",
+  "es": "<h2 id=\"t-rank\">Quién sabe más</h2>"
+ },
+ "rank_txt": {
+  "en": "Each bar is a model. Its height is the share of questions it gets right: 100 % would be the summit of Coma Pedrosa, 2,942 m. The light mark on top is the 95 % confidence interval; if two overlap, there is no clear winner.",
+  "ca": "Cada barra és un model. L'alçada és la part de les preguntes que encerta: el 100 % seria el cim del Coma Pedrosa, 2.942 m. La línia clara de dalt és l'interval de confiança del 95 %; si dues se solapen, no hi ha guanyador clar.",
+  "es": "Cada barra es un modelo. La altura es la parte de las preguntas que acierta: el 100 % sería la cima del Coma Pedrosa, 2.942 m. La marca clara de arriba es el intervalo de confianza del 95 %; si dos se solapan, no hay ganador claro."
+ },
+ "cim": {
+  "en": "<span class=\"top\">Summit · 2,942 m · 100 %</span>",
+  "ca": "<span class=\"top\">Cim · 2.942 m · 100 %</span>",
+  "es": "<span class=\"top\">Cima · 2.942 m · 100 %</span>"
+ },
+ "h_taula": {
+  "en": "<h2 id=\"t-taula\" data-r>The table, model by model</h2>",
+  "ca": "<h2 id=\"t-taula\" data-r>La taula, model a model</h2>",
+  "es": "<h2 id=\"t-taula\" data-r>La tabla, modelo a modelo</h2>"
+ },
+ "nota_peu": {
+  "en": "<p class=\"nota-peu\">Dataset __VERSIO__ · judge __JUTGE__ · generated on __DATA__.</p>",
+  "ca": "<p class=\"nota-peu\">Dataset __VERSIO__ · jutge __JUTGE__ · generat el __DATA__.</p>",
+  "es": "<p class=\"nota-peu\">Dataset __VERSIO__ · juez __JUTGE__ · generado el __DATA__.</p>"
+ },
+ "marquee": {
+  "en": "<span>Who knows Andorra? · __N_TOTAL__ questions · 13 domains · 2,942 m ·&nbsp;</span><span>Who knows Andorra? · __N_TOTAL__ questions · 13 domains · 2,942 m ·&nbsp;</span>",
+  "ca": "<span>Qui sap Andorra? · __N_TOTAL__ preguntes · 13 dominis · 2.942 m ·&nbsp;</span><span>Qui sap Andorra? · __N_TOTAL__ preguntes · 13 dominis · 2.942 m ·&nbsp;</span>",
+  "es": "<span>¿Quién sabe de Andorra? · __N_TOTAL__ preguntas · 13 dominios · 2.942 m ·&nbsp;</span><span>¿Quién sabe de Andorra? · __N_TOTAL__ preguntas · 13 dominios · 2.942 m ·&nbsp;</span>"
+ },
+ "aria_tria": {
+  "en": "aria-label=\"Pick a model\"",
+  "ca": "aria-label=\"Tria un model\"",
+  "es": "aria-label=\"Elige un modelo\""
+ },
+ "h_dom": {
+  "en": "<h2 id=\"t-dom\">Where they hit and miss</h2>",
+  "ca": "<h2 id=\"t-dom\">On encerten i on fallen</h2>",
+  "es": "<h2 id=\"t-dom\">Dónde aciertan y dónde fallan</h2>"
+ },
+ "dom_txt": {
+  "en": "<p>The big figure is the chosen model's score in each domain. The small bars are every model with all tests scored, in ranking order; the yellow one is the chosen model. Hover a bar to see which model it is. Darkened: where the chosen model fails most.</p>",
+  "ca": "<p>La xifra gran és la nota del model triat en cada domini. Les barretes són tots els models amb els tests complets, en l'ordre de la classificació; la groga és el model triat. Passa per sobre d'una barreta per veure quin model és. En fosc, on el model triat falla més.</p>",
+  "es": "<p>La cifra grande es la nota del modelo elegido en cada dominio. Las barritas son todos los modelos con los tests completos, en el orden de la clasificación; la amarilla es el modelo elegido. Pasa por encima de una barrita para ver qué modelo es. En oscuro, donde el modelo elegido falla más.</p>"
+ },
+ "alt_postal": {
+  "en": "Old postcard of the Casa de la Vall, in Andorra la Vella.",
+  "ca": "Postal antiga de la Casa de la Vall, a Andorra la Vella.",
+  "es": "Postal antigua de la Casa de la Vall, en Andorra la Vella."
+ },
+ "cap_postal": {
+  "en": "<figcaption>The Casa de la Vall, early 20th-century postcard.</figcaption>",
+  "ca": "<figcaption>La Casa de la Vall, postal de principis del segle XX.</figcaption>",
+  "es": "<figcaption>La Casa de la Vall, postal de principios del siglo XX.</figcaption>"
+ },
+ "h_prova": {
+  "en": "<h2 id=\"t-prova\">Try it</h2>",
+  "ca": "<h2 id=\"t-prova\">Prova-ho</h2>",
+  "es": "<h2 id=\"t-prova\">Pruébalo</h2>"
+ },
+ "p_tipus": {
+  "en": "<p class=\"tipus\" id=\"p-tipus\">Question</p>",
+  "ca": "<p class=\"tipus\" id=\"p-tipus\">Pregunta</p>",
+  "es": "<p class=\"tipus\" id=\"p-tipus\">Pregunta</p>"
+ },
+ "carregant": {
+  "en": "Loading a question…",
+  "ca": "Carregant una pregunta…",
+  "es": "Cargando una pregunta…"
+ },
+ "b_altra": {
+  "en": "type=\"button\">Another question</button>",
+  "ca": "type=\"button\">Una altra pregunta</button>",
+  "es": "type=\"button\">Otra pregunta</button>"
+ },
+ "b_test": {
+  "en": "data-t=\"test\">Multiple choice</button>",
+  "ca": "data-t=\"test\">Test</button>",
+  "es": "data-t=\"test\">Test</button>"
+ },
+ "b_oberta": {
+  "en": "data-t=\"oberta\">Open</button>",
+  "ca": "data-t=\"oberta\">Oberta</button>",
+  "es": "data-t=\"oberta\">Abierta</button>"
+ },
+ "b_trampa": {
+  "en": "data-t=\"trampa\">Trap</button>",
+  "ca": "data-t=\"trampa\">Trampa</button>",
+  "es": "data-t=\"trampa\">Trampa</button>"
+ },
+ "h_metode": {
+  "en": "<h2 id=\"t-metode\" data-r>How each answer is scored</h2>",
+  "ca": "<h2 id=\"t-metode\" data-r>Com es puntua cada resposta</h2>",
+  "es": "<h2 id=\"t-metode\" data-r>Cómo se puntúa cada respuesta</h2>"
+ },
+ "e1": {
+  "en": "<b>__N_TEST__ multiple choice</b><span>Scored automatically</span>",
+  "ca": "<b>__N_TEST__ tests</b><span>Correcció automàtica</span>",
+  "es": "<b>__N_TEST__ tests</b><span>Corrección automática</span>"
+ },
+ "e2": {
+  "en": "<b>__N_OBERTA__ open</b><span>Judge with a reference</span>",
+  "ca": "<b>__N_OBERTA__ obertes</b><span>Jutge amb referència</span>",
+  "es": "<b>__N_OBERTA__ abiertas</b><span>Juez con referencia</span>"
+ },
+ "e3": {
+  "en": "<b>__N_TRAMPA__ traps</b><span>Judge with a reference</span>",
+  "ca": "<b>__N_TRAMPA__ trampes</b><span>Jutge amb referència</span>",
+  "es": "<b>__N_TRAMPA__ trampas</b><span>Juez con referencia</span>"
+ },
+ "c1": {
+  "en": "First, four options and one right answer. The model gives a letter and it is marked automatically.",
+  "ca": "Primer, quatre opcions i una de bona. El model diu una lletra i es corregeix sol.",
+  "es": "Primero, cuatro opciones y una buena. El modelo dice una letra y se corrige sola."
+ },
+ "c2": {
+  "en": "Then, free answers. The judge compares them with the reference: 0, 1 or 2 points.",
+  "ca": "Després, respostes lliures. El jutge les compara amb la referència: 0, 1 o 2 punts.",
+  "es": "Después, respuestas libres. El juez las compara con la referencia: 0, 1 o 2 puntos."
+ },
+ "c3": {
+  "en": "Finally, a false premise. Only a model that rejects it scores.",
+  "ca": "Al final, una premissa falsa. Només puntua qui la rebutja.",
+  "es": "Al final, una premisa falsa. Solo puntúa quien la rechaza."
+ },
+ "h_origen": {
+  "en": "<h2 id=\"t-origen\">Where questions come from</h2>",
+  "ca": "<h2 id=\"t-origen\">D'on surten les preguntes</h2>",
+  "es": "<h2 id=\"t-origen\">De dónde salen las preguntas</h2>"
+ },
+ "origen_txt": {
+  "en": "<p>Each question comes from an article about Andorra, carries a context written in our own words and was checked against the original. The questions are in Catalan, Andorra's official language.</p>",
+  "ca": "<p>Cada pregunta surt d'un article sobre Andorra, porta un context escrit amb paraules pròpies i s'ha verificat contra l'original.</p>",
+  "es": "<p>Cada pregunta sale de un artículo sobre Andorra, lleva un contexto escrito con palabras propias y se ha verificado contra el original. Las preguntas están en catalán, la lengua oficial de Andorra.</p>"
+ },
+ "alt_vaques": {
+  "en": "Cows grazing near Pas de la Casa.",
+  "ca": "Vaques pasturant a prop del Pas de la Casa.",
+  "es": "Vacas pastando cerca del Pas de la Casa."
+ },
+ "cap_vaques": {
+  "en": "Pastures east of Pas de la Casa.</figcaption>",
+  "ca": "Pastures a l'est del Pas de la Casa.</figcaption>",
+  "es": "Pastos al este del Pas de la Casa.</figcaption>"
+ },
+ "o_preguntes": {
+  "en": "</b><span>questions</span></div>",
+  "ca": "</b><span>preguntes</span></div>",
+  "es": "</b><span>preguntas</span></div>"
+ },
+ "o_dominis": {
+  "en": "<b>13</b><span>domains</span></div>",
+  "ca": "<b>13</b><span>dominis</span></div>",
+  "es": "<b>13</b><span>dominios</span></div>"
+ },
+ "o_articles": {
+  "en": "</b><span>source articles</span></div>",
+  "ca": "</b><span>articles font</span></div>",
+  "es": "</b><span>artículos fuente</span></div>"
+ },
+ "o_novistes": {
+  "en": "</b><span>unseen questions</span></div>",
+  "ca": "</b><span>preguntes no vistes</span></div>",
+  "es": "</b><span>preguntas no vistas</span></div>"
+ },
+ "alt_estany": {
+  "en": "The Abelletes lake, with mountains behind.",
+  "ca": "L'estany de les Abelletes, amb muntanyes al fons.",
+  "es": "El lago de les Abelletes, con montañas al fondo."
+ },
+ "cap_estany": {
+  "en": "The Abelletes lake.</figcaption>",
+  "ca": "L'estany de les Abelletes.</figcaption>",
+  "es": "El lago de les Abelletes.</figcaption>"
+ },
+ "otext": {
+  "en": "<p>General models can name the capital. What we measure is everything behind it: the pareatges, the parishes, the festivals, the smuggling, the language, the people.</p>",
+  "ca": "<p>Els models generals saben dir la capital. El que mesurem és tot el que hi ha darrere: els pariatges, les parròquies, les festes, el contraban, la llengua, la gent.</p>",
+  "es": "<p>Los modelos generales saben decir la capital. Lo que medimos es todo lo que hay detrás: los pariatges, las parroquias, las fiestas, el contrabando, la lengua, la gente.</p>"
+ },
+ "h_faq": {
+  "en": "<h2 id=\"t-faq\">Questions and answers</h2>",
+  "ca": "<h2 id=\"t-faq\">Preguntes i respostes</h2>",
+  "es": "<h2 id=\"t-faq\">Preguntas y respuestas</h2>"
+ },
+ "alt_casa": {
+  "en": "The Casa de la Vall with the mountain behind.",
+  "ca": "La Casa de la Vall amb la muntanya al darrere.",
+  "es": "La Casa de la Vall con la montaña detrás."
+ },
+ "cap_casa": {
+  "en": "The Casa de la Vall today.</figcaption>",
+  "ca": "La Casa de la Vall avui.</figcaption>",
+  "es": "La Casa de la Vall hoy.</figcaption>"
+ },
+ "q1": {
+  "en": "<summary>How do I evaluate my model?",
+  "ca": "<summary>Com avaluo el meu model?",
+  "es": "<summary>¿Cómo evalúo mi modelo?"
+ },
+ "a1": {
+  "en": "<p>Clone the repository and run <code>python3 tools/executa.py --model ollama:your-model</code>. It works with Ollama, Ollama Cloud, OpenAI, Anthropic, OpenRouter and Vertex. Then run <code>python3 tools/puntua.py resultats/&lt;name&gt;</code> and <code>python3 tools/web.py</code>.</p>",
+  "ca": "<p>Clona el repositori i executa <code>python3 tools/executa.py --model ollama:el-teu-model</code>. Funciona amb Ollama, Ollama Cloud, OpenAI, Anthropic, OpenRouter i Vertex. Després, <code>python3 tools/puntua.py resultats/&lt;nom&gt;</code> i <code>python3 tools/web.py</code>.</p>",
+  "es": "<p>Clona el repositorio y ejecuta <code>python3 tools/executa.py --model ollama:tu-modelo</code>. Funciona con Ollama, Ollama Cloud, OpenAI, Anthropic, OpenRouter y Vertex. Después, <code>python3 tools/puntua.py resultats/&lt;nombre&gt;</code> y <code>python3 tools/web.py</code>.</p>"
+ },
+ "q2": {
+  "en": "<summary>What does the model see?",
+  "ca": "<summary>Què veu el model?",
+  "es": "<summary>¿Qué ve el modelo?"
+ },
+ "a2": {
+  "en": "<p>Only the question, plus the four options if it is multiple choice. Never the context or the reference answer. The same prompt and temperature 0 for everyone.</p>",
+  "ca": "<p>Només la pregunta, i les quatre opcions si és un test. Mai el context ni la resposta de referència. Mateix prompt i temperatura 0 per a tothom.</p>",
+  "es": "<p>Solo la pregunta, y las cuatro opciones si es un test. Nunca el contexto ni la respuesta de referencia. El mismo prompt y temperatura 0 para todos.</p>"
+ },
+ "q3": {
+  "en": "<summary>Who scores the open answers?",
+  "ca": "<summary>Qui puntua les respostes obertes?",
+  "es": "<summary>¿Quién puntúa las respuestas abiertas?"
+ },
+ "a3": {
+  "en": "<p>A fixed judge, __JUTGE__, with the reference answer, the key facts and a list of errors to penalise. An answer containing one of those errors cannot get full marks.</p>",
+  "ca": "<p>Un jutge fixat, __JUTGE__, amb la resposta de referència, els fets clau i una llista d'errors a penalitzar. Una resposta amb un d'aquests errors no pot treure la nota màxima.</p>",
+  "es": "<p>Un juez fijo, __JUTGE__, con la respuesta de referencia, los hechos clave y una lista de errores a penalizar. Una respuesta con uno de esos errores no puede sacar la nota máxima.</p>"
+ },
+ "q4": {
+  "en": "<summary>Is the judge impartial?",
+  "ca": "<summary>El jutge és imparcial?",
+  "es": "<summary>¿El juez es imparcial?"
+ },
+ "a4": {
+  "en": "<p>Not entirely: a judge only catches the errors it knows. That is why each question carries its typical errors. When the model being evaluated is the judge itself, the table says so.</p>",
+  "ca": "<p>No del tot: un jutge només detecta els errors que coneix. Per això cada pregunta porta errors típics. Quan el model avaluat és el mateix jutge, la taula ho marca.</p>",
+  "es": "<p>No del todo: un juez solo detecta los errores que conoce. Por eso cada pregunta lleva errores típicos. Cuando el modelo evaluado es el mismo juez, la tabla lo marca.</p>"
+ },
+ "q5": {
+  "en": "<summary>What is a trap question?",
+  "ca": "<summary>Què és una pregunta trampa?",
+  "es": "<summary>¿Qué es una pregunta trampa?"
+ },
+ "a5": {
+  "en": "<p>A question that takes a false fact for granted. A model scores if it rejects it and says what is true; one that makes up an explanation gets zero.</p>",
+  "ca": "<p>Una pregunta que dona per bo un fet fals. Puntua el model que el rebutja i diu què és cert; el que s'inventa una explicació treu un zero.</p>",
+  "es": "<p>Una pregunta que da por bueno un hecho falso. Puntúa el modelo que lo rechaza y dice qué es cierto; el que se inventa una explicación saca un cero.</p>"
+ },
+ "q6": {
+  "en": "<summary>What are unseen questions?",
+  "ca": "<summary>Què són les preguntes no vistes?",
+  "es": "<summary>¿Qué son las preguntas no vistas?"
+ },
+ "a6": {
+  "en": "<p>Questions about __N_FITXES__ reserved records that never enter maia's training. They measure whether a model makes up what it does not know.</p>",
+  "ca": "<p>Preguntes sobre __N_FITXES__ fitxes reservades que mai entren a l'entrenament de maia. Mesuren si un model s'inventa el que no sap.</p>",
+  "es": "<p>Preguntas sobre __N_FITXES__ fichas reservadas que nunca entran en el entrenamiento de maia. Miden si un modelo se inventa lo que no sabe.</p>"
+ },
+ "q7": {
+  "en": "<summary>Why is there an interval?",
+  "ca": "<summary>Per què hi ha un interval?",
+  "es": "<summary>¿Por qué hay un intervalo?"
+ },
+ "a7": {
+  "en": "<p>Because the questions are a sample. The interval comes from resampling them a thousand times. Two scores whose intervals overlap cannot be ranked.</p>",
+  "ca": "<p>Perquè les preguntes són una mostra. L'interval surt de remostrejar-les mil vegades. Dues notes amb intervals que se solapen no es poden ordenar.</p>",
+  "es": "<p>Porque las preguntas son una muestra. El intervalo sale de remuestrearlas mil veces. Dos notas con intervalos que se solapan no se pueden ordenar.</p>"
+ },
+ "q8": {
+  "en": "<summary>Why do only multiple-choice questions count for now?",
+  "ca": "<summary>Per què ara només compten els tests?",
+  "es": "<summary>¿Por qué ahora solo cuentan los tests?"
+ },
+ "a8": {
+  "en": "<p>Open and trap questions are scored by the judge, and that pass has not run yet. Once it does, the score will cover all 926 questions.</p>",
+  "ca": "<p>Les obertes i les trampes les puntua el jutge, i aquesta passada encara no s'ha fet. Quan es faci, la nota inclourà les 926 preguntes.</p>",
+  "es": "<p>Las abiertas y las trampas las puntúa el juez, y esa pasada aún no se ha hecho. Cuando se haga, la nota incluirá las 926 preguntas.</p>"
+ },
+ "q9": {
+  "en": "<summary>Does maia have an advantage?",
+  "ca": "<summary>maia juga amb avantatge?",
+  "es": "<summary>¿maia juega con ventaja?"
+ },
+ "a9": {
+  "en": "<p>maia is the model of the project that built the benchmark. That is why the method, the questions and the code are public, and the table flags it.</p>",
+  "ca": "<p>maia és el model del projecte que ha fet el benchmark. Per això el mètode, les preguntes i el codi són públics, i la taula el marca.</p>",
+  "es": "<p>maia es el modelo del proyecto que ha hecho el benchmark. Por eso el método, las preguntas y el código son públicos, y la tabla lo marca.</p>"
+ },
+ "q10": {
+  "en": "<summary>Does it also measure how a model speaks?",
+  "ca": "<summary>Mesura també com parla?",
+  "es": "<summary>¿Mide también cómo habla?"
+ },
+ "a10": {
+  "en": "<p>Not yet. The language part (perplexity on real speech, a dialect test and a blind test with Andorrans) is under construction.</p>",
+  "ca": "<p>Encara no. La part de llengua (perplexitat sobre parla real, test dialectal i prova cega amb andorrans) està en construcció.</p>",
+  "es": "<p>Aún no. La parte de lengua (perplejidad sobre habla real, test dialectal y prueba ciega con andorranos) está en construcción.</p>"
+ },
+ "peu_projecte": {
+  "en": "<ul><li>Project</li>",
+  "ca": "<ul><li>Projecte</li>",
+  "es": "<ul><li>Proyecto</li>"
+ },
+ "peu_seccions": {
+  "en": "<ul><li>Sections</li><li><a href=\"#classificacio\">Ranking</a></li><li><a href=\"#dominis\">By domain</a></li><li><a href=\"#prova\">Try it</a></li></ul>",
+  "ca": "<ul><li>Seccions</li><li><a href=\"#classificacio\">Classificació</a></li><li><a href=\"#dominis\">Per dominis</a></li><li><a href=\"#prova\">Prova-ho</a></li></ul>",
+  "es": "<ul><li>Secciones</li><li><a href=\"#classificacio\">Clasificación</a></li><li><a href=\"#dominis\">Por dominios</a></li><li><a href=\"#prova\">Pruébalo</a></li></ul>"
+ },
+ "peu_metode": {
+  "en": "<ul><li>Method</li><li><a href=\"#metode\">How it is scored</a></li><li><a href=\"#origen\">Where questions come from</a></li><li><a href=\"#preguntes\">Evaluate your model</a></li></ul>",
+  "ca": "<ul><li>Mètode</li><li><a href=\"#metode\">Com es puntua</a></li><li><a href=\"#origen\">D'on surten les preguntes</a></li><li><a href=\"#preguntes\">Avalua el teu model</a></li></ul>",
+  "es": "<ul><li>Método</li><li><a href=\"#metode\">Cómo se puntúa</a></li><li><a href=\"#origen\">De dónde salen las preguntas</a></li><li><a href=\"#preguntes\">Evalúa tu modelo</a></li></ul>"
+ },
+ "peu_versio": {
+  "en": "<ul><li>Version</li><li>Dataset __VERSIO__</li><li>Judge __JUTGE__</li><li>Generated on __DATA__</li></ul>",
+  "ca": "<ul><li>Versió</li><li>Dataset __VERSIO__</li><li>Jutge __JUTGE__</li><li>Generat el __DATA__</li></ul>",
+  "es": "<ul><li>Versión</li><li>Dataset __VERSIO__</li><li>Juez __JUTGE__</li><li>Generado el __DATA__</li></ul>"
+ },
+ "peu_fi": {
+  "en": "<span>maia-bench · a maia project</span><a class=\"btn\" href=\"#inici\">Back to top</a>",
+  "ca": "<span>maia-bench · un projecte de maia</span><a class=\"btn\" href=\"#inici\">Tornar a dalt</a>",
+  "es": "<span>maia-bench · un proyecto de maia</span><a class=\"btn\" href=\"#inici\">Volver arriba</a>"
+ }
+}
