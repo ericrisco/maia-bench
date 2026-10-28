@@ -62,7 +62,7 @@ def _post(url, cos, capcaleres, timeout):
         return json.loads(r.read())
 
 
-def _openai_compatible(prov, nom, missatges, temperatura, max_tokens):
+def _openai_compatible(prov, nom, missatges, temperatura, max_tokens, raonament=None):
     if prov == "ollama":
         base = os.environ.get("OLLAMA_HOST", "http://localhost:11434").rstrip("/")
         url, cap = f"{base}/v1/chat/completions", {}
@@ -86,6 +86,8 @@ def _openai_compatible(prov, nom, missatges, temperatura, max_tokens):
     cos = {"model": nom, "messages": missatges, "temperature": temperatura}
     # Els models de raonament d'OpenAI no accepten max_tokens; la resta sí.
     cos["max_completion_tokens" if prov == "openai" else "max_tokens"] = max_tokens
+    if raonament:  # reasoning_effort: low|medium|high (models de raonament)
+        cos["reasoning_effort"] = raonament
     try:
         d = _post(url, cos, cap, 600)
     except urllib.error.HTTPError as e:
@@ -131,7 +133,7 @@ def _vertex_claude(nom, missatges, max_tokens):
     return {"text": text, "tokens_entrada": u.get("input_tokens", 0), "tokens_sortida": u.get("output_tokens", 0)}
 
 
-def crida(model, missatges, temperatura=0, max_tokens=4000):
+def crida(model, missatges, temperatura=0, max_tokens=4000, raonament=None):
     prov, nom = separa(model)
     for intent in range(REINTENTS):
         try:
@@ -139,7 +141,7 @@ def crida(model, missatges, temperatura=0, max_tokens=4000):
                 return _anthropic(nom, missatges, temperatura, max_tokens)
             if prov == "vertexclaude":
                 return _vertex_claude(nom, missatges, max_tokens)
-            return _openai_compatible(prov, nom, missatges, temperatura, max_tokens)
+            return _openai_compatible(prov, nom, missatges, temperatura, max_tokens, raonament)
         except urllib.error.HTTPError as e:
             if e.code == 401 and prov in ("vertex", "vertexclaude"):
                 _tok["v"] = None  # token caducat: se'n demana un de nou

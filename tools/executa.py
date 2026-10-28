@@ -70,6 +70,8 @@ def main():
     ap.add_argument("--max-tokens", type=int, default=4000)
     ap.add_argument("--refes-buides", action="store_true",
                     help="torna a fer les respostes buides (models que gasten tots els tokens raonant)")
+    ap.add_argument("--raonament", choices=["low", "medium", "high"],
+                    help="esforç de raonament (reasoning_effort); amb --refes-buides, només per a les buides")
     a = ap.parse_args()
     separa(a.model)
 
@@ -89,8 +91,10 @@ def main():
                  "dataset": empremta_dataset(preguntes()), "preguntes_dataset": total, "commit": git})
     if a.refes_buides:
         meta["max_tokens_buides"] = a.max_tokens
+        meta["raonament_buides"] = a.raonament
     else:
         meta["max_tokens"] = a.max_tokens
+        meta["raonament"] = a.raonament
     meta.setdefault("inici", datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"))
     json.dump(meta, open(meta_path, "w"), ensure_ascii=False, indent=1)
 
@@ -109,9 +113,12 @@ def main():
     def una(r):
         t0 = time.time()
         try:
-            res = crida(a.model, missatges(r), temperatura=0, max_tokens=a.max_tokens)
-            return {"id": r["id"], "resposta": res["text"].strip(), "tokens_entrada": res["tokens_entrada"],
+            res = crida(a.model, missatges(r), temperatura=0, max_tokens=a.max_tokens, raonament=a.raonament)
+            fila = {"id": r["id"], "resposta": res["text"].strip(), "tokens_entrada": res["tokens_entrada"],
                     "tokens_sortida": res["tokens_sortida"], "segons": round(time.time() - t0, 2)}
+            if a.raonament:
+                fila["raonament"] = a.raonament
+            return fila
         except ErrorModel as e:
             return {"id": r["id"], "error": str(e)}
 
