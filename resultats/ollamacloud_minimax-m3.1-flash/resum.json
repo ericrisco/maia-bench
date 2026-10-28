@@ -1,0 +1,71 @@
+{
+ "model": "ollamacloud:minimax-m3.1-flash",
+ "origen": "",
+ "dataset": "ec314f7d6239",
+ "preguntes_dataset": 926,
+ "respostes": 142,
+ "puntuades": 95,
+ "complet": false,
+ "nomes_tests": true,
+ "jutge": "vertex:google/gemini-3.8-flash",
+ "versio_jutge": "j1",
+ "prompt": "p1",
+ "temperatura": 0,
+ "mateix_model_que_jutge": false,
+ "data": "2026-10-28",
+ "coneixement": {
+  "n": 95,
+  "nota": 0.4737,
+  "ic95": [
+   0.3684,
+   0.5789
+  ]
+ },
+ "per_tipus": {
+  "test": {
+   "n": 95,
+   "nota": 0.4737,
+   "ic95": [
+    0.3684,
+    0.5789
+   ]
+  }
+ },
+ "vistes": {
+  "n": 95,
+  "nota": 0.4737,
+  "ic95": [
+   0.3684,
+   0.5789
+  ]
+ },
+ "no_vistes": {
+  "n": 0
+ },
+ "per_domini": {
+  "costums": {
+   "n": 29,
+   "nota": 0.4483,
+   "ic95": [
+    0.2759,
+    0.6207
+   ]
+  },
+  "cultura": {
+   "n": 49,
+   "nota": 0.551,
+   "ic95": [
+    0.4082,
+    0.6735
+   ]
+  },
+  "economia": {
+   "n": 17,
+   "nota": 0.2941,
+   "ic95": [
+    0.1176,
+    0.5294
+   ]
+  }
+ }
+}

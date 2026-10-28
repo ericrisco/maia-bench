@@ -3,6 +3,7 @@
 Un model s'escriu com `proveidor:model`:
 
     ollama:gemma4:e4b                  Ollama local (OLLAMA_HOST, per defecte http://localhost:11434)
+    ollamacloud:gpt-oss:120b           Ollama Cloud (OLLAMA_API_KEY)
     openai:gpt-5                       OpenAI (OPENAI_API_KEY)
     anthropic:claude-sonnet-5-5        Anthropic (ANTHROPIC_API_KEY)
     openrouter:meta-llama/llama-4      OpenRouter (OPENROUTER_API_KEY)
@@ -18,7 +19,7 @@ import time
 import urllib.error
 import urllib.request
 
-PROVEIDORS = ("ollama", "openai", "anthropic", "openrouter", "vertex")
+PROVEIDORS = ("ollama", "ollamacloud", "openai", "anthropic", "openrouter", "vertex")
 REINTENTS = 8
 
 _tok = {"v": None, "t": 0}
@@ -64,6 +65,9 @@ def _openai_compatible(prov, nom, missatges, temperatura, max_tokens):
     if prov == "ollama":
         base = os.environ.get("OLLAMA_HOST", "http://localhost:11434").rstrip("/")
         url, cap = f"{base}/v1/chat/completions", {}
+    elif prov == "ollamacloud":
+        url = "https://ollama.com/v1/chat/completions"
+        cap = {"Authorization": f"Bearer {_clau('OLLAMA_API_KEY')}"}
     elif prov == "openai":
         url, cap = "https://api.openai.com/v1/chat/completions", {"Authorization": f"Bearer {_clau('OPENAI_API_KEY')}"}
     elif prov == "openrouter":

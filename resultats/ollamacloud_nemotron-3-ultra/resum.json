@@ -1,0 +1,79 @@
+{
+ "model": "ollamacloud:nemotron-3-ultra",
+ "origen": "",
+ "dataset": "ec314f7d6239",
+ "preguntes_dataset": 926,
+ "respostes": 262,
+ "puntuades": 175,
+ "complet": false,
+ "nomes_tests": true,
+ "jutge": "vertex:google/gemini-3.8-flash",
+ "versio_jutge": "j1",
+ "prompt": "p1",
+ "temperatura": 0,
+ "mateix_model_que_jutge": false,
+ "data": "2026-10-28",
+ "coneixement": {
+  "n": 175,
+  "nota": 0.6743,
+  "ic95": [
+   0.6057,
+   0.7429
+  ]
+ },
+ "per_tipus": {
+  "test": {
+   "n": 175,
+   "nota": 0.6743,
+   "ic95": [
+    0.6057,
+    0.7429
+   ]
+  }
+ },
+ "vistes": {
+  "n": 175,
+  "nota": 0.6743,
+  "ic95": [
+   0.6057,
+   0.7429
+  ]
+ },
+ "no_vistes": {
+  "n": 0
+ },
+ "per_domini": {
+  "costums": {
+   "n": 34,
+   "nota": 0.5882,
+   "ic95": [
+    0.4118,
+    0.7647
+   ]
+  },
+  "cultura": {
+   "n": 48,
+   "nota": 0.7292,
+   "ic95": [
+    0.6042,
+    0.8542
+   ]
+  },
+  "economia": {
+   "n": 50,
+   "nota": 0.66,
+   "ic95": [
+    0.52,
+    0.78
+   ]
+  },
+  "esports": {
+   "n": 43,
+   "nota": 0.6977,
+   "ic95": [
+    0.5581,
+    0.8372
+   ]
+  }
+ }
+}
