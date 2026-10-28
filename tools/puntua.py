@@ -95,6 +95,7 @@ def main():
     ap.add_argument("carpeta")
     ap.add_argument("--jutge", default=JUTGE)
     ap.add_argument("--fils", type=int, default=2)
+    ap.add_argument("--sense-jutge", action="store_true", help="només els tests; obertes i trampes queden pendents")
     a = ap.parse_args()
 
     dataset = {p["id"]: p for p in preguntes()}
@@ -120,7 +121,7 @@ def main():
         if p["tipus"] == "test":
             l = lletra(resp)
             noves.append({"id": i, "tipus": "test", "lletra": l, "punts": 1.0 if l == p["correcta"] else 0.0})
-        else:
+        elif not a.sense_jutge:
             per_jutjar.append(i)
     print(f"tests nous: {len(noves)} · per al jutge: {len(per_jutjar)} · ja puntuades: {len(fetes)}", file=sys.stderr)
 
@@ -162,6 +163,7 @@ def main():
         "model": meta["model"], "origen": meta.get("origen", ""), "dataset": meta.get("dataset"),
         "preguntes_dataset": len(dataset), "respostes": len(respostes), "puntuades": len(punts),
         "complet": len(punts) == len(dataset),
+        "nomes_tests": not any(dataset[i]["tipus"] != "test" for i in punts),
         "jutge": a.jutge, "versio_jutge": VERSIO_JUTGE, "prompt": meta.get("prompt"), "temperatura": 0,
         "mateix_model_que_jutge": meta["model"] == a.jutge,
         "data": datetime.date.today().isoformat(),

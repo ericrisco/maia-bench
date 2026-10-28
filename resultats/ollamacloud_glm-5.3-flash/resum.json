@@ -1,0 +1,95 @@
+{
+ "model": "ollamacloud:glm-5.3-flash",
+ "origen": "",
+ "dataset": "ec314f7d6239",
+ "preguntes_dataset": 926,
+ "respostes": 420,
+ "puntuades": 280,
+ "complet": false,
+ "nomes_tests": true,
+ "jutge": "vertex:google/gemini-3.8-flash",
+ "versio_jutge": "j1",
+ "prompt": "p1",
+ "temperatura": 0,
+ "mateix_model_que_jutge": false,
+ "data": "2026-10-28",
+ "coneixement": {
+  "n": 280,
+  "nota": 0.6643,
+  "ic95": [
+   0.6107,
+   0.7214
+  ]
+ },
+ "per_tipus": {
+  "test": {
+   "n": 280,
+   "nota": 0.6643,
+   "ic95": [
+    0.6107,
+    0.7214
+   ]
+  }
+ },
+ "vistes": {
+  "n": 280,
+  "nota": 0.6643,
+  "ic95": [
+   0.6107,
+   0.7214
+  ]
+ },
+ "no_vistes": {
+  "n": 0
+ },
+ "per_domini": {
+  "economia": {
+   "n": 35,
+   "nota": 0.5143,
+   "ic95": [
+    0.3429,
+    0.6857
+   ]
+  },
+  "esports": {
+   "n": 44,
+   "nota": 0.5909,
+   "ic95": [
+    0.4545,
+    0.7273
+   ]
+  },
+  "gastronomia": {
+   "n": 22,
+   "nota": 0.8182,
+   "ic95": [
+    0.6364,
+    0.9545
+   ]
+  },
+  "historia": {
+   "n": 78,
+   "nota": 0.7564,
+   "ic95": [
+    0.6538,
+    0.8462
+   ]
+  },
+  "institucions": {
+   "n": 62,
+   "nota": 0.629,
+   "ic95": [
+    0.5161,
+    0.7419
+   ]
+  },
+  "llengua": {
+   "n": 39,
+   "nota": 0.6667,
+   "ic95": [
+    0.5128,
+    0.8205
+   ]
+  }
+ }
+}

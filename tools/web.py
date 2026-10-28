@@ -36,6 +36,23 @@ NOMS = {
     "ollama:ministral-3:latest": ("Ministral 3", "Mistral · obert · local"),
     "ollama:gpt-oss:20b": ("gpt-oss 20B", "OpenAI · obert · local"),
     "vertex:google/gemini-3.8-flash": ("Gemini 3.8 Flash", "Google · tancat · API"),
+    "vertex:google/gemma-4-26b-a4b-it-maas": ("Gemma 4 26B-A4B", "Google · obert · Vertex"),
+    "ollamacloud:gemma4:31b": ("Gemma 4 31B", "Google · obert · Ollama Cloud"),
+    "ollamacloud:gpt-oss:20b": ("gpt-oss 20B", "OpenAI · obert · Ollama Cloud"),
+    "ollamacloud:gpt-oss:120b": ("gpt-oss 120B", "OpenAI · obert · Ollama Cloud"),
+    "ollamacloud:deepseek-v4.1-flash": ("DeepSeek V4.1 Flash", "DeepSeek · obert · Ollama Cloud"),
+    "ollamacloud:kimi-k3": ("Kimi K3", "Moonshot · obert · Ollama Cloud"),
+    "ollamacloud:mistral-large-4": ("Mistral Large 4", "Mistral · obert · Ollama Cloud"),
+    "ollamacloud:glm-5.3": ("GLM 5.3", "Z.ai · obert · Ollama Cloud"),
+    "ollamacloud:minimax-m3": ("MiniMax M3", "MiniMax · obert · Ollama Cloud"),
+    "ollamacloud:nemotron-3-super": ("Nemotron 3 Super", "NVIDIA · obert · Ollama Cloud"),
+    "ollamacloud:nemotron-3-ultra": ("Nemotron 3 Ultra", "NVIDIA · obert · Ollama Cloud"),
+    "ollamacloud:glm-5.2": ("GLM 5.2", "Z.ai · obert · Ollama Cloud"),
+    "ollamacloud:glm-5.3-flash": ("GLM 5.3 Flash", "Z.ai · obert · Ollama Cloud"),
+    "ollamacloud:minimax-m3.1-flash": ("MiniMax M3.1 Flash", "MiniMax · obert · Ollama Cloud"),
+    "ollamacloud:deepseek-v4-pro:0813": ("DeepSeek V4 Pro", "DeepSeek · obert · Ollama Cloud"),
+    "ollamacloud:deepseek-v4.1-flash:1017": ("DeepSeek V4.1 Flash 1017", "DeepSeek · obert · Ollama Cloud"),
+    "ollamacloud:beam": ("Beam", "obert · Ollama Cloud"),
 }
 
 
@@ -43,6 +60,8 @@ def nom_model(model):
     if model in NOMS:
         return NOMS[model]
     prov, _, nom = model.partition(":")
+    if prov == "ollamacloud":
+        return nom, "obert · Ollama Cloud"
     return nom, prov
 
 
@@ -60,7 +79,11 @@ def carrega():
         r = json.load(open(f, encoding="utf-8"))
         r["carpeta"] = os.path.dirname(f)
         models.append(r)
-    models.sort(key=lambda r: (not r["complet"], -(r["coneixement"].get("nota") or 0)))
+    # Comparable: puntuat sobre gairebé les mateixes preguntes que el model més avançat (els tests, de moment).
+    maxim = max((r["coneixement"].get("n") or 0 for r in models), default=0)
+    for r in models:
+        r["comparable"] = (r["coneixement"].get("n") or 0) >= 0.95 * maxim
+    models.sort(key=lambda r: (not r["complet"], not r["comparable"], -(r["coneixement"].get("nota") or 0)))
     return models
 
 
@@ -75,7 +98,11 @@ def files_taula(models, total):
         avisos = []
         if m.get("origen"):
             avisos.append(html.escape(m["origen"]))
-        if not m["complet"]:
+        if m.get("nomes_tests") and not m["comparable"]:
+            avisos.append(f"en curs: {m['puntuades']} tests, encara no comparable")
+        elif m.get("nomes_tests"):
+            avisos.append(f"només tests ({m['puntuades']}), jutge pendent")
+        elif not m["complet"]:
             avisos.append(f"en curs: {m['puntuades']} de {total}")
         if m.get("mateix_model_que_jutge"):
             avisos.append("també és el jutge")
@@ -93,7 +120,7 @@ def files_taula(models, total):
 
 
 def mostra_preguntes(models, dataset):
-    complets = [m for m in models if m["coneixement"].get("n")]
+    complets = [m for m in models if m["coneixement"].get("n") and m["comparable"]]
     per_model = {}
     for m in complets:
         resp, punts = {}, {}
@@ -158,7 +185,10 @@ def main():
     versio = f"v1-esborrany ({empremta_dataset(rows)})"
     tipus = {t: sum(1 for r in rows if r["tipus"] == t) for t in ("test", "oberta", "trampa")}
     complets = sum(1 for m in models if m["complet"])
-    avis = (f"{len(models)} models avaluats, {complets} amb les {len(rows)} preguntes puntuades. "
+    comparables = sum(1 for m in models if m["comparable"])
+    avis = (f"{len(models)} models avaluats; {comparables} ja tenen tots els tests puntuats i {complets} les {len(rows)} preguntes. "
+            "Les notes «només tests» "
+            "compten les preguntes de quatre opcions; les obertes i les trampes s'hi afegiran quan les puntuï el jutge. "
             "Una execució «en curs» encara no és comparable amb les completes.")
     jutge = nom_model(JUTGE)[0]
     subst = {
