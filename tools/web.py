@@ -151,6 +151,9 @@ def carrega():
     for f in sorted(glob.glob(os.path.join(ARREL, "resultats", "*", "resum.json"))):
         r = json.load(open(f, encoding="utf-8"))
         r["carpeta"] = os.path.dirname(f)
+        # A la pàgina només hi van els models amb totes les preguntes respostes.
+        if r.get("respostes", 0) < r.get("preguntes_dataset", 0):
+            continue
         models.append(r)
     # Comparable: puntuat sobre gairebé les mateixes preguntes que el model més avançat (els tests, de moment).
     maxim = max((r["coneixement"].get("n") or 0 for r in models), default=0)

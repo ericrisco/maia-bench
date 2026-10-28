@@ -2,12 +2,13 @@
 
 Un model s'escriu com `proveidor:model`:
 
-    ollama:gemma4:e4b                  Ollama local (OLLAMA_HOST, per defecte http://localhost:11434)
+    ollama:gemma4:e4b                  Ollama (OLLAMA_HOST, per defecte http://localhost:11434; OLLAMA_TOKEN si és privat)
     ollamacloud:gpt-oss:120b           Ollama Cloud (OLLAMA_API_KEY)
     openai:gpt-5                       OpenAI (OPENAI_API_KEY)
     anthropic:claude-sonnet-5-5        Anthropic (ANTHROPIC_API_KEY)
     openrouter:meta-llama/llama-4      OpenRouter (OPENROUTER_API_KEY)
     vertex:google/gemini-3.8-flash     Vertex AI, endpoint compatible amb OpenAI (gcloud + GCP_PROJECT)
+    vertexclaude:claude-haiku-5-5      Claude a Vertex AI (rawPredict, gcloud + GCP_PROJECT)
 
 `crida(model, missatges)` retorna {"text", "tokens_entrada", "tokens_sortida"} i reintenta els errors temporals.
 """
@@ -19,7 +20,7 @@ import time
 import urllib.error
 import urllib.request
 
-PROVEIDORS = ("ollama", "ollamacloud", "openai", "anthropic", "openrouter", "vertex")
+PROVEIDORS = ("ollama", "ollamacloud", "openai", "anthropic", "openrouter", "vertex", "vertexclaude")
 REINTENTS = 8
 
 _tok = {"v": None, "t": 0}
@@ -65,6 +66,9 @@ def _openai_compatible(prov, nom, missatges, temperatura, max_tokens):
     if prov == "ollama":
         base = os.environ.get("OLLAMA_HOST", "http://localhost:11434").rstrip("/")
         url, cap = f"{base}/v1/chat/completions", {}
+        # Un Ollama privat a Cloud Run demana un token d'identitat de Google (gcloud auth print-identity-token).
+        if os.environ.get("OLLAMA_TOKEN"):
+            cap["Authorization"] = f"Bearer {os.environ['OLLAMA_TOKEN']}"
     elif prov == "ollamacloud":
         url = "https://ollama.com/v1/chat/completions"
         cap = {"Authorization": f"Bearer {_clau('OLLAMA_API_KEY')}"}
@@ -111,15 +115,33 @@ def _anthropic(nom, missatges, temperatura, max_tokens):
     return {"text": text, "tokens_entrada": u.get("input_tokens", 0), "tokens_sortida": u.get("output_tokens", 0)}
 
 
+def _vertex_claude(nom, missatges, max_tokens):
+    # Sense temperatura: des del 21/10/2026 l'API de Claude rebutja els paràmetres de mostreig.
+    projecte = os.environ.get("GCP_PROJECT", "maia-andorra")
+    url = (f"https://aiplatform.googleapis.com/v1/projects/{projecte}/locations/global"
+           f"/publishers/anthropic/models/{nom}:rawPredict")
+    sistema = "\n".join(m["content"] for m in missatges if m["role"] == "system")
+    cos = {"anthropic_version": "vertex-2023-10-16", "max_tokens": max_tokens,
+           "messages": [m for m in missatges if m["role"] != "system"]}
+    if sistema:
+        cos["system"] = sistema
+    d = _post(url, cos, {"Authorization": f"Bearer {_token_gcloud()}", "x-goog-user-project": projecte}, 600)
+    text = "".join(b.get("text", "") for b in d.get("content", []) if b.get("type") == "text")
+    u = d.get("usage") or {}
+    return {"text": text, "tokens_entrada": u.get("input_tokens", 0), "tokens_sortida": u.get("output_tokens", 0)}
+
+
 def crida(model, missatges, temperatura=0, max_tokens=4000):
     prov, nom = separa(model)
     for intent in range(REINTENTS):
         try:
             if prov == "anthropic":
                 return _anthropic(nom, missatges, temperatura, max_tokens)
+            if prov == "vertexclaude":
+                return _vertex_claude(nom, missatges, max_tokens)
             return _openai_compatible(prov, nom, missatges, temperatura, max_tokens)
         except urllib.error.HTTPError as e:
-            if e.code == 401 and prov == "vertex":
+            if e.code == 401 and prov in ("vertex", "vertexclaude"):
                 _tok["v"] = None  # token caducat: se'n demana un de nou
             if e.code in (401, 408, 429, 500, 502, 503, 504, 529) and intent < REINTENTS - 1:
                 time.sleep(min(120, 5 * 2 ** intent))
