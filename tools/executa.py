@@ -68,6 +68,8 @@ def main():
     ap.add_argument("--limit", type=int, help="només les N primeres preguntes (proves)")
     ap.add_argument("--fils", type=int, default=4)
     ap.add_argument("--max-tokens", type=int, default=4000)
+    ap.add_argument("--refes-buides", action="store_true",
+                    help="torna a fer les respostes buides (models que gasten tots els tokens raonant)")
     a = ap.parse_args()
     separa(a.model)
 
@@ -83,8 +85,12 @@ def main():
     meta = json.load(open(meta_path)) if os.path.exists(meta_path) else {}
     git = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=ARREL, capture_output=True, text=True).stdout.strip()
     meta.update({"model": a.model, "origen": a.origen or meta.get("origen", ""), "prompt": VERSIO_PROMPT,
-                 "sistema": SISTEMA, "temperatura": 0, "max_tokens": a.max_tokens,
+                 "sistema": SISTEMA, "temperatura": 0,
                  "dataset": empremta_dataset(preguntes()), "preguntes_dataset": total, "commit": git})
+    if a.refes_buides:
+        meta["max_tokens_buides"] = a.max_tokens
+    else:
+        meta["max_tokens"] = a.max_tokens
     meta.setdefault("inici", datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"))
     json.dump(meta, open(meta_path, "w"), ensure_ascii=False, indent=1)
 
@@ -92,7 +98,7 @@ def main():
     if os.path.exists(fitxer):
         for l in open(fitxer, encoding="utf-8"):
             r = json.loads(l)
-            if not r.get("error"):
+            if not r.get("error") and (r.get("resposta") or not a.refes_buides):
                 fets.add(r["id"])
     pendents = [r for r in rows if r["id"] not in fets]
     print(f"{a.model}: {len(pendents)} preguntes per respondre ({len(fets)} ja fetes)", file=sys.stderr)
