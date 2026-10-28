@@ -3,8 +3,8 @@
  "origen": "",
  "dataset": "ec314f7d6239",
  "preguntes_dataset": 926,
- "respostes": 905,
- "puntuades": 589,
+ "respostes": 926,
+ "puntuades": 604,
  "complet": false,
  "nomes_tests": true,
  "jutge": "vertex:google/gemini-3.8-flash",
@@ -14,29 +14,29 @@
  "mateix_model_que_jutge": false,
  "data": "2026-10-28",
  "coneixement": {
-  "n": 589,
-  "nota": 0.7063,
+  "n": 604,
+  "nota": 0.7003,
   "ic95": [
-   0.6689,
-   0.7402
+   0.6639,
+   0.7368
   ]
  },
  "per_tipus": {
   "test": {
-   "n": 589,
-   "nota": 0.7063,
+   "n": 604,
+   "nota": 0.7003,
    "ic95": [
-    0.6689,
-    0.7402
+    0.6639,
+    0.7368
    ]
   }
  },
  "vistes": {
-  "n": 548,
-  "nota": 0.708,
+  "n": 563,
+  "nota": 0.7016,
   "ic95": [
-   0.6697,
-   0.7445
+   0.6643,
+   0.7371
   ]
  },
  "no_vistes": {
@@ -129,11 +129,11 @@
    ]
   },
   "societat": {
-   "n": 63,
-   "nota": 0.746,
+   "n": 78,
+   "nota": 0.6923,
    "ic95": [
-    0.6349,
-    0.8413
+    0.5897,
+    0.7949
    ]
   },
   "territori": {

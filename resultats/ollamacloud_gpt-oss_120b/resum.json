@@ -3,8 +3,8 @@
  "origen": "",
  "dataset": "ec314f7d6239",
  "preguntes_dataset": 926,
- "respostes": 923,
- "puntuades": 601,
+ "respostes": 926,
+ "puntuades": 604,
  "complet": false,
  "nomes_tests": true,
  "jutge": "vertex:google/gemini-3.8-flash",
@@ -14,29 +14,29 @@
  "mateix_model_que_jutge": false,
  "data": "2026-10-28",
  "coneixement": {
-  "n": 601,
-  "nota": 0.4975,
+  "n": 604,
+  "nota": 0.4967,
   "ic95": [
-   0.4592,
-   0.5374
+   0.457,
+   0.5348
   ]
  },
  "per_tipus": {
   "test": {
-   "n": 601,
-   "nota": 0.4975,
+   "n": 604,
+   "nota": 0.4967,
    "ic95": [
-    0.4592,
-    0.5374
+    0.457,
+    0.5348
    ]
   }
  },
  "vistes": {
-  "n": 560,
-  "nota": 0.5,
+  "n": 563,
+  "nota": 0.4991,
   "ic95": [
-   0.4589,
-   0.5375
+   0.4583,
+   0.5382
   ]
  },
  "no_vistes": {
@@ -129,19 +129,19 @@
    ]
   },
   "societat": {
-   "n": 77,
-   "nota": 0.5065,
+   "n": 78,
+   "nota": 0.5,
    "ic95": [
-    0.3896,
-    0.6234
+    0.3974,
+    0.6154
    ]
   },
   "territori": {
-   "n": 44,
-   "nota": 0.4773,
+   "n": 46,
+   "nota": 0.4783,
    "ic95": [
-    0.3182,
-    0.6136
+    0.3261,
+    0.6087
    ]
   },
   "vida-quotidiana": {
