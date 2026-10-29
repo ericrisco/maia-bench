@@ -1,0 +1,16 @@
+{
+ "model": "ollamacloud:glm-5.3",
+ "origen": "",
+ "prompt": "p1",
+ "sistema": "Respon en català les preguntes sobre Andorra que et facin.",
+ "temperatura": 0,
+ "dataset": "ec314f7d6239",
+ "preguntes_dataset": 926,
+ "commit": "c90322d",
+ "max_tokens": 4000,
+ "inici": "2026-10-28T22:42:35+00:00",
+ "fi": "2026-10-29T00:01:32+00:00",
+ "raonament": null,
+ "max_tokens_buides": 4000,
+ "raonament_buides": "medium"
+}

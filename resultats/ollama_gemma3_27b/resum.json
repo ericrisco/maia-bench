@@ -1,0 +1,156 @@
+{
+ "model": "ollama:gemma3:27b",
+ "origen": "",
+ "dataset": "ec314f7d6239",
+ "preguntes_dataset": 926,
+ "respostes": 926,
+ "puntuades": 604,
+ "complet": false,
+ "nomes_tests": true,
+ "jutge": "vertex:google/gemini-3.8-flash",
+ "versio_jutge": "j1",
+ "prompt": "p1",
+ "temperatura": 0,
+ "mateix_model_que_jutge": false,
+ "data": "2026-10-28",
+ "coneixement": {
+  "n": 604,
+  "nota": 0.447,
+  "ic95": [
+   0.4056,
+   0.4851
+  ]
+ },
+ "per_tipus": {
+  "test": {
+   "n": 604,
+   "nota": 0.447,
+   "ic95": [
+    0.4056,
+    0.4851
+   ]
+  }
+ },
+ "vistes": {
+  "n": 563,
+  "nota": 0.4494,
+  "ic95": [
+   0.4103,
+   0.4867
+  ]
+ },
+ "no_vistes": {
+  "n": 41,
+  "nota": 0.4146,
+  "ic95": [
+   0.2683,
+   0.561
+  ]
+ },
+ "per_domini": {
+  "costums": {
+   "n": 35,
+   "nota": 0.3714,
+   "ic95": [
+    0.2,
+    0.5429
+   ]
+  },
+  "cultura": {
+   "n": 54,
+   "nota": 0.537,
+   "ic95": [
+    0.4074,
+    0.6667
+   ]
+  },
+  "economia": {
+   "n": 54,
+   "nota": 0.4259,
+   "ic95": [
+    0.2963,
+    0.5556
+   ]
+  },
+  "esports": {
+   "n": 49,
+   "nota": 0.4286,
+   "ic95": [
+    0.2857,
+    0.5714
+   ]
+  },
+  "gastronomia": {
+   "n": 23,
+   "nota": 0.5652,
+   "ic95": [
+    0.3478,
+    0.7826
+   ]
+  },
+  "historia": {
+   "n": 85,
+   "nota": 0.4118,
+   "ic95": [
+    0.3059,
+    0.5176
+   ]
+  },
+  "institucions": {
+   "n": 70,
+   "nota": 0.4143,
+   "ic95": [
+    0.3,
+    0.5286
+   ]
+  },
+  "llengua": {
+   "n": 57,
+   "nota": 0.386,
+   "ic95": [
+    0.2632,
+    0.5263
+   ]
+  },
+  "persones": {
+   "n": 7,
+   "nota": 0.1429,
+   "ic95": [
+    0.0,
+    0.4286
+   ]
+  },
+  "politica": {
+   "n": 25,
+   "nota": 0.44,
+   "ic95": [
+    0.24,
+    0.64
+   ]
+  },
+  "societat": {
+   "n": 78,
+   "nota": 0.5641,
+   "ic95": [
+    0.4615,
+    0.6795
+   ]
+  },
+  "territori": {
+   "n": 46,
+   "nota": 0.413,
+   "ic95": [
+    0.2826,
+    0.5652
+   ]
+  },
+  "vida-quotidiana": {
+   "n": 21,
+   "nota": 0.4762,
+   "ic95": [
+    0.2857,
+    0.7143
+   ]
+  }
+ }
+}

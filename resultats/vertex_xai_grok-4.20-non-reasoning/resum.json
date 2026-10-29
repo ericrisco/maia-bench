@@ -1,0 +1,156 @@
+{
+ "model": "vertex:xai/grok-4.20-non-reasoning",
+ "origen": "",
+ "dataset": "ec314f7d6239",
+ "preguntes_dataset": 926,
+ "respostes": 671,
+ "puntuades": 435,
+ "complet": false,
+ "nomes_tests": true,
+ "jutge": "vertex:google/gemini-3.8-flash",
+ "versio_jutge": "j1",
+ "prompt": "p1",
+ "temperatura": 0,
+ "mateix_model_que_jutge": false,
+ "data": "2026-10-28",
+ "coneixement": {
+  "n": 435,
+  "nota": 0.554,
+  "ic95": [
+   0.508,
+   0.5977
+  ]
+ },
+ "per_tipus": {
+  "test": {
+   "n": 435,
+   "nota": 0.554,
+   "ic95": [
+    0.508,
+    0.5977
+   ]
+  }
+ },
+ "vistes": {
+  "n": 395,
+  "nota": 0.5494,
+  "ic95": [
+   0.4987,
+   0.5975
+  ]
+ },
+ "no_vistes": {
+  "n": 40,
+  "nota": 0.6,
+  "ic95": [
+   0.45,
+   0.75
+  ]
+ },
+ "per_domini": {
+  "costums": {
+   "n": 35,
+   "nota": 0.4857,
+   "ic95": [
+    0.3143,
+    0.6571
+   ]
+  },
+  "cultura": {
+   "n": 54,
+   "nota": 0.5185,
+   "ic95": [
+    0.3889,
+    0.6481
+   ]
+  },
+  "economia": {
+   "n": 54,
+   "nota": 0.5926,
+   "ic95": [
+    0.463,
+    0.7222
+   ]
+  },
+  "esports": {
+   "n": 49,
+   "nota": 0.4082,
+   "ic95": [
+    0.2857,
+    0.551
+   ]
+  },
+  "gastronomia": {
+   "n": 23,
+   "nota": 0.5652,
+   "ic95": [
+    0.3478,
+    0.7826
+   ]
+  },
+  "historia": {
+   "n": 84,
+   "nota": 0.5714,
+   "ic95": [
+    0.4643,
+    0.6667
+   ]
+  },
+  "institucions": {
+   "n": 68,
+   "nota": 0.6176,
+   "ic95": [
+    0.5,
+    0.7353
+   ]
+  },
+  "llengua": {
+   "n": 57,
+   "nota": 0.5965,
+   "ic95": [
+    0.4737,
+    0.7193
+   ]
+  },
+  "persones": {
+   "n": 1,
+   "nota": 1.0,
+   "ic95": [
+    1.0,
+    1.0
+   ]
+  },
+  "politica": {
+   "n": 1,
+   "nota": 1.0,
+   "ic95": [
+    1.0,
+    1.0
+   ]
+  },
+  "societat": {
+   "n": 6,
+   "nota": 0.5,
+   "ic95": [
+    0.1667,
+    0.8333
+   ]
+  },
+  "territori": {
+   "n": 2,
+   "nota": 1.0,
+   "ic95": [
+    1.0,
+    1.0
+   ]
+  },
+  "vida-quotidiana": {
+   "n": 1,
+   "nota": 0.0,
+   "ic95": [
+    0.0,
+    0.0
+   ]
+  }
+ }
+}

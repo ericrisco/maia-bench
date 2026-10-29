@@ -1,0 +1,156 @@
+{
+ "model": "vertex:google/gemini-3.6-flash",
+ "origen": "",
+ "dataset": "ec314f7d6239",
+ "preguntes_dataset": 926,
+ "respostes": 926,
+ "puntuades": 604,
+ "complet": false,
+ "nomes_tests": true,
+ "jutge": "vertex:google/gemini-3.8-flash",
+ "versio_jutge": "j1",
+ "prompt": "p1",
+ "temperatura": 0,
+ "mateix_model_que_jutge": false,
+ "data": "2026-10-28",
+ "coneixement": {
+  "n": 604,
+  "nota": 0.7914,
+  "ic95": [
+   0.7583,
+   0.8228
+  ]
+ },
+ "per_tipus": {
+  "test": {
+   "n": 604,
+   "nota": 0.7914,
+   "ic95": [
+    0.7583,
+    0.8228
+   ]
+  }
+ },
+ "vistes": {
+  "n": 563,
+  "nota": 0.7957,
+  "ic95": [
+   0.7638,
+   0.8277
+  ]
+ },
+ "no_vistes": {
+  "n": 41,
+  "nota": 0.7317,
+  "ic95": [
+   0.5854,
+   0.8537
+  ]
+ },
+ "per_domini": {
+  "costums": {
+   "n": 35,
+   "nota": 0.8,
+   "ic95": [
+    0.6571,
+    0.9429
+   ]
+  },
+  "cultura": {
+   "n": 54,
+   "nota": 0.7593,
+   "ic95": [
+    0.6296,
+    0.8704
+   ]
+  },
+  "economia": {
+   "n": 54,
+   "nota": 0.7778,
+   "ic95": [
+    0.6481,
+    0.8889
+   ]
+  },
+  "esports": {
+   "n": 49,
+   "nota": 0.8367,
+   "ic95": [
+    0.7347,
+    0.9388
+   ]
+  },
+  "gastronomia": {
+   "n": 23,
+   "nota": 0.7391,
+   "ic95": [
+    0.5652,
+    0.913
+   ]
+  },
+  "historia": {
+   "n": 85,
+   "nota": 0.7882,
+   "ic95": [
+    0.7059,
+    0.8706
+   ]
+  },
+  "institucions": {
+   "n": 70,
+   "nota": 0.8143,
+   "ic95": [
+    0.7143,
+    0.9
+   ]
+  },
+  "llengua": {
+   "n": 57,
+   "nota": 0.7544,
+   "ic95": [
+    0.6316,
+    0.8596
+   ]
+  },
+  "persones": {
+   "n": 7,
+   "nota": 0.7143,
+   "ic95": [
+    0.4286,
+    1.0
+   ]
+  },
+  "politica": {
+   "n": 25,
+   "nota": 0.88,
+   "ic95": [
+    0.72,
+    1.0
+   ]
+  },
+  "societat": {
+   "n": 78,
+   "nota": 0.7821,
+   "ic95": [
+    0.6923,
+    0.8718
+   ]
+  },
+  "territori": {
+   "n": 46,
+   "nota": 0.7826,
+   "ic95": [
+    0.6522,
+    0.8913
+   ]
+  },
+  "vida-quotidiana": {
+   "n": 21,
+   "nota": 0.8571,
+   "ic95": [
+    0.7143,
+    1.0
+   ]
+  }
+ }
+}

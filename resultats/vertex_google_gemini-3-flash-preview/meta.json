@@ -1,0 +1,13 @@
+{
+ "model": "vertex:google/gemini-3-flash-preview",
+ "origen": "",
+ "prompt": "p1",
+ "sistema": "Respon en català les preguntes sobre Andorra que et facin.",
+ "temperatura": 0,
+ "max_tokens": 4000,
+ "dataset": "ec314f7d6239",
+ "preguntes_dataset": 926,
+ "commit": "7466f01",
+ "inici": "2026-10-28T15:33:25+00:00",
+ "fi": "2026-10-28T15:52:13+00:00"
+}

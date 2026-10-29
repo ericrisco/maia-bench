@@ -12,6 +12,7 @@ import argparse
 import collections
 import concurrent.futures as cf
 import datetime
+import hashlib
 import json
 import os
 import random
@@ -95,6 +96,7 @@ def main():
     ap.add_argument("carpeta")
     ap.add_argument("--jutge", default=JUTGE)
     ap.add_argument("--fils", type=int, default=2)
+    ap.add_argument("--sense-jutge", action="store_true", help="només els tests; obertes i trampes queden pendents")
     a = ap.parse_args()
 
     dataset = {p["id"]: p for p in preguntes()}
@@ -103,24 +105,31 @@ def main():
         r = json.loads(l)
         if not r.get("error"):
             respostes[r["id"]] = r["resposta"]
+    # empremta de la resposta puntuada: si el model l'ha tornada a fer (p. ex. --refes-buides), es repuntua
+    emp = {i: hashlib.sha1(t.encode("utf-8")).hexdigest()[:12] for i, t in respostes.items()}
 
     fitxer = os.path.join(a.carpeta, "puntuacions.jsonl")
     fetes = {}
     if os.path.exists(fitxer):
         for l in open(fitxer, encoding="utf-8"):
             r = json.loads(l)
-            if r.get("jutge") in (None, a.jutge) and r["id"] in respostes:
+            if r.get("jutge") in (None, a.jutge) and r["id"] in respostes and r.get("h", emp[r["id"]]) == emp[r["id"]]:
                 fetes[r["id"]] = r
 
     noves, per_jutjar = [], []
     for i, resp in respostes.items():
-        if i in fetes or i not in dataset:
+        if i not in dataset:
             continue
         p = dataset[i]
         if p["tipus"] == "test":
             l = lletra(resp)
-            noves.append({"id": i, "tipus": "test", "lletra": l, "punts": 1.0 if l == p["correcta"] else 0.0})
-        else:
+            if i in fetes and fetes[i].get("lletra") == l:
+                continue
+            noves.append({"id": i, "tipus": "test", "lletra": l, "punts": 1.0 if l == p["correcta"] else 0.0,
+                          "h": emp[i]})
+        elif i in fetes:
+            continue
+        elif not a.sense_jutge:
             per_jutjar.append(i)
     print(f"tests nous: {len(noves)} · per al jutge: {len(per_jutjar)} · ja puntuades: {len(fetes)}", file=sys.stderr)
 
@@ -134,7 +143,7 @@ def main():
             try:
                 v = jutja(a.jutge, dataset[i], respostes[i])
                 return {"id": i, "tipus": dataset[i]["tipus"], "nota": v["nota"], "punts": v["nota"] / 2,
-                        "motiu": v["motiu"], "jutge": a.jutge}
+                        "motiu": v["motiu"], "jutge": a.jutge, "h": emp[i]}
             except (ErrorModel, json.JSONDecodeError) as e:
                 return {"id": i, "error": str(e)}
 
@@ -162,6 +171,7 @@ def main():
         "model": meta["model"], "origen": meta.get("origen", ""), "dataset": meta.get("dataset"),
         "preguntes_dataset": len(dataset), "respostes": len(respostes), "puntuades": len(punts),
         "complet": len(punts) == len(dataset),
+        "nomes_tests": not any(dataset[i]["tipus"] != "test" for i in punts),
         "jutge": a.jutge, "versio_jutge": VERSIO_JUTGE, "prompt": meta.get("prompt"), "temperatura": 0,
         "mateix_model_que_jutge": meta["model"] == a.jutge,
         "data": datetime.date.today().isoformat(),
