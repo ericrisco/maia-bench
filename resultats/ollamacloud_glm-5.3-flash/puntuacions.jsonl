@@ -278,3 +278,366 @@
 {"id": "llengua-morfosintaxi/004", "tipus": "test", "lletra": "C", "punts": 1.0}
 {"id": "llengua-morfosintaxi/005", "tipus": "test", "lletra": null, "punts": 0.0}
 {"id": "llengua-morfosintaxi/006", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "costums-calendari-festiu/002", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "costums-calendari-festiu/001", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "costums-calendari-festiu/003", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "costums-calendari-festiu/004", "tipus": "test", "lletra": "C", "punts": 0.0}
+{"id": "costums-caramelles/001", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "costums-caramelles/002", "tipus": "test", "lletra": "C", "punts": 0.0}
+{"id": "costums-danses/001", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "costums-danses/002", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "costums-danses/003", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "costums-danses/004", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "costums-danses/005", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "costums-danses/006", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "costums-falles/001", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "costums-falles/002", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "costums-festes-majors/001", "tipus": "test", "lletra": null, "punts": 0.0}
+{"id": "costums-festes-majors/002", "tipus": "test", "lletra": null, "punts": 0.0}
+{"id": "costums-festes-majors/003", "tipus": "test", "lletra": null, "punts": 0.0}
+{"id": "costums-festes-majors/004", "tipus": "test", "lletra": "C", "punts": 0.0}
+{"id": "costums-gegants/001", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "costums-gegants/002", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "costums-meritxell/001", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "costums-meritxell/002", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "costums-religiositat/002", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "costums-religiositat/003", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "costums-religiositat/004", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "costums-religiositat/005", "tipus": "test", "lletra": "C", "punts": 0.0}
+{"id": "costums-religiositat/006", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "costums-religiositat/001", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "costums-ritus-de-pas/001", "tipus": "test", "lletra": "D", "punts": 0.0}
+{"id": "costums-ritus-de-pas/002", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "costums-ritus-de-pas/003", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "costums-ritus-de-pas/004", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "costums-sant-antoni/001", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "costums-sant-antoni/002", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "cultura-andorra-vista-de-fora/001", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "cultura-andorra-vista-de-fora/002", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "cultura-andorra-vista-de-fora/003", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "cultura-andorra-vista-de-fora/004", "tipus": "test", "lletra": "D", "punts": 0.0}
+{"id": "cultura-andorra-vista-de-fora/005", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "cultura-andorra-vista-de-fora/006", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "cultura-arquitectura/001", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "cultura-arquitectura/002", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "cultura-arquitectura/003", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "cultura-arquitectura/004", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "cultura-arquitectura/005", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "cultura-arquitectura/006", "tipus": "test", "lletra": "D", "punts": 0.0}
+{"id": "cultura-artesania/001", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "cultura-artesania/002", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "cultura-artesania/003", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "cultura-artesania/004", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "cultura-artesania/005", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "cultura-arts-visuals/001", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "cultura-arts-visuals/002", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "cultura-arts-visuals/003", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "cultura-arts-visuals/005", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "cultura-arts-visuals/006", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "cultura-arts-visuals/004", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "cultura-cultura-popular/001", "tipus": "test", "lletra": "C", "punts": 0.0}
+{"id": "cultura-cultura-popular/002", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "cultura-cultura-popular/003", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "cultura-cultura-popular/004", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "cultura-literatura/001", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "cultura-literatura/002", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "cultura-llegendes/001", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "cultura-llegendes/002", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "cultura-llegendes/004", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "cultura-llegendes/005", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "cultura-llegendes/006", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "cultura-llegendes/007", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "cultura-museus-i-arxius/001", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "cultura-museus-i-arxius/002", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "cultura-museus-i-arxius/003", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "cultura-museus-i-arxius/004", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "cultura-museus-i-arxius/005", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "cultura-museus-i-arxius/006", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "cultura-musica-i-cancons/001", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "cultura-musica-i-cancons/002", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "cultura-musica-i-cancons/003", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "cultura-musica-i-cancons/005", "tipus": "test", "lletra": null, "punts": 0.0}
+{"id": "cultura-musica-i-cancons/006", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "cultura-musica-i-cancons/004", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "cultura-solts/001", "tipus": "test", "lletra": null, "punts": 0.0}
+{"id": "cultura-solts/002", "tipus": "test", "lletra": null, "punts": 0.0}
+{"id": "cultura-teatre/001", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "cultura-teatre/002", "tipus": "test", "lletra": null, "punts": 0.0}
+{"id": "economia-banca-i-fiscalitat/001", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "economia-banca-i-fiscalitat/003", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "economia-banca-i-fiscalitat/004", "tipus": "test", "lletra": null, "punts": 0.0}
+{"id": "economia-banca-i-fiscalitat/005", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "economia-banca-i-fiscalitat/006", "tipus": "test", "lletra": null, "punts": 0.0}
+{"id": "economia-banca-i-fiscalitat/002", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "economia-comerc/001", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "economia-comerc/003", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "economia-comerc/005", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "economia-comerc/006", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "economia-comerc/002", "tipus": "test", "lletra": null, "punts": 0.0}
+{"id": "economia-comerc/004", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "economia-energia-i-serveis/001", "tipus": "test", "lletra": "D", "punts": 0.0}
+{"id": "economia-energia-i-serveis/002", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "economia-energia-i-serveis/003", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "llengua-morfosintaxi/001", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "llengua-onomastica/001", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "llengua-onomastica/002", "tipus": "test", "lletra": "C", "punts": 0.0}
+{"id": "llengua-onomastica/003", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "llengua-onomastica/004", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "llengua-onomastica/005", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "llengua-onomastica/006", "tipus": "test", "lletra": null, "punts": 0.0}
+{"id": "llengua-politica-linguistica/003", "tipus": "test", "lletra": "C", "punts": 0.0}
+{"id": "llengua-politica-linguistica/004", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "llengua-politica-linguistica/005", "tipus": "test", "lletra": null, "punts": 0.0}
+{"id": "llengua-politica-linguistica/001", "tipus": "test", "lletra": "D", "punts": 0.0}
+{"id": "llengua-politica-linguistica/002", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "llengua-politica-linguistica/006", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "llengua-registres/001", "tipus": "test", "lletra": "C", "punts": 0.0}
+{"id": "llengua-registres/002", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "llengua-tractament/001", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "llengua-tractament/002", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "nv-n01/001", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "nv-n02/001", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "nv-n02/003", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "nv-n02/005", "tipus": "test", "lletra": null, "punts": 0.0}
+{"id": "nv-n03/001", "tipus": "test", "lletra": null, "punts": 0.0}
+{"id": "nv-n03/003", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "nv-n03/005", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "nv-n03/007", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "nv-n04/001", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "nv-n04/003", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "nv-n04/005", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "nv-n04/007", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "nv-n04/009", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "nv-n05/001", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "nv-n06/001", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "nv-n06/003", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "nv-n06/005", "tipus": "test", "lletra": "C", "punts": 0.0}
+{"id": "nv-n06/007", "tipus": "test", "lletra": "C", "punts": 0.0}
+{"id": "nv-n06/009", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "nv-n06/011", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "nv-n06/013", "tipus": "test", "lletra": null, "punts": 0.0}
+{"id": "nv-n07/001", "tipus": "test", "lletra": null, "punts": 0.0}
+{"id": "nv-n07/003", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "nv-n07/007", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "nv-n07/009", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "nv-n07/011", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "nv-n07/013", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "nv-n07/015", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "nv-n07/005", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "nv-n08/001", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "nv-n09/001", "tipus": "test", "lletra": null, "punts": 0.0}
+{"id": "nv-n10/001", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "nv-n11/001", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "nv-n11/003", "tipus": "test", "lletra": "C", "punts": 0.0}
+{"id": "nv-n11/005", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "nv-n11/007", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "nv-n11/009", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "nv-n11/011", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "nv-n12/001", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "nv-n12/003", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "nv-n13/001", "tipus": "test", "lletra": "D", "punts": 0.0}
+{"id": "persones/001", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "persones/002", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "persones/003", "tipus": "test", "lletra": "C", "punts": 0.0}
+{"id": "persones/004", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "persones/005", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "persones/006", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "politica-identitat-politica/001", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "politica-identitat-politica/002", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "politica-identitat-politica/003", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "politica-identitat-politica/004", "tipus": "test", "lletra": null, "punts": 0.0}
+{"id": "politica-identitat-politica/005", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "politica-identitat-politica/006", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "politica-parlamentarisme/001", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "politica-parlamentarisme/002", "tipus": "test", "lletra": null, "punts": 0.0}
+{"id": "politica-parlamentarisme/003", "tipus": "test", "lletra": null, "punts": 0.0}
+{"id": "politica-parlamentarisme/004", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "politica-parlamentarisme/005", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "politica-parlamentarisme/006", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "politica-partits/001", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "politica-partits/002", "tipus": "test", "lletra": "D", "punts": 0.0}
+{"id": "politica-partits/003", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "politica-partits/005", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "politica-partits/006", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "politica-partits/010", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "politica-sistema-electoral/001", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "politica-sistema-electoral/002", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "politica-sistema-electoral/003", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "politica-sistema-electoral/004", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "politica-sistema-electoral/005", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "politica-sistema-electoral/006", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "societat-associacionisme/001", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "societat-associacionisme/002", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "societat-demografia/001", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "societat-demografia/002", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "societat-demografia/003", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "societat-demografia/004", "tipus": "test", "lletra": "D", "punts": 0.0}
+{"id": "societat-demografia/005", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "societat-demografia/006", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "societat-dones/001", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "societat-dones/002", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "societat-dones/003", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "societat-dones/004", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "societat-dones/005", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "societat-dones/006", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "societat-educacio/002", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "societat-educacio/003", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "societat-educacio/004", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "societat-educacio/005", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "societat-educacio/006", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "societat-educacio/001", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "societat-esport/001", "tipus": "test", "lletra": "C", "punts": 0.0}
+{"id": "societat-esport/002", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "societat-familia/001", "tipus": "test", "lletra": null, "punts": 0.0}
+{"id": "societat-familia/002", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "societat-familia/003", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "societat-familia/004", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "societat-familia/005", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "societat-familia/006", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "societat-habitatge/001", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "societat-habitatge/002", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "societat-habitatge/003", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "societat-habitatge/004", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "societat-habitatge/005", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "societat-habitatge/006", "tipus": "test", "lletra": "D", "punts": 0.0}
+{"id": "societat-immigracio/001", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "societat-immigracio/002", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "societat-immigracio/003", "tipus": "test", "lletra": "C", "punts": 0.0}
+{"id": "societat-immigracio/004", "tipus": "test", "lletra": null, "punts": 0.0}
+{"id": "societat-immigracio/005", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "societat-immigracio/006", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "societat-mitjans/001", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "societat-mitjans/002", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "societat-mitjans/003", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "societat-mitjans/004", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "societat-mitjans/005", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "societat-mitjans/006", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "societat-proteccio-social/001", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "societat-proteccio-social/002", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "societat-proteccio-social/003", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "societat-proteccio-social/004", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "societat-proteccio-social/005", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "societat-proteccio-social/006", "tipus": "test", "lletra": null, "punts": 0.0}
+{"id": "societat-sanitat/001", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "societat-sanitat/002", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "societat-sanitat/003", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "societat-sanitat/004", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "societat-sanitat/005", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "societat-sanitat/006", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "societat-solts/001", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "societat-solts/002", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "societat-treball/001", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "societat-treball/002", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "societat-treball/003", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "societat-treball/004", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "societat-treball/005", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "societat-treball/006", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "societat-vida-civica/001", "tipus": "test", "lletra": "D", "punts": 0.0}
+{"id": "societat-vida-civica/002", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "societat-vida-civica/003", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "societat-vida-civica/004", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "societat-vida-civica/005", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "societat-vida-civica/006", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "territori-clima-i-muntanya/001", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "territori-clima-i-muntanya/003", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "territori-clima-i-muntanya/005", "tipus": "test", "lletra": null, "punts": 0.0}
+{"id": "territori-clima-i-muntanya/010", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "territori-clima-i-muntanya/004", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "territori-clima-i-muntanya/006", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "territori-fauna-i-flora/001", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "territori-fauna-i-flora/002", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "territori-fauna-i-flora/003", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "territori-fauna-i-flora/004", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "territori-fauna-i-flora/005", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "territori-fauna-i-flora/006", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "territori-geografia-fisica/001", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "territori-geografia-fisica/002", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "territori-geografia-fisica/004", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "territori-geografia-fisica/005", "tipus": "test", "lletra": "C", "punts": 0.0}
+{"id": "territori-geografia-fisica/006", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "territori-geografia-fisica/003", "tipus": "test", "lletra": "C", "punts": 0.0}
+{"id": "territori-paisatge-construit/001", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "territori-paisatge-construit/002", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "territori-paisatge-construit/003", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "territori-paisatge-construit/004", "tipus": "test", "lletra": "D", "punts": 0.0}
+{"id": "territori-paisatge-construit/005", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "territori-paisatge-construit/006", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "territori-parroquies/001", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "territori-parroquies/004", "tipus": "test", "lletra": null, "punts": 0.0}
+{"id": "territori-parroquies/006", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "territori-parroquies/003", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "territori-parroquies/005", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "territori-parroquies/002", "tipus": "test", "lletra": "C", "punts": 0.0}
+{"id": "territori-patrimoni-natural/001", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "territori-patrimoni-natural/003", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "territori-patrimoni-natural/004", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "territori-patrimoni-natural/002", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "territori-toponimia/001", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "territori-toponimia/002", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "territori-toponimia/005", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "territori-toponimia/003", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "territori-toponimia/004", "tipus": "test", "lletra": null, "punts": 0.0}
+{"id": "territori-toponimia/006", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "territori-urbanisme/001", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "territori-urbanisme/002", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "territori-urbanisme/003", "tipus": "test", "lletra": null, "punts": 0.0}
+{"id": "territori-urbanisme/004", "tipus": "test", "lletra": "B", "punts": 0.0}
+{"id": "vida-quotidiana-com-funciona-tot/001", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "vida-quotidiana-com-funciona-tot/002", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "vida-quotidiana-com-funciona-tot/004", "tipus": "test", "lletra": "D", "punts": 0.0}
+{"id": "vida-quotidiana-com-funciona-tot/005", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "vida-quotidiana-com-funciona-tot/007", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "vida-quotidiana-com-funciona-tot/008", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "vida-quotidiana-convencions-socials/001", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "vida-quotidiana-convencions-socials/002", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "vida-quotidiana-convencions-socials/003", "tipus": "test", "lletra": "C", "punts": 0.0}
+{"id": "vida-quotidiana-convencions-socials/006", "tipus": "test", "lletra": "B", "punts": 1.0}
+{"id": "vida-quotidiana-convencions-socials/007", "tipus": "test", "lletra": "A", "punts": 0.0}
+{"id": "vida-quotidiana-convencions-socials/008", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "vida-quotidiana-creences/001", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "vida-quotidiana-creences/002", "tipus": "test", "lletra": "C", "punts": 0.0}
+{"id": "vida-quotidiana-geografia-mental/001", "tipus": "test", "lletra": "C", "punts": 1.0}
+{"id": "vida-quotidiana-geografia-mental/002", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "vida-quotidiana-humor/001", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "vida-quotidiana-humor/002", "tipus": "test", "lletra": "D", "punts": 0.0}
+{"id": "vida-quotidiana-referents-compartits/001", "tipus": "test", "lletra": "D", "punts": 1.0}
+{"id": "vida-quotidiana-referents-compartits/002", "tipus": "test", "lletra": "A", "punts": 1.0}
+{"id": "economia-transformacio-economica/002", "tipus": "test", "lletra": "C", "punts": 1.0, "h": "32096c2e0eff"}
+{"id": "economia-transport/006", "tipus": "test", "lletra": "A", "punts": 1.0, "h": "6dcd4ce23d88"}
+{"id": "economia-turisme-i-neu/002", "tipus": "test", "lletra": "B", "punts": 0.0, "h": "ae4f281df5a5"}
+{"id": "esports-futbol/005", "tipus": "test", "lletra": "A", "punts": 0.0, "h": "6dcd4ce23d88"}
+{"id": "esports-seleccions/003", "tipus": "test", "lletra": "B", "punts": 0.0, "h": "ae4f281df5a5"}
+{"id": "historia-constitucio-1993/004", "tipus": "test", "lletra": "D", "punts": 1.0, "h": "4cdb2c8945c9"}
+{"id": "historia-moments-historics/003", "tipus": "test", "lletra": "B", "punts": 0.0, "h": "ae4f281df5a5"}
+{"id": "historia-segle-xix/002", "tipus": "test", "lletra": "A", "punts": 0.0, "h": "6dcd4ce23d88"}
+{"id": "historia-segle-xix/006", "tipus": "test", "lletra": "A", "punts": 0.0, "h": "6dcd4ce23d88"}
+{"id": "institucions-consell-general/005", "tipus": "test", "lletra": "A", "punts": 0.0, "h": "6dcd4ce23d88"}
+{"id": "institucions-govern/006", "tipus": "test", "lletra": "C", "punts": 0.0, "h": "32096c2e0eff"}
+{"id": "institucions-justicia/004", "tipus": "test", "lletra": "B", "punts": 0.0, "h": "ae4f281df5a5"}
+{"id": "institucions-patrimoni-institucional/003", "tipus": "test", "lletra": "C", "punts": 1.0, "h": "32096c2e0eff"}
+{"id": "llengua-dialectologia/004", "tipus": "test", "lletra": "B", "punts": 1.0, "h": "ae4f281df5a5"}
+{"id": "llengua-fonetica/004", "tipus": "test", "lletra": "B", "punts": 0.0, "h": "ae4f281df5a5"}
+{"id": "llengua-lexic-andorra/003", "tipus": "test", "lletra": "A", "punts": 0.0, "h": "6dcd4ce23d88"}
+{"id": "llengua-manlleus/006", "tipus": "test", "lletra": "A", "punts": 0.0, "h": "6dcd4ce23d88"}
+{"id": "llengua-morfosintaxi/003", "tipus": "test", "lletra": "B", "punts": 0.0, "h": "ae4f281df5a5"}
+{"id": "llengua-morfosintaxi/005", "tipus": "test", "lletra": "B", "punts": 1.0, "h": "ae4f281df5a5"}
+{"id": "costums-festes-majors/001", "tipus": "test", "lletra": "B", "punts": 1.0, "h": "ae4f281df5a5"}
+{"id": "costums-festes-majors/002", "tipus": "test", "lletra": "A", "punts": 1.0, "h": "6dcd4ce23d88"}
+{"id": "costums-festes-majors/003", "tipus": "test", "lletra": "B", "punts": 0.0, "h": "ae4f281df5a5"}
+{"id": "cultura-musica-i-cancons/005", "tipus": "test", "lletra": "D", "punts": 0.0, "h": "50c9e8d5fc98"}
+{"id": "economia-banca-i-fiscalitat/004", "tipus": "test", "lletra": "B", "punts": 0.0, "h": "ae4f281df5a5"}
+{"id": "economia-banca-i-fiscalitat/006", "tipus": "test", "lletra": "A", "punts": 0.0, "h": "6dcd4ce23d88"}
+{"id": "economia-comerc/002", "tipus": "test", "lletra": "A", "punts": 0.0, "h": "6dcd4ce23d88"}
+{"id": "llengua-onomastica/006", "tipus": "test", "lletra": "C", "punts": 0.0, "h": "32096c2e0eff"}
+{"id": "llengua-politica-linguistica/005", "tipus": "test", "lletra": "D", "punts": 1.0, "h": "9bc26f0f7fd0"}
+{"id": "nv-n02/005", "tipus": "test", "lletra": "B", "punts": 1.0, "h": "ee072586c1d9"}
+{"id": "nv-n03/001", "tipus": "test", "lletra": "B", "punts": 1.0, "h": "ae4f281df5a5"}
+{"id": "nv-n06/013", "tipus": "test", "lletra": "B", "punts": 0.0, "h": "ae4f281df5a5"}
+{"id": "politica-identitat-politica/004", "tipus": "test", "lletra": "D", "punts": 1.0, "h": "50c9e8d5fc98"}
+{"id": "politica-parlamentarisme/002", "tipus": "test", "lletra": "B", "punts": 1.0, "h": "ae4f281df5a5"}
+{"id": "politica-parlamentarisme/003", "tipus": "test", "lletra": "C", "punts": 0.0, "h": "32096c2e0eff"}
+{"id": "societat-familia/001", "tipus": "test", "lletra": "A", "punts": 0.0, "h": "6dcd4ce23d88"}
+{"id": "societat-immigracio/004", "tipus": "test", "lletra": "C", "punts": 0.0, "h": "32096c2e0eff"}
+{"id": "territori-parroquies/004", "tipus": "test", "lletra": "A", "punts": 1.0, "h": "6dcd4ce23d88"}
+{"id": "territori-toponimia/004", "tipus": "test", "lletra": "C", "punts": 1.0, "h": "32096c2e0eff"}
+{"id": "territori-urbanisme/003", "tipus": "test", "lletra": "D", "punts": 1.0, "h": "50c9e8d5fc98"}
