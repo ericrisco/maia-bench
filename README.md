@@ -81,6 +81,8 @@ maia-bench/
 python3 tools/executa.py --model ollama:gemma4:e4b
 # 2. Puntuació: tests automàtics; obertes i trampes amb el jutge (Gemini 3.8 Flash a Vertex)
 python3 tools/puntua.py resultats/ollama_gemma4_e4b
+#    Si Vertex rebutja les crides en línia (403), el mateix jutge per lots i després puntua.py per al resum:
+#    python3 tools/judge_batch.py resultats/ollama_gemma4_e4b [resultats/<un_altre> ...]
 # 3. Pàgina de resultats (web/index.html)
 python3 tools/web.py
 ```
