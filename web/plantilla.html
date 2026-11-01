@@ -98,6 +98,20 @@ section { margin-top: 120px; }
 .cim-cap .claim h2 { font-size: var(--step-head); margin-top: 18px; }
 .cim-cap .peu { grid-column: 7 / 13; color: var(--ink); max-width: 52ch; align-self: end; }
 .cim-cap .peu span { color: var(--muted); display: block; margin-top: 10px; font-size: var(--step-small); }
+.cim .filtre { padding: 0 var(--m); margin-top: 36px; display: flex; flex-wrap: wrap; gap: 6px; }
+.filtre .num { color: var(--muted); margin-left: 4px; }
+.filtre button[aria-pressed="true"] .num { color: inherit; opacity: .7; }
+.b.sense { display: none; }
+/* amb molts models, una fila per model: el nom en una columna a l'esquerra i la nota just després de la barra,
+   perquè res no se solapi encara que la barra sigui curta */
+.barres.files { --alt: 100%; --nom: clamp(132px, 26vw, 210px); grid-auto-flow: row; grid-auto-rows: 30px; grid-auto-columns: auto; gap: 6px; height: auto; align-items: stretch; margin: 40px var(--m) 72px; }
+.barres.files .top { display: none; }
+.barres.files .b { height: auto; margin-left: var(--nom); width: calc(var(--v) * (100% - var(--nom) - 72px)); border-radius: 0 4px 4px 0; transform-origin: left; }
+.barres.files.in .b { animation-name: creix; }
+.barres.files .b .ic { display: none; }
+.barres.files .bv, .barres.files .bi { display: block; position: absolute; left: calc(100% + 8px); right: auto; bottom: auto; top: 50%; transform: translateY(-50%); font-size: var(--step-small); font-weight: 500; text-align: left; color: var(--ink); }
+.barres.files .bn { position: absolute; left: calc(-1 * var(--nom)); width: calc(var(--nom) - 12px); right: auto; top: 50%; bottom: auto; transform: translateY(-50%); text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--ink); }
+.barres.files .b.lider .bn, .barres.files .b.lider .bv { color: var(--ink); }
 .barres { --alt: 58vh; position: relative; display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: var(--gap); align-items: end; height: calc(var(--alt) + 60px); margin: 40px var(--m) 72px; }
 .barres .top { position: absolute; left: 0; bottom: calc(var(--alt) + 8px); font-size: var(--step-body); font-weight: 500; color: var(--ink); }
 .b { position: relative; height: calc(var(--v) * var(--alt)); background: var(--bar); border-radius: 4px 4px 0 0; transform-origin: bottom; transition: background .2s var(--ease); outline-offset: -3px; }
@@ -362,7 +376,8 @@ footer { margin-top: 120px; background: var(--surface); padding: 40px var(--m) 2
     <div class="claim" data-r style="--i:1">__T:h_rank__</div>
     <p class="peu" data-r style="--i:2">__T:rank_txt__<span>__AVIS__</span></p>
   </div>
-  <div class="barres" id="barres" data-ui>
+  __FILTRE__
+  <div class="barres __BARRES_CLS__" id="barres">
     __T:cim__
     __BARRES__
   </div>
@@ -370,7 +385,7 @@ footer { margin-top: 120px; background: var(--surface); padding: 40px var(--m) 2
 
 <section class="taula" id="taula" aria-labelledby="t-taula">
   __T:h_taula__
-  <div class="tauler" data-ui>
+  <div class="tauler">
 __FILES__
   </div>
   __T:nota_peu__
@@ -401,7 +416,7 @@ __FILES__
         <button type="button" __T:b_trampa__
       </div>
     </div>
-    <div class="presp" id="p-resp" data-ui aria-live="polite"></div>
+    <div class="presp" id="p-resp" aria-live="polite"></div>
   </div>
 </section>
 
@@ -493,6 +508,31 @@ __FILES__
     tip.style.left = Math.min(window.innerWidth - tip.offsetWidth - 8, Math.max(8, x - tip.offsetWidth / 2)) + "px";
     tip.style.top = Math.max(8, y - tip.offsetHeight - 14) + "px";
   }
+  // classificació per tema: reordena les barres amb la nota del tema triat (data-ds) o la general (data-g)
+  var fig = document.querySelector(".cim-cap .fig"), barres = document.getElementById("barres");
+  document.querySelectorAll("#filtre-tema button").forEach(function (bt) {
+    bt.addEventListener("click", function () {
+      var d = bt.dataset.d;
+      document.querySelectorAll("#filtre-tema button").forEach(function (x) { x.setAttribute("aria-pressed", x === bt ? "true" : "false"); });
+      var bs = Array.prototype.slice.call(barres.querySelectorAll(".b"));
+      bs.forEach(function (b) { b._v = d ? (JSON.parse(b.dataset.ds)[d] || null) : b.dataset.g.split(",").map(Number); });
+      bs.sort(function (a, b) { return (b._v ? b._v[0] : -1) - (a._v ? a._v[0] : -1); });
+      bs.forEach(function (b, i) {
+        var v = b._v;
+        b.classList.toggle("sense", !v);
+        b.style.order = i;
+        if (!v) return;
+        b.style.setProperty("--v", v[0]); b.style.setProperty("--lo", v[1]); b.style.setProperty("--hi", v[2]);
+        b.classList.toggle("lider", i === 0);
+        var el = b.querySelector(".bv, .bi");
+        el.className = (i < 3 ? "bv" : "bi") + " num"; el.textContent = pc(v[0]);
+        var t = b.dataset.nom + ": " + pc(v[0]) + ", " + T.interval + " " + pc(v[1]) + " \u2013 " + pc(v[2]);
+        b.dataset.tip = t; b.setAttribute("aria-label", t);
+      });
+      if (fig && bs[0] && bs[0]._v) fig.textContent = pc(bs[0]._v[0]);
+    });
+  });
+
   document.querySelectorAll(".b").forEach(function (b) {
     b.addEventListener("mousemove", function (e) { mou(e, b); });
     b.addEventListener("focus", function () { mou(null, b); });

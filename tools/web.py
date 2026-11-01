@@ -8,6 +8,7 @@ els que es munten aquí, a TXT. Les preguntes del dataset es mostren sempre en c
 La taula es pinta aquí (es veu sense JavaScript); els dominis i «Prova-ho» es dibuixen al navegador amb les dades
 incrustades a la mateixa pàgina, que funciona com a fitxer local i a GitHub Pages.
 """
+import collections
 import datetime
 import glob
 import html
@@ -28,6 +29,8 @@ NOM_IDIOMA = {"en": "EN", "ca": "CA", "es": "ES"}
 IDIOMA = "en"  # el que s'està generant; el fixa main()
 
 TXT = {
+    "general": {"en": "Overall", "ca": "General", "es": "General"},
+    "filtre_tema": {"en": "Rank by topic", "ca": "Classifica per tema", "es": "Clasifica por tema"},
     "complet": {"en": "Complete", "ca": "Complet", "es": "Completo"},
     "tests": {"en": "Tests", "ca": "Tests", "es": "Tests"},
     "en_curs": {"en": "In progress", "ca": "En curs", "es": "En curso"},
@@ -47,15 +50,15 @@ TXT = {
     "tancat": {"en": "closed", "ca": "tancat", "es": "cerrado"},
     "fotos": {"en": "Photographs", "ca": "Fotografies", "es": "Fotografías"},
     "avis": {
-        "en": "{n} models evaluated; {c} have every multiple-choice question scored and {k} all {t} questions. "
-              "“Tests only” scores count the four-option questions; open and trap questions will be added once the "
-              "judge scores them. A run “in progress” is not yet comparable with complete ones.",
-        "ca": "{n} models avaluats; {c} ja tenen tots els tests puntuats i {k} les {t} preguntes. Les notes «només tests» "
-              "compten les preguntes de quatre opcions; les obertes i les trampes s'hi afegiran quan les puntuï el jutge. "
-              "Una execució «en curs» encara no és comparable amb les completes.",
-        "es": "{n} modelos evaluados; {c} ya tienen todos los tests puntuados y {k} las {t} preguntas. Las notas «solo tests» "
-              "cuentan las preguntas de cuatro opciones; las abiertas y las trampas se añadirán cuando las puntúe el juez. "
-              "Una ejecución «en curso» aún no es comparable con las completas.",
+        "en": "{n} models evaluated, {k} with all {t} questions scored: multiple choice automatically, open and trap "
+              "questions by the judge (Gemini 3.8 Flash, in batch). Gemini 3.8 Flash is also the judge, so its open and "
+              "trap scores may be inflated. An empty answer counts as wrong.",
+        "ca": "{n} models avaluats, {k} amb les {t} preguntes puntuades: els tests automàticament, les obertes i les "
+              "trampes amb el jutge (Gemini 3.8 Flash, per lots). Gemini 3.8 Flash també és el jutge: la seva nota a les "
+              "obertes i trampes pot estar inflada. Una resposta buida compta com a errada.",
+        "es": "{n} modelos evaluados, {k} con las {t} preguntas puntuadas: los tests automáticamente, las abiertas y las "
+              "trampas con el juez (Gemini 3.8 Flash, por lotes). Gemini 3.8 Flash también es el juez: su nota en las "
+              "abiertas y trampas puede estar inflada. Una respuesta vacía cuenta como error.",
     },
     # textos que fa servir el JavaScript de la pàgina
     "js": {
@@ -107,6 +110,28 @@ NOMS = {
     "ollama:ministral-3:latest": ("Ministral 3", "Mistral · obert · local"),
     "ollama:gpt-oss:20b": ("gpt-oss 20B", "OpenAI · obert · local"),
     "vertex:google/gemini-3.8-flash": ("Gemini 3.8 Flash", "Google · tancat · API"),
+    "vertex:google/gemini-4-argon": ("Gemini 4 Argon", "Google · tancat · API"),
+    "vertex:google/gemini-3.1-pro-preview": ("Gemini 3.1 Pro", "Google · tancat · API"),
+    "vertex:google/gemini-3.7-flash": ("Gemini 3.7 Flash", "Google · tancat · API"),
+    "vertex:google/gemini-3.6-flash": ("Gemini 3.6 Flash", "Google · tancat · API"),
+    "vertex:google/gemini-3.5-flash": ("Gemini 3.5 Flash", "Google · tancat · API"),
+    "vertex:google/gemini-3-flash-preview": ("Gemini 3 Flash", "Google · tancat · API"),
+    "vertex:google/gemini-3.5-flash-lite": ("Gemini 3.5 Flash-Lite", "Google · tancat · API"),
+    "vertex:google/gemini-3.1-flash-lite": ("Gemini 3.1 Flash-Lite", "Google · tancat · API"),
+    "vertex:xai/grok-4.20-non-reasoning": ("Grok 4.20", "xAI · tancat · API"),
+    "ollama:gemma3:4b": ("Gemma 3 4B", "Google · obert · local"),
+    "ollama:gemma3:27b": ("Gemma 3 27B", "Google · obert · local"),
+    "ollamacloud:kimi-k2.6": ("Kimi K2.6", "Moonshot · obert · Ollama Cloud"),
+    "openrouter:anthropic/claude-haiku-5.5": ("Claude Haiku 5.5", "Anthropic · tancat · API"),
+    "openrouter:anthropic/claude-sonnet-5.5": ("Claude Sonnet 5.5", "Anthropic · tancat · API"),
+    "openrouter:anthropic/claude-opus-5.5": ("Claude Opus 5.5", "Anthropic · tancat · API"),
+    "openrouter:openai/gpt-6-luna": ("GPT-6 Luna", "OpenAI · tancat · API"),
+    "openrouter:openai/gpt-6.1-terra": ("GPT-6.1 Terra", "OpenAI · tancat · API"),
+    "openrouter:openai/gpt-6.1-sol": ("GPT-6.1 Sol", "OpenAI · tancat · API"),
+    "openrouter:x-ai/grok-4.7": ("Grok 4.7", "xAI · tancat · API"),
+    "openrouter:qwen/qwen3.8-max-0902": ("Qwen 3.8 Max", "Alibaba · tancat · API"),
+    "openrouter:qwen/qwen3.8-flash": ("Qwen 3.8 Flash", "Alibaba · tancat · API"),
+    "openrouter:dots-studio/dots-3-note-preview:free": ("Dots 3", "Dots · obert · API"),
     "vertex:google/gemma-4-26b-a4b-it-maas": ("Gemma 4 26B-A4B", "Google · obert · Vertex"),
     "ollamacloud:gemma4:31b": ("Gemma 4 31B", "Google · obert · Ollama Cloud"),
     "ollamacloud:gpt-oss:20b": ("gpt-oss 20B", "OpenAI · obert · Ollama Cloud"),
@@ -218,11 +243,29 @@ def barres_cim(models):
         etiqueta = f'{html.escape(nom)}: {pct(c["nota"])}, {tr("interval")} {pct(lo)} – {pct(hi)}' + (
             "" if m["comparable"] else f', {tr("en_curs_min")}')
         valor = f'<b class="bv num">{pct(c["nota"])}</b>' if i < 3 else f'<span class="bi num">{pct(c["nota"])}</span>'
+        # nota i interval per tema, perquè el filtre de temes pugui reordenar les barres sense tornar a generar la pàgina
+        ds = {d: [round(b["nota"], 4), *[round(x, 4) for x in b["ic95"]]]
+              for d, b in m.get("per_domini", {}).items() if b.get("nota") is not None}
         out.append(
             f'<div class="{cls}" style="--v:{c["nota"]:.4f};--lo:{lo:.4f};--hi:{hi:.4f}" tabindex="0" '
+            f'data-nom="{html.escape(nom)}" data-g="{c["nota"]:.4f},{lo:.4f},{hi:.4f}" '
+            f'data-ds="{html.escape(json.dumps(ds, separators=(",", ":")))}" '
             f'aria-label="{etiqueta}" data-tip="{etiqueta}">{valor}<i class="ic"></i>'
             f'<span class="bn">{html.escape(nom)}</span></div>')
     return "\n".join(out)
+
+
+def filtre_temes(models):
+    """Botons per classificar per tema: General i un per domini, amb el nombre de preguntes."""
+    n = collections.Counter()
+    for m in models[:1]:
+        n.update({d: b.get("n", 0) for d, b in m.get("per_domini", {}).items()})
+    botons = [f'<div class="ctl filtre" id="filtre-tema" role="group" aria-label="{tr("filtre_tema")}">',
+              f'<button type="button" data-d="" aria-pressed="true">{tr("general")}</button>']
+    for d, nom in DOMINIS:
+        botons.append(f'<button type="button" data-d="{d}" aria-pressed="false">{html.escape(nom_domini(d, nom))}'
+                      f' <span class="num">{n.get(d, 0)}</span></button>')
+    return "\n".join(botons + ["</div>"])
 
 
 def hero_barres(models, n=8):
@@ -328,7 +371,7 @@ def main():
                         "per_domini_n": {d: v.get("n", 0) for d, v in m["per_domini"].items()}}
                        for m in models],
             "mostra": mostra_preguntes(models, dataset),
-            "t": TXT["js"][idioma],
+            "t": {**TXT["js"][idioma], "interval": TXT["interval"][idioma]},
             "dec": "." if idioma == "en" else ",",
         }
         avis = tr("avis").format(n=len(models), c=comparables, k=complets, t=len(rows))
@@ -338,6 +381,8 @@ def main():
         subst = {
             "__FILES__": files_tauler(models, len(rows)),
             "__BARRES__": barres_cim(models),
+            "__BARRES_CLS__": "files" if sum(1 for m in models if m["coneixement"].get("n")) > 14 else "",
+            "__FILTRE__": filtre_temes(models),
             "__HERO_BARRES__": hero_barres(models),
             "__DOMINIS__": tiles_dominis(models),
             "__IDIOMES__": idiomes,

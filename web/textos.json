@@ -45,9 +45,9 @@
   "es": "</b>modelos evaluados</li>"
  },
  "cimlbl": {
-  "en": "The background of each column is the summit of Coma Pedrosa, 2,942 m: the 100 %. Top eight, multiple-choice scored.",
-  "ca": "El fons de cada columna és el cim del Coma Pedrosa, 2.942 m: el 100 %. Els vuit primers, tests puntuats.",
-  "es": "El fondo de cada columna es la cima del Coma Pedrosa, 2.942 m: el 100 %. Los ocho primeros, tests puntuados."
+  "en": "The background of each column is the summit of Coma Pedrosa, 2,942 m: the 100 %. Top eight, full score.",
+  "ca": "El fons de cada columna és el cim del Coma Pedrosa, 2.942 m: el 100 %. Els vuit primers, nota completa.",
+  "es": "El fondo de cada columna es la cima del Coma Pedrosa, 2.942 m: el 100 %. Los ocho primeros, nota completa."
  },
  "h1": {
   "en": "<h1>Who knows Andorra?</h1>",
@@ -70,9 +70,9 @@
   "es": "</b>de altitud, si la cima es el 100 %</div>"
  },
  "r3": {
-  "en": "</b>models with every test scored</div>",
-  "ca": "</b>models amb tots els tests</div>",
-  "es": "</b>modelos con todos los tests</div>"
+  "en": "</b>models with all 926 questions scored</div>",
+  "ca": "</b>models amb les 926 preguntes puntuades</div>",
+  "es": "</b>modelos con las 926 preguntas puntuadas</div>"
  },
  "r4": {
   "en": "<b>95 % CI</b>on every score</div>",
@@ -90,9 +90,9 @@
   "es": "<h2 id=\"t-rank\">Quién sabe más</h2>"
  },
  "rank_txt": {
-  "en": "Each bar is a model. Its height is the share of questions it gets right: 100 % would be the summit of Coma Pedrosa, 2,942 m. The light mark on top is the 95 % confidence interval; if two overlap, there is no clear winner.",
-  "ca": "Cada barra és un model. L'alçada és la part de les preguntes que encerta: el 100 % seria el cim del Coma Pedrosa, 2.942 m. La línia clara de dalt és l'interval de confiança del 95 %; si dues se solapen, no hi ha guanyador clar.",
-  "es": "Cada barra es un modelo. La altura es la parte de las preguntas que acierta: el 100 % sería la cima del Coma Pedrosa, 2.942 m. La marca clara de arriba es el intervalo de confianza del 95 %; si dos se solapan, no hay ganador claro."
+  "en": "Each bar is a model and measures the share of questions it gets right: 100 % would be the summit of Coma Pedrosa, 2,942 m. Hover a bar to see its 95 % confidence interval; if two intervals overlap, there is no clear winner. Pick a topic to rank the models by it.",
+  "ca": "Cada barra és un model i mesura la part de les preguntes que encerta: el 100 % seria el cim del Coma Pedrosa, 2.942 m. Passa per sobre d'una barra per veure'n l'interval de confiança del 95 %; si dos intervals se solapen, no hi ha guanyador clar. Tria un tema per classificar-los per aquell tema.",
+  "es": "Cada barra es un modelo y mide la parte de las preguntas que acierta: el 100 % sería la cima del Coma Pedrosa, 2.942 m. Pasa por encima de una barra para ver su intervalo de confianza del 95 %; si dos intervalos se solapan, no hay ganador claro. Elige un tema para clasificarlos por ese tema."
  },
  "cim": {
   "en": "<span class=\"top\">Summit · 2,942 m · 100 %</span>",
