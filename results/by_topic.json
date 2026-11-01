@@ -163,6 +163,27 @@
    }
   },
   {
+   "model": "openrouter:openai/gpt-6-luna",
+   "folder": "openrouter_openai_gpt-6-luna",
+   "scored": 926,
+   "score": 0.6026,
+   "by_domain": {
+    "culture": 0.6707,
+    "customs": 0.4906,
+    "daily-life": 0.7031,
+    "economy": 0.5843,
+    "gastronomy": 0.5857,
+    "history": 0.6107,
+    "institutions": 0.5963,
+    "language": 0.5814,
+    "people": 0.5909,
+    "politics": 0.6974,
+    "society": 0.5792,
+    "sports": 0.5526,
+    "territory": 0.6571
+   }
+  },
+  {
    "model": "ollamacloud:deepseek-v4.1-flash:1017",
    "folder": "ollamacloud_deepseek-v4.1-flash_1017",
    "scored": 926,
@@ -244,6 +265,27 @@
     "society": 0.4875,
     "sports": 0.5461,
     "territory": 0.5786
+   }
+  },
+  {
+   "model": "openrouter:x-ai/grok-4.7",
+   "folder": "openrouter_x-ai_grok-4.7",
+   "scored": 926,
+   "score": 0.5432,
+   "by_domain": {
+    "culture": 0.5,
+    "customs": 0.4906,
+    "daily-life": 0.7031,
+    "economy": 0.5301,
+    "gastronomy": 0.5429,
+    "history": 0.5916,
+    "institutions": 0.5872,
+    "language": 0.5465,
+    "people": 0.3182,
+    "politics": 0.6842,
+    "society": 0.525,
+    "sports": 0.4539,
+    "territory": 0.5
    }
   },
   {
@@ -394,6 +436,27 @@
    }
   },
   {
+   "model": "openrouter:qwen/qwen3.8-flash",
+   "folder": "openrouter_qwen_qwen3.8-flash",
+   "scored": 926,
+   "score": 0.4822,
+   "by_domain": {
+    "culture": 0.4817,
+    "customs": 0.4434,
+    "daily-life": 0.6875,
+    "economy": 0.4578,
+    "gastronomy": 0.5,
+    "history": 0.5,
+    "institutions": 0.5092,
+    "language": 0.5523,
+    "people": 0.5909,
+    "politics": 0.4474,
+    "society": 0.4542,
+    "sports": 0.4276,
+    "territory": 0.3857
+   }
+  },
+  {
    "model": "ollamacloud:kimi-k2.6",
    "folder": "ollamacloud_kimi-k2.6",
    "scored": 926,
@@ -433,6 +496,27 @@
     "society": 0.5083,
     "sports": 0.3882,
     "territory": 0.4286
+   }
+  },
+  {
+   "model": "openrouter:anthropic/claude-haiku-5.5",
+   "folder": "openrouter_anthropic_claude-haiku-5.5",
+   "scored": 926,
+   "score": 0.4347,
+   "by_domain": {
+    "culture": 0.378,
+    "customs": 0.3868,
+    "daily-life": 0.5625,
+    "economy": 0.4639,
+    "gastronomy": 0.5286,
+    "history": 0.4885,
+    "institutions": 0.4587,
+    "language": 0.4477,
+    "people": 0.1818,
+    "politics": 0.3289,
+    "society": 0.4375,
+    "sports": 0.25,
+    "territory": 0.5357
    }
   },
   {

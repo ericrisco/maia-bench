@@ -1,0 +1,14 @@
+{
+ "model": "openrouter:qwen/qwen3.8-flash",
+ "origin": "",
+ "prompt": "p1",
+ "system": "Respon en català les preguntes sobre Andorra que et facin.",
+ "temperature": 0,
+ "dataset": "ec314f7d6239",
+ "dataset_questions": 926,
+ "commit": "96946c2",
+ "max_tokens": 8000,
+ "reasoning": "1500",
+ "started": "2026-11-01T16:45:22+00:00",
+ "finished": "2026-11-01T18:56:59+00:00"
+}

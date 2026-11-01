@@ -1,0 +1,16 @@
+{
+ "model": "openrouter:openai/gpt-6-luna",
+ "origin": "",
+ "prompt": "p1",
+ "system": "Respon en català les preguntes sobre Andorra que et facin.",
+ "temperature": 0,
+ "max_tokens": 8000,
+ "reasoning": "low",
+ "transport": "openrouter-batch",
+ "dataset": "ec314f7d6239",
+ "dataset_questions": 926,
+ "commit": "96946c2",
+ "started": "2026-11-01T19:21:42+00:00",
+ "finished": "2026-11-01T19:43:53+00:00",
+ "cost_usd": 0.0614
+}
