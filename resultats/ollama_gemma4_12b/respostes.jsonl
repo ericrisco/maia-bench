@@ -924,3 +924,94 @@
 {"id": "vida-quotidiana-referents-compartits/001", "resposta": "", "tokens_entrada": 118, "tokens_sortida": 4000, "segons": 70.25}
 {"id": "vida-quotidiana-referents-compartits/003", "resposta": "Un referent compartit és un element que defineix la identitat col·lectiva i la memòria d'un poble, mentre que una cosa famosa només té notorietat sense necessàriament formar part del \"nosaltre\". El Pareatge del 1278 exemplifica això perquè no és només un document històric conegut, sinó la base jurídica i simbòlica que fonamenta l'estructura política i l'identitat de l'Andorra actual.", "tokens_entrada": 86, "tokens_sortida": 664, "segons": 20.64}
 {"id": "vida-quotidiana-referents-compartits/002", "resposta": "C", "tokens_entrada": 116, "tokens_sortida": 269, "segons": 5.84}
+{"id": "costums-caramelles/001", "resposta": "B", "tokens_entrada": 134, "tokens_sortida": 738, "segons": 159.77, "raonament": "medium"}
+{"id": "costums-festes-majors/006", "resposta": "La Passa és la dansa més coneguda perquè és una tradició molt antiga i enraïssada en la identitat cultural de Sant Julià de Lòria. És l'element central de la Festa Major, on es balla de manera tradicional a les rues de la vila. La seva importància històrica i la seva presència constant la convertenen en el símbol més representatiu de la festa.", "tokens_entrada": 74, "tokens_sortida": 684, "segons": 156.2, "raonament": "medium"}
+{"id": "cultura-llegendes/008", "resposta": "", "tokens_entrada": 93, "tokens_sortida": 4000, "segons": 247.47, "raonament": "medium"}
+{"id": "cultura-solts/002", "resposta": "A", "tokens_entrada": 140, "tokens_sortida": 1516, "segons": 179.07, "raonament": "medium"}
+{"id": "cultura-teatre/002", "resposta": "", "tokens_entrada": 114, "tokens_sortida": 4000, "segons": 93.68, "raonament": "medium"}
+{"id": "economia-transformacio-economica/006", "resposta": "", "tokens_entrada": 108, "tokens_sortida": 4000, "segons": 92.24, "raonament": "medium"}
+{"id": "esports-competicio/001", "resposta": "", "tokens_entrada": 117, "tokens_sortida": 4000, "segons": 97.49, "raonament": "medium"}
+{"id": "esports-competicio/003", "resposta": "", "tokens_entrada": 122, "tokens_sortida": 4000, "segons": 89.86, "raonament": "medium"}
+{"id": "esports-competicio/004", "resposta": "B", "tokens_entrada": 114, "tokens_sortida": 2346, "segons": 58.8, "raonament": "medium"}
+{"id": "esports-competicio/007", "resposta": "Els països han de ser microestats europeus amb una població i un territori reduïts. Andorra els ha organitzat un total de tres vegades (el 2008, el 2020 i el 2024).", "tokens_entrada": 84, "tokens_sortida": 940, "segons": 25.49, "raonament": "medium"}
+{"id": "esports-estiu/003", "resposta": "", "tokens_entrada": 114, "tokens_sortida": 4000, "segons": 99.94, "raonament": "medium"}
+{"id": "esports-estiu/009", "resposta": "No hi ha cap registre d'un atleta anomenat Antoni Bernadó que hagi guanyat una medalla olímpica en marató. És possible que hi hagi una confusió amb un altre nom o un altre esport.", "tokens_entrada": 67, "tokens_sortida": 537, "segons": 14.98, "raonament": "medium"}
+{"id": "esports-estiu/007", "resposta": "", "tokens_entrada": 103, "tokens_sortida": 4000, "segons": 85.46, "raonament": "medium"}
+{"id": "esports-estiu/008", "resposta": "", "tokens_entrada": 92, "tokens_sortida": 4000, "segons": 85.72, "raonament": "medium"}
+{"id": "gastronomia-begudes/002", "resposta": "B", "tokens_entrada": 149, "tokens_sortida": 406, "segons": 11.27, "raonament": "medium"}
+{"id": "historia-democratitzacio/003", "resposta": "D", "tokens_entrada": 144, "tokens_sortida": 570, "segons": 15.69, "raonament": "medium"}
+{"id": "historia-moments-historics/003", "resposta": "C", "tokens_entrada": 113, "tokens_sortida": 1168, "segons": 33.63, "raonament": "medium"}
+{"id": "historia-pareatge/002", "resposta": "", "tokens_entrada": 119, "tokens_sortida": 4000, "segons": 96.73, "raonament": "medium"}
+{"id": "institucions-comuns-i-parroquies/006", "resposta": "", "tokens_entrada": 154, "tokens_sortida": 4000, "segons": 98.18, "raonament": "medium"}
+{"id": "institucions-patrimoni-institucional/007", "resposta": "L'arxiu del Consell General repartia les claus segons la propietat de la terra i els drets d'ús dels habitants. Amb aquest repartiment s'aconseguia establir una propietat clara i regular l'ús dels recursos comuns. L'objectiu final era garantir la convivència social i la estabilitat del territori.", "tokens_entrada": 84, "tokens_sortida": 1087, "segons": 30.42, "raonament": "medium"}
+{"id": "llengua-contacte-de-llengues/002", "resposta": "", "tokens_entrada": 127, "tokens_sortida": 4000, "segons": 101.13, "raonament": "medium"}
+{"id": "llengua-historia-de-la-llengua/004", "resposta": "A", "tokens_entrada": 186, "tokens_sortida": 691, "segons": 19.51, "raonament": "medium"}
+{"id": "llengua-lexic-andorra/003", "resposta": "", "tokens_entrada": 130, "tokens_sortida": 4000, "segons": 84.48, "raonament": "medium"}
+{"id": "llengua-lexic-andorra/007", "resposta": "", "tokens_entrada": 87, "tokens_sortida": 4000, "segons": 85.28, "raonament": "medium"}
+{"id": "llengua-manlleus/003", "resposta": "A", "tokens_entrada": 121, "tokens_sortida": 3964, "segons": 104.89, "raonament": "medium"}
+{"id": "llengua-morfosintaxi/007", "resposta": "El tret distintiu és l'ús de la combinació \"no més\" per expressar \"ja no\". Mentre que el català general utilitza \"ja no\", l'andorrà prenombrega el \"no\" i afegeix el \"més\". Per exemple, es diria \"no més vaig anar\" en lloc de \"ja no vaig anar\".", "tokens_entrada": 80, "tokens_sortida": 1771, "segons": 50.5, "raonament": "medium"}
+{"id": "nv-n01/002", "resposta": "Fèlix va ser un bisbe d'Urgell que va ser condemnat per la seva oposició als interessos de la noblesa local i la corona. La seva condemna va provocar una pèrdua significativa de territoris i drets jurisdiccionals per part del bisbat. Aquest fet va debilitar considerablement la influència política i econòmica de l'institució en la regió durant un llarg període.", "tokens_entrada": 84, "tokens_sortida": 992, "segons": 29.83, "raonament": "medium"}
+{"id": "nv-n04/002", "resposta": "", "tokens_entrada": 94, "tokens_sortida": 4000, "segons": 93.5, "raonament": "medium"}
+{"id": "nv-n04/004", "resposta": "", "tokens_entrada": 82, "tokens_sortida": 4000, "segons": 91.74, "raonament": "medium"}
+{"id": "nv-n10/002", "resposta": "La reforma electoral de 1993 va facilitar la formació de majories més estables i funcionals al Consell General. Els crítics preveuen que el nou sistema provocaria una fragmentació excessiva que impediria la governabilitat. Aquest pronòstic va fallar, ja que la reforma va permetre una gestió política més eficient i coordinada.", "tokens_entrada": 86, "tokens_sortida": 1087, "segons": 32.77, "raonament": "medium"}
+{"id": "nv-n11/002", "resposta": "", "tokens_entrada": 87, "tokens_sortida": 4000, "segons": 102.42, "raonament": "medium"}
+{"id": "nv-n12/003", "resposta": "", "tokens_entrada": 95, "tokens_sortida": 4000, "segons": 83.87, "raonament": "medium"}
+{"id": "persones/001", "resposta": "C", "tokens_entrada": 109, "tokens_sortida": 721, "segons": 19.14, "raonament": "medium"}
+{"id": "societat-demografia/007", "resposta": "La diferència es produeix perquè una sèrie mesura la població al **comencament** del mes i l'altra la mesura al **final** del mateix mes. La primera mostra la població inicial, mentre que la segona inclou els moviments demogràfics (naixements, morts i migracions) ocorreguts durant el juliol. Això explica per què les xifres poden mostrar tendències oposades segons el moment de la captura de dades.", "tokens_entrada": 93, "tokens_sortida": 1510, "segons": 44.28, "raonament": "medium"}
+{"id": "societat-esport/003", "resposta": "Andorra ha aportat terminologia als vocabularis dels **esports de muntanya** i dels **esports d'hivern**. La seva col·laboració s'ha centrat en la descripció de les infraestructures i tècniques de les estacions d'esquí. Un exemple de terme que s'ha difundit és **\"pista\"**.", "tokens_entrada": 84, "tokens_sortida": 1924, "segons": 53.87, "raonament": "medium"}
+{"id": "societat-immigracio/007", "resposta": "Becat no utilitzava el terme \"gueto\" per expressar hostilitat cap als estrangers, sinó per denunciar la marginalització econòmica i social de la població local davant del creixement del capital extern. La seva crítica se centrava en la pèrdida de cohesió social i en com els andorrans quedaven exclosos dels beneficis del propi país. Sovint se suprimeix que la seva intenció era una crítica estructural al model de desenvolupament i no un atac a la població immigrant.", "tokens_entrada": 101, "tokens_sortida": 1242, "segons": 38.6, "raonament": "medium"}
+{"id": "societat-sanitat/005", "resposta": "", "tokens_entrada": 139, "tokens_sortida": 4000, "segons": 88.18, "raonament": "medium"}
+{"id": "societat-sanitat/008", "resposta": "Els Serveis de Salut Mental del SAAS van ser dirigits pel Dr. Joan Font des de la seva creació el 1998. L'any 2001, Andorra va acollir el Congrés Internacional de Salut Mental.", "tokens_entrada": 94, "tokens_sortida": 1402, "segons": 36.62, "raonament": "medium"}
+{"id": "societat-vida-civica/004", "resposta": "A", "tokens_entrada": 113, "tokens_sortida": 756, "segons": 18.82, "raonament": "medium"}
+{"id": "territori-parroquies/008", "resposta": "Canillo és una de les parròquies més àmplies d'Andorra, tot i que no és la que té la major extensió territorial. Ocupa el cinquè lloc en l'ordre protocol·lari del país, situant-se després de Andorra la Vella, Escaldes-Engordany, Encamp i Sant Julià de Lòria. Internament, el seu territori es divideix en diversos veïnats per a la seva organització local.", "tokens_entrada": 88, "tokens_sortida": 1223, "segons": 34.52, "raonament": "medium"}
+{"id": "territori-patrimoni-natural/002", "resposta": "", "tokens_entrada": 120, "tokens_sortida": 4000, "segons": 86.65, "raonament": "medium"}
+{"id": "territori-toponimia/006", "resposta": "A", "tokens_entrada": 153, "tokens_sortida": 489, "segons": 13.04, "raonament": "medium"}
+{"id": "vida-quotidiana-referents-compartits/001", "resposta": "", "tokens_entrada": 118, "tokens_sortida": 4000, "segons": 84.74, "raonament": "medium"}
+{"id": "cultura-llegendes/008", "resposta": "No tinc informació sobre aquesta llegenda específica ni sobre la Dama Blanca d'Aubinyà. A més, Aubinyà és una localitat de Catalunya i no d'Andorra.", "tokens_entrada": 93, "tokens_sortida": 2109, "segons": 70.37, "raonament": "low"}
+{"id": "cultura-teatre/002", "resposta": "B", "tokens_entrada": 114, "tokens_sortida": 593, "segons": 29.5, "raonament": "low"}
+{"id": "economia-transformacio-economica/006", "resposta": "", "tokens_entrada": 108, "tokens_sortida": 4000, "segons": 108.8, "raonament": "low"}
+{"id": "esports-competicio/001", "resposta": "A", "tokens_entrada": 117, "tokens_sortida": 1344, "segons": 47.79, "raonament": "low"}
+{"id": "esports-competicio/003", "resposta": "", "tokens_entrada": 122, "tokens_sortida": 4000, "segons": 90.19, "raonament": "low"}
+{"id": "esports-estiu/003", "resposta": "C", "tokens_entrada": 114, "tokens_sortida": 272, "segons": 7.03, "raonament": "low"}
+{"id": "esports-estiu/007", "resposta": "", "tokens_entrada": 103, "tokens_sortida": 4000, "segons": 83.67, "raonament": "low"}
+{"id": "esports-estiu/008", "resposta": "Els dos ciclistes són Jordi Ribas i Joan Ribas. Jordi Ribas va ser el que va quedar novè a Seül 1988.", "tokens_entrada": 92, "tokens_sortida": 3192, "segons": 84.83, "raonament": "low"}
+{"id": "historia-pareatge/002", "resposta": "", "tokens_entrada": 119, "tokens_sortida": 4000, "segons": 92.47, "raonament": "low"}
+{"id": "institucions-comuns-i-parroquies/006", "resposta": "", "tokens_entrada": 154, "tokens_sortida": 4000, "segons": 96.36, "raonament": "low"}
+{"id": "llengua-contacte-de-llengues/002", "resposta": "", "tokens_entrada": 127, "tokens_sortida": 4000, "segons": 96.43, "raonament": "low"}
+{"id": "llengua-lexic-andorra/003", "resposta": "", "tokens_entrada": 130, "tokens_sortida": 4000, "segons": 83.86, "raonament": "low"}
+{"id": "llengua-lexic-andorra/007", "resposta": "", "tokens_entrada": 87, "tokens_sortida": 4000, "segons": 84.68, "raonament": "low"}
+{"id": "nv-n04/002", "resposta": "David Norwood va cofundar el fons d'inversió Andorra Capital. Entre el 2015 i el 2019, va ocupar el càrrec de Director General.", "tokens_entrada": 94, "tokens_sortida": 390, "segons": 10.65, "raonament": "low"}
+{"id": "nv-n04/004", "resposta": "Laurent Recouderc va perdre el seu primer partit contra Sam Querrey amb un marcador de 6-3, 6-4, 6-4. No hi ha registres de que hagués jugat contra Novak Djokovic en el Roland Garros del 2007, ja que Djokovic encara no participava en la fase principal d'aquest torneig.", "tokens_entrada": 82, "tokens_sortida": 1977, "segons": 53.48, "raonament": "low"}
+{"id": "nv-n11/002", "resposta": "La llei qualifica la pressió sobre una persona que reclama accessibilitat com una conducta discriminatòria. Aquesta infracció prescriu en un termini de tres anys.", "tokens_entrada": 87, "tokens_sortida": 1214, "segons": 32.36, "raonament": "low"}
+{"id": "nv-n12/003", "resposta": "C", "tokens_entrada": 95, "tokens_sortida": 553, "segons": 15.66, "raonament": "low"}
+{"id": "societat-sanitat/005", "resposta": "", "tokens_entrada": 139, "tokens_sortida": 4000, "segons": 86.95, "raonament": "low"}
+{"id": "territori-patrimoni-natural/002", "resposta": "", "tokens_entrada": 120, "tokens_sortida": 4000, "segons": 87.21, "raonament": "low"}
+{"id": "vida-quotidiana-referents-compartits/001", "resposta": "", "tokens_entrada": 118, "tokens_sortida": 4000, "segons": 83.65, "raonament": "low"}
+{"id": "economia-transformacio-economica/006", "resposta": "D", "tokens_entrada": 108, "tokens_sortida": 1725, "segons": 194.71, "raonament": "medium"}
+{"id": "esports-competicio/003", "resposta": "", "tokens_entrada": 122, "tokens_sortida": 4000, "segons": 244.5, "raonament": "medium"}
+{"id": "esports-estiu/007", "resposta": "", "tokens_entrada": 103, "tokens_sortida": 4000, "segons": 237.95, "raonament": "medium"}
+{"id": "historia-pareatge/002", "resposta": "", "tokens_entrada": 119, "tokens_sortida": 4000, "segons": 246.74, "raonament": "medium"}
+{"id": "institucions-comuns-i-parroquies/006", "resposta": "C", "tokens_entrada": 154, "tokens_sortida": 3738, "segons": 97.82, "raonament": "medium"}
+{"id": "llengua-contacte-de-llengues/002", "resposta": "", "tokens_entrada": 127, "tokens_sortida": 4000, "segons": 99.85, "raonament": "medium"}
+{"id": "llengua-lexic-andorra/003", "resposta": "", "tokens_entrada": 130, "tokens_sortida": 4000, "segons": 84.56, "raonament": "medium"}
+{"id": "llengua-lexic-andorra/007", "resposta": "", "tokens_entrada": 87, "tokens_sortida": 4000, "segons": 103.48, "raonament": "medium"}
+{"id": "societat-sanitat/005", "resposta": "", "tokens_entrada": 139, "tokens_sortida": 4000, "segons": 98.78, "raonament": "medium"}
+{"id": "territori-patrimoni-natural/002", "resposta": "", "tokens_entrada": 120, "tokens_sortida": 4000, "segons": 97.06, "raonament": "medium"}
+{"id": "vida-quotidiana-referents-compartits/001", "resposta": "", "tokens_entrada": 118, "tokens_sortida": 4000, "segons": 96.62, "raonament": "medium"}
+{"id": "esports-competicio/003", "resposta": "", "tokens_entrada": 122, "tokens_sortida": 4000, "segons": 91.04, "raonament": "low"}
+{"id": "esports-estiu/007", "resposta": "", "tokens_entrada": 103, "tokens_sortida": 4000, "segons": 82.4, "raonament": "low"}
+{"id": "historia-pareatge/002", "resposta": "", "tokens_entrada": 119, "tokens_sortida": 4000, "segons": 99.92, "raonament": "low"}
+{"id": "llengua-contacte-de-llengues/002", "resposta": "D", "tokens_entrada": 127, "tokens_sortida": 607, "segons": 17.02, "raonament": "low"}
+{"id": "llengua-lexic-andorra/003", "resposta": "", "tokens_entrada": 130, "tokens_sortida": 4000, "segons": 83.86, "raonament": "low"}
+{"id": "llengua-lexic-andorra/007", "resposta": "", "tokens_entrada": 87, "tokens_sortida": 4000, "segons": 83.43, "raonament": "low"}
+{"id": "societat-sanitat/005", "resposta": "", "tokens_entrada": 139, "tokens_sortida": 4000, "segons": 101.45, "raonament": "low"}
+{"id": "territori-patrimoni-natural/002", "resposta": "", "tokens_entrada": 120, "tokens_sortida": 4000, "segons": 102.79, "raonament": "low"}
+{"id": "vida-quotidiana-referents-compartits/001", "resposta": "", "tokens_entrada": 118, "tokens_sortida": 4000, "segons": 102.82, "raonament": "low"}
+{"id": "esports-competicio/003", "resposta": "", "tokens_entrada": 122, "tokens_sortida": 8070, "segons": 176.31, "raonament": "low"}
+{"id": "esports-estiu/007", "resposta": "", "tokens_entrada": 103, "tokens_sortida": 8087, "segons": 169.15, "raonament": "low"}
+{"id": "historia-pareatge/002", "resposta": "", "tokens_entrada": 119, "tokens_sortida": 8071, "segons": 177.08, "raonament": "low"}
+{"id": "llengua-lexic-andorra/003", "resposta": "", "tokens_entrada": 130, "tokens_sortida": 8060, "segons": 166.83, "raonament": "low"}
+{"id": "llengua-lexic-andorra/007", "resposta": "", "tokens_entrada": 87, "tokens_sortida": 8105, "segons": 172.1, "raonament": "low"}
+{"id": "societat-sanitat/005", "resposta": "", "tokens_entrada": 139, "tokens_sortida": 8050, "segons": 191.47, "raonament": "low"}
+{"id": "territori-patrimoni-natural/002", "resposta": "", "tokens_entrada": 120, "tokens_sortida": 8071, "segons": 189.16, "raonament": "low"}
+{"id": "vida-quotidiana-referents-compartits/001", "resposta": "", "tokens_entrada": 118, "tokens_sortida": 8074, "segons": 190.48, "raonament": "low"}

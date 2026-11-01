@@ -70,8 +70,9 @@ def main():
     ap.add_argument("--max-tokens", type=int, default=4000)
     ap.add_argument("--refes-buides", action="store_true",
                     help="torna a fer les respostes buides (models que gasten tots els tokens raonant)")
-    ap.add_argument("--raonament", choices=["low", "medium", "high"],
-                    help="esforç de raonament (reasoning_effort); amb --refes-buides, només per a les buides")
+    ap.add_argument("--raonament",
+                    help="esforç de raonament: low|medium|high, o un número (topall de tokens, només OpenRouter); "
+                         "amb --refes-buides, només per a les buides")
     a = ap.parse_args()
     separa(a.model)
 

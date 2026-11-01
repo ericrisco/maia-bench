@@ -86,8 +86,12 @@ def _openai_compatible(prov, nom, missatges, temperatura, max_tokens, raonament=
     cos = {"model": nom, "messages": missatges, "temperature": temperatura}
     # Els models de raonament d'OpenAI no accepten max_tokens; la resta sí.
     cos["max_completion_tokens" if prov == "openai" else "max_tokens"] = max_tokens
-    if raonament:  # reasoning_effort: low|medium|high (models de raonament)
-        cos["reasoning_effort"] = raonament
+    if raonament:  # reasoning_effort: low|medium|high (models de raonament); OpenRouter el vol com a objecte
+        if prov == "openrouter":
+            # un número és un topall de tokens de raonament: deixa sempre lloc a la resposta
+            cos["reasoning"] = {"max_tokens": int(raonament)} if str(raonament).isdigit() else {"effort": raonament}
+        else:
+            cos["reasoning_effort"] = raonament
     try:
         d = _post(url, cos, cap, 600)
     except urllib.error.HTTPError as e:
