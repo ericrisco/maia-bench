@@ -1,94 +1,94 @@
 # maia-bench
 
-Benchmark per mesurar **quant sap un model d'Andorra** i **com de bé parla andorrà**.
+A benchmark that measures **how much a model knows about Andorra** and **how well it speaks Andorran Catalan**.
 
-Neix del projecte [maia](https://github.com/ericrisco/maia) (Gemma 4 especialitzat en Andorra), però és independent:
-serveix per avaluar qualsevol model.
+It was born from the [maia](https://github.com/ericrisco/maia) project (Gemma 4 specialised in Andorra), but it is
+independent: it can evaluate any model.
 
-> **Estat:** el dataset de coneixement (926 preguntes) està fet i verificat. La part de llengua està en construcció.
+> **Status:** the knowledge dataset (926 questions) is done and verified. The language part is under construction.
 
-> **D'on surt el corpus:** vegeu [com s'ha creat el corpus](docs/origen-del-corpus.md): el procés, una foto amb recomptes i les seves limitacions.
+> **Where the corpus comes from:** see [how the corpus was built](docs/corpus-origin.md): the process, a snapshot with counts, and its limitations.
 
-## Què mesura
+## What it measures
 
-| Part | Pregunta | Correcció |
+| Part | Question | Scoring |
 |---|---|---|
-| **Coneixement** | Sap d'Andorra? S'inventa coses? | Test de 4 opcions (automàtic); respostes obertes i trampes (jutge LLM) |
-| **Llengua** | Parla andorrà? | Perplexitat sobre parla real, test dialectal (automàtics) i prova cega amb andorrans (vots humans) |
-| **Control** | Ha empitjorat en català general? | Subconjunt de CatalanBench |
+| **Knowledge** | Does it know about Andorra? Does it make things up? | 4-option multiple choice (automatic); open answers and traps (LLM judge) |
+| **Language** | Does it speak Andorran Catalan? | Perplexity on real speech, dialect test (automatic) and a blind test with Andorrans (human votes) |
+| **Control** | Has it got worse at general Catalan? | Subset of CatalanBench |
 
-La part de llengua **no usa un jutge LLM** per decidir si una resposta «sona andorrana»: un model no coneix bé aquesta
-varietat, que és justament el que es vol mesurar.
+The language part **does not use an LLM judge** to decide whether an answer "sounds Andorran": a model does not know
+this variety well, which is exactly what is being measured.
 
-## Dos nivells d'execució
+## Two execution levels
 
-| Nivell | Què inclou | Cost per a qui l'executa |
+| Level | What it includes | Cost for whoever runs it |
 |---|---|---|
-| **1. Sense jutge** | Test de 4 opcions, test dialectal, perplexitat | Només la seva GPU |
-| **2. Amb jutge** | Preguntes obertes i trampes | Una clau d'un model jutge, configurable |
+| **1. Without judge** | 4-option multiple choice, dialect test, perplexity | Only their own GPU |
+| **2. With judge** | Open questions and traps | A key for a judge model, configurable |
 
-Els resultats **oficials** fan servir sempre el jutge fixat (model i versió anotats a cada publicació).
+**Official** results always use the fixed judge (model and version recorded in each publication).
 
-## Regles
+## Rules
 
-1. **Versions congelades.** Un cop publicada, `v1` no es toca. Una correcció és una `v2`.
-2. **Mai a l'entrenament.** Cap pregunta, ni el contingut reservat, pot entrar a un entrenament que s'avaluï amb aquest benchmark.
-3. **Sense dades que caduquen:** ni lleis vigents, ni preus, ni càrrecs actuals, ni horaris.
-4. **Mateixes condicions per a tots els models:** mateix prompt, temperatura 0.
-5. **Contaminació.** Cada pregunta es compara amb les dades d'entrenament de maia i es descarta si s'hi assembla massa.
+1. **Frozen versions.** Once published, `v1` is never touched. A correction is a `v2`.
+2. **Never in training.** No question, nor the holdout content, may enter a training run that is evaluated with this benchmark.
+3. **No data that expires:** no laws in force, prices, current office-holders or timetables.
+4. **Same conditions for every model:** same prompt, temperature 0.
+5. **Contamination.** Every question is compared against maia's training data and discarded if it is too similar.
 
-## Tot és públic
+## Everything is public
 
-El benchmark es publica sencer: preguntes, contextos, respostes de referència, fets clau i codi. **No hi ha part privada**
-(decidit el 2026-10-26; les proves privades es deixen per a altres benchmarks). La contaminació es mitiga amb versions
-congelades, una marca de contaminació (*canary string*) i preguntes «no vistes» sobre fitxes que mai han entrat a un
-entrenament. L'únic que **no** es pot publicar és el text de les peces de parla de la prova de perplexitat (les fonts no
-en permeten la redistribució): se'n publica un manifest i un carregador.
+The benchmark is published in full: questions, contexts, reference answers, key facts and code. **There is no private
+part** (decided on 2026-10-26; private tests are left for other benchmarks). Contamination is mitigated with frozen
+versions, a contamination marker (*canary string*) and "unseen" questions about fact sheets that have never entered a
+training run. The only thing that **cannot** be published is the text of the speech pieces used in the perplexity test
+(the sources do not allow redistribution): a manifest and a loader are published instead.
 
-## Pendent de decidir
+## Still to decide
 
-- **Llicència** del codi i de les dades (depèn dels termes de les fonts del corpus).
-- **Quan es fa públic el repositori** i on s'allotja la pàgina de resultats.
+- **Licence** for the code and the data (depends on the terms of the corpus sources).
+- **When the repository goes public** and where the results page is hosted.
 
-## Dataset de coneixement
+## Knowledge dataset
 
-Es construeix pregunta a pregunta (un commit per pregunta) a la branca `dataset`. Cada entrada té una pregunta, un
-context detallat i la resposta de referència. Format a [`docs/format.md`](docs/format.md); es valida amb
-`tools/valida.py`. Previstes: 925 preguntes (9 per subtema, i 2 «no vistes» per cada fitxa reservada).
+It is built question by question (one commit per question) on the `dataset` branch. Each entry has a question, a
+detailed context and the reference answer. Format in [`docs/format.md`](docs/format.md); validated with
+`tools/validate.py`. Planned: 925 questions (9 per subtopic, and 2 "unseen" per holdout fact sheet).
 
-## Documentació
+## Documentation
 
-- [Com s'ha creat el corpus](docs/origen-del-corpus.md)
-- [Spec — què mesura el benchmark](docs/specs/andorranitat-benchmark.md)
-- [Spec — plataforma: execució, resultats públics i part privada](docs/specs/maia-bench-platform.md)
-- `reserva/` — els 41 articles i les 6 peces de parla que **no s'entrenen mai** (n'hi ha una còpia a maia, que han de coincidir).
+- [How the corpus was built](docs/corpus-origin.md)
+- [Spec — what the benchmark measures](docs/specs/andorranness-benchmark.md)
+- [Spec — platform: execution, public results and private part](docs/specs/maia-bench-platform.md)
+- `holdout/` — the 41 articles and the 6 speech pieces that are **never trained on** (maia holds a copy, and the two must match).
 
-## Estructura prevista
+## Planned structure
 
 ```
 maia-bench/
-├── coneixement/    un fitxer per subtema (test, obertes, trampes) i nv-*.jsonl (no vistes)
-├── llengua/        dialectal, perplexitat (manifest), cega
-├── reserva/        fitxes i peces de parla que no entren mai a un entrenament
-├── tools/          valida.py, afegeix.py
-└── avalua/         codi que passa el benchmark a un model i en treu la taula (pendent)
+├── knowledge/      one file per subtopic (multiple choice, open, traps) and unseen-*.jsonl (unseen)
+├── language/       dialect, perplexity (manifest), blind
+├── holdout/        fact sheets and speech pieces that never enter a training run
+├── tools/          validate.py, add.py
+└── evaluate/       code that runs the benchmark on a model and produces the table (pending)
 ```
 
-## Avaluar un model
+## Evaluating a model
 
 ```bash
-# 1. Respostes (el model només veu la pregunta). Reprenible.
-python3 tools/executa.py --model ollama:gemma4:e4b
-# 2. Puntuació: tests automàtics; obertes i trampes amb el jutge (Gemini 3.8 Flash a Vertex)
-python3 tools/puntua.py resultats/ollama_gemma4_e4b
-#    Si Vertex rebutja les crides en línia (403), el mateix jutge per lots i després puntua.py per al resum:
-#    python3 tools/judge_batch.py resultats/ollama_gemma4_e4b [resultats/<un_altre> ...]
-# 3. Pàgina de resultats (web/index.html)
+# 1. Answers (the model only sees the question). Resumable.
+python3 tools/run.py --model ollama:gemma4:e4b
+# 2. Scoring: multiple choice automatic; open and traps with the judge (Gemini 3.8 Flash on Vertex)
+python3 tools/score.py results/ollama_gemma4_e4b
+#    If Vertex rejects online calls (403), run the same judge in batch and then score.py for the summary:
+#    python3 tools/judge_batch.py results/ollama_gemma4_e4b [results/<another> ...]
+# 3. Results page (web/index.html)
 python3 tools/web.py
 ```
 
 Models: `ollama:<model>` (local), `openai:<model>` (`OPENAI_API_KEY`), `anthropic:<model>` (`ANTHROPIC_API_KEY`),
-`openrouter:<model>` (`OPENROUTER_API_KEY`), `vertex:google/<model>` (`gcloud` autenticat, `GCP_PROJECT`).
-Opcions útils: `--limit 20` per provar, `--fils 4`, `--origen "Andorra · model del projecte"`.
+`openrouter:<model>` (`OPENROUTER_API_KEY`), `vertex:google/<model>` (authenticated `gcloud`, `GCP_PROJECT`).
+Useful options: `--limit 20` to try it out, `--threads 4`, `--origin "Andorra · project model"`.
 
-La pàgina es publica a GitHub Pages amb `.github/workflows/pages.yml` cada cop que canvia `web/` a `main`.
+The page is published to GitHub Pages with `.github/workflows/pages.yml` every time `web/` changes on `main`.

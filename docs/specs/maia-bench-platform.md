@@ -1,195 +1,195 @@
 ---
 type: spec
-title: Spec — Plataforma maia-bench (dataset, execució i resultats públics)
-description: Com es crea el dataset de referència, com qualsevol model s'avalua contra el benchmark de l'andorranitat i com es publiquen els resultats en una pàgina web. Tot el benchmark és públic.
-tags: [sdd, spec, benchmark, avaluacio, maia-bench]
+title: Spec — maia-bench platform (dataset, execution and public results)
+description: How the reference dataset is built, how any model is evaluated against the andorranness benchmark and how results are published on a web page. The whole benchmark is public.
+tags: [sdd, spec, benchmark, evaluation, maia-bench]
 timestamp: 2026-10-26T12:00:00Z
 topic: sdd
 slug: maia-bench-platform
 status: draft
 ---
 
-# Spec — Plataforma maia-bench
+# Spec — maia-bench platform
 
 > Slug: `maia-bench-platform` · Status: draft · Created: 2026-10-26
-> Hereda: la constitució del projecte maia — principis 16 i 17.
-> Complementa: [andorranitat-benchmark](./andorranitat-benchmark.md), que defineix **què es mesura**. Aquesta spec
-> defineix **com s'executa i com es publica**. **Decisió del 2026-10-26: el benchmark és públic**, sense part privada.
-> Repositori: [ericrisco/maia-bench](https://github.com/ericrisco/maia-bench) (privat, de moment; es farà públic).
+> Inherits: the maia project constitution — principles 16 and 17.
+> Complements: [andorranness-benchmark](./andorranness-benchmark.md), which defines **what is measured**. This spec
+> defines **how it runs and how it is published**. **Decision of 2026-10-26: the benchmark is public**, with no private part.
+> Repository: [ericrisco/maia-bench](https://github.com/ericrisco/maia-bench) (private for now; it will be made public).
 
-## Problema i per què
+## Problem and why
 
-El benchmark de l'andorranitat mesura dues coses: quant sap un model d'Andorra i com de bé parla andorrà. Tal com està
-plantejat a `andorranitat-benchmark`, serveix per comparar maia amb Gemma base. No serveix perquè un tercer hi avaluï el
-seu model, ni existeix cap lloc públic on es vegi quins models saben d'Andorra i parlen andorrà. Aquesta referència no
-existeix avui.
+The andorranness benchmark measures two things: how much a model knows about Andorra and how well it speaks Andorran
+Catalan. As framed in `andorranness-benchmark`, it serves to compare maia with base Gemma. It does not let a third party
+evaluate their own model, nor is there any public place showing which models know about Andorra and speak Andorran
+Catalan. That reference does not exist today.
 
-Un benchmark públic té un risc conegut: **les preguntes obertes poden acabar a l'entrenament de models futurs**, que les
-resoldran de memòria. S'ha decidit **assumir-lo** en lloc de mantenir una part privada (vegeu «Decisió: el benchmark és
-públic»): el que no es pot protegir amb secret es mitiga amb versions, una marca de contaminació i preguntes sobre fitxes
-mai entrenades.
+A public benchmark has a known risk: **the open questions may end up in the training data of future models**, which
+will solve them from memory. The decision is to **accept it** instead of keeping a private part (see "Decision: the
+benchmark is public"): what cannot be protected by secrecy is mitigated with versions, a contamination marker and
+questions about fact sheets that were never trained on.
 
-## Cost de no construir-ho
+## Cost of not building it
 
-Per a maia no es trenca res: el principi 17 es pot complir amb un script que ens passem a nosaltres mateixos. El que es
-perd és que cap altre model quedi mesurat per la mateixa vara, i que el projecte no deixi cap referència reutilitzable
-sobre Andorra. Si algú publica abans un benchmark pitjor, l'estàndard serà el seu.
+Nothing breaks for maia: principle 17 can be met with a script we run on ourselves. What is lost is having any other
+model measured by the same yardstick, and the project leaving no reusable reference about Andorra. If someone publishes
+a worse benchmark first, theirs becomes the standard.
 
-## L'alternativa més barata
+## The cheapest alternative
 
-Un script que executem a mà i una taula al README. Cobreix la constitució per a maia i costa un dia. **No cobreix**
-avaluar tercers, tenir una pàgina pública ni protegir-se de la contaminació. Si l'únic objectiu fos validar maia, seria
-suficient. Aquesta spec existeix perquè volem una referència pública.
+A script we run by hand and a table in the README. It covers the constitution for maia and costs a day. It **does not
+cover** evaluating third parties, having a public page or protecting against contamination. If the only goal were to
+validate maia, it would be enough. This spec exists because we want a public reference.
 
-## Objectius
+## Goals
 
-- Qualsevol persona pot avaluar un model amb el benchmark, i veure'n els resultats sense demanar permís.
-- Una pàgina web pública mostra una taula de models amb les seves notes, i distingeix els que **surten d'Andorra**.
-- Tot el benchmark és **públic**: preguntes, contextos, respostes de referència i codi.
-- Cap resultat es pot falsificar enviant una nota: es puntua sempre al nostre costat, amb el mateix jutge fixat.
-- Cada resultat porta la versió del benchmark, la del jutge i les condicions d'execució, i es pot reproduir.
-- Les notes porten incertesa: dues notes que no es poden distingir estadísticament no es presenten com un empat resolt.
+- Anyone can evaluate a model with the benchmark and see its results without asking for permission.
+- A public web page shows a table of models with their scores, and distinguishes those that **come from Andorra**.
+- The whole benchmark is **public**: questions, contexts, reference answers and code.
+- No result can be faked by submitting a score: scoring always happens on our side, with the same fixed judge.
+- Each result carries the benchmark version, the judge version and the execution conditions, and can be reproduced.
+- Scores carry uncertainty: two scores that cannot be told apart statistically are not presented as a resolved tie.
 
-## No-objectius
+## Non-goals
 
-- **No és un chat ni una demo en viu** d'un model.
-- **No té comptes d'usuari ni base de dades**: la web és estàtica.
-- **No dona una sola nota global** a la v1: dues notes principals (Coneixement i Llengua), mai sumades.
-- **No executa codi enviat per tercers.** Només s'accepten dades.
-- **No avalua models tancats amb claus d'altri.** Els models d'API que apareguin a la taula els executa el projecte amb
-  les seves pròpies claus.
-- **No substitueix la prova cega amb andorrans:** és part del benchmark, però necessita persones.
-- **No entrena res** ni publica pesos.
+- **It is not a chat or a live demo** of a model.
+- **It has no user accounts or database**: the website is static.
+- **It does not give a single global score** in v1: two main scores (Knowledge and Language), never added together.
+- **It does not run code submitted by third parties.** Only data is accepted.
+- **It does not evaluate closed models with other people's keys.** API models that appear in the table are run by the
+  project with its own keys.
+- **It does not replace the blind test with Andorrans:** that is part of the benchmark, but it needs people.
+- **It does not train anything** or publish weights.
 
-## Usuaris i context
+## Users and context
 
-1. **Eric / el projecte maia**, que necessita demostrar que el fine-tune supera Gemma base (principi 17).
-2. **Equips que fan models** (catalans, andorrans o generals), que volen saber com es comporten amb Andorra.
-3. **Lectors de la pàgina**, que només volen saber quin model és millor per a Andorra.
-4. **La comunitat lingüística**, per a qui un rànquing de «parla andorrà» és una referència que no existeix.
+1. **Eric / the maia project**, which needs to show that the fine-tune beats base Gemma (principle 17).
+2. **Teams building models** (Catalan, Andorran or general), who want to know how they behave with Andorra.
+3. **Readers of the page**, who only want to know which model is best for Andorra.
+4. **The linguistic community**, for whom a "speaks Andorran Catalan" ranking is a reference that does not exist.
 
-Conflicte d'interessos: maia és alhora el projecte que construeix el benchmark i un dels models que s'hi mesura. La pàgina
-ho ha de dir i marcar-lo (`origen: Andorra · model del projecte`), i el mètode ha de ser públic.
+Conflict of interest: maia is both the project that builds the benchmark and one of the models measured by it. The page
+must say so and mark it (`origin: Andorra · project model`), and the method must be public.
 
-## Decisió: el benchmark és públic
+## Decision: the benchmark is public
 
-**Decidit per Eric el 2026-10-26.** Inicialment es va plantejar una part privada que decidís el rànquing. Es descarta: el
-benchmark es publica sencer i les proves privades es deixen per a altres benchmarks. Conseqüències:
+**Decided by Eric on 2026-10-26.** A private part that would decide the ranking was initially considered. It is
+discarded: the benchmark is published in full and private tests are left for other benchmarks. Consequences:
 
-- **Es publica tot el dataset**: pregunta, opcions, context, resposta de referència, fets clau i errors a penalitzar.
-- **Cap secret ni servidor privat de preguntes.** Tampoc cal cua d'execucions privades.
-- **El rànquing el fa el mateix benchmark públic**, i qualsevol pot reproduir-lo.
+- **The whole dataset is published**: question, options, context, reference answer, key facts and errors to penalise.
+- **No secret and no private question server.** No private run queue is needed either.
+- **The ranking is produced by the public benchmark itself**, and anyone can reproduce it.
 
-### Com es mitiga la contaminació, ja que no s'amaga
+### How contamination is mitigated, since it is not hidden
 
-| Risc | Mesura |
+| Risk | Measure |
 |---|---|
-| Que models futurs entrenin amb les preguntes | Una marca de contaminació (*canary string*) a cada fitxer, perquè es pugui filtrar o detectar |
-| Que la nota deixi de voler dir res amb el temps | Versions congelades (`v1`, `v2`…): una correcció o una renovació és una versió nova, i cada resultat porta la versió |
-| Que un model hagi après les respostes, no el tema | Les preguntes «no vistes» sobre fitxes que mai han entrat a cap entrenament de maia |
-| Que algú enviï notes falses | Mai s'accepten notes: es puntua sempre al nostre costat, amb el mateix jutge fixat |
-| Que un PR de tercers llegeixi secrets | Les accions de PR de forks no reben secrets; no n'hi ha cap necessari per al nivell 1 |
+| Future models training on the questions | A contamination marker (*canary string*) in every file, so it can be filtered or detected |
+| The score ceasing to mean anything over time | Frozen versions (`v1`, `v2`…): a correction or a renewal is a new version, and every result carries the version |
+| A model having learnt the answers, not the topic | The "unseen" questions about fact sheets that have never entered any maia training run |
+| Someone submitting fake scores | Scores are never accepted: scoring always happens on our side, with the same fixed judge |
+| A third-party PR reading secrets | PR actions from forks receive no secrets; none is needed for level 1 |
 
-### Una excepció que no depèn de la decisió: el text de parla
+### An exception that does not depend on the decision: the speech text
 
-Les peces de parla reservades per a la **perplexitat** provenen de fonts amb redistribució `pendent` o `no`. Encara que el
-benchmark sigui públic, **aquest text no es pot publicar**. Es publica només un **manifest** (identificador de la peça,
-font, URL i hash) i un carregador que obté el text de l'origen. Qui no pugui obtenir-lo no té aquesta prova, i es
-mostra com a no disponible.
+The held-out speech pieces used for **perplexity** come from sources with redistribution `pendent` (pending) or `no`.
+Even though the benchmark is public, **this text cannot be published**. Only a **manifest** (piece identifier,
+source, URL and hash) and a loader that fetches the text from its origin are published. Anyone who cannot obtain it does
+not get this test, and it is shown as unavailable.
 
-### Qui l'executa
+### Who runs it
 
-| Part | Què s'envia | Qui puntua |
+| Part | What is submitted | Who scores |
 |---|---|---|
-| Test de 4 opcions, test dialectal | Un fitxer amb les respostes | Una acció automàtica, sense jutge |
-| Obertes i trampes | Un fitxer amb les respostes | El jutge fixat, al costat del projecte |
-| Perplexitat | Res: es calcula amb el manifest | Qui l'executa, amb el seu model |
+| 4-option multiple choice, dialect test | A file with the answers | An automatic action, without a judge |
+| Open and traps | A file with the answers | The fixed judge, on the project's side |
+| Perplexity | Nothing: it is computed with the manifest | Whoever runs it, with their model |
 
-## Dataset de referència (decidit el 2026-10-26)
+## Reference dataset (decided on 2026-10-26)
 
-El dataset de coneixement el **escrivim nosaltres**, llegint el corpus, no el genera un jutge ni un buscador:
+The knowledge dataset is **written by us**, reading the corpus; it is not generated by a judge or a search engine:
 
-- **Cada entrada:** pregunta, **context** detallat (60–200 paraules, amb les nostres paraules, sense referències al corpus)
-  i la **resposta** que donaríem a partir d'aquest context. Format a `docs/format.md` del repositori.
-- **Quantitat:** 9 preguntes per subtema (6 de test, 2 d'obertes i 1 de trampa), 6 si en té 2 articles i 3 si en té
-  un, més 2 «no vistes» per cada una de les 41 fitxes reservades: **925** en total (843 + 82).
-- **Escriptura:** agents del projecte, **una pregunta per commit**, validada automàticament abans de pujar-la.
-- **Verificació independent:** un model d'una altra família (Gemini) intenta respondre només amb el context, sense veure
-  la resposta; si no coincideix, la pregunta es descarta. A més, una mostra de ~100 la revisa una persona.
-- **Límit:** la referència és *el que diu el corpus*, que és compilat per IA i no verificat afirmació per afirmació. El
-  benchmark mesura si un model sap el que diu el corpus; la pàgina pública ho ha de dir.
+- **Each entry:** question, detailed **context** (60–200 words, in our own words, with no references to the corpus)
+  and the **reference answer** we would give from that context. Format in the repository's `docs/format.md`.
+- **Quantity:** 9 questions per subtopic (6 multiple choice, 2 open and 1 trap), 6 if it has 2 articles and 3 if it has
+  one, plus 2 "unseen" for each of the 41 holdout fact sheets: **925** in total (843 + 82).
+- **Writing:** project agents, **one question per commit**, validated automatically before pushing.
+- **Independent verification:** a model from another family (Gemini) tries to answer using only the context, without
+  seeing the answer; if it does not match, the question is discarded. In addition, a sample of ~100 is reviewed by a person.
+- **Limit:** the reference is *what the corpus says*, which is compiled by AI and not verified claim by claim. The
+  benchmark measures whether a model knows what the corpus says; the public page must say so.
 
-## Flux d'enviament
+## Submission flow
 
-**Nivell 1 — sense jutge.** Es descarreguen les preguntes, el model respon i s'envia un fitxer de respostes per
-*pull request*. Una acció puntua les preguntes de test i el test dialectal, que són deterministes. Es publica el resultat.
+**Level 1 — without judge.** The questions are downloaded, the model answers and an answers file is submitted by
+*pull request*. An action scores the multiple-choice questions and the dialect test, which are deterministic. The result is published.
 
-**Nivell 2 — amb jutge.** Les preguntes obertes i trampes les puntua el jutge fixat (model i versió anotats). El jutge
-rep la pregunta, la resposta de referència, els fets clau i la resposta del model, i retorna una nota de 0 a 2 i un motiu.
-Temperatura 0 i dues passades; si no coincideixen, la resposta es marca per revisió humana.
+**Level 2 — with judge.** Open and trap questions are scored by the fixed judge (model and version recorded). The judge
+receives the question, the reference answer, the key facts and the model's answer, and returns a grade from 0 to 2 and a reason.
+Temperature 0 and two passes; if they disagree, the answer is flagged for human review.
 
-**Límits del jutge (provat el 2026-10-26).** En una prova, el jutge va puntuar amb un 2 (correcta i completa) una
-resposta que incloïa una afirmació **falsa afegida** («el més jove de la història dels Jocs d'hivern»), perquè només
-tenia la referència i els fets clau, i la referència no deia que fos falsa. Un jutge no pot detectar un error que no
-coneix. Conseqüència de disseny: cada pregunta ha de portar, a més dels fets clau, una llista d'**errors típics a
-penalitzar** (afirmacions falses conegudes), i la nota 2 exigeix que no n'hi hagi cap.
+**Judge limits (tested on 2026-10-26).** In one test, the judge gave a 2 (correct and complete) to an answer that
+included an **added false** claim («el més jove de la història dels Jocs d'hivern», "the youngest in the history of the
+Winter Games"), because it only had the reference and the key facts, and the reference did not say it was false. A
+judge cannot detect an error it does not know about. Design consequence: each question must carry, in addition to the
+key facts, a list of **typical errors to penalise** (known false claims), and a grade of 2 requires that none be present.
 
-**La llengua no la jutja una IA.** Que una resposta «soni andorrana» no es delega a un LLM, que no coneix bé aquesta
-varietat. Es mesura amb la perplexitat, el test dialectal i els andorrans de la prova cega.
+**Language is not judged by an AI.** Whether an answer "sounds Andorran" is not delegated to an LLM, which does not know
+this variety well. It is measured with perplexity, the dialect test and the Andorrans in the blind test.
 
-## Resultats i puntuació
+## Results and scoring
 
-Cada fila de resultats porta: model i versió exacta (hash de Hugging Face o nom i data d'API), mida, família, **origen**,
-versió del benchmark, nivell executat (1 o 2), versió del jutge, dates, notes per part amb el **nombre de
-preguntes** i un **interval de confiança** (remostreig o *bootstrap*), i la configuració d'execució (prompt, temperatura).
+Each results row carries: model and exact version (Hugging Face hash or API name and date), size, family, **origin**,
+benchmark version, level run (1 or 2), judge version, dates, scores per part with the **number of
+questions** and a **confidence interval** (resampling or *bootstrap*), and the execution configuration (prompt, temperature).
 
-- Cap nota única. Es mostren **Coneixement** i **Llengua**, i el control com a avís (una caiguda marcada es ressalta).
-- Si els intervals de dos models se solapen, la pàgina no els ordena com si un fos millor.
+- No single score. **Knowledge** and **Language** are shown, and the control as a warning (a marked drop is highlighted).
+- If the intervals of two models overlap, the page does not rank them as if one were better.
 
-## Pàgina pública
+## Public page
 
-Pàgina estàtica generada a partir dels fitxers de resultats; sense servidor, comptes ni base de dades. Mostra una taula
-filtrable per família, mida i origen; un selector de versió del benchmark; i, a cada fila, quin nivell s'ha executat i amb
-quin jutge. Un text visible explica com es va crear el corpus i quines limitacions té
-([origen del corpus](https://github.com/ericrisco/maia-bench/blob/main/docs/origen-del-corpus.md)).
+A static page generated from the results files; no server, accounts or database. It shows a table
+filterable by family, size and origin; a benchmark version selector; and, on each row, which level was run and with
+which judge. Visible text explains how the corpus was built and what its limitations are
+([corpus origin](https://github.com/ericrisco/maia-bench/blob/main/docs/corpus-origin.md)).
 
-## Cost i infraestructura
+## Cost and infrastructure
 
-- Google Cloud: projecte `maia-andorra`, facturació MAIA (crèdit disponible: **no verificat**).
-  **Jutge:** `google/gemini-3.8-flash` respon (HTTP 200) pel **endpoint compatible amb OpenAI** de Vertex
-  (`/endpoints/openapi/chat/completions`, `location=global`), comprovat el 2026-10-26. La ruta nativa `generateContent`
-  dona 404 per a tots els models provats, i `gemini-2.5-flash` també dona 404 per les dues rutes. Cal fixar el jutge amb
-  aquesta ruta. Cost mesurat en un cas curt: ~400–450 tokens per crida (raonament inclòs).
-  **GPU:** el 2026-10-26 la quota global és d'**1 GPU** (aprovada) i la **L4** a europe-west4 està concedida; la
-  **A100 80 GB** va ser denegada. Per al 31B cal una L4 amb 4 bits, o tornar a demanar la A100 amb més justificació.
-- Cada execució té un **pressupost màxim** i s'apaga sola en acabar. Cap màquina amb GPU queda encesa sense feina.
-- Les execucions de models amb pesos que fa el projecte tenen un màxim mensual, perquè el cost no depengui de qui demani.
+- Google Cloud: project `maia-andorra`, MAIA billing (available credit: **not verified**).
+  **Judge:** `google/gemini-3.8-flash` responds (HTTP 200) through Vertex's **OpenAI-compatible endpoint**
+  (`/endpoints/openapi/chat/completions`, `location=global`), checked on 2026-10-26. The native `generateContent` route
+  returns 404 for every model tried, and `gemini-2.5-flash` also returns 404 on both routes. The judge must be pinned
+  with this route. Cost measured on a short case: ~400–450 tokens per call (reasoning included).
+  **GPU:** on 2026-10-26 the global quota is **1 GPU** (approved) and the **L4** in europe-west4 is granted; the
+  **A100 80 GB** was denied. For the 31B an L4 with 4 bits is needed, or the A100 must be requested again with more justification.
+- Each run has a **maximum budget** and shuts itself down at the end. No GPU machine stays on without work.
+- Runs of open-weight models done by the project have a monthly cap, so the cost does not depend on who asks.
 
-## Llicències i drets
+## Licences and rights
 
-- Llicència del codi i de les dades: **no triada**. Depèn dels termes de les fonts del corpus.
-- Les peces de parla reservades **no es poden publicar** (redistribució `pendent`/`no`): només el manifest i el carregador.
-- Com que el dataset és públic, el **context** i la **resposta** de cada pregunta han d'estar escrits amb paraules pròpies i
-  no copiar text d'una font de redistribució limitada. És una regla de l'escriptura i es revisa en la mostra humana.
+- Licence for the code and data: **not chosen**. It depends on the terms of the corpus sources.
+- The held-out speech pieces **cannot be published** (redistribution `pendent`/`no`): only the manifest and the loader.
+- Since the dataset is public, the **context** and the **reference answer** of each question must be written in our own
+  words and not copy text from a source with limited redistribution. It is a writing rule and is checked in the human sample.
 
-## Criteris d'acceptació
+## Acceptance criteria
 
-- [ ] Existeix el dataset de referència congelat com a `v1` (925 preguntes previstes), amb cada entrada validada.
-- [ ] El repositori **no conté** text de les peces de parla reservades, només el manifest.
-- [ ] Un tercer pot avaluar un model amb el nivell 1 seguint només el README, sense claus nostres.
-- [ ] Una resposta enviada per PR es puntua sense accedir a cap secret.
-- [ ] Una nota enviada manualment per un tercer és ignorada (només es puntuen respostes).
-- [ ] Cada fila publicada porta versió del benchmark, del jutge, nombre de preguntes i interval de confiança.
-- [ ] La pàgina web es genera dels fitxers de resultats i mostra l'origen de cada model.
-- [ ] Cap execució amb GPU supera el pressupost màxim ni queda encesa.
-- [ ] Els resultats de dos models base (Gemma 4 E4B i 31B) estan publicats abans de cap fine-tune.
+- [ ] The reference dataset exists, frozen as `v1` (925 questions planned), with every entry validated.
+- [ ] The repository **does not contain** text from the held-out speech pieces, only the manifest.
+- [ ] A third party can evaluate a model at level 1 following only the README, without our keys.
+- [ ] An answer submitted by PR is scored without accessing any secret.
+- [ ] A score submitted manually by a third party is ignored (only answers are scored).
+- [ ] Each published row carries the benchmark version, the judge version, the number of questions and a confidence interval.
+- [ ] The web page is generated from the results files and shows the origin of each model.
+- [ ] No GPU run exceeds the maximum budget or stays on.
+- [ ] The results of the two base models (Gemma 4 E4B and 31B) are published before any fine-tune.
 
-## Decisions obertes
+## Open decisions
 
-1. ~~Proporció pública/privada.~~ **Resolta el 2026-10-26: tot públic.**
-2. **Qui pot enviar models**: qualsevol persona o només els aprovats pel projecte.
-3. **Quan es fa públic el repositori** i on s'allotja la web (GitHub Pages).
-4. **Jutge**: `gemini-3.8-flash` funciona pel endpoint OpenAI-compatible; decidir si és el que es fixa o si es prefereix un model de gama *pro*, i com es detecten les afirmacions falses afegides (vegeu «Límits del jutge»).
-5. **Llicència** del codi i de les dades.
-6. **Votants de la prova cega** (5–10 andorrans) i qui revisa la mostra de 100 preguntes.
-7. ~~Quota de GPU.~~ **Parcial:** global 1 i L4 concedides; A100 denegada.
+1. ~~Public/private split.~~ **Resolved on 2026-10-26: everything public.**
+2. **Who can submit models**: anyone, or only those approved by the project.
+3. **When the repository goes public** and where the website is hosted (GitHub Pages).
+4. **Judge**: `gemini-3.8-flash` works through the OpenAI-compatible endpoint; decide whether it is the one pinned or whether a *pro*-tier model is preferred, and how added false claims are detected (see "Judge limits").
+5. **Licence** for the code and the data.
+6. **Blind-test voters** (5–10 Andorrans) and who reviews the 100-question sample.
+7. ~~GPU quota.~~ **Partial:** global 1 and L4 granted; A100 denied.

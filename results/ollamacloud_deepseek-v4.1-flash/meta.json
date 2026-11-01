@@ -1,0 +1,15 @@
+{
+ "model": "ollamacloud:deepseek-v4.1-flash",
+ "origin": "",
+ "prompt": "p1",
+ "system": "Respon en català les preguntes sobre Andorra que et facin.",
+ "temperature": 0,
+ "max_tokens": 4000,
+ "dataset": "ec314f7d6239",
+ "dataset_questions": 926,
+ "commit": "c90322d",
+ "started": "2026-10-27T18:21:46+00:00",
+ "finished": "2026-10-29T06:12:00+00:00",
+ "max_tokens_empty_retry": 4000,
+ "reasoning_empty_retry": "low"
+}

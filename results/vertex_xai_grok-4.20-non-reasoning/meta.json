@@ -1,0 +1,14 @@
+{
+ "model": "vertex:xai/grok-4.20-non-reasoning",
+ "origin": "",
+ "prompt": "p1",
+ "system": "Respon en català les preguntes sobre Andorra que et facin.",
+ "temperature": 0,
+ "max_tokens": 4000,
+ "dataset": "ec314f7d6239",
+ "dataset_questions": 926,
+ "commit": "6974098",
+ "started": "2026-10-28T15:52:18+00:00",
+ "finished": "2026-10-29T18:49:02+00:00",
+ "reasoning": null
+}

@@ -1,0 +1,172 @@
+{
+ "model": "ollamacloud:beam",
+ "origin": "",
+ "dataset": "ec314f7d6239",
+ "dataset_questions": 926,
+ "answers": 926,
+ "scored": 926,
+ "complete": true,
+ "multiple_choice_only": false,
+ "judge": "vertex:google/gemini-3.8-flash",
+ "judge_version": "j1",
+ "prompt": "p1",
+ "temperature": 0,
+ "same_model_as_judge": false,
+ "date": "2026-11-01",
+ "knowledge": {
+  "n": 926,
+  "score": 0.4962,
+  "ci95": [
+   0.4671,
+   0.5265
+  ]
+ },
+ "by_type": {
+  "multiple_choice": {
+   "n": 604,
+   "score": 0.6606,
+   "ci95": [
+    0.6258,
+    0.6987
+   ]
+  },
+  "open": {
+   "n": 231,
+   "score": 0.1991,
+   "ci95": [
+    0.1623,
+    0.2359
+   ]
+  },
+  "trap": {
+   "n": 91,
+   "score": 0.1593,
+   "ci95": [
+    0.1044,
+    0.2253
+   ]
+  }
+ },
+ "seen": {
+  "n": 844,
+  "score": 0.5083,
+  "ci95": [
+   0.4757,
+   0.5415
+  ]
+ },
+ "unseen": {
+  "n": 82,
+  "score": 0.372,
+  "ci95": [
+   0.2744,
+   0.4756
+  ]
+ },
+ "by_domain": {
+  "culture": {
+   "n": 82,
+   "score": 0.5183,
+   "ci95": [
+    0.4146,
+    0.6159
+   ]
+  },
+  "customs": {
+   "n": 53,
+   "score": 0.4151,
+   "ci95": [
+    0.283,
+    0.5472
+   ]
+  },
+  "daily-life": {
+   "n": 32,
+   "score": 0.6562,
+   "ci95": [
+    0.5,
+    0.8125
+   ]
+  },
+  "economy": {
+   "n": 83,
+   "score": 0.4458,
+   "ci95": [
+    0.3494,
+    0.5422
+   ]
+  },
+  "gastronomy": {
+   "n": 35,
+   "score": 0.5857,
+   "ci95": [
+    0.4286,
+    0.7429
+   ]
+  },
+  "history": {
+   "n": 131,
+   "score": 0.5496,
+   "ci95": [
+    0.4695,
+    0.6336
+   ]
+  },
+  "institutions": {
+   "n": 109,
+   "score": 0.4817,
+   "ci95": [
+    0.3899,
+    0.5734
+   ]
+  },
+  "language": {
+   "n": 86,
+   "score": 0.5116,
+   "ci95": [
+    0.4128,
+    0.6105
+   ]
+  },
+  "people": {
+   "n": 11,
+   "score": 0.4545,
+   "ci95": [
+    0.1818,
+    0.7273
+   ]
+  },
+  "politics": {
+   "n": 38,
+   "score": 0.4737,
+   "ci95": [
+    0.3158,
+    0.6316
+   ]
+  },
+  "society": {
+   "n": 120,
+   "score": 0.4708,
+   "ci95": [
+    0.3875,
+    0.5625
+   ]
+  },
+  "sports": {
+   "n": 76,
+   "score": 0.4211,
+   "ci95": [
+    0.3224,
+    0.5263
+   ]
+  },
+  "territory": {
+   "n": 70,
+   "score": 0.5214,
+   "ci95": [
+    0.4071,
+    0.6429
+   ]
+  }
+ }
+}

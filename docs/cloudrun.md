@@ -1,23 +1,23 @@
-# Avaluar models oberts amb Cloud Run i una GPU
+# Evaluating open models with Cloud Run and a GPU
 
-Per als models oberts petits (Gemma 4 E2B, E4B, 12B; Gemma 3 4B, 12B, 27B) no cal desplegar res al Model Garden: un
-servei d'Ollama a Cloud Run amb una GPU NVIDIA L4 els serveix un darrere l'altre, i s'esborra quan s'acaba. Es paga
-només mentre el servei és viu.
+For the small open models (Gemma 4 E2B, E4B, 12B; Gemma 3 4B, 12B, 27B) there is no need to deploy anything to Model
+Garden: an Ollama service on Cloud Run with an NVIDIA L4 GPU serves them one after another, and is deleted when it is
+done. You only pay while the service is alive.
 
-## 1. Preparar el projecte
+## 1. Prepare the project
 
 ```bash
-gcloud services enable run.googleapis.com --project <projecte>
+gcloud services enable run.googleapis.com --project <project>
 ```
 
-La regió ha de tenir L4 a Cloud Run (per exemple `europe-west4`) i el projecte, quota de GPU sense redundància zonal.
+The region must have L4 on Cloud Run (for example `europe-west4`) and the project needs GPU quota without zonal redundancy.
 
-## 2. Desplegar el servei
+## 2. Deploy the service
 
-Servei privat (sense accés públic), amb la imatge oficial d'Ollama fixada a una versió:
+Private service (no public access), with the official Ollama image pinned to a version:
 
 ```bash
-gcloud run deploy maia-bench-ollama --project <projecte> --region europe-west4 \
+gcloud run deploy maia-bench-ollama --project <project> --region europe-west4 \
   --image docker.io/ollama/ollama:0.40.11 --port 11434 \
   --gpu 1 --gpu-type nvidia-l4 --no-gpu-zonal-redundancy \
   --cpu 8 --memory 32Gi --no-cpu-throttling \
@@ -26,47 +26,47 @@ gcloud run deploy maia-bench-ollama --project <projecte> --region europe-west4 \
   --no-allow-unauthenticated
 ```
 
-- `--min-instances 1` manté la instància (i el model descarregat) viva durant la passada. Per això el servei
-  s'ha d'esborrar al final.
-- Els models es descarreguen al disc en memòria del contenidor: amb 32 GiB n'hi cap un de cada vegada, i
-  `tools/cloudrun.sh` l'esborra abans de passar al següent.
+- `--min-instances 1` keeps the instance (and the downloaded model) alive during the run. That is why the service
+  must be deleted at the end.
+- Models are downloaded to the container's in-memory disk: with 32 GiB one fits at a time, and
+  `tools/cloudrun.sh` deletes it before moving on to the next.
 
-## 3. Passar el benchmark
+## 3. Run the benchmark
 
-El servei demana un token d'identitat de Google. El runner l'envia si hi ha `OLLAMA_TOKEN`:
+The service requires a Google identity token. The runner sends it if `OLLAMA_TOKEN` is set:
 
 ```bash
 export OLLAMA_HOST=https://maia-bench-ollama-<id>.europe-west4.run.app
 export OLLAMA_TOKEN=$(gcloud auth print-identity-token)
-python3 tools/executa.py --model ollama:gemma4:e2b
+python3 tools/run.py --model ollama:gemma4:e2b
 ```
 
-El token caduca a l'hora. `tools/cloudrun.sh` ho resol sol: per a cada model el descarrega al servei, executa en
-trams de 50 minuts amb un token nou per tram (`executa.py` es reprèn i torna a fer les preguntes amb error), puntua
-els tests i esborra el model:
+The token expires after an hour. `tools/cloudrun.sh` handles this on its own: for each model it downloads it to the
+service, runs in 50-minute slices with a fresh token per slice (`run.py` resumes and retries the questions that
+errored), scores the multiple-choice questions and deletes the model:
 
 ```bash
 tools/cloudrun.sh https://maia-bench-ollama-<id>.europe-west4.run.app gemma4:e2b gemma4:e4b gemma4:12b
 ```
 
-Les respostes queden a `resultats/ollama_<model>/` com qualsevol altra execució amb Ollama: el model és el mateix,
-només canvia on corre.
+The answers end up in `results/ollama_<model>/` like any other Ollama run: the model is the same, only where it runs
+changes.
 
-## 4. Esborrar el servei
+## 4. Delete the service
 
 ```bash
-gcloud run services delete maia-bench-ollama --region europe-west4 --project <projecte>
+gcloud run services delete maia-bench-ollama --region europe-west4 --project <project>
 ```
 
-## Cost i rendiment observats
+## Observed cost and performance
 
-- Descàrrega de Gemma 4 E2B (4,6 GB) al servei: 1 min 38 s. Primera crida (càrrega a la GPU): ~45 s.
-- Amb el model carregat: ~3 s per pregunta, 4 en paral·lel.
-- Cost: GPU L4 + 8 vCPU + 32 GiB a Cloud Run, de l'ordre d'1 € per hora mentre el servei és viu (preus de la
-  regió a la consola).
+- Download of Gemma 4 E2B (4.6 GB) to the service: 1 min 38 s. First call (loading onto the GPU): ~45 s.
+- With the model loaded: ~3 s per question, 4 in parallel.
+- Cost: L4 GPU + 8 vCPU + 32 GiB on Cloud Run, in the order of €1 per hour while the service is alive (prices for the
+  region in the console).
 
-## Altres models de Google Cloud
+## Other Google Cloud models
 
-Els models servits per API a Vertex (Gemini, Grok, alguns de partners) no necessiten servei: es criden directament
-amb `vertex:<editor>/<model>`. Claude a Vertex fa servir `vertexclaude:<model>` i necessita quota a Vertex AI per a
-cada model (per defecte és zero); Claude Fable demana, a més, activar que es comparteixin dades amb Anthropic.
+Models served by API on Vertex (Gemini, Grok, some partner models) need no service: they are called directly
+with `vertex:<publisher>/<model>`. Claude on Vertex uses `vertexclaude:<model>` and needs Vertex AI quota for
+each model (zero by default); Claude Fable additionally requires enabling data sharing with Anthropic.

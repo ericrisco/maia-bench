@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Genera la pàgina pública de resultats a partir de resultats/*/resum.json, en tres idiomes:
-web/index.html (anglès, per defecte), web/ca.html i web/es.html. Els textos de la plantilla són a web/textos.json;
-els que es munten aquí, a TXT. Les preguntes del dataset es mostren sempre en català.
+"""Builds the public results page from results/*/summary.json, in three languages:
+web/index.html (English, the default), web/ca.html and web/es.html. The template's strings live in web/strings.json;
+the ones assembled here live in TXT. Dataset questions are always shown in Catalan.
 
-Ús:  python3 tools/web.py
+Usage:  python3 tools/web.py
 
-La taula es pinta aquí (es veu sense JavaScript); els dominis i «Prova-ho» es dibuixen al navegador amb les dades
-incrustades a la mateixa pàgina, que funciona com a fitxer local i a GitHub Pages.
+The table is rendered here (it shows without JavaScript); the domains and «Try it» are drawn in the
+browser from the data embedded in the same page, which works as a local file and on GitHub Pages.
 """
 import collections
 import datetime
@@ -18,38 +18,39 @@ import random
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from executa import empremta_dataset, preguntes  # noqa: E402
-from puntua import JUTGE  # noqa: E402
+from run import dataset_fingerprint, load_questions  # noqa: E402
+from score import JUDGE  # noqa: E402
 
-ARREL = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CIM = 2942  # metres del Coma Pedrosa: el 100 %
-MOSTRA = 80
-IDIOMES = {"en": "index.html", "ca": "ca.html", "es": "es.html"}
-NOM_IDIOMA = {"en": "EN", "ca": "CA", "es": "ES"}
-IDIOMA = "en"  # el que s'està generant; el fixa main()
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SUMMIT = 2942  # metres of Coma Pedrosa: the 100 %
+SAMPLE_SIZE = 80
+LANGS = {"en": "index.html", "ca": "ca.html", "es": "es.html"}
+LANG_LABEL = {"en": "EN", "ca": "CA", "es": "ES"}
+LANG = "en"  # the one being generated; set by main()
+TYPES = ("multiple_choice", "open", "trap")
 
 TXT = {
-    "general": {"en": "Overall", "ca": "General", "es": "General"},
-    "filtre_tema": {"en": "Rank by topic", "ca": "Classifica per tema", "es": "Clasifica por tema"},
-    "complet": {"en": "Complete", "ca": "Complet", "es": "Completo"},
+    "overall": {"en": "Overall", "ca": "General", "es": "General"},
+    "topic_filter": {"en": "Rank by topic", "ca": "Classifica per tema", "es": "Clasifica por tema"},
+    "complete": {"en": "Complete", "ca": "Complet", "es": "Completo"},
     "tests": {"en": "Tests", "ca": "Tests", "es": "Tests"},
-    "en_curs": {"en": "In progress", "ca": "En curs", "es": "En curso"},
-    "t_test": {"en": "Multiple choice", "ca": "Tests", "es": "Tests"},
-    "t_oberta": {"en": "Open", "ca": "Obertes", "es": "Abiertas"},
-    "t_trampa": {"en": "Traps", "ca": "Trampes", "es": "Trampas"},
-    "jutge_pendent": {"en": "judge pending", "ca": "jutge pendent", "es": "juez pendiente"},
-    "es_jutge": {"en": "also the judge", "ca": "també és el jutge", "es": "también es el juez"},
-    "no_comparable": {"en": "not comparable yet", "ca": "encara no comparable", "es": "aún no comparable"},
-    "cap_model": {"en": "No model scored yet.", "ca": "Encara no hi ha cap model puntuat.", "es": "Aún no hay ningún modelo puntuado."},
+    "in_progress": {"en": "In progress", "ca": "En curs", "es": "En curso"},
+    "t_multiple_choice": {"en": "Multiple choice", "ca": "Tests", "es": "Tests"},
+    "t_open": {"en": "Open", "ca": "Obertes", "es": "Abiertas"},
+    "t_trap": {"en": "Traps", "ca": "Trampes", "es": "Trampas"},
+    "judge_pending": {"en": "judge pending", "ca": "jutge pendent", "es": "juez pendiente"},
+    "is_judge": {"en": "also the judge", "ca": "també és el jutge", "es": "también es el juez"},
+    "not_comparable": {"en": "not comparable yet", "ca": "encara no comparable", "es": "aún no comparable"},
+    "no_model": {"en": "No model scored yet.", "ca": "Encara no hi ha cap model puntuat.", "es": "Aún no hay ningún modelo puntuado."},
     "interval": {"en": "interval", "ca": "interval", "es": "intervalo"},
-    "en_curs_min": {"en": "in progress", "ca": "en curs", "es": "en curso"},
-    "sense_dades": {"en": "no data", "ca": "sense dades", "es": "sin datos"},
-    "millor": {"en": "Best", "ca": "Millor", "es": "Mejor"},
-    "preguntes": {"en": "questions", "ca": "preguntes", "es": "preguntas"},
-    "obert": {"en": "open", "ca": "obert", "es": "abierto"},
-    "tancat": {"en": "closed", "ca": "tancat", "es": "cerrado"},
-    "fotos": {"en": "Photographs", "ca": "Fotografies", "es": "Fotografías"},
-    "avis": {
+    "in_progress_lc": {"en": "in progress", "ca": "en curs", "es": "en curso"},
+    "no_data": {"en": "no data", "ca": "sense dades", "es": "sin datos"},
+    "best": {"en": "Best", "ca": "Millor", "es": "Mejor"},
+    "questions": {"en": "questions", "ca": "preguntes", "es": "preguntas"},
+    "open": {"en": "open", "ca": "obert", "es": "abierto"},
+    "closed": {"en": "closed", "ca": "tancat", "es": "cerrado"},
+    "photos": {"en": "Photographs", "ca": "Fotografies", "es": "Fotografías"},
+    "notice": {
         "en": "{n} models evaluated, {k} with all {t} questions scored: multiple choice automatically, open and trap "
               "questions by the judge (Gemini 3.8 Flash, in batch). Gemini 3.8 Flash is also the judge, so its open and "
               "trap scores may be inflated. An empty answer counts as wrong.",
@@ -60,360 +61,370 @@ TXT = {
               "trampas con el juez (Gemini 3.8 Flash, por lotes). Gemini 3.8 Flash también es el juez: su nota en las "
               "abiertas y trampas puede estar inflada. Una respuesta vacía cuenta como error.",
     },
-    # textos que fa servir el JavaScript de la pàgina
+    # strings used by the page's JavaScript
     "js": {
-        "en": {"test": "Multiple choice · four options", "oberta": "Open question", "trampa": "Trap question",
-               "ok": "Correct", "mig": "Partly", "ko": "Wrong", "sense": "Not scored", "ref": "Reference answer",
-               "preguntes": "questions", "cap": "No scored answers yet.", "cap_tipus": "No scored questions of this type yet.",
-               "ca": "Questions are in Catalan, the benchmark's language."},
-        "ca": {"test": "Test · quatre opcions", "oberta": "Pregunta oberta", "trampa": "Pregunta trampa",
-               "ok": "Correcta", "mig": "A mitges", "ko": "Incorrecta", "sense": "Sense puntuar", "ref": "Resposta de referència",
-               "preguntes": "preguntes", "cap": "Encara no hi ha respostes puntuades.",
-               "cap_tipus": "Encara no hi ha preguntes d'aquest tipus puntuades.", "ca": ""},
-        "es": {"test": "Test · cuatro opciones", "oberta": "Pregunta abierta", "trampa": "Pregunta trampa",
-               "ok": "Correcta", "mig": "A medias", "ko": "Incorrecta", "sense": "Sin puntuar", "ref": "Respuesta de referencia",
-               "preguntes": "preguntas", "cap": "Aún no hay respuestas puntuadas.",
-               "cap_tipus": "Aún no hay preguntas de este tipo puntuadas.", "ca": "Las preguntas están en catalán, la lengua del benchmark."},
+        "en": {"multiple_choice": "Multiple choice · four options", "open": "Open question", "trap": "Trap question",
+               "ok": "Correct", "partial": "Partly", "ko": "Wrong", "unscored": "Not scored", "ref": "Reference answer",
+               "questions": "questions", "none": "No scored answers yet.",
+               "none_of_type": "No scored questions of this type yet.",
+               "catalan_note": "Questions are in Catalan, the benchmark's language."},
+        "ca": {"multiple_choice": "Test · quatre opcions", "open": "Pregunta oberta", "trap": "Pregunta trampa",
+               "ok": "Correcta", "partial": "A mitges", "ko": "Incorrecta", "unscored": "Sense puntuar",
+               "ref": "Resposta de referència", "questions": "preguntes", "none": "Encara no hi ha respostes puntuades.",
+               "none_of_type": "Encara no hi ha preguntes d'aquest tipus puntuades.", "catalan_note": ""},
+        "es": {"multiple_choice": "Test · cuatro opciones", "open": "Pregunta abierta", "trap": "Pregunta trampa",
+               "ok": "Correcta", "partial": "A medias", "ko": "Incorrecta", "unscored": "Sin puntuar",
+               "ref": "Respuesta de referencia", "questions": "preguntas", "none": "Aún no hay respuestas puntuadas.",
+               "none_of_type": "Aún no hay preguntas de este tipo puntuadas.",
+               "catalan_note": "Las preguntas están en catalán, la lengua del benchmark."},
     },
 }
 
-NOM_DOMINI = {
-    "en": {"historia": "History", "institucions": "Institutions", "societat": "Society", "llengua": "Language",
-           "economia": "Economy", "cultura": "Culture", "esports": "Sport", "territori": "Territory",
-           "costums": "Customs", "politica": "Politics", "gastronomia": "Food", "vida-quotidiana": "Daily life",
-           "persones": "People"},
-    "es": {"historia": "Historia", "institucions": "Instituciones", "societat": "Sociedad", "llengua": "Lengua",
-           "economia": "Economía", "cultura": "Cultura", "esports": "Deportes", "territori": "Territorio",
-           "costums": "Costumbres", "politica": "Política", "gastronomia": "Gastronomía",
-           "vida-quotidiana": "Vida cotidiana", "persones": "Personas"},
+# Domain ids (as in the dataset and summary.json), in page order, with their display name per language.
+DOMAINS = [
+    ("history", {"en": "History", "ca": "Història", "es": "Historia"}),
+    ("institutions", {"en": "Institutions", "ca": "Institucions", "es": "Instituciones"}),
+    ("society", {"en": "Society", "ca": "Societat", "es": "Sociedad"}),
+    ("language", {"en": "Language", "ca": "Llengua", "es": "Lengua"}),
+    ("economy", {"en": "Economy", "ca": "Economia", "es": "Economía"}),
+    ("culture", {"en": "Culture", "ca": "Cultura", "es": "Cultura"}),
+    ("sports", {"en": "Sport", "ca": "Esports", "es": "Deportes"}),
+    ("territory", {"en": "Territory", "ca": "Territori", "es": "Territorio"}),
+    ("customs", {"en": "Customs", "ca": "Costums", "es": "Costumbres"}),
+    ("politics", {"en": "Politics", "ca": "Política", "es": "Política"}),
+    ("gastronomy", {"en": "Food", "ca": "Gastronomia", "es": "Gastronomía"}),
+    ("daily-life", {"en": "Daily life", "ca": "Vida quotidiana", "es": "Vida cotidiana"}),
+    ("people", {"en": "People", "ca": "Persones", "es": "Personas"}),
+]
+DOMAIN_NAMES = dict(DOMAINS)
+
+
+def tr(key):
+    return TXT[key][LANG]
+
+
+def domain_name(d):
+    return DOMAIN_NAMES.get(d, {}).get(LANG, d)
+
+
+MODEL_NAMES = {
+    "ollama:gemma4:e4b": ("Gemma 4 E4B", "Google · open · local"),
+    "ollama:gemma4:e2b": ("Gemma 4 E2B", "Google · open · local"),
+    "ollama:gemma4:12b": ("Gemma 4 12B", "Google · open · local"),
+    "ollama:gemma3:12b": ("Gemma 3 12B", "Google · open · local"),
+    "ollama:qwen2.5:3b-instruct": ("Qwen 2.5 3B", "Alibaba · open · local"),
+    "ollama:ministral-3:latest": ("Ministral 3", "Mistral · open · local"),
+    "ollama:gpt-oss:20b": ("gpt-oss 20B", "OpenAI · open · local"),
+    "vertex:google/gemini-3.8-flash": ("Gemini 3.8 Flash", "Google · closed · API"),
+    "vertex:google/gemini-4-argon": ("Gemini 4 Argon", "Google · closed · API"),
+    "vertex:google/gemini-3.1-pro-preview": ("Gemini 3.1 Pro", "Google · closed · API"),
+    "vertex:google/gemini-3.7-flash": ("Gemini 3.7 Flash", "Google · closed · API"),
+    "vertex:google/gemini-3.6-flash": ("Gemini 3.6 Flash", "Google · closed · API"),
+    "vertex:google/gemini-3.5-flash": ("Gemini 3.5 Flash", "Google · closed · API"),
+    "vertex:google/gemini-3-flash-preview": ("Gemini 3 Flash", "Google · closed · API"),
+    "vertex:google/gemini-3.5-flash-lite": ("Gemini 3.5 Flash-Lite", "Google · closed · API"),
+    "vertex:google/gemini-3.1-flash-lite": ("Gemini 3.1 Flash-Lite", "Google · closed · API"),
+    "vertex:xai/grok-4.20-non-reasoning": ("Grok 4.20", "xAI · closed · API"),
+    "ollama:gemma3:4b": ("Gemma 3 4B", "Google · open · local"),
+    "ollama:gemma3:27b": ("Gemma 3 27B", "Google · open · local"),
+    "ollamacloud:kimi-k2.6": ("Kimi K2.6", "Moonshot · open · Ollama Cloud"),
+    "openrouter:anthropic/claude-haiku-5.5": ("Claude Haiku 5.5", "Anthropic · closed · API"),
+    "openrouter:anthropic/claude-sonnet-5.5": ("Claude Sonnet 5.5", "Anthropic · closed · API"),
+    "openrouter:anthropic/claude-opus-5.5": ("Claude Opus 5.5", "Anthropic · closed · API"),
+    "openrouter:openai/gpt-6-luna": ("GPT-6 Luna", "OpenAI · closed · API"),
+    "openrouter:openai/gpt-6.1-terra": ("GPT-6.1 Terra", "OpenAI · closed · API"),
+    "openrouter:openai/gpt-6.1-sol": ("GPT-6.1 Sol", "OpenAI · closed · API"),
+    "openrouter:x-ai/grok-4.7": ("Grok 4.7", "xAI · closed · API"),
+    "openrouter:qwen/qwen3.8-max-0902": ("Qwen 3.8 Max", "Alibaba · closed · API"),
+    "openrouter:qwen/qwen3.8-flash": ("Qwen 3.8 Flash", "Alibaba · closed · API"),
+    "openrouter:dots-studio/dots-3-note-preview:free": ("Dots 3", "Dots · open · API"),
+    "vertex:google/gemma-4-26b-a4b-it-maas": ("Gemma 4 26B-A4B", "Google · open · Vertex"),
+    "ollamacloud:gemma4:31b": ("Gemma 4 31B", "Google · open · Ollama Cloud"),
+    "ollamacloud:gpt-oss:20b": ("gpt-oss 20B", "OpenAI · open · Ollama Cloud"),
+    "ollamacloud:gpt-oss:120b": ("gpt-oss 120B", "OpenAI · open · Ollama Cloud"),
+    "ollamacloud:deepseek-v4.1-flash": ("DeepSeek V4.1 Flash", "DeepSeek · open · Ollama Cloud"),
+    "ollamacloud:kimi-k3": ("Kimi K3", "Moonshot · open · Ollama Cloud"),
+    "ollamacloud:mistral-large-4": ("Mistral Large 4", "Mistral · open · Ollama Cloud"),
+    "ollamacloud:glm-5.3": ("GLM 5.3", "Z.ai · open · Ollama Cloud"),
+    "ollamacloud:minimax-m3": ("MiniMax M3", "MiniMax · open · Ollama Cloud"),
+    "ollamacloud:nemotron-3-super": ("Nemotron 3 Super", "NVIDIA · open · Ollama Cloud"),
+    "ollamacloud:nemotron-3-ultra": ("Nemotron 3 Ultra", "NVIDIA · open · Ollama Cloud"),
+    "ollamacloud:glm-5.2": ("GLM 5.2", "Z.ai · open · Ollama Cloud"),
+    "ollamacloud:glm-5.3-flash": ("GLM 5.3 Flash", "Z.ai · open · Ollama Cloud"),
+    "ollamacloud:minimax-m3.1-flash": ("MiniMax M3.1 Flash", "MiniMax · open · Ollama Cloud"),
+    "ollamacloud:deepseek-v4-pro:0813": ("DeepSeek V4 Pro", "DeepSeek · open · Ollama Cloud"),
+    "ollamacloud:deepseek-v4.1-flash:1017": ("DeepSeek V4.1 Flash 1017", "DeepSeek · open · Ollama Cloud"),
+    "ollamacloud:beam": ("Beam", "open · Ollama Cloud"),
 }
 
 
-def tr(clau):
-    return TXT[clau][IDIOMA]
-
-
-def nom_domini(d, nom_ca):
-    return NOM_DOMINI.get(IDIOMA, {}).get(d, nom_ca)
-
-DOMINIS = [("historia", "Història"), ("institucions", "Institucions"), ("societat", "Societat"), ("llengua", "Llengua"),
-           ("economia", "Economia"), ("cultura", "Cultura"), ("esports", "Esports"), ("territori", "Territori"),
-           ("costums", "Costums"), ("politica", "Política"), ("gastronomia", "Gastronomia"),
-           ("vida-quotidiana", "Vida quotidiana"), ("persones", "Persones")]
-
-NOMS = {
-    "ollama:gemma4:e4b": ("Gemma 4 E4B", "Google · obert · local"),
-    "ollama:gemma4:e2b": ("Gemma 4 E2B", "Google · obert · local"),
-    "ollama:gemma4:12b": ("Gemma 4 12B", "Google · obert · local"),
-    "ollama:gemma3:12b": ("Gemma 3 12B", "Google · obert · local"),
-    "ollama:qwen2.5:3b-instruct": ("Qwen 2.5 3B", "Alibaba · obert · local"),
-    "ollama:ministral-3:latest": ("Ministral 3", "Mistral · obert · local"),
-    "ollama:gpt-oss:20b": ("gpt-oss 20B", "OpenAI · obert · local"),
-    "vertex:google/gemini-3.8-flash": ("Gemini 3.8 Flash", "Google · tancat · API"),
-    "vertex:google/gemini-4-argon": ("Gemini 4 Argon", "Google · tancat · API"),
-    "vertex:google/gemini-3.1-pro-preview": ("Gemini 3.1 Pro", "Google · tancat · API"),
-    "vertex:google/gemini-3.7-flash": ("Gemini 3.7 Flash", "Google · tancat · API"),
-    "vertex:google/gemini-3.6-flash": ("Gemini 3.6 Flash", "Google · tancat · API"),
-    "vertex:google/gemini-3.5-flash": ("Gemini 3.5 Flash", "Google · tancat · API"),
-    "vertex:google/gemini-3-flash-preview": ("Gemini 3 Flash", "Google · tancat · API"),
-    "vertex:google/gemini-3.5-flash-lite": ("Gemini 3.5 Flash-Lite", "Google · tancat · API"),
-    "vertex:google/gemini-3.1-flash-lite": ("Gemini 3.1 Flash-Lite", "Google · tancat · API"),
-    "vertex:xai/grok-4.20-non-reasoning": ("Grok 4.20", "xAI · tancat · API"),
-    "ollama:gemma3:4b": ("Gemma 3 4B", "Google · obert · local"),
-    "ollama:gemma3:27b": ("Gemma 3 27B", "Google · obert · local"),
-    "ollamacloud:kimi-k2.6": ("Kimi K2.6", "Moonshot · obert · Ollama Cloud"),
-    "openrouter:anthropic/claude-haiku-5.5": ("Claude Haiku 5.5", "Anthropic · tancat · API"),
-    "openrouter:anthropic/claude-sonnet-5.5": ("Claude Sonnet 5.5", "Anthropic · tancat · API"),
-    "openrouter:anthropic/claude-opus-5.5": ("Claude Opus 5.5", "Anthropic · tancat · API"),
-    "openrouter:openai/gpt-6-luna": ("GPT-6 Luna", "OpenAI · tancat · API"),
-    "openrouter:openai/gpt-6.1-terra": ("GPT-6.1 Terra", "OpenAI · tancat · API"),
-    "openrouter:openai/gpt-6.1-sol": ("GPT-6.1 Sol", "OpenAI · tancat · API"),
-    "openrouter:x-ai/grok-4.7": ("Grok 4.7", "xAI · tancat · API"),
-    "openrouter:qwen/qwen3.8-max-0902": ("Qwen 3.8 Max", "Alibaba · tancat · API"),
-    "openrouter:qwen/qwen3.8-flash": ("Qwen 3.8 Flash", "Alibaba · tancat · API"),
-    "openrouter:dots-studio/dots-3-note-preview:free": ("Dots 3", "Dots · obert · API"),
-    "vertex:google/gemma-4-26b-a4b-it-maas": ("Gemma 4 26B-A4B", "Google · obert · Vertex"),
-    "ollamacloud:gemma4:31b": ("Gemma 4 31B", "Google · obert · Ollama Cloud"),
-    "ollamacloud:gpt-oss:20b": ("gpt-oss 20B", "OpenAI · obert · Ollama Cloud"),
-    "ollamacloud:gpt-oss:120b": ("gpt-oss 120B", "OpenAI · obert · Ollama Cloud"),
-    "ollamacloud:deepseek-v4.1-flash": ("DeepSeek V4.1 Flash", "DeepSeek · obert · Ollama Cloud"),
-    "ollamacloud:kimi-k3": ("Kimi K3", "Moonshot · obert · Ollama Cloud"),
-    "ollamacloud:mistral-large-4": ("Mistral Large 4", "Mistral · obert · Ollama Cloud"),
-    "ollamacloud:glm-5.3": ("GLM 5.3", "Z.ai · obert · Ollama Cloud"),
-    "ollamacloud:minimax-m3": ("MiniMax M3", "MiniMax · obert · Ollama Cloud"),
-    "ollamacloud:nemotron-3-super": ("Nemotron 3 Super", "NVIDIA · obert · Ollama Cloud"),
-    "ollamacloud:nemotron-3-ultra": ("Nemotron 3 Ultra", "NVIDIA · obert · Ollama Cloud"),
-    "ollamacloud:glm-5.2": ("GLM 5.2", "Z.ai · obert · Ollama Cloud"),
-    "ollamacloud:glm-5.3-flash": ("GLM 5.3 Flash", "Z.ai · obert · Ollama Cloud"),
-    "ollamacloud:minimax-m3.1-flash": ("MiniMax M3.1 Flash", "MiniMax · obert · Ollama Cloud"),
-    "ollamacloud:deepseek-v4-pro:0813": ("DeepSeek V4 Pro", "DeepSeek · obert · Ollama Cloud"),
-    "ollamacloud:deepseek-v4.1-flash:1017": ("DeepSeek V4.1 Flash 1017", "DeepSeek · obert · Ollama Cloud"),
-    "ollamacloud:beam": ("Beam", "obert · Ollama Cloud"),
-}
-
-
-def nom_model(model):
-    if model in NOMS:
-        nom, sub = NOMS[model]
+def model_name(model):
+    """Display name and subtitle of a model; the subtitle's open/closed tag is translated."""
+    if model in MODEL_NAMES:
+        name, sub = MODEL_NAMES[model]
     else:
-        prov, _, nom = model.partition(":")
-        sub = "obert · Ollama Cloud" if prov == "ollamacloud" else prov
-    return nom, sub.replace("obert", tr("obert")).replace("tancat", tr("tancat"))
+        prov, _, name = model.partition(":")
+        sub = "open · Ollama Cloud" if prov == "ollamacloud" else prov
+    sub = " · ".join(tr(p) if p in ("open", "closed") else p for p in sub.split(" · "))
+    return name, sub
 
 
 def pct(v):
     x = f"{v * 100:.1f}"
-    return (x if IDIOMA == "en" else x.replace(".", ",")) + "\u00a0%"
+    return (x if LANG == "en" else x.replace(".", ",")) + " %"
 
 
 def metres(v):
-    x = f"{round(v * CIM):,}"
-    return (x if IDIOMA == "en" else x.replace(",", ".")) + " m"
+    x = f"{round(v * SUMMIT):,}"
+    return (x if LANG == "en" else x.replace(",", ".")) + " m"
 
 
-def carrega():
+def load_models():
     models = []
-    for f in sorted(glob.glob(os.path.join(ARREL, "resultats", "*", "resum.json"))):
+    for f in sorted(glob.glob(os.path.join(ROOT, "results", "*", "summary.json"))):
         r = json.load(open(f, encoding="utf-8"))
-        r["carpeta"] = os.path.dirname(f)
-        # A la pàgina només hi van els models amb totes les preguntes respostes.
-        if r.get("respostes", 0) < r.get("preguntes_dataset", 0):
+        r["folder"] = os.path.dirname(f)
+        # Only models with every question answered go on the page.
+        if r.get("answers", 0) < r.get("dataset_questions", 0):
             continue
         models.append(r)
-    # Comparable: puntuat sobre gairebé les mateixes preguntes que el model més avançat (els tests, de moment).
-    maxim = max((r["coneixement"].get("n") or 0 for r in models), default=0)
+    # Comparable: scored on nearly the same questions as the most advanced model (multiple choice, for now).
+    top = max((r["knowledge"].get("n") or 0 for r in models), default=0)
     for r in models:
-        r["comparable"] = (r["coneixement"].get("n") or 0) >= 0.95 * maxim
-    models.sort(key=lambda r: (not r["complet"], not r["comparable"], -(r["coneixement"].get("nota") or 0)))
+        r["comparable"] = (r["knowledge"].get("n") or 0) >= 0.95 * top
+    models.sort(key=lambda r: (not r["complete"], not r["comparable"], -(r["knowledge"].get("score") or 0)))
     return models
 
 
-def estat(m, total):
-    """Paraula d'estat de la fila i la seva classe: complet, només tests o en curs."""
-    if m["complet"]:
-        return tr("complet"), "e-ok"
+def status(m, total):
+    """The row's status word and its class: complete, multiple choice only or in progress."""
+    if m["complete"]:
+        return tr("complete"), "e-ok"
     if m["comparable"]:
         return tr("tests"), "e-tests"
-    return f"{tr('en_curs')} · {m['puntuades']}", "e-curs"
+    return f"{tr('in_progress')} · {m['scored']}", "e-pending"
 
 
-def files_tauler(models, total):
-    """La taula completa com un tauler de files; cada fila s'obre amb el detall per tipus."""
+def table_rows(models, total):
+    """The full table as a board of rows; each row opens with the per-type detail."""
     out = []
     for i, m in enumerate(models):
-        nom, sub = nom_model(m["model"])
-        c = m["coneixement"]
-        if not c.get("n"):
+        name, sub = model_name(m["model"])
+        k = m["knowledge"]
+        if not k.get("n"):
             continue
-        lo, hi = c["ic95"]
-        paraula, cls = estat(m, total)
-        tipus = []
-        for t in ("test", "oberta", "trampa"):
-            etiqueta = tr("t_" + t)
-            b = m["per_tipus"].get(t) or {}
-            tipus.append(f"{etiqueta} {pct(b['nota'])} ({b['n']})" if b.get("n") else f"{etiqueta}: {tr('jutge_pendent')}")
-        avisos = [sub]
-        if m.get("origen"):
-            avisos.append(m["origen"])
-        if m.get("mateix_model_que_jutge"):
-            avisos.append(tr("es_jutge"))
+        lo, hi = k["ci95"]
+        word, cls = status(m, total)
+        types = []
+        for t in TYPES:
+            label = tr("t_" + t)
+            b = m["by_type"].get(t) or {}
+            types.append(f"{label} {pct(b['score'])} ({b['n']})" if b.get("n") else f"{label}: {tr('judge_pending')}")
+        notes = [sub]
+        if m.get("origin"):
+            notes.append(m["origin"])
+        if m.get("same_model_as_judge"):
+            notes.append(tr("is_judge"))
         if not m["comparable"]:
-            avisos.append(tr("no_comparable"))
-        obert = " open" if i == 0 else ""
+            notes.append(tr("not_comparable"))
+        opened = " open" if i == 0 else ""
         out.append(
-            f'<details class="fila" name="taula"{obert}><summary>'
-            f'<span class="f-nom">{html.escape(nom)}</span>'
-            f'<span class="f-n num">{pct(c["nota"])}</span>'
-            f'<span class="f-ic num hide-m">{pct(lo)} – {pct(hi)}</span>'
-            f'<span class="f-m num hide-m">{metres(c["nota"])}</span>'
-            f'<span class="f-e {cls}">{html.escape(paraula)}</span></summary>'
-            f'<div class="f-det"><p>{html.escape(" · ".join(avisos))}</p>'
-            f'<p>{html.escape(" · ".join(tipus))}</p></div></details>')
-    return "\n".join(out) or f'<p>{tr("cap_model")}</p>'
+            f'<details class="row" name="table"{opened}><summary>'
+            f'<span class="f-name">{html.escape(name)}</span>'
+            f'<span class="f-n num">{pct(k["score"])}</span>'
+            f'<span class="f-ci num hide-m">{pct(lo)} – {pct(hi)}</span>'
+            f'<span class="f-m num hide-m">{metres(k["score"])}</span>'
+            f'<span class="f-e {cls}">{html.escape(word)}</span></summary>'
+            f'<div class="f-det"><p>{html.escape(" · ".join(notes))}</p>'
+            f'<p>{html.escape(" · ".join(types))}</p></div></details>')
+    return "\n".join(out) or f'<p>{tr("no_model")}</p>'
 
 
-def barres_cim(models):
-    """El gràfic principal: una barra per model que s'aixeca des de baix; el 100 % és el cim del Coma Pedrosa."""
+def summit_bars(models):
+    """The main chart: one bar per model rising from the bottom; 100 % is the summit of Coma Pedrosa."""
     out = []
-    for i, m in enumerate(m for m in models if m["coneixement"].get("n")):
-        nom, _ = nom_model(m["model"])
-        c = m["coneixement"]
-        lo, hi = c["ic95"]
-        cls = "b" + (" lider" if i == 0 else "") + ("" if m["comparable"] else " curs")
-        etiqueta = f'{html.escape(nom)}: {pct(c["nota"])}, {tr("interval")} {pct(lo)} – {pct(hi)}' + (
-            "" if m["comparable"] else f', {tr("en_curs_min")}')
-        valor = f'<b class="bv num">{pct(c["nota"])}</b>' if i < 3 else f'<span class="bi num">{pct(c["nota"])}</span>'
-        # nota i interval per tema, perquè el filtre de temes pugui reordenar les barres sense tornar a generar la pàgina
-        ds = {d: [round(b["nota"], 4), *[round(x, 4) for x in b["ic95"]]]
-              for d, b in m.get("per_domini", {}).items() if b.get("nota") is not None}
+    for i, m in enumerate(m for m in models if m["knowledge"].get("n")):
+        name, _ = model_name(m["model"])
+        k = m["knowledge"]
+        lo, hi = k["ci95"]
+        cls = "b" + (" leader" if i == 0 else "") + ("" if m["comparable"] else " pending")
+        label = f'{html.escape(name)}: {pct(k["score"])}, {tr("interval")} {pct(lo)} – {pct(hi)}' + (
+            "" if m["comparable"] else f', {tr("in_progress_lc")}')
+        value = f'<b class="bv num">{pct(k["score"])}</b>' if i < 3 else f'<span class="bi num">{pct(k["score"])}</span>'
+        # score and interval per topic, so the topic filter can reorder the bars without regenerating the page
+        ds = {d: [round(b["score"], 4), *[round(x, 4) for x in b["ci95"]]]
+              for d, b in m.get("by_domain", {}).items() if b.get("score") is not None}
         out.append(
-            f'<div class="{cls}" style="--v:{c["nota"]:.4f};--lo:{lo:.4f};--hi:{hi:.4f}" tabindex="0" '
-            f'data-nom="{html.escape(nom)}" data-g="{c["nota"]:.4f},{lo:.4f},{hi:.4f}" '
+            f'<div class="{cls}" style="--v:{k["score"]:.4f};--lo:{lo:.4f};--hi:{hi:.4f}" tabindex="0" '
+            f'data-name="{html.escape(name)}" data-g="{k["score"]:.4f},{lo:.4f},{hi:.4f}" '
             f'data-ds="{html.escape(json.dumps(ds, separators=(",", ":")))}" '
-            f'aria-label="{etiqueta}" data-tip="{etiqueta}">{valor}<i class="ic"></i>'
-            f'<span class="bn">{html.escape(nom)}</span></div>')
+            f'aria-label="{label}" data-tip="{label}">{value}<i class="ci"></i>'
+            f'<span class="bn">{html.escape(name)}</span></div>')
     return "\n".join(out)
 
 
-def filtre_temes(models):
-    """Botons per classificar per tema: General i un per domini, amb el nombre de preguntes."""
+def topic_filter(models):
+    """Buttons to rank by topic: Overall and one per domain, with the number of questions."""
     n = collections.Counter()
     for m in models[:1]:
-        n.update({d: b.get("n", 0) for d, b in m.get("per_domini", {}).items()})
-    botons = [f'<div class="ctl filtre" id="filtre-tema" role="group" aria-label="{tr("filtre_tema")}">',
-              f'<button type="button" data-d="" aria-pressed="true">{tr("general")}</button>']
-    for d, nom in DOMINIS:
-        botons.append(f'<button type="button" data-d="{d}" aria-pressed="false">{html.escape(nom_domini(d, nom))}'
-                      f' <span class="num">{n.get(d, 0)}</span></button>')
-    return "\n".join(botons + ["</div>"])
+        n.update({d: b.get("n", 0) for d, b in m.get("by_domain", {}).items()})
+    buttons = [f'<div class="ctl filter" id="topic-filter" role="group" aria-label="{tr("topic_filter")}">',
+               f'<button type="button" data-d="" aria-pressed="true">{tr("overall")}</button>']
+    for d, _ in DOMAINS:
+        buttons.append(f'<button type="button" data-d="{d}" aria-pressed="false">{html.escape(domain_name(d))}'
+                       f' <span class="num">{n.get(d, 0)}</span></button>')
+    return "\n".join(buttons + ["</div>"])
 
 
-def hero_barres(models, n=8):
-    """Les columnes de la primera pantalla: el fons de cada columna és el cim (100 %), la barra és la nota."""
+def hero_bars(models, n=8):
+    """The first screen's columns: each column's background is the summit (100 %), the bar is the score."""
     out = []
     for i, m in enumerate([m for m in models if m["comparable"]][:n]):
-        nom, _ = nom_model(m["model"])
-        c = m["coneixement"]
-        out.append(f'<li style="--v:{c["nota"]:.4f};--i:{i}"><b class="num">{pct(c["nota"])}</b>'
-                   f'<span class="hb"><i></i></span><span class="hn">{html.escape(nom)}<span class="hv"> · {pct(c["nota"])}</span></span></li>')
+        name, _ = model_name(m["model"])
+        k = m["knowledge"]
+        out.append(f'<li style="--v:{k["score"]:.4f};--i:{i}"><b class="num">{pct(k["score"])}</b>'
+                   f'<span class="hb"><i></i></span><span class="hn">{html.escape(name)}<span class="hv"> · {pct(k["score"])}</span></span></li>')
     return "\n".join(out)
 
 
-def tiles_dominis(models):
+def domain_tiles(models):
     comp = [m for m in models if m["comparable"]]
     if not comp:
         return ""
     sel = comp[0]["model"]
     out = []
-    for d, nom in DOMINIS:
-        nom = nom_domini(d, nom)
-        vals = [(m["model"], (m["per_domini"].get(d) or {}).get("nota")) for m in comp]
+    for d, _ in DOMAINS:
+        name = domain_name(d)
+        vals = [(m["model"], (m["by_domain"].get(d) or {}).get("score")) for m in comp]
         v = dict(vals).get(sel)
         mini = "".join(f'<i class="{"sel" if mid == sel else ""}" data-m="{html.escape(mid)}" '
-                       f'title="{html.escape(nom_model(mid)[0])}: {pct(x) if x is not None else tr("sense_dades")}" '
+                       f'title="{html.escape(model_name(mid)[0])}: {pct(x) if x is not None else tr("no_data")}" '
                        f'style="--v:{(x or 0):.4f}"></i>' for mid, x in vals)
-        nsel = (comp[0]["per_domini"].get(d) or {}).get("n", 0)
-        millor = max((x for x in vals if x[1] is not None), key=lambda x: x[1], default=None)
-        mtxt = (f"{tr('millor')}: {html.escape(nom_model(millor[0])[0])}, {pct(millor[1])}" if millor
-                else tr("sense_dades").capitalize())
-        out.append(f'<div class="dt" data-d="{d}"><h3>{nom}</h3><b class="dv num">{pct(v) if v is not None else "–"}</b>'
-                   f'<div class="mini" data-ui aria-hidden="true">{mini}</div><p class="dn"><span class="dnn">{nsel} {tr("preguntes")}</span> · {mtxt}</p></div>')
+        nsel = (comp[0]["by_domain"].get(d) or {}).get("n", 0)
+        best = max((x for x in vals if x[1] is not None), key=lambda x: x[1], default=None)
+        btxt = (f"{tr('best')}: {html.escape(model_name(best[0])[0])}, {pct(best[1])}" if best
+                else tr("no_data").capitalize())
+        out.append(f'<div class="dt" data-d="{d}"><h3>{name}</h3><b class="dv num">{pct(v) if v is not None else "–"}</b>'
+                   f'<div class="mini" data-ui aria-hidden="true">{mini}</div><p class="dn"><span class="dnn">{nsel} {tr("questions")}</span> · {btxt}</p></div>')
     return "\n".join(out)
 
 
-def mostra_preguntes(models, dataset):
-    complets = [m for m in models if m["coneixement"].get("n") and m["comparable"]]
-    per_model = {}
-    for m in complets:
-        resp, punts = {}, {}
-        for l in open(os.path.join(m["carpeta"], "respostes.jsonl"), encoding="utf-8"):
-            r = json.loads(l)
+def question_sample(models, dataset):
+    complete = [m for m in models if m["knowledge"].get("n") and m["comparable"]]
+    by_model = {}
+    for m in complete:
+        answers, scores = {}, {}
+        for line in open(os.path.join(m["folder"], "answers.jsonl"), encoding="utf-8"):
+            r = json.loads(line)
             if not r.get("error"):
-                resp[r["id"]] = r["resposta"]
-        pf = os.path.join(m["carpeta"], "puntuacions.jsonl")
-        if os.path.exists(pf):
-            for l in open(pf, encoding="utf-8"):
-                r = json.loads(l)
-                punts[r["id"]] = r
-        per_model[m["model"]] = (resp, punts)
-    comuns = [i for i in dataset if all(i in p for _, p in per_model.values())] if per_model else []
+                answers[r["id"]] = r["answer"]
+        sf = os.path.join(m["folder"], "scores.jsonl")
+        if os.path.exists(sf):
+            for line in open(sf, encoding="utf-8"):
+                r = json.loads(line)
+                scores[r["id"]] = r
+        by_model[m["model"]] = (answers, scores)
+    shared = [i for i in dataset if all(i in s for _, s in by_model.values())] if by_model else []
     rnd = random.Random(20261027)
-    # Primer les preguntes on els models no coincideixen: són les que expliquen més.
-    def desacord(i):
-        vals = {per_model[m][1][i]["punts"] for m in per_model}
+
+    # Questions where the models disagree come first: they explain the most.
+    def disagree(i):
+        vals = {by_model[m][1][i]["points"] for m in by_model}
         return len(vals) > 1
-    rnd.shuffle(comuns)
-    comuns.sort(key=lambda i: not desacord(i))
+    rnd.shuffle(shared)
+    shared.sort(key=lambda i: not disagree(i))
     out = []
-    for i in comuns[:MOSTRA]:
+    for i in shared[:SAMPLE_SIZE]:
         p = dataset[i]
-        dom = nom_domini(p["domini"], dict(DOMINIS).get(p["domini"], p["domini"]))
-        e = {"id": i, "tipus": p["tipus"], "domini": dom, "pregunta": p["pregunta"],
-             "referencia": p["resposta"] if p["tipus"] != "test" else f"{p['correcta']}) {p['opcions'][p['correcta']]}",
-             "respostes": []}
-        if p["tipus"] == "test":
-            e["opcions"] = p["opcions"]
-        for m, (resp, punts) in per_model.items():
-            pu = punts[i]
-            e["respostes"].append({"model": m, "text": resp.get(i, "")[:700], "punts": pu["punts"],
-                                   "motiu": pu.get("motiu", "")})
+        e = {"id": i, "type": p["type"], "domain": domain_name(p["domain"]), "question": p["question"],
+             "reference": (p["reference_answer"] if p["type"] != "multiple_choice"
+                           else f"{p['correct']}) {p['options'][p['correct']]}"),
+             "answers": []}
+        if p["type"] == "multiple_choice":
+            e["options"] = p["options"]
+        for m, (answers, scores) in by_model.items():
+            s = scores[i]
+            e["answers"].append({"model": m, "text": answers.get(i, "")[:700], "points": s["points"],
+                                 "reason": s.get("reason", "")})
         out.append(e)
     return out
 
 
 def main():
-    global IDIOMA
-    rows = preguntes()
+    global LANG
+    rows = load_questions()
     dataset = {r["id"]: r for r in rows}
-    models = carrega()
-    plantilla_base = open(os.path.join(ARREL, "web", "plantilla.html"), encoding="utf-8").read()
-    textos = json.load(open(os.path.join(ARREL, "web", "textos.json"), encoding="utf-8"))
-    credits = json.load(open(os.path.join(ARREL, "web", "assets", "credits.json"), encoding="utf-8"))
-    versio = f"v1-esborrany ({empremta_dataset(rows)})"
-    tipus = {t: sum(1 for r in rows if r["tipus"] == t) for t in ("test", "oberta", "trampa")}
-    complets = sum(1 for m in models if m["complet"])
-    comparables = sum(1 for m in models if m["comparable"])
+    models = load_models()
+    template = open(os.path.join(ROOT, "web", "template.html"), encoding="utf-8").read()
+    strings = json.load(open(os.path.join(ROOT, "web", "strings.json"), encoding="utf-8"))
+    credits = json.load(open(os.path.join(ROOT, "web", "assets", "credits.json"), encoding="utf-8"))
+    version = f"v1-draft ({dataset_fingerprint(rows)})"
+    type_counts = {t: sum(1 for r in rows if r["type"] == t) for t in TYPES}
+    n_complete = sum(1 for m in models if m["complete"])
+    n_comparable = sum(1 for m in models if m["comparable"])
+    fact_sheets = open(os.path.join(ROOT, "holdout", "fact-sheets.txt"), encoding="utf-8").read().split()
 
-    for idioma, fitxer in IDIOMES.items():
-        IDIOMA = idioma
-        peces = []
+    for lang, filename in LANGS.items():
+        LANG = lang
+        pieces = []
         for c in credits if isinstance(credits, list) else credits.values():
-            titol = html.escape(c.get("title", ""))
-            autor = c.get("creator") or c.get("author")
+            title = html.escape(c.get("title", ""))
+            author = c.get("creator") or c.get("author")
             lic = c.get("licence") or c.get("license") or ""
-            peces.append(f'<a href="{html.escape(c.get("page") or c.get("source", ""))}">«{titol}»</a>'
-                         + (f", {html.escape(autor)}" if autor else "") + (f", {html.escape(lic)}" if lic else ""))
-        credits_html = f"{tr('fotos')}: " + "; ".join(peces) + ", via Wikimedia Commons."
-        dades = {
-            "models": [{"id": m["model"], "nom": nom_model(m["model"])[0], "nota": m["coneixement"].get("nota", 0),
-                        "n": m["coneixement"].get("n", 0), "complet": m["complet"], "comparable": m["comparable"],
-                        "per_domini": {d: (v.get("nota") if v.get("n") else None) for d, v in m["per_domini"].items()},
-                        "per_domini_n": {d: v.get("n", 0) for d, v in m["per_domini"].items()}}
+            pieces.append(f'<a href="{html.escape(c.get("page") or c.get("source", ""))}">«{title}»</a>'
+                          + (f", {html.escape(author)}" if author else "") + (f", {html.escape(lic)}" if lic else ""))
+        credits_html = f"{tr('photos')}: " + "; ".join(pieces) + ", via Wikimedia Commons."
+        payload = {
+            "models": [{"id": m["model"], "name": model_name(m["model"])[0], "score": m["knowledge"].get("score", 0),
+                        "n": m["knowledge"].get("n", 0), "complete": m["complete"], "comparable": m["comparable"],
+                        "by_domain": {d: (v.get("score") if v.get("n") else None) for d, v in m["by_domain"].items()},
+                        "by_domain_n": {d: v.get("n", 0) for d, v in m["by_domain"].items()}}
                        for m in models],
-            "mostra": mostra_preguntes(models, dataset),
-            "t": {**TXT["js"][idioma], "interval": TXT["interval"][idioma]},
-            "dec": "." if idioma == "en" else ",",
+            "sample": question_sample(models, dataset),
+            "t": {**TXT["js"][lang], "interval": TXT["interval"][lang]},
+            "dec": "." if lang == "en" else ",",
         }
-        avis = tr("avis").format(n=len(models), c=comparables, k=complets, t=len(rows))
-        idiomes = "".join(f'<a href="{f}" hreflang="{i}" lang="{i}"' + (' aria-current="page"' if i == idioma else "")
-                          + f">{NOM_IDIOMA[i]}</a>" for i, f in IDIOMES.items())
-        data = datetime.date.today()
+        notice = tr("notice").format(n=len(models), c=n_comparable, k=n_complete, t=len(rows))
+        langs = "".join(f'<a href="{f}" hreflang="{i}" lang="{i}"' + (' aria-current="page"' if i == lang else "")
+                        + f">{LANG_LABEL[i]}</a>" for i, f in LANGS.items())
+        today = datetime.date.today()
         subst = {
-            "__FILES__": files_tauler(models, len(rows)),
-            "__BARRES__": barres_cim(models),
-            "__BARRES_CLS__": "files" if sum(1 for m in models if m["coneixement"].get("n")) > 14 else "",
-            "__FILTRE__": filtre_temes(models),
-            "__HERO_BARRES__": hero_barres(models),
-            "__DOMINIS__": tiles_dominis(models),
-            "__IDIOMES__": idiomes,
-            "__LANG__": idioma,
+            "__ROWS__": table_rows(models, len(rows)),
+            "__BARS__": summit_bars(models),
+            "__BARS_CLS__": "rows" if sum(1 for m in models if m["knowledge"].get("n")) > 14 else "",
+            "__FILTER__": topic_filter(models),
+            "__HERO_BARS__": hero_bars(models),
+            "__DOMAINS__": domain_tiles(models),
+            "__LANGS__": langs,
+            "__LANG__": lang,
             "__N_MODELS__": str(len(models)),
-            "__N_COMPARABLES__": str(comparables),
-            "__MILLOR_NOM__": html.escape(nom_model(models[0]["model"])[0]) if models else "–",
-            "__MILLOR_NOTA__": pct(models[0]["coneixement"]["nota"]) if models else "–",
-            "__MILLOR_M__": metres(models[0]["coneixement"]["nota"]) if models else "–",
-            "__AVIS__": html.escape(avis),
-            "__DATA__": data.isoformat() if idioma == "en" else data.strftime("%d/%m/%Y"),
+            "__N_COMPARABLE__": str(n_comparable),
+            "__BEST_NAME__": html.escape(model_name(models[0]["model"])[0]) if models else "–",
+            "__BEST_SCORE__": pct(models[0]["knowledge"]["score"]) if models else "–",
+            "__BEST_M__": metres(models[0]["knowledge"]["score"]) if models else "–",
+            "__NOTICE__": html.escape(notice),
+            "__DATE__": today.isoformat() if lang == "en" else today.strftime("%d/%m/%Y"),
             "__CREDITS__": credits_html,
-            "__DADES__": json.dumps(dades, ensure_ascii=False).replace("</", "<\\/"),
+            "__PAYLOAD__": json.dumps(payload, ensure_ascii=False).replace("</", "<\\/"),
         }
-        pagina = plantilla_base
-        for clau, t in textos.items():
-            pagina = pagina.replace(f"__T:{clau}__", t[idioma])
-        # els textos traduïts poden portar marcadors de dades: se substitueixen després
+        page = template
+        for key, t in strings.items():
+            page = page.replace(f"__T:{key}__", t[lang])
+        # translated strings may carry data placeholders: they are substituted afterwards
         subst.update({
-            "__VERSIO__": html.escape(versio), "__JUTGE__": html.escape(nom_model(JUTGE)[0]),
-            "__N_TEST__": str(tipus["test"]), "__N_OBERTA__": str(tipus["oberta"]), "__N_TRAMPA__": str(tipus["trampa"]),
+            "__VERSION__": html.escape(version), "__JUDGE__": html.escape(model_name(JUDGE)[0]),
+            "__N_MULTIPLE_CHOICE__": str(type_counts["multiple_choice"]), "__N_OPEN__": str(type_counts["open"]),
+            "__N_TRAP__": str(type_counts["trap"]),
             "__N_TOTAL__": str(len(rows)),
             "__N_ARTICLES__": f"{len({d for r in rows for d in r['documents']})}",
-            "__N_NOVISTES__": str(sum(1 for r in rows if r.get("no_vista"))),
-            "__N_FITXES__": str(len(open(os.path.join(ARREL, "reserva", "fitxes.txt")).read().split())),
+            "__N_UNSEEN__": str(sum(1 for r in rows if r.get("unseen"))),
+            "__N_FACT_SHEETS__": str(len(fact_sheets)),
         })
         for k, v in subst.items():
-            pagina = pagina.replace(k, v)
-        sortida = os.path.join(ARREL, "web", fitxer)
-        open(sortida, "w", encoding="utf-8").write(pagina)
-        print(f"{sortida}: {len(models)} models, {len(dades['mostra'])} preguntes a «Prova-ho»")
+            page = page.replace(k, v)
+        out = os.path.join(ROOT, "web", filename)
+        open(out, "w", encoding="utf-8").write(page)
+        print(f"{out}: {len(models)} models, {len(payload['sample'])} questions in «Try it»")
 
 
 if __name__ == "__main__":

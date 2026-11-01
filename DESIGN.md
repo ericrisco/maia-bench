@@ -1,6 +1,6 @@
 ---
 name: maia-bench
-description: El Coma Pedrosa (2.942 m) és el 100 %; cada model és una barra que s'aixeca des del peu fins a la seva nota.
+description: Coma Pedrosa (2,942 m) is 100 %; each model is a bar that rises from the foot to its score.
 colors:
   ground: "#111111"
   surface: "#1c1c1c"
@@ -15,59 +15,59 @@ typography:
   display: { fontFamily: "General Sans", fontWeight: 700, letterSpacing: "-0.04em", lineHeight: 0.9 }
   text: { fontFamily: "General Sans", fontSize: "17-19px", lineHeight: 1.45 }
 rounded: { tile: "0px", bar-end: "4px", button: "0px" }
-spacing: { margin: "16px", gap: "8px (6px al mòbil)", section: "160px (112px al mòbil)" }
+spacing: { margin: "16px", gap: "8px (6px on mobile)", section: "160px (112px on mobile)" }
 direction: { id: "dense-tiles", seed: 448745881 }
 ---
 
-# DESIGN.md — pàgina de resultats de maia-bench
+# DESIGN.md — maia-bench results page
 
 ## Overview
 
-Pàgina pública de resultats (mode Persuade, però amb els gràfics com a protagonistes, a petició d'Eric: «més
-tecnològica, que siguin gràfics»). Direcció «The well-kept board»: tota la pàgina és un tauler fosc de rajoles
-plenes, de vora a vora, amb 8 px de separació. Substitueix «The printed annual» (llavor 605962653), que era clara i
-editorial.
+Public results page (Persuade mode, but with the charts as the protagonists, at Eric's request: "more
+technological, make them charts"). Direction "The well-kept board": the
+whole page is a dark board of full tiles, edge to edge, with 8 px gaps. It replaces "The printed annual" (seed
+605962653), which was light and editorial.
 
-- **Idea:** el cim del Coma Pedrosa és el 100 %. A la primera pantalla, el fons fosc de cada columna és el cim i la
-  barra n'és la nota; a la classificació, les barres s'aixequen des del peu i l'etiqueta «Cim · 2.942 m · 100 %» marca
-  el sostre.
-- **Cosa viva:** «Prova-ho»: una pregunta a l'atzar amb la resposta i el veredicte de cada model.
+- **Idea:** the summit of Coma Pedrosa is 100 %. On the first screen, the dark background of each column is the summit
+  and the bar is the score; in the leaderboard, the bars rise from the foot and the label «Cim · 2.942 m · 100 %» marks
+  the ceiling.
+- **Live element:** «Prova-ho» ("Try it"): a random question with the answer and the verdict of each model.
 
 ## Colors
 
-Fons negre suau, rajoles un pas més clares, tinta blanca. Un sol accent, el groc de la bandera: el model primer (barra,
-fila oberta de la taula), el model triat als dominis, el botó i la faixa en moviment. El blau i el vermell de la bandera
-només com a camps sencers (etapes del mètode, resposta de referència, «incorrecta», el peu). Un domini on el model triat
-falla més es marca amb el camp `#2a1a1d`. Fotos en escala de grisos.
+Soft black background, tiles one step lighter, white ink. A single accent, the yellow of the flag: the first model (bar,
+open table row), the model selected in the domains, the button and the moving band. The blue and red of the flag
+only as whole fields (method stages, reference answer, «incorrecta», the footer). A domain where the selected model
+fails most is marked with the field `#2a1a1d`. Photos in greyscale.
 
 ## Typography
 
-General Sans 400/500/700, cinc mides: `--step-small`, `--step-body`, `--step-lead`, `--step-head` i la de display
-(la franja del nom, la xifra gran i la faixa). Xifres tabulars a tot arreu on hi ha números. Monoespai només dins
+General Sans 400/500/700, five sizes: `--step-small`, `--step-body`, `--step-lead`, `--step-head` and the display one
+(the name strip, the big figure and the band). Tabular figures wherever there are numbers. Monospace only inside
 `<code>`.
 
 ## Components
 
-- Rajoles plenes, sense vora ni ombra. Cantonades rectes; només els extrems de les barres porten 4 px.
-- Gràfics en HTML i CSS amb `data-ui`: les alçades surten de `--v` (nota 0–1), l'interval de `--lo`/`--hi`.
-- La taula és un tauler de files `<details name="taula">`; la fila oberta es pinta groga.
-- FAQ amb `<details name="faq">`, una oberta cada vegada; el signe més són dues barres de 3 px.
-- Peu: el nom construït amb blocs de colors d'alçades diferents.
-- L'únic element amb ombra és el tooltip de les barres, perquè flota.
+- Full tiles, no border or shadow. Square corners; only the ends of the bars get 4 px.
+- Charts in HTML and CSS with `data-ui`: heights come from `--v` (score 0–1), the interval from `--lo`/`--hi`.
+- The table is a board of `<details name="taula">` rows; the open row is painted yellow.
+- FAQ with `<details name="faq">`, one open at a time; the plus sign is two 3 px bars.
+- Footer: the name built from coloured blocks of different heights.
+- The only element with a shadow is the bar tooltip, because it floats.
 
 ## Layout
 
-Marges de 16 px a totes les amplades, graella de 12 columnes. Al mòbil el tauler passa a dues columnes; la
-classificació es dibuixa amb barres horitzontals i els dominis passen a files.
+16 px margins at every width, 12-column grid. On mobile the board switches to two columns; the
+leaderboard is drawn with horizontal bars and the domains become rows.
 
 ## Motion
 
-Faixa groga en moviment (el moviment principal), barres que creixen en entrar, entrades escalonades per secció,
-vídeo de vaques en bucle. Tot s'atura amb `prefers-reduced-motion`.
+Moving yellow band (the main motion), bars that grow on entry, staggered entrances per section,
+looping cow video. Everything stops with `prefers-reduced-motion`.
 
 ## Do / Don't
 
-- Fes que cada xifra vagi amb el seu gràfic; cap gràfic sense valors llegibles o tooltip.
-- No facis servir el groc per a res que no sigui el model destacat o l'acció.
-- No hi posis degradats, línies fines, majúscules espaiades ni targetes amb icona.
-- Les fotos són de Wikimedia Commons; els crèdits van a `web/assets/credits.json` i al peu.
+- Pair every figure with its chart; no chart without readable values or a tooltip.
+- Do not use the yellow for anything other than the highlighted model or the action.
+- Do not add gradients, thin lines, letter-spaced capitals or icon cards.
+- The photos come from Wikimedia Commons; credits go in `web/assets/credits.json` and in the footer.

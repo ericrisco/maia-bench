@@ -1,22 +1,22 @@
 #!/usr/bin/env bash
-# Passa el benchmark a models d'Ollama servits per un Cloud Run privat amb GPU (vegeu docs/cloudrun.md).
+# Runs the benchmark on Ollama models served by a private Cloud Run service with a GPU (see docs/cloudrun.md).
 #
-# Ús:  tools/cloudrun.sh <url-del-servei> <model> [<model> ...]
-#      p. ex. tools/cloudrun.sh https://maia-bench-ollama-...run.app gemma4:e2b gemma4:e4b
+# Usage:  tools/cloudrun.sh <service-url> <model> [<model> ...]
+#         e.g. tools/cloudrun.sh https://maia-bench-ollama-...run.app gemma4:e2b gemma4:e4b
 #
-# Per a cada model: el descarrega al servei, executa el benchmark en trams de 50 minuts (el token d'identitat
-# caduca a l'hora i executa.py es reprèn sol), repeteix fins que no queden errors, puntua els tests i esborra el
-# model del servei. No esborra el servei: això es fa a mà quan s'acaba (gcloud run services delete).
+# For each model: pulls it into the service, runs the benchmark in 50-minute slices (the identity token expires
+# after an hour and run.py resumes on its own), repeats until no errors are left, scores multiple choice and deletes
+# the model from the service. It does not delete the service: do that by hand when done (gcloud run services delete).
 set -uo pipefail
 URL="$1"; shift
 cd "$(dirname "$0")/.."
 export OLLAMA_HOST="$URL"
-TOTAL=$(python3 -c 'import sys; sys.path.insert(0, "tools"); from executa import preguntes; print(len(preguntes()))')
+TOTAL=$(python3 -c 'import sys; sys.path.insert(0, "tools"); from run import load_questions; print(len(load_questions()))')
 
-fetes() {  # respostes sense error d'un model
+answered() {  # answers without error for a model
   python3 - "$1" <<'EOF'
 import json, os, sys
-f = os.path.join("resultats", sys.argv[1], "respostes.jsonl")
+f = os.path.join("results", sys.argv[1], "answers.jsonl")
 ok = set()
 if os.path.exists(f):
     for l in open(f, encoding="utf-8"):
@@ -28,22 +28,22 @@ EOF
 }
 
 for MODEL in "$@"; do
-  CARPETA="ollama_${MODEL//[:\/]/_}"
+  FOLDER="ollama_${MODEL//[:\/]/_}"
   echo "== $MODEL ($(date +%H:%M))"
   export OLLAMA_TOKEN=$(gcloud auth print-identity-token)
   if ! curl -sf -m 1800 "$URL/api/pull" -H "Authorization: Bearer $OLLAMA_TOKEN" \
        -d "{\"model\":\"$MODEL\",\"stream\":false}" >/dev/null; then
-    echo "   no s'ha pogut descarregar; el salto"; continue
+    echo "   could not pull it; skipping"; continue
   fi
-  for intent in 1 2 3 4 5 6 7 8 9 10; do
+  for attempt in 1 2 3 4 5 6 7 8 9 10; do
     export OLLAMA_TOKEN=$(gcloud auth print-identity-token)
-    perl -e 'alarm shift; exec @ARGV' 3000 python3 tools/executa.py --model "ollama:$MODEL" --fils 4 >/dev/null 2>&1
-    N=$(fetes "$CARPETA")
-    echo "   tram $intent: $N de $TOTAL"
+    perl -e 'alarm shift; exec @ARGV' 3000 python3 tools/run.py --model "ollama:$MODEL" --threads 4 >/dev/null 2>&1
+    N=$(answered "$FOLDER")
+    echo "   slice $attempt: $N of $TOTAL"
     [ "$N" -ge "$TOTAL" ] && break
   done
-  python3 tools/puntua.py "resultats/$CARPETA" --sense-jutge 2>/dev/null
+  python3 tools/score.py "results/$FOLDER" --no-judge 2>/dev/null
   export OLLAMA_TOKEN=$(gcloud auth print-identity-token)
   curl -s -m 120 -X DELETE "$URL/api/delete" -H "Authorization: Bearer $OLLAMA_TOKEN" -d "{\"model\":\"$MODEL\"}" >/dev/null
 done
-echo "FI ($(date +%H:%M))"
+echo "END ($(date +%H:%M))"
