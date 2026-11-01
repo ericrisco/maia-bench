@@ -1,0 +1,13 @@
+{
+ "model": "ollama:gemma3:4b",
+ "origen": "",
+ "prompt": "p1",
+ "sistema": "Respon en català les preguntes sobre Andorra que et facin.",
+ "temperatura": 0,
+ "max_tokens": 4000,
+ "dataset": "ec314f7d6239",
+ "preguntes_dataset": 926,
+ "commit": "7466f01",
+ "inici": "2026-10-28T14:34:05+00:00",
+ "fi": "2026-10-28T14:39:31+00:00"
+}

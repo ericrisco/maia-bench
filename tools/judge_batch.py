@@ -9,6 +9,7 @@ which is not affected by the project's block on online Gemini calls. Rows are ta
 puntua.py treats them as done. Field names (nota, punts, motiu, jutge, tipus) are puntua.py's data schema.
 """
 import argparse
+import hashlib
 import json
 import os
 import re
@@ -54,6 +55,11 @@ def to_request(messages):
             "generationConfig": {"temperature": 0, "maxOutputTokens": 4000}}
 
 
+def fingerprint(answer):
+    # same as puntua.py: a score only counts for the answer it was given to
+    return hashlib.sha1(answer.encode("utf-8")).hexdigest()[:12]
+
+
 def pending(folder, dataset):
     answers = {}
     for line in open(os.path.join(folder, "respostes.jsonl"), encoding="utf-8"):
@@ -65,7 +71,8 @@ def pending(folder, dataset):
     if os.path.exists(scores):
         for line in open(scores, encoding="utf-8"):
             r = json.loads(line)
-            if r.get("jutge") in (None, JUTGE):
+            if r.get("jutge") in (None, JUTGE) and r["id"] in answers \
+                    and r.get("h", fingerprint(answers[r["id"]])) == fingerprint(answers[r["id"]]):
                 done.add(r["id"])
     return {i: a for i, a in answers.items() if i in dataset and dataset[i]["tipus"] != "test" and i not in done}
 
@@ -75,9 +82,9 @@ def append_score(folder, row):
         out.write(json.dumps(row, ensure_ascii=False) + "\n")
 
 
-def score_row(dataset, qid, nota, motiu):
+def score_row(dataset, qid, nota, motiu, answer):
     return {"id": qid, "tipus": dataset[qid]["tipus"], "nota": nota, "punts": nota / 2, "motiu": motiu,
-            "jutge": JUTGE, "transport": "batch"}
+            "jutge": JUTGE, "transport": "batch", "h": fingerprint(answer)}
 
 
 def main():
@@ -87,9 +94,10 @@ def main():
     args = ap.parse_args()
 
     dataset = {p["id"]: p for p in preguntes()}
-    rows, empty = [], []
+    rows, empty, answers = [], [], {}
     for folder in args.folders:
         for qid, answer in pending(folder, dataset).items():
+            answers[f"{folder}|{qid}"] = answer
             if not answer.strip():
                 empty.append((folder, qid))
             else:
@@ -97,7 +105,7 @@ def main():
     print(f"to judge: {len(rows)} · empty: {len(empty)}", file=sys.stderr)
 
     for folder, qid in empty:
-        append_score(folder, score_row(dataset, qid, 0, "resposta buida"))
+        append_score(folder, score_row(dataset, qid, 0, "resposta buida", answers[f"{folder}|{qid}"]))
     if not rows:
         return
 
@@ -139,7 +147,7 @@ def main():
                 errors += 1
                 print(f"ERROR {qid}: {r.get('status') or e}", file=sys.stderr)
                 continue
-            append_score(folder, score_row(dataset, qid, verdict["nota"], verdict.get("motiu", "")))
+            append_score(folder, score_row(dataset, qid, verdict["nota"], verdict.get("motiu", ""), answers[r["key"]]))
     print(f"done ({errors} errors; rerun the same command to resubmit them)", file=sys.stderr)
 
 

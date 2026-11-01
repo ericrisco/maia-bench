@@ -1,0 +1,172 @@
+{
+ "model": "vertex:google/gemma-4-26b-a4b-it-maas",
+ "origen": "",
+ "dataset": "ec314f7d6239",
+ "preguntes_dataset": 926,
+ "respostes": 926,
+ "puntuades": 926,
+ "complet": true,
+ "nomes_tests": false,
+ "jutge": "vertex:google/gemini-3.8-flash",
+ "versio_jutge": "j1",
+ "prompt": "p1",
+ "temperatura": 0,
+ "mateix_model_que_jutge": false,
+ "data": "2026-11-01",
+ "coneixement": {
+  "n": 926,
+  "nota": 0.351,
+  "ic95": [
+   0.3197,
+   0.3812
+  ]
+ },
+ "per_tipus": {
+  "oberta": {
+   "n": 231,
+   "nota": 0.1212,
+   "ic95": [
+    0.0909,
+    0.1537
+   ]
+  },
+  "test": {
+   "n": 604,
+   "nota": 0.4752,
+   "ic95": [
+    0.4338,
+    0.5132
+   ]
+  },
+  "trampa": {
+   "n": 91,
+   "nota": 0.1099,
+   "ic95": [
+    0.0549,
+    0.1703
+   ]
+  }
+ },
+ "vistes": {
+  "n": 844,
+  "nota": 0.356,
+  "ic95": [
+   0.3252,
+   0.3892
+  ]
+ },
+ "no_vistes": {
+  "n": 82,
+  "nota": 0.2988,
+  "ic95": [
+   0.2073,
+   0.3902
+  ]
+ },
+ "per_domini": {
+  "costums": {
+   "n": 53,
+   "nota": 0.3396,
+   "ic95": [
+    0.217,
+    0.4623
+   ]
+  },
+  "cultura": {
+   "n": 82,
+   "nota": 0.3476,
+   "ic95": [
+    0.25,
+    0.4451
+   ]
+  },
+  "economia": {
+   "n": 83,
+   "nota": 0.3494,
+   "ic95": [
+    0.247,
+    0.4518
+   ]
+  },
+  "esports": {
+   "n": 76,
+   "nota": 0.2368,
+   "ic95": [
+    0.1447,
+    0.3355
+   ]
+  },
+  "gastronomia": {
+   "n": 35,
+   "nota": 0.4429,
+   "ic95": [
+    0.2714,
+    0.5857
+   ]
+  },
+  "historia": {
+   "n": 131,
+   "nota": 0.3397,
+   "ic95": [
+    0.2672,
+    0.4237
+   ]
+  },
+  "institucions": {
+   "n": 109,
+   "nota": 0.3853,
+   "ic95": [
+    0.289,
+    0.4679
+   ]
+  },
+  "llengua": {
+   "n": 86,
+   "nota": 0.3721,
+   "ic95": [
+    0.2733,
+    0.4767
+   ]
+  },
+  "persones": {
+   "n": 11,
+   "nota": 0.1818,
+   "ic95": [
+    0.0,
+    0.4545
+   ]
+  },
+  "politica": {
+   "n": 38,
+   "nota": 0.3289,
+   "ic95": [
+    0.1974,
+    0.4868
+   ]
+  },
+  "societat": {
+   "n": 120,
+   "nota": 0.3542,
+   "ic95": [
+    0.2792,
+    0.4375
+   ]
+  },
+  "territori": {
+   "n": 70,
+   "nota": 0.3429,
+   "ic95": [
+    0.2357,
+    0.45
+   ]
+  },
+  "vida-quotidiana": {
+   "n": 32,
+   "nota": 0.5156,
+   "ic95": [
+    0.3438,
+    0.6875
+   ]
+  }
+ }
+}
