@@ -16,6 +16,27 @@
  ],
  "models": [
   {
+   "model": "openrouter:openai/gpt-6.1-sol",
+   "folder": "openrouter_openai_gpt-6.1-sol",
+   "scored": 926,
+   "score": 0.7144,
+   "by_domain": {
+    "culture": 0.75,
+    "customs": 0.6792,
+    "daily-life": 0.7969,
+    "economy": 0.6566,
+    "gastronomy": 0.6286,
+    "history": 0.7328,
+    "institutions": 0.656,
+    "language": 0.7151,
+    "people": 0.7727,
+    "politics": 0.7895,
+    "society": 0.7167,
+    "sports": 0.75,
+    "territory": 0.7357
+   }
+  },
+  {
    "model": "vertex:google/gemini-3.1-pro-preview",
    "folder": "vertex_google_gemini-3.1-pro-preview",
    "scored": 926,
@@ -121,6 +142,27 @@
    }
   },
   {
+   "model": "openrouter:anthropic/claude-opus-5.5",
+   "folder": "openrouter_anthropic_claude-opus-5.5",
+   "scored": 926,
+   "score": 0.6512,
+   "by_domain": {
+    "culture": 0.6951,
+    "customs": 0.6698,
+    "daily-life": 0.7812,
+    "economy": 0.5783,
+    "gastronomy": 0.5286,
+    "history": 0.6947,
+    "institutions": 0.6193,
+    "language": 0.657,
+    "people": 0.6364,
+    "politics": 0.7632,
+    "society": 0.6292,
+    "sports": 0.5855,
+    "territory": 0.6857
+   }
+  },
+  {
    "model": "vertex:google/gemini-3-flash-preview",
    "folder": "vertex_google_gemini-3-flash-preview",
    "scored": 926,
@@ -159,6 +201,27 @@
     "politics": 0.7368,
     "society": 0.625,
     "sports": 0.7105,
+    "territory": 0.6571
+   }
+  },
+  {
+   "model": "openrouter:openai/gpt-6.1-terra",
+   "folder": "openrouter_openai_gpt-6.1-terra",
+   "scored": 926,
+   "score": 0.6285,
+   "by_domain": {
+    "culture": 0.7195,
+    "customs": 0.6415,
+    "daily-life": 0.7188,
+    "economy": 0.6024,
+    "gastronomy": 0.5571,
+    "history": 0.6183,
+    "institutions": 0.6193,
+    "language": 0.5814,
+    "people": 0.5455,
+    "politics": 0.7105,
+    "society": 0.6208,
+    "sports": 0.5855,
     "territory": 0.6571
    }
   },
@@ -454,6 +517,27 @@
     "society": 0.4542,
     "sports": 0.4276,
     "territory": 0.3857
+   }
+  },
+  {
+   "model": "openrouter:anthropic/claude-sonnet-5.5",
+   "folder": "openrouter_anthropic_claude-sonnet-5.5",
+   "scored": 926,
+   "score": 0.4671,
+   "by_domain": {
+    "culture": 0.5122,
+    "customs": 0.3962,
+    "daily-life": 0.5938,
+    "economy": 0.4458,
+    "gastronomy": 0.5571,
+    "history": 0.5,
+    "institutions": 0.4862,
+    "language": 0.436,
+    "people": 0.3182,
+    "politics": 0.6053,
+    "society": 0.4583,
+    "sports": 0.2961,
+    "territory": 0.4857
    }
   },
   {
