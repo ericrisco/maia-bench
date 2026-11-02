@@ -1,0 +1,944 @@
+{"id": "customs-festive-calendar/002", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "customs-festive-calendar/001", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "customs-festive-calendar/003", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "customs-festive-calendar/004", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "customs-caramelles/001", "type": "multiple_choice", "letter": null, "points": 0.0}
+{"id": "customs-caramelles/002", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "customs-dances/001", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "customs-dances/002", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "customs-dances/003", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "customs-dances/004", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "customs-dances/005", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "customs-dances/006", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "customs-falles/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "customs-falles/002", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "customs-patron-festivals/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "customs-patron-festivals/002", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "customs-patron-festivals/003", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "customs-patron-festivals/004", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "customs-giants/001", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "customs-giants/002", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "customs-meritxell/001", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "customs-meritxell/002", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "customs-religiosity/002", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "customs-religiosity/003", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "customs-religiosity/004", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "customs-religiosity/005", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "customs-religiosity/006", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "customs-religiosity/001", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "customs-rites-of-passage/001", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "customs-rites-of-passage/002", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "customs-rites-of-passage/003", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "customs-rites-of-passage/004", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "customs-sant-antoni/001", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "customs-sant-antoni/002", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "culture-andorra-seen-from-abroad/001", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "culture-andorra-seen-from-abroad/002", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "culture-andorra-seen-from-abroad/003", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "culture-andorra-seen-from-abroad/004", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "culture-andorra-seen-from-abroad/005", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "culture-andorra-seen-from-abroad/006", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "culture-architecture/001", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "culture-architecture/002", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "culture-architecture/003", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "culture-architecture/004", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "culture-architecture/005", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "culture-architecture/006", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "culture-crafts/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "culture-crafts/002", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "culture-crafts/003", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "culture-crafts/004", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "culture-crafts/005", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "culture-visual-arts/001", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "culture-visual-arts/002", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "culture-visual-arts/003", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "culture-visual-arts/005", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "culture-visual-arts/006", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "culture-visual-arts/004", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "culture-popular-culture/001", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "culture-popular-culture/002", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "culture-popular-culture/003", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "culture-popular-culture/004", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "culture-literature/001", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "culture-literature/002", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "culture-legends/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "culture-legends/002", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "culture-legends/004", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "culture-legends/005", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "culture-legends/006", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "culture-legends/007", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "culture-museums-and-archives/001", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "culture-museums-and-archives/002", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "culture-museums-and-archives/003", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "culture-museums-and-archives/004", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "culture-museums-and-archives/005", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "culture-museums-and-archives/006", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "culture-music-and-songs/001", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "culture-music-and-songs/002", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "culture-music-and-songs/003", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "culture-music-and-songs/005", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "culture-music-and-songs/006", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "culture-music-and-songs/004", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "culture-loose/001", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "culture-loose/002", "type": "multiple_choice", "letter": null, "points": 0.0}
+{"id": "culture-theatre/001", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "culture-theatre/002", "type": "multiple_choice", "letter": null, "points": 0.0}
+{"id": "economy-banking-and-tax/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "economy-banking-and-tax/003", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "economy-banking-and-tax/004", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "economy-banking-and-tax/005", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "economy-banking-and-tax/006", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "economy-banking-and-tax/002", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "economy-trade/001", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "economy-trade/003", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "economy-trade/005", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "economy-trade/006", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "economy-trade/002", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "economy-trade/004", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "economy-energy-and-utilities/001", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "economy-energy-and-utilities/002", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "economy-energy-and-utilities/003", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "economy-energy-and-utilities/004", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "economy-energy-and-utilities/005", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "economy-energy-and-utilities/006", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "economy-great-families/001", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "economy-great-families/002", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "economy-livestock-and-farming/001", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "economy-livestock-and-farming/002", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "economy-livestock-and-farming/004", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "economy-livestock-and-farming/005", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "economy-livestock-and-farming/006", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "economy-livestock-and-farming/003", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "economy-tobacco/001", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "economy-tobacco/002", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "economy-tobacco/003", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "economy-tobacco/004", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "economy-tobacco/005", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "economy-tobacco/006", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "economy-economic-transformation/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "economy-economic-transformation/002", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "economy-economic-transformation/003", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "economy-economic-transformation/004", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "economy-economic-transformation/005", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "economy-economic-transformation/006", "type": "multiple_choice", "letter": null, "points": 0.0}
+{"id": "economy-transport/002", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "economy-transport/004", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "economy-transport/005", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "economy-transport/006", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "economy-transport/001", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "economy-transport/003", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "economy-tourism-and-snow/001", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "economy-tourism-and-snow/002", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "economy-tourism-and-snow/003", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "economy-tourism-and-snow/004", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "economy-tourism-and-snow/005", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "economy-tourism-and-snow/006", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "sports-other-sports/001", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "sports-other-sports/002", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "sports-other-sports/003", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "sports-other-sports/004", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "sports-other-sports/005", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "sports-other-sports/006", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "sports-competition/001", "type": "multiple_choice", "letter": null, "points": 0.0}
+{"id": "sports-competition/002", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "sports-competition/003", "type": "multiple_choice", "letter": null, "points": 0.0}
+{"id": "sports-competition/004", "type": "multiple_choice", "letter": null, "points": 0.0}
+{"id": "sports-competition/005", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "sports-competition/006", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "sports-chess/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "sports-chess/002", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "sports-chess/003", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "sports-chess/004", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "sports-chess/005", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "sports-chess/006", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "sports-skiing/001", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "sports-skiing/002", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "sports-skiing/003", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "sports-skiing/006", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "sports-skiing/004", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "sports-skiing/005", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "sports-summer/001", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "sports-summer/002", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "sports-summer/003", "type": "multiple_choice", "letter": null, "points": 0.0}
+{"id": "sports-summer/004", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "sports-summer/005", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "sports-summer/006", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "sports-sports-training/001", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "sports-sports-training/002", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "sports-football/001", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "sports-football/002", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "sports-football/003", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "sports-football/004", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "sports-football/005", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "sports-football/006", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "sports-national-teams/001", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "sports-national-teams/003", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "sports-national-teams/004", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "sports-national-teams/005", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "sports-national-teams/006", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "sports-national-teams/002", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "gastronomy-drinks/001", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "gastronomy-drinks/002", "type": "multiple_choice", "letter": null, "points": 0.0}
+{"id": "gastronomy-food-calendar/002", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "gastronomy-food-calendar/001", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "gastronomy-food-history/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "gastronomy-food-history/002", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "gastronomy-food-history/003", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "gastronomy-food-history/004", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "gastronomy-food-history/005", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "gastronomy-food-history/006", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "gastronomy-dishes/001", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "gastronomy-dishes/002", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "gastronomy-dishes/003", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "gastronomy-dishes/004", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "gastronomy-dishes/005", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "gastronomy-dishes/006", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "gastronomy-products/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "gastronomy-products/003", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "gastronomy-products/004", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "gastronomy-products/002", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "gastronomy-pastry/001", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "gastronomy-pastry/002", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "history-old-regime/001", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "history-old-regime/002", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "history-old-regime/003", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "history-old-regime/004", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "history-old-regime/005", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "history-old-regime/006", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "history-constitution-1993/002", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "history-constitution-1993/004", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "history-constitution-1993/003", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "history-constitution-1993/001", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "history-smuggling/001", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "history-smuggling/002", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "history-smuggling/003", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "history-smuggling/004", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "history-democratisation/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "history-democratisation/002", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "history-democratisation/003", "type": "multiple_choice", "letter": null, "points": 0.0}
+{"id": "history-democratisation/004", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "history-democratisation/005", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "history-democratisation/006", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "history-middle-ages/001", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "history-middle-ages/002", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "history-middle-ages/003", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "history-middle-ages/004", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "history-middle-ages/005", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "history-middle-ages/006", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "history-wars-and-neutrality/001", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "history-wars-and-neutrality/002", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "history-wars-and-neutrality/003", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "history-wars-and-neutrality/006", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "history-wars-and-neutrality/004", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "history-wars-and-neutrality/005", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "history-recent-history/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "history-recent-history/002", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "history-recent-history/003", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "history-recent-history/004", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "history-recent-history/005", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "history-recent-history/006", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "history-historiography/001", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "history-historiography/002", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "history-historiography/003", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "history-historiography/004", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "history-historiography/005", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "history-historiography/006", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "history-manual-digest/002", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "history-manual-digest/003", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "history-manual-digest/004", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "history-manual-digest/005", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "history-manual-digest/006", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "history-manual-digest/001", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "history-historic-moments/001", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "history-historic-moments/003", "type": "multiple_choice", "letter": null, "points": 0.0}
+{"id": "history-historic-moments/002", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "history-historic-moments/004", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "history-origins/002", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "history-origins/003", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "history-origins/004", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "history-origins/005", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "history-origins/006", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "history-origins/001", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "history-pareatge/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "history-pareatge/002", "type": "multiple_choice", "letter": null, "points": 0.0}
+{"id": "history-pareatge/003", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "history-pareatge/004", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "history-pareatge/005", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "history-pareatge/006", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "history-19th-century/001", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "history-19th-century/002", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "history-19th-century/003", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "history-19th-century/004", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "history-19th-century/005", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "history-19th-century/006", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "history-20th-century-first-half/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "history-20th-century-first-half/002", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "history-20th-century-first-half/003", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "history-20th-century-first-half/004", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "history-20th-century-first-half/006", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "history-20th-century-first-half/005", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "institutions-communes-and-parishes/001", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "institutions-communes-and-parishes/002", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "institutions-communes-and-parishes/003", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "institutions-communes-and-parishes/004", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "institutions-communes-and-parishes/005", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "institutions-communes-and-parishes/006", "type": "multiple_choice", "letter": null, "points": 0.0}
+{"id": "institutions-general-council/001", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "institutions-general-council/002", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "institutions-general-council/003", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "institutions-general-council/004", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "institutions-general-council/005", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "institutions-general-council/006", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "institutions-co-principality/001", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "institutions-co-principality/002", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "institutions-co-principality/003", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "institutions-co-principality/004", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "institutions-co-principality/005", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "institutions-co-principality/006", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "institutions-government/001", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "institutions-government/002", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "institutions-government/003", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "institutions-government/004", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "institutions-government/005", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "institutions-government/006", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "institutions-justice/001", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "institutions-justice/002", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "institutions-justice/003", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "institutions-justice/004", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "institutions-justice/005", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "institutions-justice/006", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "institutions-nationality-and-residence/001", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "institutions-nationality-and-residence/002", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "institutions-nationality-and-residence/003", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "institutions-nationality-and-residence/004", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "institutions-nationality-and-residence/005", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "institutions-nationality-and-residence/006", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "institutions-institutional-heritage/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "institutions-institutional-heritage/002", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "institutions-institutional-heritage/003", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "institutions-institutional-heritage/004", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "institutions-institutional-heritage/005", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "institutions-institutional-heritage/006", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "institutions-small-states/001", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "institutions-small-states/002", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "institutions-small-states/003", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "institutions-small-states/004", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "institutions-quarts-and-veinats/001", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "institutions-quarts-and-veinats/002", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "institutions-quarts-and-veinats/004", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "institutions-quarts-and-veinats/007", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "institutions-foreign-relations/001", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "institutions-foreign-relations/002", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "institutions-foreign-relations/003", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "institutions-foreign-relations/004", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "institutions-foreign-relations/005", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "institutions-foreign-relations/010", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "institutions-symbols/001", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "institutions-symbols/002", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "institutions-symbols/003", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "institutions-symbols/004", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "institutions-symbols/005", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "institutions-symbols/006", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "language-language-contact/001", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "language-language-contact/002", "type": "multiple_choice", "letter": null, "points": 0.0}
+{"id": "language-language-contact/003", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "language-language-contact/004", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "language-language-contact/005", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "language-language-contact/006", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "language-dialectology/001", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "language-dialectology/003", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "language-dialectology/004", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "language-dialectology/005", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "language-dialectology/006", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "language-dialectology/002", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "language-phonetics/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "language-phonetics/003", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "language-phonetics/004", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "language-phonetics/002", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "language-phraseology/002", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "language-phraseology/001", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "language-history-of-the-language/001", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "language-history-of-the-language/002", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "language-history-of-the-language/003", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "language-history-of-the-language/004", "type": "multiple_choice", "letter": null, "points": 0.0}
+{"id": "language-andorran-lexicon/001", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "language-andorran-lexicon/002", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "language-andorran-lexicon/003", "type": "multiple_choice", "letter": null, "points": 0.0}
+{"id": "language-andorran-lexicon/004", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "language-andorran-lexicon/005", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "language-andorran-lexicon/006", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "language-loanwords/001", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "language-loanwords/002", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "language-loanwords/003", "type": "multiple_choice", "letter": null, "points": 0.0}
+{"id": "language-loanwords/004", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "language-loanwords/005", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "language-loanwords/006", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "language-morphosyntax/002", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "language-morphosyntax/003", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "language-morphosyntax/004", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "language-morphosyntax/005", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "language-morphosyntax/006", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "language-morphosyntax/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "language-onomastics/001", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "language-onomastics/002", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "language-onomastics/003", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "language-onomastics/004", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "language-onomastics/005", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "language-onomastics/006", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "language-language-policy/003", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "language-language-policy/004", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "language-language-policy/005", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "language-language-policy/001", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "language-language-policy/002", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "language-language-policy/006", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "language-registers/001", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "language-registers/002", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "language-forms-of-address/001", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "language-forms-of-address/002", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "unseen-n01/001", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "unseen-n02/001", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "unseen-n02/003", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "unseen-n02/005", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "unseen-n03/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "unseen-n03/003", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "unseen-n03/005", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "unseen-n03/007", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "unseen-n04/001", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "unseen-n04/003", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "unseen-n04/005", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "unseen-n04/007", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "unseen-n04/009", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "unseen-n05/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "unseen-n06/001", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "unseen-n06/003", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "unseen-n06/005", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "unseen-n06/007", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "unseen-n06/009", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "unseen-n06/011", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "unseen-n06/013", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "unseen-n07/001", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "unseen-n07/003", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "unseen-n07/007", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "unseen-n07/009", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "unseen-n07/011", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "unseen-n07/013", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "unseen-n07/015", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "unseen-n07/005", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "unseen-n08/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "unseen-n09/001", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "unseen-n10/001", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "unseen-n11/001", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "unseen-n11/003", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "unseen-n11/005", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "unseen-n11/007", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "unseen-n11/009", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "unseen-n11/011", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "unseen-n12/001", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "unseen-n12/003", "type": "multiple_choice", "letter": null, "points": 0.0}
+{"id": "unseen-n13/001", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "people/001", "type": "multiple_choice", "letter": null, "points": 0.0}
+{"id": "people/002", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "people/003", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "people/004", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "people/005", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "people/006", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "politics-political-identity/001", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "politics-political-identity/002", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "politics-political-identity/003", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "politics-political-identity/004", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "politics-political-identity/005", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "politics-political-identity/006", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "politics-parliamentarism/001", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "politics-parliamentarism/002", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "politics-parliamentarism/003", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "politics-parliamentarism/004", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "politics-parliamentarism/005", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "politics-parliamentarism/006", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "politics-parties/001", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "politics-parties/002", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "politics-parties/003", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "politics-parties/005", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "politics-parties/006", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "politics-parties/010", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "politics-electoral-system/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "politics-electoral-system/002", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "politics-electoral-system/003", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "politics-electoral-system/004", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "politics-electoral-system/005", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "politics-electoral-system/006", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "society-associations/001", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "society-associations/002", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "society-demography/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "society-demography/002", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "society-demography/003", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "society-demography/004", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "society-demography/005", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "society-demography/006", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "society-women/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "society-women/002", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "society-women/003", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "society-women/004", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "society-women/005", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "society-women/006", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "society-education/002", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "society-education/003", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "society-education/004", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "society-education/005", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "society-education/006", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "society-education/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "society-sport/001", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "society-sport/002", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "society-family/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "society-family/002", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "society-family/003", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "society-family/004", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "society-family/005", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "society-family/006", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "society-housing/001", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "society-housing/002", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "society-housing/003", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "society-housing/004", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "society-housing/005", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "society-housing/006", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "society-immigration/001", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "society-immigration/002", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "society-immigration/003", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "society-immigration/004", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "society-immigration/005", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "society-immigration/006", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "society-media/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "society-media/002", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "society-media/003", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "society-media/004", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "society-media/005", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "society-media/006", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "society-social-protection/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "society-social-protection/002", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "society-social-protection/003", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "society-social-protection/004", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "society-social-protection/005", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "society-social-protection/006", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "society-healthcare/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "society-healthcare/002", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "society-healthcare/003", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "society-healthcare/004", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "society-healthcare/005", "type": "multiple_choice", "letter": null, "points": 0.0}
+{"id": "society-healthcare/006", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "society-loose/001", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "society-loose/002", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "society-work/001", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "society-work/002", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "society-work/003", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "society-work/004", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "society-work/005", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "society-work/006", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "society-civic-life/001", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "society-civic-life/002", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "society-civic-life/003", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "society-civic-life/004", "type": "multiple_choice", "letter": null, "points": 0.0}
+{"id": "society-civic-life/005", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "society-civic-life/006", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "territory-climate-and-mountain/001", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "territory-climate-and-mountain/003", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "territory-climate-and-mountain/005", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "territory-climate-and-mountain/010", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "territory-climate-and-mountain/004", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "territory-climate-and-mountain/006", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "territory-fauna-and-flora/001", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "territory-fauna-and-flora/002", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "territory-fauna-and-flora/003", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "territory-fauna-and-flora/004", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "territory-fauna-and-flora/005", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "territory-fauna-and-flora/006", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "territory-physical-geography/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "territory-physical-geography/002", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "territory-physical-geography/004", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "territory-physical-geography/005", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "territory-physical-geography/006", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "territory-physical-geography/003", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "territory-built-landscape/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "territory-built-landscape/002", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "territory-built-landscape/003", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "territory-built-landscape/004", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "territory-built-landscape/005", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "territory-built-landscape/006", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "territory-parishes/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "territory-parishes/004", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "territory-parishes/006", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "territory-parishes/003", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "territory-parishes/005", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "territory-parishes/002", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "territory-natural-heritage/001", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "territory-natural-heritage/003", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "territory-natural-heritage/004", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "territory-natural-heritage/002", "type": "multiple_choice", "letter": null, "points": 0.0}
+{"id": "territory-toponymy/001", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "territory-toponymy/002", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "territory-toponymy/005", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "territory-toponymy/003", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "territory-toponymy/004", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "territory-toponymy/006", "type": "multiple_choice", "letter": null, "points": 0.0}
+{"id": "territory-urban-planning/001", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "territory-urban-planning/002", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "territory-urban-planning/003", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "territory-urban-planning/004", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "daily-life-how-things-work/001", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "daily-life-how-things-work/002", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "daily-life-how-things-work/004", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "daily-life-how-things-work/005", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "daily-life-how-things-work/007", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "daily-life-how-things-work/008", "type": "multiple_choice", "letter": "D", "points": 0.0}
+{"id": "daily-life-social-conventions/001", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "daily-life-social-conventions/002", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "daily-life-social-conventions/003", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "daily-life-social-conventions/006", "type": "multiple_choice", "letter": "B", "points": 1.0}
+{"id": "daily-life-social-conventions/007", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "daily-life-social-conventions/008", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "daily-life-beliefs/001", "type": "multiple_choice", "letter": "B", "points": 0.0}
+{"id": "daily-life-beliefs/002", "type": "multiple_choice", "letter": "D", "points": 1.0}
+{"id": "daily-life-mental-geography/001", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "daily-life-mental-geography/002", "type": "multiple_choice", "letter": "A", "points": 0.0}
+{"id": "daily-life-humour/001", "type": "multiple_choice", "letter": "A", "points": 1.0}
+{"id": "daily-life-humour/002", "type": "multiple_choice", "letter": "C", "points": 1.0}
+{"id": "daily-life-shared-references/001", "type": "multiple_choice", "letter": null, "points": 0.0}
+{"id": "daily-life-shared-references/002", "type": "multiple_choice", "letter": "C", "points": 0.0}
+{"id": "customs-caramelles/001", "type": "multiple_choice", "letter": "B", "points": 0.0, "answer_hash": "ae4f281df5a5"}
+{"id": "culture-loose/002", "type": "multiple_choice", "letter": "A", "points": 1.0, "answer_hash": "6dcd4ce23d88"}
+{"id": "culture-theatre/002", "type": "multiple_choice", "letter": "B", "points": 0.0, "answer_hash": "ae4f281df5a5"}
+{"id": "sports-competition/001", "type": "multiple_choice", "letter": "A", "points": 0.0, "answer_hash": "6dcd4ce23d88"}
+{"id": "sports-competition/004", "type": "multiple_choice", "letter": "B", "points": 0.0, "answer_hash": "ae4f281df5a5"}
+{"id": "sports-summer/003", "type": "multiple_choice", "letter": "C", "points": 0.0, "answer_hash": "32096c2e0eff"}
+{"id": "gastronomy-drinks/002", "type": "multiple_choice", "letter": "B", "points": 0.0, "answer_hash": "ae4f281df5a5"}
+{"id": "history-democratisation/003", "type": "multiple_choice", "letter": "D", "points": 0.0, "answer_hash": "50c9e8d5fc98"}
+{"id": "history-historic-moments/003", "type": "multiple_choice", "letter": "C", "points": 1.0, "answer_hash": "32096c2e0eff"}
+{"id": "language-history-of-the-language/004", "type": "multiple_choice", "letter": "A", "points": 0.0, "answer_hash": "6dcd4ce23d88"}
+{"id": "language-loanwords/003", "type": "multiple_choice", "letter": "A", "points": 0.0, "answer_hash": "6dcd4ce23d88"}
+{"id": "unseen-n12/003", "type": "multiple_choice", "letter": "C", "points": 0.0, "answer_hash": "32096c2e0eff"}
+{"id": "people/001", "type": "multiple_choice", "letter": "C", "points": 0.0, "answer_hash": "32096c2e0eff"}
+{"id": "society-civic-life/004", "type": "multiple_choice", "letter": "A", "points": 1.0, "answer_hash": "6dcd4ce23d88"}
+{"id": "territory-toponymy/006", "type": "multiple_choice", "letter": "A", "points": 0.0, "answer_hash": "6dcd4ce23d88"}
+{"id": "economy-economic-transformation/006", "type": "multiple_choice", "letter": "D", "points": 1.0, "answer_hash": "50c9e8d5fc98"}
+{"id": "institutions-communes-and-parishes/006", "type": "multiple_choice", "letter": "C", "points": 0.0, "answer_hash": "32096c2e0eff"}
+{"id": "language-language-contact/002", "type": "multiple_choice", "letter": "D", "points": 0.0, "answer_hash": "50c9e8d5fc98"}
+{"id": "sports-summer/007", "type": "open", "grade": 0, "points": 0.0, "reason": "resposta buida", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "da39a3ee5e6b"}
+{"id": "language-andorran-lexicon/007", "type": "open", "grade": 0, "points": 0.0, "reason": "resposta buida", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "da39a3ee5e6b"}
+{"id": "culture-crafts/006", "type": "open", "grade": 0, "points": 0.0, "reason": "Confon la farga i el ferrer com a taller i artesà d'un mateix ofici, en lloc de distingir la producció protoindustrial de ferro per exportar de l'ofici local de ferreria.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "bd5607a4f5fc"}
+{"id": "culture-andorra-seen-from-abroad/007", "type": "open", "grade": 1, "points": 0.5, "reason": "Capta de manera molt genèrica la influència romàntica i comercial, però omet el fet clau principal que els dibuixants sovint no havien vist el lloc i treballaven a partir de relats de tercers.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "d1c3a5d50114"}
+{"id": "unseen-n02/004", "type": "open", "grade": 1, "points": 0.5, "reason": "Encerta l'origen de les vísceres (la matança del porc), però descriu l'argument de forma molt vaga sense esmentar que el Carnestoltes està malalt de tanta festa ni els metges estrafolaris.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "9aaa0c378588"}
+{"id": "culture-museums-and-archives/008", "type": "open", "grade": 0, "points": 0.0, "reason": "No esmenta el motiu escolar relacionat amb l'Escola Andorrana i situa erròniament un dels centres a París en lloc de Perpinyà o Tolosa.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "97fb8ec3db02"}
+{"id": "language-language-contact/009", "type": "trap", "grade": 1, "points": 0.5, "reason": "Rebutja correctament la comparació directa, però no esmenta els motius metodològics reals (enquesta a peu de carrer sense ponderar vs. telefònica ponderada) i especula sobre els objectius.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "f7dfef8a3e9f"}
+{"id": "economy-economic-transformation/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és evasiva, afirma que no hi ha dades disponibles i no proporciona cap de les xifres clau requerides.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "3aada3eea3f5"}
+{"id": "sports-other-sports/008", "type": "open", "grade": 0, "points": 0.0, "reason": "Invénta que va guanyar un títol mundial al Campionat de Països Petits el 2011 i omet que va ser campió del món amb Espanya el 2019 i l'or europeu sub-16 amb Andorra.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "e98be24e987b"}
+{"id": "unseen-n07/006", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta afirma el contrari del que estableix la referència, dient que el 1900 es va decidir la possessió privada i que la llei de 1996 va modificar aquesta decisió.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "d9eace08e883"}
+{"id": "society-media/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta afirma erròniament el contrari de la referència, defensant que Pallerola donava suport a la llibertat d'expressió quan en realitat va escriure que no podia existir.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "bc10d0dd4003"}
+{"id": "economy-banking-and-tax/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és completament incorrecta i inventada, ja que afirma erròniament que es tractava d'un intercanvi en què Andorra va cedir l'exclusiva bancària a entitats de potències veïnes a canvi dels drets dels salts d'aigua.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "4c7e479dc718"}
+{"id": "gastronomy-food-calendar/003", "type": "open", "grade": 0, "points": 0.0, "reason": "Tot i encertar la idea general, els dos exemples demanats són inventats i contradiuen el context, que esmenta el trinxat i el tupí d'estiu.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "77d279dc67a6"}
+{"id": "sports-national-teams/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa d'una final el 1998, s'inventa el resultat i explica com es va guanyar.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "260e39723233"}
+{"id": "territory-parishes/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa que Andorra la Vella és la més extensa i s'inventa explicacions per justificar-ho.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "cadca28e4e7c"}
+{"id": "sports-national-teams/007", "type": "open", "grade": 0, "points": 0.0, "reason": "El resultat és incorrecte (82-74 en lloc de 84-79) i s'afirma falsament que Andorra va dominar el joc en lloc d'explicar com es va decidir al darrer minut.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "1697379d08ae"}
+{"id": "history-old-regime/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és completament incorrecta i inventada, confonent els cabalers amb una milícia popular armada.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "d01a5f3da3f8"}
+{"id": "gastronomy-products/005", "type": "open", "grade": 0, "points": 0.0, "reason": "No esmenta els conceptes clau essencials com la «llet d'estiu» ni el calendari de la transhumància, i inventa explicacions sobre greixos, proteïnes i races.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "9536d3024b1d"}
+{"id": "institutions-general-council/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no esmenta cap de les limitacions concretes recollides al document històric i ofereix una explicació genèrica i imprecisa.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "f65cb886b4ef"}
+{"id": "language-morphosyntax/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és incorrecta i inventada, ja que no esmenta l'ús de 'cap' com a equivalent de 'pas' ni cap dels exemples de referència.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "969b0a8aad4f"}
+{"id": "language-dialectology/007", "type": "open", "grade": 2, "points": 1.0, "reason": "Explica correctament que la promoció del català estàndard a l'escola i als mitjans fa avançar la llengua general mentre dilueix els trets dialectals andorrans.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "362c1643de1e"}
+{"id": "culture-architecture/007", "type": "open", "grade": 0, "points": 0.0, "reason": "No esmenta la hipòtesi de la «colonització espiritual» del bisbe d'Urgell ni el context de disputa amb els Castellbò, oferint una explicació genèrica i incorrecta segons la referència.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "094746922401"}
+{"id": "history-recent-history/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa de la pregunta i afirma erròniament que Ribas Reig va dirigir les tasques en persona quan en realitat era a Ginebra.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "2227d355011b"}
+{"id": "economy-tobacco/008", "type": "open", "grade": 1, "points": 0.5, "reason": "Capta la idea que era una estratègia política per mantenir bones relacions amb la corona espanyola, però omet el motiu clau específic de la renovació dels privilegis duaners.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "e49f4d83f517"}
+{"id": "gastronomy-food-history/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa i inventa una explicació en lloc d'assenyalar que a la majoria de cases no es menjava a taula parada.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "4978d69688bc"}
+{"id": "unseen-n11/010", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta situa erròniament la creació del primer sindicat a principis del segle XX en lloc de finals dels anys vuitanta i no esmenta l'Associació de Residents a Andorra.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "c838af3c1bb2"}
+{"id": "society-immigration/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta inverteix la distribució de nacionalitats per segments, inventa la defensa tradicional del treballador i no inclou cap de les dades sectorials del 2006.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "ab53a9107fe4"}
+{"id": "sports-skiing/008", "type": "open", "grade": 0, "points": 0.0, "reason": "El model s'inventa el nom de l'esportista en lloc d'identificar Irineu Esteve Altimiras.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "dc8174e933a4"}
+{"id": "unseen-n02/002", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta inventa el final de la llegenda parlant d'una «dama del llac» i no esmenta que el llac esdevé el lloc de bany de les bruixes.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "814497e19069"}
+{"id": "culture-popular-culture/006", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa afirmant que la tradició connecta el patrimoni medieval amb el present i que és fruit d'una transmissió espontània.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "2ffa6007dfea"}
+{"id": "history-manual-digest/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és incorrecta i inventada, no inclou cap fet clau i afirma erròniament que la còpia no tenia valor jurídic oficial.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "626cf19747e4"}
+{"id": "customs-falles/003", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és massa vaga i no explica que la falla andorrana és una torxa que es fa girar ni esmenta els canvis materials de l'escorça de beç al cotó.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "4f64a9e80d0f"}
+{"id": "territory-climate-and-mountain/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és incorrecta i inventada, ja que no esmenta la classificació com a ús no consumptiu de l'inventari ni la inclusió com a ús consumptiu per part de Marc Pons.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "30c9212ec157"}
+{"id": "customs-festive-calendar/006", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa de la pregunta i inventa una explicació en lloc d'assenyalar que el ball de l'Ossa es fa dilluns i el judici diumenge.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "88b6ab2cb36c"}
+{"id": "history-20th-century-first-half/009", "type": "trap", "grade": 2, "points": 1.0, "reason": "Rebutja correctament la premissa falsa aclarint que Andorra no va declarar la guerra a Alemanya i que va mantenir la neutralitat.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "9f63a609a621"}
+{"id": "history-wars-and-neutrality/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa de la pregunta i inventa una justificació en lloc d'assenyalar que el Consell ho va prohibir expressament.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "2d44fc21a944"}
+{"id": "territory-natural-heritage/006", "type": "trap", "grade": 1, "points": 0.5, "reason": "Rebutja correctament la premissa falsa aclarint que Andorra no és membre de la UE i que s'alinea voluntàriament, però omet la menció a la llei pròpia i les xifres clau.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "addf50d63914"}
+{"id": "economy-tourism-and-snow/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta inventa completament el nom de l'empresa, la seva activitat i el nombre de països on opera.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "4d1c6805c798"}
+{"id": "territory-parishes/007", "type": "open", "grade": 0, "points": 0.0, "reason": "L'any de creació (1976 en comptes de 1978) i la posició en l'ordre protocol·lari (segon lloc en comptes de setè) són incorrectes.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "443c27eb0a4a"}
+{"id": "institutions-nationality-and-residence/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és incorrecta i diu el contrari de la realitat històrica, afirmant que el 1977 es va flexibilitzar i facilitar l'accés a la nacionalitat quan en realitat es va tancar.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "d46ff04f7fe9"}
+{"id": "society-media/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa afirmant erròniament que França va tancar Ràdio Andorra, quan en realitat ho va fer el Consell General d'Andorra.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "c97395c2002a"}
+{"id": "society-civic-life/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa de la pregunta i inventa una explicació en lloc de desmentir-la.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "8335db186628"}
+{"id": "politics-political-identity/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta inventa les xifres de signants (afirma 12 i 13 en lloc de sis i tres-cents) i no encerta cap dels fets clau.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "07aea1832009"}
+{"id": "sports-chess/008", "type": "open", "grade": 1, "points": 0.5, "reason": "Identifica correctament que va jugar al primer tauler, però dona una xifra incorrecta per al balanç de partides.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "02857b3a840a"}
+{"id": "customs-dances/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa i s'inventa una explicació sense indicar que la marratxa és pròpia de Sant Julià de Lòria i es balla el dilluns.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "ae2d54597d35"}
+{"id": "society-civic-life/008", "type": "open", "grade": 0, "points": 0.0, "reason": "El model descriu mètodes físics de prevenció i construcció en lloc d'esmentar les societats mútues d'assegurança contra incendis que s'expliquen a la referència.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "e0d2aa127c9d"}
+{"id": "daily-life-beliefs/003", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta inventa pràctiques genèriques (infusions, dietes) i no recull cap dels fets clau com l'entorn vermell, la prohibició d'injeccions o l'habitació sense ventilar.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "fbc3c31a9e18"}
+{"id": "unseen-n11/004", "type": "open", "grade": 1, "points": 0.5, "reason": "Encerta la tendència de millora entre el 2007 i el 2014, però erra en el percentatge del 2007 (afirma que era el 43% en lloc del 22%).", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "fd37ff1ea4b4"}
+{"id": "economy-banking-and-tax/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa i inventa motius per justificar que la seu inicial fos a la plaça Rebés d'Andorra la Vella.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "36a7c33b4e24"}
+{"id": "institutions-foreign-relations/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no recull cap dels tres arguments específics d'André Vilar (militar, comercial i de principi envers Espanya) i ofereix explicacions genèriques inventades.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "f6a3c8b9bb65"}
+{"id": "daily-life-shared-references/003", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no utilitza la definició del context (allò que no cal explicar) i fa una interpretació oposada sobre el Pareatge del 1278 respecte al text de referència.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "de11cd32e354"}
+{"id": "economy-energy-and-utilities/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és totalment inventada i no menciona el bisbe d'Urgell, la manca d'autorització ni la tala dels pals per homes requerits per la Mitra.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "06c485aaed0f"}
+{"id": "politics-electoral-system/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no recull el principi clau de la representació de la família a través del cap de casa ni el caràcter de càrrega obligatòria, i aporta dades inventades com l'edat de 25 anys.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "4c8ad5b93650"}
+{"id": "economy-trade/008", "type": "open", "grade": 0, "points": 0.0, "reason": "Atribueix erròniament la fixació del preu de la carn al Consell General en lloc de la parròquia i inventa el preu de la visita del metge com a 1 franc.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "c2484bea9364"}
+{"id": "unseen-n04/010", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és completament incorrecta i inventada, atribuint-li una prova d'atletisme inexistent i una medalla d'or el 2011.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "9fa03ae1641b"}
+{"id": "institutions-communes-and-parishes/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa de la pregunta i s'inventa una justificació per explicar per què els eclesiàstics eren els candidats preferits, quan en realitat n'estaven exclosos.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "fa0562b303a0"}
+{"id": "culture-visual-arts/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és completament inventada, identificant erròniament l'objecte com una pintura rupestre d'un cavall i la localització a la Cova de la Llacuna en lloc de còdols a la Balma de la Margineda.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "9e163dc65f7a"}
+{"id": "institutions-communes-and-parishes/007", "type": "open", "grade": 0, "points": 0.0, "reason": "Afirma erròniament que van refusar del tot la crida a les armes i inventa els motius al·legats.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "3ec3f3adfc3a"}
+{"id": "society-education/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no menciona que s'imparteix dins de l'horari escolar i s'inventa el llistat d'àrees obligatòries sense especificar el català i el medi com a úniques obligatòries ni la música com a opcional.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "418c2467500e"}
+{"id": "history-old-regime/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa de la pregunta trampa i no esmenta que el cobrament de la quèstia s'alternava anualment amb el bisbe d'Urgell.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "ccd2cf9c21ea"}
+{"id": "gastronomy-food-history/007", "type": "open", "grade": 1, "points": 0.5, "reason": "Identifica la influència del turisme i l'obertura a influències externes, però no esmenta l'impacte de la immigració ni que la cuina autòctona es va abandonar i només es va conservar en algunes cases.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "246a68f0bf1e"}
+{"id": "culture-visual-arts/008", "type": "open", "grade": 1, "points": 0.5, "reason": "Menciona que hi va exercir la docència, però omet que el comú hi va instal·lar el seu taller el 2017 i que l'escola va passar a anomenar-se Espai Sergi Mas.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "beb62b3f3f5c"}
+{"id": "economy-transport/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no menciona cap dels fets clau cronològics (obertura el 1982, fi de vols el 1984 i retorn dels vols el 2021) i ofereix una explicació genèrica i incorrecta.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "b4416f4fa164"}
+{"id": "history-old-regime/008", "type": "open", "grade": 0, "points": 0.0, "reason": "Afirma erròniament que s'aplicava la primogenitura per al fill gran, un error penalitzable segons la referència.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "723a60e42bd1"}
+{"id": "society-civic-life/007", "type": "open", "grade": 1, "points": 0.5, "reason": "Capta la distinció conceptual entre desconeguts i cercles propers, però no aporta les dades empíriques de l'estudi que sustenten l'explicació.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "c4b21431924a"}
+{"id": "history-recent-history/007", "type": "open", "grade": 1, "points": 0.5, "reason": "Reconeix la pressió del Consell d'Europa lligada als drets humans, però ho fa de manera genèrica sense esmentar els fets clau concrets com la pena de mort, la manca de separació de poders o la il·legalitat dels sindicats.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "cd241d8b55f5"}
+{"id": "society-healthcare/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa afirmant que el SAAS i la CASS es van crear simultàniament, quan el SAAS es va crear el 1986.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "1ca2405d66cd"}
+{"id": "society-sport/003", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no menciona el rugbi, no cita els títols dels vocabularis de referència i s'inventa l'exemple del terme aportat en lloc d'esmentar 'fer cunya'.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "19fc55589d5c"}
+{"id": "unseen-n04/002", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és incorrecta i inventada, ja que atribueix la cofundació a 'Andorra Capital' en lloc d'Oxford Sciences Innovation.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "e4511e16fe5e"}
+{"id": "unseen-n07/016", "type": "open", "grade": 1, "points": 0.5, "reason": "És parcialment correcta perquè reconeix que el Consell va haver de cedir i es va acceptar Guillem Moles, però és molt genèrica i omet els fets clau com el penediment i el desterrament de Fiter.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "29d0e7b28c7e"}
+{"id": "territory-physical-geography/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és completament inventada i defineix l'empriu erròniament com una subdivisió administrativa interna d'una parròquia.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "14f82029ea02"}
+{"id": "society-family/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa de la pregunta afirmant que el bisbe va nomenar els tutors, quan en realitat va ser el batlle.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "1db823567078"}
+{"id": "institutions-government/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa en lloc de desmentir-la i no esmenta que els tribunals sí que poden accedir a la informació reservada.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "081265d5f2f6"}
+{"id": "society-associations/003", "type": "open", "grade": 1, "points": 0.5, "reason": "Menciona el mínim de tres persones, però omet la finalitat no lucrativa i no especifica que el registre és de publicitat i no d'autorització.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "3d6640cedadf"}
+{"id": "institutions-small-states/005", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és incorrecta i inventada, ja que no identifica el mimetisme com a principal perill ni la necessitat d'actuar amb imaginació i vies adaptades com a solució.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "9e6f90991f97"}
+{"id": "society-demography/008", "type": "open", "grade": 0, "points": 0.0, "reason": "No esmenta les xifres de població i afirma erròniament que les cartes d'Ardison aporten dades fiables de població quan en realitat no contenen cap recompte.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "a1532e2380f9"}
+{"id": "society-immigration/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no recull cap dels matisos originals de Becat (població estricta, límit de la polèmica i exclusió del poder polític i econòmic) i fins i tot afirma erròniament que parlava de marginalització econòmica.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "52d11956a981"}
+{"id": "unseen-n07/002", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta inventa un criteri d'antiguitat de 6 mesos en lloc d'indicar la data de tall establerta (haver estat autoritzat abans o durant l'any 2022).", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "dd62dd00cb42"}
+{"id": "economy-transport/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa que el túnel d'Envalira es va obrir el 1984 en lloc de rebutjar-la i indicar que és del 2002.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "091c61c9ee71"}
+{"id": "unseen-n12/002", "type": "open", "grade": 1, "points": 0.5, "reason": "Identifica correctament la tendència a la baixa de la precipitació, però omet les dades quantitatives i afirma erròniament que la tendència és molt similar a la del Pirineu en lloc de més ràpida.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "4c010432a532"}
+{"id": "language-phonetics/006", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa afirmant que es va entrevistar una mostra representativa de diversos grups d'edat, quan en realitat només van ser tres homes grans.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "ecea92a32663"}
+{"id": "gastronomy-dishes/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no menciona els plats específics ni la distinció entre plat de festa i plat usual, i s'inventa explicacions genèriques sobre tècniques de conservació i subsistència.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "cfd43c8d5282"}
+{"id": "unseen-n04/004", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és completament incorrecta i afirma erròniament que Recouderc va perdre contra Querrey i que no va jugar contra Djokovic.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "4e8466ebc16f"}
+{"id": "economy-banking-and-tax/008", "type": "open", "grade": 1, "points": 0.5, "reason": "Encerta que prestaven particulars i el cobrament d'interessos en espècie, però no esmenta els jornals ni la venda a carta de gràcia amb el pagament d'un cànon.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "f60df8f7d1a5"}
+{"id": "economy-economic-transformation/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa que el PIB es va doblar i s'inventa les causes del suposat creixement.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "06c29ff702ca"}
+{"id": "history-democratisation/008", "type": "open", "grade": 0, "points": 0.0, "reason": "No esmenta el motiu principal (la manca de llibertat de premsa i la censura a Andorra que impedia publicar-hi) ni cap dels fets clau associats.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "433723a8cf24"}
+{"id": "language-forms-of-address/003", "type": "open", "grade": 0, "points": 0.0, "reason": "El model malinterpreta el concepte de 'tractament' com a situació sociològica del país i no menciona cap dels fets clau del context lingüístic.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "27c96d203aa2"}
+{"id": "history-recent-history/008", "type": "open", "grade": 0, "points": 0.0, "reason": "No recull els fets clau del context (el paper de pont entre la França del boom i l'Espanya autàrquica) ni la definició d'haver esdevingut el 'supermercat d'Europa'.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "f5a131ea6f86"}
+{"id": "sports-competition/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa afirmant que Andorra va desfilar amb la seva pròpia bandera quan en realitat ho va fer sota la bandera olímpica.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "04b5322187de"}
+{"id": "unseen-n06/010", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és incorrecta perquè afirma que el dot l'aportaven els pares de la núvia, quan en realitat l'aportava l'home no hereu.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "8d3e916a633c"}
+{"id": "territory-built-landscape/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és incorrecta perquè afirma que es recomanava millorar tots els camins, quan el Politar manava explícitament que els camins dels ports es mantinguessin bruscos, estrets i pedregosos.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "3c4646ec307b"}
+{"id": "customs-meritxell/003", "type": "open", "grade": 1, "points": 0.5, "reason": "Reconeix l'incendi de 1972 i la posterior reconstrucció, però omet tots els detalls clau com Ricard Bofill, l'any 1976 i la pèrdua i rèplica de la talla romànica.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "fdda566ff850"}
+{"id": "politics-parliamentarism/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa i inventa motius per a un augment de consellers que mai va tenir lloc.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "96cd44ff1c84"}
+{"id": "customs-religiosity/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa que el Papa va proclamar la patrona el 1873 en lloc de rebutjar-la i atribuir-la al Consell General.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "d881997a2045"}
+{"id": "unseen-n06/008", "type": "open", "grade": 1, "points": 0.5, "reason": "Encerta que va créixer a través d'herències i donacions, però omet la distinció essencial de Brutails entre mà morta religiosa i laica, així com el paper dels rectors i les consignes sense control.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "059c3e0f74fd"}
+{"id": "economy-tobacco/007", "type": "open", "grade": 0, "points": 0.0, "reason": "No esmenta la retirada del bisbe ni la condemna dels cinc líders al penal d'Orà, i afirma erròniament que van ser multats.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "2454f6c30fef"}
+{"id": "language-language-policy/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és completament inventada i no conté cap dels fets clau explicats al text de referència.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "991598cc228e"}
+{"id": "territory-fauna-and-flora/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no menciona les diferències reals de comportament de captura el 2025 i afirma erròniament que la llei distingeix pel domicili.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "e7f237cea022"}
+{"id": "sports-national-teams/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta indica incorrectament que van ser dos títols (els anys 2002 i 2004) en lloc dels sis títols reals corresponents.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "cb8df4fe5397"}
+{"id": "unseen-n11/002", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no identifica la qualificació com a infracció molt greu i indica erròniament un termini de prescripció de tres anys en comptes de cinc.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "4235c1514317"}
+{"id": "culture-visual-arts/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa atribuint l'escultura a Sergi Mas i inventant una explicació, quan en realitat és obra de Salvador Dalí.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "b684824ff191"}
+{"id": "daily-life-social-conventions/004", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa de la pregunta i inventa motius per defensar una postura que Badia no sostenia.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "5619f789c733"}
+{"id": "unseen-n06/014", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és completament inventada i no menciona cap dels motius reals defensats pel Consell General (la proximitat de la Seu d'Urgell, la llengua catalana i els advocats catalans).", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "2f7d47c1dafa"}
+{"id": "culture-museums-and-archives/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és incorrecta i genèrica, ja que omet el desmuntatge del museu el 1991 i el seu trasllat a Ordino el 1998.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "d869046c1f2b"}
+{"id": "unseen-n06/004", "type": "open", "grade": 1, "points": 0.5, "reason": "Capta la idea general que la majoria no van ser expulsats, però omet els detalls clau del procés i les xifres concretes.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "bf56c935795e"}
+{"id": "economy-great-families/003", "type": "open", "grade": 1, "points": 0.5, "reason": "Menciona encertadament el sector bancari i la política de manera genèrica, però omet la premsa, no concreta els càrrecs polítics i afegeix sectors no esmentats al context.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "c3696fe05057"}
+{"id": "institutions-co-principality/008", "type": "open", "grade": 1, "points": 0.5, "reason": "Explica correctament el motiu de l'abolició el 1793 i el restabliment amb Napoleó, però omet que van ser els mateixos andorrans qui en van demanar el restabliment.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "dc666c26c956"}
+{"id": "gastronomy-dishes/009", "type": "trap", "grade": 1, "points": 0.5, "reason": "Rebutja correctament la premissa que sigui exclusiu d'Andorra, però no menciona que va néixer de la necessitat hivernal ni que ningú el va inventar.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "acb535c31328"}
+{"id": "customs-dances/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és completament inventada, confonent l'ossa amb els ossos d'un esquelet i ignorant els dallaires i el ritu de pas.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "3fd22a5439d0"}
+{"id": "institutions-foreign-relations/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa, afirmant erròniament que la Cassació francesa va reconèixer la sobirania d'Andorra i que això en va motivar l'ingrés a l'ONU.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "daa930957b94"}
+{"id": "unseen-n04/006", "type": "open", "grade": 1, "points": 0.5, "reason": "És una resposta molt genèrica que no conté errors greus, però omet els fets clau essencials com els noms dels esquiadors i que van abandonar totes les proves.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "77c6be7f96bc"}
+{"id": "culture-legends/008", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model no respon a la pregunta, no detecta la premissa falsa de la llegenda i afirma incorrectament que Aubinyà és a Catalunya.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "2cd1408613ce"}
+{"id": "sports-competition/008", "type": "open", "grade": 0, "points": 0.0, "reason": "No esmenta el millor resultat històric (el 6è lloc de Mònica Dòria a París 2024) ni cap dels 9ns llocs concrets, i afirma erròniament que els millors resultats s'han obtingut en esports d'hivern.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "b273353ac8c9"}
+{"id": "culture-music-and-songs/007", "type": "open", "grade": 1, "points": 0.5, "reason": "Menciona encertadament la falta de recollida sistemàtica, però omet les dues hipòtesis concretes del text de referència (la de Puigoriol sobre l'aïllament i la de l'ús de repertori català compartit).", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "123f97f10f0b"}
+{"id": "unseen-n11/008", "type": "open", "grade": 0, "points": 0.0, "reason": "No aporta cap de les dades percentuals requerides i afirma erròniament que la caiguda més notable va ser durant la dècada dels 80 en lloc del període 1972-1982.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "83362ab2f46b"}
+{"id": "unseen-n11/006", "type": "open", "grade": 0, "points": 0.0, "reason": "Afirma incorrectament que no hi ha cap professió exclosa d'aquest deure, incorrent en un dels errors penalitzables en ometre l'excepció dels advocats.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "149a5aa1723d"}
+{"id": "society-education/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és incorrecta i inventada, ja que afirma erròniament que es va mantenir la coexistència entre l'escola pública i la privada en lloc de la pluralitat dels tres sistemes educatius (andorrà, francès i espanyol).", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "457e345cde08"}
+{"id": "society-media/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és completament incorrecta, inventa el tribunal i afirma falsament que va ser condemnat a presó.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "0f476fed3e28"}
+{"id": "politics-parliamentarism/008", "type": "open", "grade": 1, "points": 0.5, "reason": "Menciona la conservació de la representació històrica de les parròquies, però omet el motiu clau del desequilibri demogràfic causat pel creixement econòmic.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "fb5df09f7bfd"}
+{"id": "society-work/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta conté un dels errors a penalitzar en afirmar que la compensació era d'un mes de sou per any i dona dades errònies tant sobre el preavís com sobre la indemnització.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "062cc48767f0"}
+{"id": "economy-tourism-and-snow/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa d'una pregunta trampa i afirma incorrectament que Vallnord va continuar comercialitzant les estacions de manera independent.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "d89c62fa0fc3"}
+{"id": "institutions-nationality-and-residence/008", "type": "open", "grade": 0, "points": 0.0, "reason": "No recull cap dels fets clau com el consens entre els 20 i 30 anys (la durada d'una generació) ni l'aprovació final per unanimitat, donant una resposta genèrica i imprecisa.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "ad54e6aa04d9"}
+{"id": "language-phraseology/003", "type": "open", "grade": 1, "points": 0.5, "reason": "Aproxima la idea que s'utilitza sense pensar-hi ('resistent als canvis conscients'), però omet els fets clau sobre l'aprenentatge d'una llista i que la diferència es nota en una sola frase.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "b1515a001c61"}
+{"id": "politics-electoral-system/008", "type": "open", "grade": 0, "points": 0.0, "reason": "No aporta cap de les xifres demanades a la pregunta ni conté cap dels fets clau de la referència, limitant-se a una explicació genèrica.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "6581012ac2ff"}
+{"id": "culture-architecture/009", "type": "trap", "grade": 1, "points": 0.5, "reason": "Rebutja correctament que siguin exclusius d'Andorra i els situa al Pirineu, però omet la seva presència a altres comarques catalanes i la funció específica d'estripar la roba dels lladres.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "15f08b04e4fa"}
+{"id": "history-origins/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa de la pregunta i s'inventa que Anníbal va creuar pel Pas de la Bonaigua.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "c866c694d788"}
+{"id": "politics-parties/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa de la pregunta i afirma incorrectament que el Partit Socialdemòcrata va guanyar amb majoria absoluta el 2011.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "77009c125547"}
+{"id": "customs-sant-antoni/003", "type": "open", "grade": 1, "points": 0.5, "reason": "Menciona la recuperació cap a l'any 2000 i la intervenció del Comú de Canillo, però omet la figura clau de Josep Casal i afirma que estaven en risc en lloc d'haver-se perdut completament.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "31f5f1f83b14"}
+{"id": "unseen-n03/004", "type": "open", "grade": 0, "points": 0.0, "reason": "No inclou cap dels fets clau requerits, com la limitació de 2.500 euros per setmana, la intervenció de l'AREB o la resolució mitjançant el banc pont Vall Banc.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "f50b55ca2fb9"}
+{"id": "institutions-symbols/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa afirmant erròniament que la bandera es va oficialitzar el 1866.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "e0514c04ea79"}
+{"id": "institutions-government/008", "type": "open", "grade": 0, "points": 0.0, "reason": "No explica el sistema de dues voltes segons la nacionalitat i no identifica correctament els cossos reservats concrets establerts per la llei.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "530ee8e744da"}
+{"id": "society-housing/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no recull les denúncies concretes (lloguers del 60% del sou, càmpings, amuntegament) i al·lucina afirmant que es va construir un 'complex de la Seu d'Urgell' en lloc d'esmentar el concepte de ciutat-dormitori transfronterera.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "99864ee3e632"}
+{"id": "economy-economic-transformation/007", "type": "open", "grade": 0, "points": 0.0, "reason": "El model afirma erròniament que no hi ha dades disponibles i assenyala com a dificultats principals el personal qualificat i el finançament, incorrent en els errors a penalitzar.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "7de518975143"}
+{"id": "territory-fauna-and-flora/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa de la pregunta i justifica una prohibició general inexistent en lloc de rebutjar-la.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "8385c643ab54"}
+{"id": "economy-tourism-and-snow/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és completament inventada respecte a l'origen del parc i no aporta cap de les dades financeres reals del 2020.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "42337d2b7b7b"}
+{"id": "society-healthcare/007", "type": "open", "grade": 0, "points": 0.0, "reason": "No esmenta la lliure elecció de metge ni el pagament per acte mèdic, oferint una explicació genèrica i incorrecta sobre la fi de les iguales.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "2229778711f7"}
+{"id": "unseen-n01/002", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és totalment inventada, ja que atribueix la condemna a motius polítics en lloc de l'adopcionisme i no esmenta cap de les conseqüències reals.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "093bada0129a"}
+{"id": "culture-legends/009", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és incorrecta i inventada, ja que no esmenta que Canturri va concloure que cap andorrà confirmava la descripció d'Amades.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "358d04c6c8c7"}
+{"id": "institutions-nationality-and-residence/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa i inventa motius sobre una naturalització per simple residència que el Codi de 1977 no preveia.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "411f556c33ac"}
+{"id": "daily-life-how-things-work/003", "type": "trap", "grade": 0, "points": 0.0, "reason": "Tot i rebutjar la figura de l'alcalde, s'inventa el càrrec de 'cap de parròquia' en lloc d'indicar que és el cònsol.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "151d02cf0a16"}
+{"id": "society-social-protection/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa de la pregunta i afirma incorrectament que el règim de 1966 va incloure les branques de prestacions familiars i de desocupació.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "26b2b0834995"}
+{"id": "economy-livestock-and-farming/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa afirmant erròniament que la fil·loxera va destruir la vinya andorrana a finals del segle XIX.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "50aaba9514cc"}
+{"id": "customs-patron-festivals/006", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa afirmant que la Passa és una dansa que es balla, en lloc d'assenyalar que és una cercavila i un ritu de pas.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "fb778fded1f3"}
+{"id": "institutions-co-principality/007", "type": "open", "grade": 0, "points": 0.0, "reason": "Afirma erròniament que el bisbe no tenia dret a demanar la quèstia i no especifica la proporció exacta (3/4 i 1/4) dels ingressos de la justícia.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "f1aef3f0782d"}
+{"id": "gastronomy-dishes/008", "type": "open", "grade": 1, "points": 0.5, "reason": "Descriu l'escudella com un plat tradicional amb carn i verdures per Sant Antoni, però omet els fets concrets sobre com es va recuperar als anys setanta.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "66bddd694f31"}
+{"id": "institutions-justice/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa afirmant que el president té vot de desempat, quan en realitat desempata el magistrat ponent o es bloqueja l'acord.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "ac25a42695c9"}
+{"id": "culture-popular-culture/005", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no recull la tesi de Canturri sobre la pèrdua d'espontaneïtat i les associacions, ni menciona cap dels tres exemples datats (gegants, sardana, falles).", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "d380946d080c"}
+{"id": "unseen-n12/004", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no esmenta l'evacuació d'edificis ni el tancament des d'un punt més avall, i inventa l'entitat que avalua el risc.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "8769440546aa"}
+{"id": "customs-dances/008", "type": "open", "grade": 0, "points": 0.0, "reason": "No esmenta l'emigració de joves al sud de França dels anys vint ni identifica les dues festes que encara es conserven (Ordino i Encamp).", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "94079acb0085"}
+{"id": "customs-religiosity/007", "type": "open", "grade": 1, "points": 0.5, "reason": "Identifica correctament el bisbe com a copríncep, però no especifica que va ser el Consell General qui va proclamar la patrona el 1873.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "a3f2e8fff934"}
+{"id": "language-language-contact/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta inventa el motiu de la invalidesa (falta d'homogeneïtat en comptes del nombre insuficient de participants) i no recull els fets clau.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "f2d365a13cec"}
+{"id": "history-20th-century-first-half/008", "type": "open", "grade": 1, "points": 0.5, "reason": "Menciona de manera molt genèrica la inestabilitat política com a causa, però no concreta la data de sortida dels gendarmes (el 9 d'octubre).", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "293a46fe2ae3"}
+{"id": "unseen-n07/004", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no esmenta el motiu real (evitar conflictes de competència entre tribunals ni la petició del Consell General) i s'inventa explicacions sobre continuïtat administrativa.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "46f875e7273f"}
+{"id": "sports-football/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa i inventa detalls sobre una victòria que mai no va tenir lloc, ja que el FC Andorra no ha jugat mai a la lliga andorrana.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "8adb3c05917f"}
+{"id": "history-historiography/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa de la pregunta i inventa que l'obra va demostrar l'autenticitat del document mitjançant un estudi paleogràfic.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "6e560c9a77c7"}
+{"id": "history-constitution-1993/006", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa de la pregunta i afirma incorrectament que la Constitució va entrar en vigor el dia del referèndum.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "f685f235de2b"}
+{"id": "history-origins/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no menciona cap dels fets clau del període indicat (vinya i vi, militar tardoromà, poblat en altura) i ofereix informació no coincident amb la referència.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "4764cf167520"}
+{"id": "history-19th-century/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model no detecta ni rebutja la premissa falsa que Guillem d'Areny-Plandolit va néixer a Ordino.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "35c70c957570"}
+{"id": "daily-life-how-things-work/006", "type": "open", "grade": 1, "points": 0.5, "reason": "Respon correctament que no es perd la garantia legal i que és voluntària, però omet elements obligatoris clau del contingut com les vies de reclamació o l'àmbit territorial.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "dfec71940e78"}
+{"id": "economy-tobacco/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa i inventa una justificació per a una competència penal general que el Consell General mai no va tenir.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "d1b2859e48df"}
+{"id": "unseen-n06/006", "type": "open", "grade": 0, "points": 0.0, "reason": "Afirma erròniament que el decret va crear el Consell General en lloc del Consell Executiu, i no recull els fets clau essencials.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "3dc45b291c8d"}
+{"id": "culture-legends/003", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta inventa l'explicació de la llegenda, afirmant que servien per marcar camins i protegir el territori en lloc de la feina encomanada per un amo desesperat.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "54a5804067f1"}
+{"id": "history-middle-ages/008", "type": "open", "grade": 0, "points": 0.0, "reason": "Afirma erròniament que el treball del ferro era una activitat consolidada a l'Alta Edat Mitjana, contradient la referència que parla d'activitat puntual i no d'una indústria contínua.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "45003a27a35e"}
+{"id": "history-origins/008", "type": "open", "grade": 1, "points": 0.5, "reason": "Reconeix que és una llegenda i que hi havia influència carolíngia, però omet la falsedat específica de la Carta de poblament i la pertinença a la Marca Hispànica.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "f7920d34646d"}
+{"id": "unseen-n04/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no menciona el balanç de partits ni l'ascens, i s'inventa informació afirmant que Jordi Aláez n'era l'entrenador i que van guanyar la Lliga Nacional de Juvenils.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "31454d5c3aa0"}
+{"id": "economy-trade/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa afirmant que el caballó s'utilitzava per a la construcció de camins en lloc d'assenyalar que era una mesura de superfície agrària.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "dd1e13af9238"}
+{"id": "customs-rites-of-passage/006", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa, afirma que és una dansa de parella i s'inventa una coreografia inexistent.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "20fbf6851b64"}
+{"id": "institutions-symbols/007", "type": "open", "grade": 0, "points": 0.0, "reason": "No esmenta ni qui la va crear (Guillem d'Areny-Plandolit) ni quan (Reforma de 1866), i afirma erròniament que segons Vilar no hi havia autor ni data.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "fd826dca99f0"}
+{"id": "territory-urban-planning/006", "type": "trap", "grade": 0, "points": 0.0, "reason": "Accepta la premissa falsa de la pregunta i justifica erròniament que els plans parroquials poden ampliar lliurement l'edificabilitat.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "a47498c856e8"}
+{"id": "society-family/007", "type": "open", "grade": 1, "points": 0.5, "reason": "Encerta que la tutela no pertanyia de dret a la mare vídua, però omet que de fet gestionava els béns com a usufructuària i els requisits de nomenament judicial o testamentari.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "2219762e1ff8"}
+{"id": "society-women/008", "type": "open", "grade": 1, "points": 0.5, "reason": "Explica correctament la inversió de la càrrega de la prova, però cita erròniament l'article 14 en lloc del 24.1 i omet l'excepció dels processos penals i sancionadors.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "bf178e76dd66"}
+{"id": "sports-skiing/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa en lloc de corregir-la, ignorant que François Soulié ja va competir a Torí 2006.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "37490869b700"}
+{"id": "customs-festive-calendar/005", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és completament inventada i no encerta cap dels fets clau de la referència.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "be62fbe6c4d4"}
+{"id": "politics-parties/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta conté múltiples falsedats greus sobre el fundador, el partit predecessor i el resultat electoral obtingut.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "7159a6438a94"}
+{"id": "history-democratisation/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa de la pregunta i no assenyala que el decret de 1970 només va concedir el dret de vot.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "05aed91ff3c6"}
+{"id": "sports-other-sports/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "Tot i rebutjar que representés Andorra, afirma falsament que només va guanyar el Dakar tres vegades en lloc de cinc.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "9534e9de3952"}
+{"id": "gastronomy-drinks/003", "type": "open", "grade": 1, "points": 0.5, "reason": "Identifica que no es pot competir per volum i cal diferenciar-se per qualitat i marca, però omet els motius concrets dels alts costos com el treball manual en fort pendent i la dispersió parcel·lària.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "09351e19040e"}
+{"id": "unseen-n03/002", "type": "open", "grade": 1, "points": 0.5, "reason": "Respon a les dues preguntes principals indicant el suport al rescat i l'any 1984, però omet detalls clau com que va ser l'única via d'accés, els 146 vols i la coincidència amb el túnel del Cadí.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "61a80a6c096e"}
+{"id": "customs-patron-festivals/005", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és massa genèrica i no esmenta cap dels fets clau com la Marratxa, la Passa, el ball del Cerdà o el format únic de caramelles.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "81adf137443a"}
+{"id": "economy-energy-and-utilities/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa i s'inventa una explicació sobre la demanda i l'autonomia energètica d'Andorra.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "38cf60aa109c"}
+{"id": "society-demography/009", "type": "trap", "grade": 1, "points": 0.5, "reason": "Rebutja que la baixa mortalitat demostri que fossin els més sans d'Europa, però no explica que la taxa baixa es devia al retorn dels jubilats al seu país d'origen.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "b617a50809a6"}
+{"id": "history-constitution-1993/005", "type": "open", "grade": 1, "points": 0.5, "reason": "Encerta que la llei entra en vigor igualment i no queda bloquejada, però omet els requisits de la signatura de l'altre copríncep i la contrasignatura corresponent.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "ca7d1772732b"}
+{"id": "territory-physical-geography/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa que la frontera segueix sempre la divisòria d'aigües en lloc de rebutjar-la.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "3b59f3d2198b"}
+{"id": "culture-andorra-seen-from-abroad/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa de la pregunta i afirma erròniament que Andorra té estancs i un monopoli estatal del tabac.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "2bb61d472eca"}
+{"id": "language-loanwords/008", "type": "open", "grade": 0, "points": 0.0, "reason": "El model s'inventa categories abstractes (lingüística, cultural, econòmica, política i social) en lloc d'esmentar les cinc vies concretes documentades per l'IEC.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "90398565b4b0"}
+{"id": "history-historic-moments/006", "type": "trap", "grade": 0, "points": 0.0, "reason": "Accepta la premissa falsa afirmant erròniament que el Consell de la Terra va ser reconegut el 1278.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "853b9946bc84"}
+{"id": "institutions-foreign-relations/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és massa genèrica i no menciona cap dels documents concrets (les provisions reials sobre duanes de 1335 i 1391) ni l'argument de Vilar sobre la sobirania duanera.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "45a9000180b7"}
+{"id": "institutions-general-council/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa i inventa una justificació feudal en lloc d'assenyalar que el primer privilegi el va concedir el bisbe d'Urgell.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "837596accb50"}
+{"id": "customs-caramelles/003", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és completament inventada i no conté cap dels fets clau sobre la recollida d'ous i diners per a àpats col·lectius.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "bb08b6f720d9"}
+{"id": "history-pareatge/008", "type": "open", "grade": 0, "points": 0.0, "reason": "No especifica el tipus d'homenatge («de boca i de mans»), omet que el comte era vassall i comet l'error de considerar que la cosenyoria provenia directament del pacte i no del fet que els successors defugissin l'homenatge.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "bae2c37e2190"}
+{"id": "society-loose/003", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és evasiva i afirma que no hi ha dades disponibles en lloc de respondre a la pregunta.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "7a9de57fe36f"}
+{"id": "culture-music-and-songs/008", "type": "open", "grade": 1, "points": 0.5, "reason": "Capta la idea que exerceix una funció d'abast nacional des d'Andorra la Vella, però omet els fets clau sobre la seva fundació el 1980 pel Comú i la voluntat popular.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "0fc108439303"}
+{"id": "sports-football/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és incorrecta, ja que afirma erròniament que juga a l'Estadi Comunal d'Andorra la Vella en lloc de l'Estadi de la FAF a Encamp.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "98af089afe1e"}
+{"id": "unseen-n13/002", "type": "open", "grade": 2, "points": 1.0, "reason": "La resposta conté correctament el descompte del 50% i la renúncia a recórrer o presentar al·legacions contra la sanció.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "05c00bde928c"}
+{"id": "society-social-protection/007", "type": "open", "grade": 1, "points": 0.5, "reason": "Explica correctament que la pensió cobreix la diferència fins al llindar, però no esmenta l'equivalència amb el salari mínim ni respon quina part cobria de mitjana el 2023 (el 38%).", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "2b8f382e9686"}
+{"id": "culture-museums-and-archives/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa de la pregunta i afirma erròniament que la Nova Reforma va reforçar els privilegis dels focs.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "c918b5ed4bfc"}
+{"id": "history-middle-ages/007", "type": "open", "grade": 1, "points": 0.5, "reason": "Reconeix l'oposició a l'ordre del veguer, però omet que van apel·lar formalment, que van prometre pagar la quèstia com de costum i que van posar els béns sota protecció del comte.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "232fcff328d9"}
+{"id": "gastronomy-pastry/003", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és completament incorrecta i inventada, descrivint una massa salada amb formatge o carn en lloc de la coca dolça tradicional de Sant Joan.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "cefb205f54af"}
+{"id": "history-pareatge/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no menciona cap dels llinatges ni enllaços matrimonials clau (Caboet, Castellbò, Ermessenda) i afirma erròniament que es va consolidar a través de la compra de drets.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "36b5200cbbe3"}
+{"id": "sports-summer/009", "type": "trap", "grade": 1, "points": 0.5, "reason": "El model rebutja correctament la premissa falsa que Bernadó hagi guanyat una medalla olímpica, però no explica els fets reals sobre la seva participació olímpica.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "661eebaa608d"}
+{"id": "culture-music-and-songs/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "Accepta la premissa falsa de la pregunta i inventa una justificació inexistent en lloc de rebutjar-la.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "28964bd68a5e"}
+{"id": "sports-chess/007", "type": "open", "grade": 1, "points": 0.5, "reason": "Descriu la seqüència correcta dels fets sense errors, però omet completament les dates clau (1948, 1967 i 1979).", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "b76ad5807e82"}
+{"id": "society-work/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta afirma exactament el contrari de la referència, presentant les vagues com un origen heroic i positiu del sindicalisme en comptes d'un conflicte aliè que va generar una imatge negativa.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "905b56c0ed85"}
+{"id": "politics-political-identity/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa i inventa motius per a un ingrés a la Societat de Nacions que mai no es va produir.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "4459d9fa1f3e"}
+{"id": "institutions-small-states/006", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa i justifica erròniament que Andorra tenia la densitat més alta per la mida del seu territori.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "259c0e331cbd"}
+{"id": "language-language-policy/008", "type": "open", "grade": 0, "points": 0.0, "reason": "No aporta les dades clau sobre l'evolució percentual de les llengües i s'inventa que el canvi més inesperat es va produir a Andorra la Vella en lloc d'entre els ciutadans andorrans.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "12e4fd68bb1f"}
+{"id": "culture-architecture/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta conté dades falses com que van marxar a finals del segle XIX i omet tots els fets clau sobre la requisa nazi i la compra el 2007.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "6fc747c7508e"}
+{"id": "institutions-institutional-heritage/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és genèrica i inventada, sense esmentar cap dels fets clau recollits al context com l'ordenació per notari en armaris amb rètol, l'amenaça d'excomunió o la visita anual del Consell.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "2b4336ae000e"}
+{"id": "history-20th-century-first-half/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és massa vaga i no recull els fets clau com el concordat/modus vivendi, la designació de bisbes, la negativa papal al dret de presentació ni els canvis polítics i la Guerra Civil.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "f2b3cd0ee848"}
+{"id": "unseen-n06/012", "type": "open", "grade": 0, "points": 0.0, "reason": "No esmenta la condició clau de no ser arrendador i afirma erròniament que Pallerols va rebutjar jurar els privilegis, quan en realitat hi estava disposat.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "edf15044b5a1"}
+{"id": "language-loanwords/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa en lloc de rebutjar-la i indicar que més del 82 % dels manlleus provenen de l'anglès.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "e0d19a7a0da0"}
+{"id": "language-history-of-the-language/006", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa de la pregunta i inventa una explicació per a un canvi que en realitat va ser a la inversa.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "cae94b74627c"}
+{"id": "history-wars-and-neutrality/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és purament evasiva i genèrica, i no aporta cap dels detalls concrets ni fets clau sobre com es va organitzar el dispositiu el 1686 i el 1689.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "defc39b52f14"}
+{"id": "unseen-n07/010", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no recull la condemna als venedors a tornar el preu i pagar les costes judicials, i fa afirmacions incorrectes i inventades sobre la decisió.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "e6952b0e7961"}
+{"id": "sports-competition/007", "type": "open", "grade": 0, "points": 0.0, "reason": "No especifica les condicions reals de participació (menys d'un milió d'habitants i pertinença al COI) i s'inventa els anys en què Andorra els ha acollit.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "1a21c672003d"}
+{"id": "unseen-n06/002", "type": "open", "grade": 0, "points": 0.0, "reason": "Atribueix erròniament el llibre a Joan Roig i afirma incorrectament que tracta de la Guerra Civil espanyola, a més d'ometre els aviadors britànics i Francesc Viadiu.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "78354092745a"}
+{"id": "daily-life-social-conventions/005", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és en gran part inventada i no recull els arguments concrets de Montserrat Badia especificats al text de referència, tret d'una vaga menció a la identitat.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "9c912edbe899"}
+{"id": "institutions-government/007", "type": "open", "grade": 1, "points": 0.5, "reason": "Identifica la publicitat com a mecanisme de pressió, però omet els detalls clau de fer-ho constar a l'informe anual i publicar la identitat i el càrrec del responsable.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "d8670a79a99a"}
+{"id": "politics-political-identity/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és incorrecta i inventada, ja que contradiu totalment els arguments reals de Betriu i a qui afectaven negativament segons la referència.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "9c21fe2273d5"}
+{"id": "institutions-communes-and-parishes/008", "type": "open", "grade": 0, "points": 0.0, "reason": "Les definicions de la taba i del mostassà són completament incorrectes i inventades.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "146ac56d99da"}
+{"id": "institutions-quarts-and-veinats/005", "type": "open", "grade": 0, "points": 0.0, "reason": "Afirma incorrectament que la parròquia s'encarregava de contractar el metge i el mestre i que els quarts només cooperaven, ignorant la competència subsidiària d'aquests últims per contractar-los.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "bdc46485ec86"}
+{"id": "society-social-protection/008", "type": "open", "grade": 1, "points": 0.5, "reason": "Explica correctament la causa de fons (manca de cotització i creació tardana de la seguretat social), però omet dades clau com els anys 50 i 60, l'any de creació (1966) o les dades estadístiques.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "6f370ee5d6ad"}
+{"id": "territory-toponymy/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és completament incorrecta i inventada, atribuint l'origen al llatí 'hortus' i a l'agricultura medieval en lloc d'esmentar l'altitud, les esllavissades i l'arrel basca.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "d50dd40f3736"}
+{"id": "gastronomy-products/006", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa afirmant erròniament que 'trumfa' és un localisme exclusiu d'Andorra.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "f57d75a9985f"}
+{"id": "language-onomastics/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta inventa la discrepància afirmant erròniament que és per l'ús de l'article i no esmenta la grafia «la Maçana» defensada per l'IEC.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "a99f41e37e3f"}
+{"id": "culture-loose/003", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és completament inventada i no conté cap de les dades reals de referència, afirmant erròniament un creixement en recursos multimèdia quan els audiovisuals van caure dràsticament.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "441c7550e262"}
+{"id": "politics-parliamentarism/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és genèrica i no recull la tesi del pas cap a un règim presidencialista ni el mecanisme de les llistes tancades.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "4c4f065791b5"}
+{"id": "sports-other-sports/007", "type": "open", "grade": 0, "points": 0.0, "reason": "Totes dues respostes són incorrectes, ja que es disputa des del 1987 i qui va guanyar cinc títols seguits va ser Jordi Lestang.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "88d58ffa5837"}
+{"id": "territory-built-landscape/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa i inventa l'existència de la xarxa de carreteres en lloc de desmentir-la.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "290ed961b8c5"}
+{"id": "territory-natural-heritage/005", "type": "open", "grade": 1, "points": 0.5, "reason": "Capta correctament la idea de la interacció humana amb el medi, però no menciona els elements concrets reconeguts com les bordes, els cortals, la transhumància o la gestió comunal.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "7e3833048ddd"}
+{"id": "history-manual-digest/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa i afirma erròniament que va ser una iniciativa personal sense demandes externes, en comptes d'aclarir que va ser un encàrrec del Consell General.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "0f06a5b906de"}
+{"id": "society-demography/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és completament inventada i no esmenta la diferència entre població registrada i estimada ni els seus mètodes de càlcul.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "c52e99ea6ce8"}
+{"id": "history-smuggling/006", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa en lloc de rebutjar-la i no esmenta que el contraban va continuar vigent durant dècades posteriors.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "9053924f2634"}
+{"id": "society-housing/007", "type": "open", "grade": 1, "points": 0.5, "reason": "Descriu la idea general del procediment i la cessió d'ús sense errors greus, però és molt vaga i omet les dades clau com els comptadors, els 18 mesos, el termini de tres mesos i la durada de cinc anys.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "4f23bc6c6f17"}
+{"id": "daily-life-how-things-work/009", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no identifica les dues regles específiques sobre el bescanvi del permís de conduir ni la prohibició que els residents condueixin vehicles amb matrícula estrangera.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "d3992452f0c5"}
+{"id": "society-housing/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa que la llei permet l'expropiació definitiva dels habitatges buits.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "6d62ab197af1"}
+{"id": "society-family/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és totalment incorrecta, ja que afirma erròniament que el matrimoni canònic no té efectes civils a Andorra.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "07e8f4608ecf"}
+{"id": "history-historiography/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no recull cap dels fets clau i s'inventa que Bayo va admetre haver mentit per venjança.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "736a46dbf461"}
+{"id": "language-andorran-lexicon/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa, inventa que [AD] és una marca geogràfica d'Andorra i no esmenta que significa llenguatge administratiu.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "f79cac632229"}
+{"id": "history-democratisation/007", "type": "open", "grade": 1, "points": 0.5, "reason": "Descriu correctament que la iniciativa va sorgir de les dones per reclamar els drets polítics, però omet els fets clau concrets com el grup de set dones, la recollida de signatures i les dates de les peticions.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "5d079cf63f7a"}
+{"id": "history-19th-century/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és completament incorrecta i inventada, afirmant que es va proposar que el Papa fos l'únic sobirà en lloc d'un model amb tres elements sobirans.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "39288fcf610d"}
+{"id": "people/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "Accepta la premissa falsa de la pregunta i a més s'inventa que la fita va ser en la disciplina de Moguls en comptes d'esquí alpí.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "472a6df1f4a9"}
+{"id": "economy-trade/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és incorrecta perquè atribueix el mal estat dels camins al proteccionisme comercial en lloc d'una mesura defensiva militar, i no identifica correctament que el comerç anava principalment cap a Catalunya.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "4f3a1562ddce"}
+{"id": "people/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta inventa els motius de les dimissions, atribuint-los a reformes institucionals i constitucionals en lloc de qüestions fiscals i econòmiques.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "8a9daacf4a16"}
+{"id": "language-morphosyntax/008", "type": "open", "grade": 1, "points": 0.5, "reason": "Descriu la tendència de pèrdua per generacions de manera aproximada, però no aporta les xifres clau i omet que a la tercera generació la forma majoritària és 'al' i no 'el'.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "2d559dba79df"}
+{"id": "daily-life-mental-geography/003", "type": "open", "grade": 0, "points": 0.0, "reason": "No recull el mecanisme clau explicat al text (els andorrans que hi fan estudis superiors i en tornar introdueixen termes francesos) i ofereix una explicació genèrica i no basada en la referència.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "9c8aaad0602f"}
+{"id": "economy-transport/008", "type": "open", "grade": 1, "points": 0.5, "reason": "Identifica de manera general el repartiment de competències entre el Govern i els comuns, però no explica que les carreteres secundàries es numeren segons la carretera general de la qual pengen.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "f820c15f59c3"}
+{"id": "language-morphosyntax/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa afirmant erròniament que el DIEC2 inclou aquest ús de prop.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "fd61642d3d53"}
+{"id": "unseen-n07/012", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta inventa arguments genèrics de sobirania i no menciona cap dels fets clau ni les quatre vies jurídiques del text.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "b2df2e004bc4"}
+{"id": "politics-parties/008", "type": "open", "grade": 1, "points": 0.5, "reason": "Identifica que només les persones físiques poden donar i la prohibició de donacions anònimes i jurídiques, però no concreta la quantitat límit (6.000 euros) ni la restricció als contractistes públics.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "a834702f341c"}
+{"id": "territory-climate-and-mountain/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "Accepta la premissa falsa de la pregunta i afirma incorrectament que el mapa ATES prediu el perill diari en temps real incorporant factors meteorològics.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "0324d07a1409"}
+{"id": "politics-electoral-system/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa i inventa motius per a un rebuig de la Constitució que mai no es va produir.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "b95f1d50daca"}
+{"id": "history-wars-and-neutrality/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no menciona cap dels fets clau com la invocació de país neutre ni les mesures logístiques concretes, oferint una descripció genèrica i inventada.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "9eca757bfb48"}
+{"id": "culture-theatre/003", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no menciona cap dels fets clau sobre l'oposició del veguer francès, la suspensió temporal per part del síndic ni els canvis fets a l'obra per poder-se representar.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "8a6df120df2f"}
+{"id": "daily-life-humour/003", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no esmenta el significat de l'expressió (fer-se el desentès) ni que utilitza el propi gentilici per designar una actitud poc heroica.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "d8290db8faf0"}
+{"id": "territory-fauna-and-flora/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no esmenta el requisit clau de ser membre de la federació corresponent i aporta condicions no relacionades amb el context de referència.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "185424652354"}
+{"id": "unseen-n05/002", "type": "open", "grade": 0, "points": 0.0, "reason": "Identifica correctament el pa, però indica una ració errònia de 250 grams en lloc dels 300 grams fixats oficialment, un error explícitament penalitzable.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "2465e0908a1c"}
+{"id": "language-language-policy/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model ha acceptat la premissa falsa de la pregunta sense assenyalar que el mínim històric va ser el 2009 amb un 28,9 %.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "fc8ece1c02ab"}
+{"id": "unseen-n03/006", "type": "open", "grade": 0, "points": 0.0, "reason": "El model dóna una resposta evasiva i manifesta no disposar de les dades, sense aportar cap dels fets clau sol·licitats.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "0c00dfd0c88a"}
+{"id": "sports-football/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta conté dades completament inventades sobre els rivals, els anys i els fets dels dos partits.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "efde04baecc2"}
+{"id": "territory-climate-and-mountain/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és completament inventada i no conté cap dels fets clau relacionats amb el pla d'allaus.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "93046d5e2fa0"}
+{"id": "institutions-general-council/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta dóna una explicació genèrica incorrecta en lloc d'esmentar la redacció al segle XV i l'atribució voluntària a segles anteriors per legitimar la potestat del Consell.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "292b0d199684"}
+{"id": "society-education/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa que el Consell General va crear un sistema educatiu propi el 1882 i inventa una explicació.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "656529e3c988"}
+{"id": "history-historiography/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta s'inventa completament les tres fases i els seus protagonistes, sense esmentar cap dels fets clau de la referència.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "72e0aec6be05"}
+{"id": "sports-sports-training/003", "type": "open", "grade": 1, "points": 0.5, "reason": "Encerta el creixement de l'esquí alpí, però descriu erròniament l'esquí de fons amb un creixement moderat en lloc d'assenyalar l'estancament i els molt pocs candidats.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "6c0a1454f959"}
+{"id": "territory-built-landscape/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta inventa el castell de la Mola i no esmenta el castell del puig d'Enclar ni la decisió presa en el segon Pareatge de 1288.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "8d009a4bcaff"}
+{"id": "history-19th-century/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és incorrecta i inventada, ja que afirma el contrari del que es va ordenar (prohibir tota relació oficial amb les autoritats andorranes).", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "60169237e8b4"}
+{"id": "territory-toponymy/007", "type": "open", "grade": 0, "points": 0.0, "reason": "Les dades proporcionades són completament incorrectes i inventades, tant pel que fa al percentatge com a les xifres de l'estudi.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "6adc5f80c694"}
+{"id": "institutions-quarts-and-veinats/006", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa inventant una explicació, en lloc d'assenyalar que Escaldes-Engordany no va ser parròquia fins al 1978.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "9560b77bcaec"}
+{"id": "history-historic-moments/005", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és massa genèrica i no esmenta cap dels fets clau concrets introduïts per la Nova Reforma.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "5af63955b821"}
+{"id": "society-work/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "Accepta la premissa falsa que el SAT es va fundar el 1976 en lloc de rebutjar-la i assenyalar que es va fundar el 1990.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "bc0f90138d87"}
+{"id": "history-smuggling/005", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta inventa els fets del cas, atribuint erròniament una sentència a Brutails i descrivint un litigi que no es correspon amb els fets clau de la referència.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "91e013da69db"}
+{"id": "customs-religiosity/008", "type": "open", "grade": 0, "points": 0.0, "reason": "No esmenta la intervenció d'Enric IV prohibint la Inquisició ni el fet que un copríncep anul·lés la decisió de l'altre, i a més suggereix erròniament que la Inquisició va funcionar de manera activa.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "8d4c49f43350"}
+{"id": "sports-skiing/007", "type": "open", "grade": 0, "points": 0.0, "reason": "Identifica incorrectament l'esquiador com a Jordi Ribas en lloc de Gerard Escoda.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "7c477ead6a10"}
+{"id": "unseen-n10/002", "type": "open", "grade": 1, "points": 0.5, "reason": "Captura la idea que el pronòstic dels crítics sobre la falta de majories estables va fallar, però ho descriu de manera vaga sense esmentar les majories absolutes proporcionades.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "ac69b833e91f"}
+{"id": "economy-livestock-and-farming/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és completament inventada i no menciona cap dels fets clau de la referència, com la sentència de 1731, la cria de mules o el canal d'Urgell.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "0876647b0698"}
+{"id": "society-women/007", "type": "open", "grade": 0, "points": 0.0, "reason": "Afirma erròniament que es van concedir tots dos drets el 1969, quan el dret a ser elegides va ser rebutjat.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "70a7d1a973b3"}
+{"id": "territory-parishes/008", "type": "open", "grade": 0, "points": 0.0, "reason": "Afirma erròniament que Canillo no és la parròquia més extensa i que ocupa el cinquè lloc en l'ordre protocol·lari en comptes del primer.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "257aa79b3f62"}
+{"id": "institutions-justice/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta afirma incorrectament que no hi ha registres d'execucions i no identifica Pere Areny Aleix ni la data de 1943.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "7fd0b617af4a"}
+{"id": "institutions-co-principality/009", "type": "trap", "grade": 2, "points": 1.0, "reason": "Rebutja correctament la premissa falsa i explica que el càrrec l'ocupa el president de França, escollit pels ciutadans francesos.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "e1ce7c691e45"}
+{"id": "unseen-n09/002", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no es basa en la informació de referència i no inclou cap dels fets clau sol·licitats.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "0e05b81d6b2e"}
+{"id": "history-pareatge/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa afirmant que el Pareatge va ser un acte fundacional en lloc d'assenyalar que va ser un armistici per repartir un senyoriu preexistent.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "b9f95e0bf924"}
+{"id": "institutions-justice/007", "type": "open", "grade": 1, "points": 0.5, "reason": "La resposta és molt vaga i no concreta que cada copríncep en designa un de cadascun dels òrgans, tot i que reconeix la seva intervenció.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "53fe54fe7788"}
+{"id": "language-phonetics/005", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no esmenta cap dels fets clau ni els exemples concrets de lèxic i forma recollits a la referència, oferint una explicació genèrica i no basada en les dades.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "e34aa6202d04"}
+{"id": "society-immigration/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa, confon la funció pública amb la contractació d'empreses i no identifica les condicions reals del conveni.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "79f166f1c389"}
+{"id": "language-history-of-the-language/005", "type": "open", "grade": 1, "points": 0.5, "reason": "Capta la idea que era una convenció gràfica i no pas una pronúncia real, però no esmenta els arguments concrets com la coexistència de formes al Politar o l'ús de -es en textos pràctics.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "473cb5fe6a8f"}
+{"id": "sports-chess/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa i inventa una explicació per a una victòria que no va existir.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "32bd811ff100"}
+{"id": "culture-andorra-seen-from-abroad/008", "type": "open", "grade": 1, "points": 0.5, "reason": "Captura la diferència general de fiabilitat entre les dues fonts, però no esmenta la cadena de producció ni la finalitat comercial dels gravats.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "2ca28f85be1c"}
+{"id": "unseen-n11/012", "type": "open", "grade": 0, "points": 0.0, "reason": "Totes les dades aportades (durada d'un a tres anys, edat de 16 a 25 anys i 35 hores setmanals) són incorrectes segons la referència.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "163556fde807"}
+{"id": "institutions-symbols/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no recull cap dels fets clau sobre les decisions del Consell de 1914 i 1942 ni les referències al segell o a la Casa de la Vall, i fa afirmacions incorrectes.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "9a88ac446485"}
+{"id": "society-women/009", "type": "trap", "grade": 1, "points": 0.5, "reason": "Rebutja correctament la premissa que la llei fixa aquesta bretxa, però no aporta les dades reals sobre la diferència salarial del 2024.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "36bf98661a89"}
+{"id": "history-manual-digest/007", "type": "open", "grade": 1, "points": 0.5, "reason": "Encerta la neutralitat en conflictes i l'equilibri amb les dues corones, però no menciona la consigna de fingir pobresa (predicar misèries) ni recórrer a les corts.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "42baf87c51c7"}
+{"id": "language-loanwords/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és completament inventada i no esmenta cap de les raons lingüístiques documentades en l'estudi.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "d583da99c8b4"}
+{"id": "unseen-n08/002", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no recull els fets clau sobre la dificultat d'admetre la ignorància ni el mètode de creuar testimonis, i afirma erròniament que proposava contrastar-los amb documents escrits.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "0ba55a6b8d5d"}
+{"id": "society-healthcare/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta inventa el nom del director (Dr. Joan Font en lloc de Joan Obiols i Llandrich) i el nom del congrés acollit el 2001.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "28ca4b289815"}
+{"id": "language-language-contact/008", "type": "open", "grade": 1, "points": 0.5, "reason": "Explica correctament per què no s'usa la nacionalitat, però no esmenta els nou grups etnolingüístics ni els criteris d'origen i socialització.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "1047e4ce8cb9"}
+{"id": "unseen-n03/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no es basa en la informació de referència, no menciona cap dels fets clau ni les dades de l'evolució del parc hoteler, i s'inventa explicacions genèriques.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "04762dd3e87e"}
+{"id": "culture-crafts/007", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa i s'inventa motius pels quals els treballadors eren suposadament locals, quan en realitat eren tots francesos.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "d9c1f2c7bac6"}
+{"id": "language-onomastics/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa i afirma erròniament que «encampenc» és el gentilici estàndard i tradicional, quan en realitat és «encampadà».", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "96cf808c318a"}
+{"id": "language-andorran-lexicon/008", "type": "open", "grade": 1, "points": 0.5, "reason": "Identifica l'aïllament i la influència del francès, però no esmenta amb precisió la continuïtat institucional ni la innovació local, afegint a més el castellà.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "56eb87c5faee"}
+{"id": "history-middle-ages/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa que la prima estava reservada als homes armats, quan en realitat estava oberta a qualsevol home o dona de les valls.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "be8374932b85"}
+{"id": "territory-toponymy/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa afirmant que la forma actual ja estava consolidada al segle IX, quan en realitat la grafia Canillo no apareix fins al 1347.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "d04192a6c58b"}
+{"id": "sports-summer/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és completament incorrecta i inventa la identitat dels ciclistes.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "44407045ccdb"}
+{"id": "territory-urban-planning/005", "type": "open", "grade": 1, "points": 0.5, "reason": "Reconeix el caràcter vinculant dels instruments del Govern, però omet que són executius des de la publicació al BOPA i que s'integren directament a la planificació comunal amb efectes immediats.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "a05da7644917"}
+{"id": "customs-rites-of-passage/005", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no menciona cap dels fets clau com la classificació pública per edat ni la presentació de les parelles que es casaran al capdavant, recorrent a generalitats vagues.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "36f200503286"}
+{"id": "gastronomy-food-history/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és massa genèrica i no recull els fets clau del context, a més d'inventar ingredients com patates i viandes quan el menú de festa es basava principalment en peix salat d'importació.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "9b99f2848719"}
+{"id": "language-onomastics/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és incorrecta i inventada, ja que afirma que prové d'un poble anomenat Laureda i que santjulianenc és el gentilici de la parròquia.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "aee58f1a4f34"}
+{"id": "customs-giants/003", "type": "open", "grade": 1, "points": 0.5, "reason": "Captura parcialment el motiu de la tria dels personatges per les arrels del país, però omet els motius concrets de la creació com revifar la festa major, 'fer poble' o el paper de Joan Roure.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "f15a8c0ea171"}
+{"id": "economy-energy-and-utilities/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no esmenta cap de les contrapartides reals (la xarxa de carreteres i la reserva del 10 % d'electricitat) i es limita a generalitats vagues.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "55a8eb4fff85"}
+{"id": "economy-livestock-and-farming/008", "type": "open", "grade": 0, "points": 0.0, "reason": "No recull l'origen estrictament agrícola enfront del ramader, omet l'evolució moderna com a restaurant típic i atribueix funcions no corresponents a la referència.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "513b728110f8"}
+{"id": "people/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és completament incorrecta i inventada, afirmant falsament que va jugar a l'NBA i donant xifres errònies de partits i punts.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "4b0019d99710"}
+{"id": "institutions-institutional-heritage/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa i explica el motiu pel qual l'armari tenia set panys, ignorant que històricament en tenia sis fins al 1978.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "baea516ede4d"}
+{"id": "unseen-n07/014", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és incorrecta i inventada, ja que no menciona l'arrencada de plantes, el sometent, els batlles, les armes ni cap dels fets clau històrics.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "4312459f49b2"}
+{"id": "territory-physical-geography/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta inventa la definició de la peixena relacionant-la amb la caça i la silvicultura en lloc de la pastura vana, i no esmenta les restriccions agrícoles.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "6dbe5e34b7de"}
+{"id": "language-dialectology/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta inventa l'explicació i no esmenta l'ús espontani a les zones rurals ni la influència de l'estàndard als centres urbans.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "734d76fd375a"}
+{"id": "unseen-n07/008", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta afirma incorrectament que el Consell va rebutjar la petició, quan en realitat no la va resoldre directament i la va deixar a deliberació de Guillem Areny.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "c00dd7221174"}
+{"id": "language-registers/003", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta no menciona el biaix cap al registre institucional ni la manca de registre col·loquial, inventant una explicació sobre diversitat i biaixos socials.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "db6a827cb5f5"}
+{"id": "institutions-institutional-heritage/007", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és completament inventada i no menciona cap dels fets clau sobre les parròquies ni el Consell General.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "4f06c1b06f12"}
+{"id": "unseen-n02/006", "type": "open", "grade": 0, "points": 0.0, "reason": "No esmenta que els documents anteriors al 1984 queden exclosos d'avaluació i tria, i erra en afirmar que la responsabilitat s'assumeix quan es reben els documents en lloc de quan l'oficina rep el formulari signat.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "da5e952a4787"}
+{"id": "language-dialectology/009", "type": "trap", "grade": 0, "points": 0.0, "reason": "El model accepta la premissa falsa de la pregunta i inventa una influència toponímica i cultural àrab inexistent a Andorra.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "069dafb013c3"}
+{"id": "culture-literature/003", "type": "open", "grade": 1, "points": 0.5, "reason": "Encerta que els relats van ser escrits per viatgers forasters, però omet el fet clau del Manual Digest d'Antoni Fiter i Rossell com a inici de la literatura andorrana.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "a3058e850fa9"}
+{"id": "daily-life-social-conventions/009", "type": "open", "grade": 0, "points": 0.0, "reason": "La resposta és completament incorrecta i inventada, afirmant que era un empresari de la construcció i el comerç en lloc d'un escultor que fugia per motius polítics.", "judge": "vertex:google/gemini-3.8-flash", "transport": "batch", "answer_hash": "94451f3c8c29"}

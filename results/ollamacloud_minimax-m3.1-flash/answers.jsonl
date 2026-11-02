@@ -1,0 +1,964 @@
+{"id": "customs-festive-calendar/002", "error": "HTTP 429: {\"error\":\"too many concurrent requests\"}\n"}
+{"id": "customs-festive-calendar/005", "error": "HTTP 429: {\"error\":\"too many concurrent requests\"}\n"}
+{"id": "customs-festive-calendar/001", "error": "HTTP 429: {\"error\":\"too many concurrent requests\"}\n"}
+{"id": "customs-festive-calendar/003", "answer": "", "input_tokens": 330, "output_tokens": 4000, "seconds": 448.29}
+{"id": "customs-festive-calendar/004", "error": "HTTP 429: {\"error\":\"too many concurrent requests\"}\n"}
+{"id": "customs-festive-calendar/006", "error": "HTTP 429: {\"error\":\"too many concurrent requests\"}\n"}
+{"id": "customs-caramelles/001", "error": "HTTP 429: {\"error\":\"too many concurrent requests\"}\n"}
+{"id": "customs-caramelles/002", "answer": "", "input_tokens": 285, "output_tokens": 4000, "seconds": 49.54}
+{"id": "customs-caramelles/003", "answer": "Abans, les colles de caramelles recollien llaminades, torrons i altres productes de Nadal per consumirlos. Ara, sobretot, recullen diners per a entitats socials i actuacions de caritat a Andorra.", "input_tokens": 257, "output_tokens": 3829, "seconds": 68.07}
+{"id": "customs-dances/001", "answer": "D", "input_tokens": 305, "output_tokens": 179, "seconds": 19.08}
+{"id": "customs-dances/002", "answer": "C", "input_tokens": 311, "output_tokens": 172, "seconds": 27.05}
+{"id": "customs-dances/003", "answer": "", "input_tokens": 296, "output_tokens": 4000, "seconds": 52.37}
+{"id": "customs-dances/004", "answer": "", "input_tokens": 300, "output_tokens": 4000, "seconds": 53.73}
+{"id": "customs-dances/005", "answer": "D", "input_tokens": 302, "output_tokens": 1169, "seconds": 31.04}
+{"id": "customs-dances/006", "answer": "C", "input_tokens": 301, "output_tokens": 424, "seconds": 22.88}
+{"id": "customs-dances/007", "answer": "", "input_tokens": 256, "output_tokens": 4000, "seconds": 59.87}
+{"id": "customs-dances/008", "error": "HTTP 429: {\"error\":\"too many concurrent requests\"}\n"}
+{"id": "customs-dances/009", "answer": "Perquè manté l’antiga tradició de ballar-la col·lectivament a la plaça els diumenges, generalment després de l’ofici. La Festa Major la conserva com a un dels balls més emblemàtics d’Andorra.", "input_tokens": 254, "output_tokens": 3526, "seconds": 78.12}
+{"id": "customs-falles/001", "answer": "A", "input_tokens": 306, "output_tokens": 367, "seconds": 47.94}
+{"id": "customs-falles/002", "answer": "A", "input_tokens": 296, "output_tokens": 314, "seconds": 25.13}
+{"id": "customs-falles/003", "answer": "La falla valenciana és una gran obra artística i satírica, cremada durant la cremà; la falla andorrana és una tradició oral de Nadal en què grups d’infants —els fallaires— van de casa en casa cantant i recollent dolços. Antigament era una pràctica comunitària de veïns i adults, i avui s’ha adaptat com una celebració infantil推广推广, cada vegada mésextent i reconeguda com a patrimoni cultural d’Andorra.", "input_tokens": 264, "output_tokens": 3699, "seconds": 61.98}
+{"id": "customs-patron-festivals/001", "answer": "C", "input_tokens": 299, "output_tokens": 2838, "seconds": 58.84}
+{"id": "customs-patron-festivals/002", "answer": "A", "input_tokens": 319, "output_tokens": 539, "seconds": 37.0}
+{"id": "customs-patron-festivals/005", "answer": "Perquè les seves festes —especialment la Festa Major de Santa Llúcia, el Carnaval i el Nadal— han mantingut de manera contínua balls, cants, processons i rituals de l’Andorra tradicional. Gràcies a la participació comunitària i a la transmissió entre generacions, en conserva el caràcter arrelat.", "input_tokens": 259, "output_tokens": 2819, "seconds": 64.14}
+{"id": "customs-patron-festivals/006", "answer": "La Passa és el ritual més emblemàtic de la Festa Major perquè és una dansa processional tradicional, ballada pels «Comes» i les «Comesses» pels carrers amb vestuari i música tradicionals. En representar la identitat col·lectiva de Sant Julià i comptar amb el reconeixement UNESCO del cant que l’acompanya, és la dansa més coneguda de la festa.", "input_tokens": 255, "output_tokens": 1748, "seconds": 53.91}
+{"id": "customs-patron-festivals/003", "answer": "C", "input_tokens": 291, "output_tokens": 49, "seconds": 40.34}
+{"id": "customs-patron-festivals/004", "answer": "B", "input_tokens": 290, "output_tokens": 1400, "seconds": 44.18}
+{"id": "customs-giants/001", "answer": "A", "input_tokens": 299, "output_tokens": 322, "seconds": 29.35}
+{"id": "customs-giants/002", "answer": "D", "input_tokens": 302, "output_tokens": 665, "seconds": 30.56}
+{"id": "customs-giants/003", "answer": "", "input_tokens": 270, "output_tokens": 4000, "seconds": 52.35}
+{"id": "customs-meritxell/001", "answer": "A", "input_tokens": 332, "output_tokens": 72, "seconds": 15.06}
+{"id": "customs-meritxell/002", "answer": "", "input_tokens": 287, "output_tokens": 4000, "seconds": 51.2}
+{"id": "customs-meritxell/003", "answer": "El 1972, un incendi va destruir l’església històrica del santuari de Meritxell. Es va reconstruir amb traça i estil romànics, conservant-ne alguns vestigis, i la nova església va ser inaugurada el 1975.", "input_tokens": 251, "output_tokens": 1017, "seconds": 55.87}
+{"id": "customs-religiosity/002", "answer": "C", "input_tokens": 291, "output_tokens": 92, "seconds": 23.31}
+{"id": "customs-religiosity/003", "answer": "D", "input_tokens": 297, "output_tokens": 914, "seconds": 27.83}
+{"id": "customs-religiosity/004", "answer": "B", "input_tokens": 340, "output_tokens": 429, "seconds": 27.6}
+{"id": "customs-religiosity/005", "answer": "B", "input_tokens": 286, "output_tokens": 284, "seconds": 28.94}
+{"id": "customs-religiosity/006", "answer": "D", "input_tokens": 289, "output_tokens": 138, "seconds": 21.97}
+{"id": "customs-religiosity/007", "answer": "El bisbe d’Urgell és el co-príncep episcopal d’Andorra, al costat del president de la República. El 1878, Josep Caixal i Estradé, aleshores bisbe d’Urgell, va proclamar la Mare de Déu de Meritxell patrona d’Andorra.", "input_tokens": 264, "output_tokens": 1013, "seconds": 31.6}
+{"id": "customs-religiosity/008", "answer": "", "input_tokens": 251, "output_tokens": 4000, "seconds": 71.55}
+{"id": "customs-religiosity/009", "answer": "El 1873, el Papa Pius IX proclamà la Mare de Déu de Meritxell patrona d’Andorra en reconeixement de la llarga devoção popular al santuari i de la protecció que la-pagesa li atribuïa. La declaració oficialitzà un cult ancestral ja existent.", "input_tokens": 256, "output_tokens": 3466, "seconds": 64.29}
+{"id": "customs-religiosity/001", "answer": "D", "input_tokens": 280, "output_tokens": 2, "seconds": 33.08}
+{"id": "customs-rites-of-passage/001", "answer": "B", "input_tokens": 321, "output_tokens": 2418, "seconds": 39.17}
+{"id": "customs-rites-of-passage/002", "answer": "C", "input_tokens": 307, "output_tokens": 983, "seconds": 27.74}
+{"id": "customs-rites-of-passage/003", "answer": "A", "input_tokens": 340, "output_tokens": 2, "seconds": 23.46}
+{"id": "customs-rites-of-passage/004", "error": "HTTP 429: {\"error\":\"too many concurrent requests\"}\n"}
+{"id": "customs-rites-of-passage/005", "answer": "", "input_tokens": 266, "output_tokens": 4000, "seconds": 66.37}
+{"id": "customs-rites-of-passage/006", "answer": "", "input_tokens": 265, "output_tokens": 4000, "seconds": 72.22}
+{"id": "customs-sant-antoni/001", "answer": "A", "input_tokens": 281, "output_tokens": 90, "seconds": 55.43}
+{"id": "customs-sant-antoni/002", "answer": "A", "input_tokens": 316, "output_tokens": 278, "seconds": 19.59}
+{"id": "customs-sant-antoni/003", "answer": "", "input_tokens": 260, "output_tokens": 4000, "seconds": 56.23}
+{"id": "culture-andorra-seen-from-abroad/001", "answer": "", "input_tokens": 323, "output_tokens": 4000, "seconds": 50.98}
+{"id": "culture-andorra-seen-from-abroad/002", "answer": "D", "input_tokens": 302, "output_tokens": 612, "seconds": 41.81}
+{"id": "culture-andorra-seen-from-abroad/003", "answer": "A", "input_tokens": 297, "output_tokens": 285, "seconds": 10.16}
+{"id": "culture-andorra-seen-from-abroad/004", "answer": "C", "input_tokens": 278, "output_tokens": 358, "seconds": 13.41}
+{"id": "culture-andorra-seen-from-abroad/005", "answer": "B", "input_tokens": 320, "output_tokens": 2, "seconds": 13.7}
+{"id": "culture-andorra-seen-from-abroad/006", "answer": "A", "input_tokens": 295, "output_tokens": 525, "seconds": 18.84}
+{"id": "culture-andorra-seen-from-abroad/007", "answer": "Perquè molts autors eren estrangers que només visitaren Andorra de pas i coneixien poc la llengua, les costums i la realitat social. A més, accentuaven el caràcter romàntic i exòtic per adjusted a les expectatives europees i a les demandes del mercat. Per tant, reflecteixen més la imaginació i els estereotips de l’època que la vida quotidiana del país.", "input_tokens": 257, "output_tokens": 555, "seconds": 30.78}
+{"id": "culture-andorra-seen-from-abroad/008", "answer": "Les guies de viatge französesesproviding dades més verificables sobre camins, serveis, economia i institucions, encara que reflecteixin els biais dels autors. Els gravats romàntics són més idealsitzats i estètics, i serveixen sobretot per reconstruir la imatge符èmica d’Andorra, amb menor fiabilitat per als fets concrets.", "input_tokens": 268, "output_tokens": 337, "seconds": 35.18}
+{"id": "culture-andorra-seen-from-abroad/009", "answer": "Perquè el tabac és molt consumit, fàcil de gravar i de contrabandar, cosa que permetia a l’estat controlar-ne el comerç i obtenir recursos. El monopoli, nascut de la tradició de tràfic entre França i Espanya, s’ha mantingut gràcies al seu valor tributari i a concessions estatals històriques.", "input_tokens": 258, "output_tokens": 573, "seconds": 43.41}
+{"id": "culture-architecture/001", "answer": "A", "input_tokens": 291, "output_tokens": 618, "seconds": 35.05}
+{"id": "culture-architecture/002", "answer": "A", "input_tokens": 307, "output_tokens": 190, "seconds": 33.45}
+{"id": "culture-architecture/003", "answer": "B", "input_tokens": 313, "output_tokens": 2, "seconds": 17.33}
+{"id": "culture-architecture/004", "answer": "", "input_tokens": 306, "output_tokens": 4000, "seconds": 60.92}
+{"id": "culture-architecture/005", "answer": "A", "input_tokens": 327, "output_tokens": 313, "seconds": 49.8}
+{"id": "culture-architecture/006", "answer": "", "input_tokens": 285, "output_tokens": 4000, "seconds": 83.32}
+{"id": "culture-architecture/007", "answer": "", "input_tokens": 284, "output_tokens": 4000, "seconds": 61.11}
+{"id": "culture-architecture/008", "answer": "", "input_tokens": 255, "output_tokens": 4000, "seconds": 65.03}
+{"id": "culture-architecture/009", "answer": "Van néixer com a elements defensius: les finestres baixes de les cases rurals eren fàcilment accessibles i els punxes de forja dissuadiaven lladres i intrusos. Amb el temps es convertiren en un tret emblemàtic d’Andorra, encara que no són exclusius en un sentit estrictament històric.", "input_tokens": 270, "output_tokens": 2139, "seconds": 52.98}
+{"id": "culture-crafts/001", "answer": "A", "input_tokens": 281, "output_tokens": 195, "seconds": 22.29}
+{"id": "culture-crafts/002", "answer": "A", "input_tokens": 292, "output_tokens": 1160, "seconds": 32.03}
+{"id": "culture-crafts/003", "answer": "D", "input_tokens": 337, "output_tokens": 678, "seconds": 22.23}
+{"id": "culture-crafts/004", "answer": "B", "input_tokens": 292, "output_tokens": 616, "seconds": 19.65}
+{"id": "culture-crafts/005", "answer": "B", "input_tokens": 330, "output_tokens": 2, "seconds": 16.69}
+{"id": "culture-crafts/006", "answer": "", "input_tokens": 267, "output_tokens": 4000, "seconds": 60.24}
+{"id": "culture-crafts/007", "answer": "", "input_tokens": 254, "output_tokens": 4000, "seconds": 62.2}
+{"id": "culture-visual-arts/001", "error": "HTTP 429: {\"error\":\"too many concurrent requests\"}\n"}
+{"id": "culture-visual-arts/002", "answer": "B", "input_tokens": 297, "output_tokens": 829, "seconds": 113.09}
+{"id": "culture-visual-arts/003", "answer": "B", "input_tokens": 326, "output_tokens": 2955, "seconds": 47.85}
+{"id": "culture-visual-arts/005", "answer": "C", "input_tokens": 307, "output_tokens": 373, "seconds": 40.97}
+{"id": "culture-visual-arts/006", "answer": "B", "input_tokens": 300, "output_tokens": 104, "seconds": 27.03}
+{"id": "culture-visual-arts/007", "answer": "", "input_tokens": 263, "output_tokens": 4000, "seconds": 117.92}
+{"id": "culture-visual-arts/008", "answer": "Sergi Mas va fundar l’Escola d’Art Comunal de Sant Julià de Lòria i n’ha exercit la direcció.", "input_tokens": 259, "output_tokens": 3843, "seconds": 57.1}
+{"id": "culture-visual-arts/009", "answer": "Perquè l’escultura conserva la signatura de Sergi Mas i la documentació contemporània en confirma la modelació i l’entrega a l’Ajuntament. L’autoria, doncs, està documentada, i no és una simple atribució basada en l’estil.", "input_tokens": 266, "output_tokens": 3307, "seconds": 79.83}
+{"id": "culture-visual-arts/004", "answer": "B", "input_tokens": 297, "output_tokens": 326, "seconds": 57.24}
+{"id": "culture-popular-culture/001", "answer": "D", "input_tokens": 299, "output_tokens": 408, "seconds": 25.11}
+{"id": "culture-popular-culture/002", "answer": "C", "input_tokens": 306, "output_tokens": 423, "seconds": 26.55}
+{"id": "culture-popular-culture/003", "answer": "D", "input_tokens": 305, "output_tokens": 612, "seconds": 39.17}
+{"id": "culture-popular-culture/004", "answer": "A", "input_tokens": 312, "output_tokens": 555, "seconds": 42.79}
+{"id": "culture-popular-culture/005", "answer": "", "input_tokens": 272, "output_tokens": 4000, "seconds": 76.77}
+{"id": "culture-popular-culture/006", "answer": "La seva arrel medieval es va mantenir per la transmissió popular de generació en generació, com a expressió de la identitat d’Andorra la Vella. El seu €supò? no depèn d’una ordre oficial, sinó de la participació comunitària i de la continuitat de les festes.", "input_tokens": 262, "output_tokens": 1056, "seconds": 55.21}
+{"id": "culture-literature/001", "answer": "B", "input_tokens": 307, "output_tokens": 336, "seconds": 48.37}
+{"id": "culture-literature/002", "answer": "A", "input_tokens": 332, "output_tokens": 2, "seconds": 20.34}
+{"id": "culture-literature/003", "answer": "", "input_tokens": 264, "output_tokens": 4000, "seconds": 61.39}
+{"id": "culture-legends/001", "answer": "B", "input_tokens": 341, "output_tokens": 56, "seconds": 20.4}
+{"id": "culture-legends/002", "answer": "C", "input_tokens": 304, "output_tokens": 2, "seconds": 37.57}
+{"id": "culture-legends/003", "answer": "Perquè, segons el folklore, els minairons les construïen per servir-se’n com a refugi i amagar-hi els tresors extrets de les mines.", "input_tokens": 254, "output_tokens": 2898, "seconds": 75.91}
+{"id": "culture-legends/004", "answer": "", "input_tokens": 297, "output_tokens": 4000, "seconds": 69.93}
+{"id": "culture-legends/005", "answer": "A", "input_tokens": 339, "output_tokens": 2, "seconds": 55.49}
+{"id": "culture-legends/006", "error": "HTTP 429: {\"error\":\"too many concurrent requests\"}\n"}
+{"id": "culture-legends/007", "answer": "B", "input_tokens": 292, "output_tokens": 190, "seconds": 40.28}
+{"id": "culture-legends/008", "answer": "", "input_tokens": 271, "output_tokens": 4000, "seconds": 68.0}
+{"id": "culture-legends/009", "answer": "", "input_tokens": 269, "output_tokens": 4000, "seconds": 77.93}
+{"id": "culture-museums-and-archives/001", "answer": "B", "input_tokens": 332, "output_tokens": 168, "seconds": 56.26}
+{"id": "culture-museums-and-archives/002", "answer": "C", "input_tokens": 302, "output_tokens": 493, "seconds": 30.28}
+{"id": "culture-museums-and-archives/003", "answer": "D", "input_tokens": 302, "output_tokens": 160, "seconds": 24.6}
+{"id": "culture-museums-and-archives/004", "answer": "A", "input_tokens": 305, "output_tokens": 69, "seconds": 25.82}
+{"id": "culture-museums-and-archives/005", "answer": "A", "input_tokens": 298, "output_tokens": 280, "seconds": 41.64}
+{"id": "culture-museums-and-archives/006", "answer": "D", "input_tokens": 295, "output_tokens": 1438, "seconds": 52.93}
+{"id": "culture-museums-and-archives/007", "answer": "", "input_tokens": 251, "output_tokens": 4000, "seconds": 81.0}
+{"id": "culture-museums-and-archives/008", "answer": "", "input_tokens": 261, "output_tokens": 4000, "seconds": 95.86}
+{"id": "culture-museums-and-archives/009", "answer": "", "input_tokens": 262, "output_tokens": 4000, "seconds": 109.6}
+{"id": "culture-music-and-songs/001", "answer": "A", "input_tokens": 313, "output_tokens": 62, "seconds": 51.91}
+{"id": "culture-music-and-songs/002", "answer": "A", "input_tokens": 275, "output_tokens": 150, "seconds": 37.24}
+{"id": "culture-music-and-songs/003", "answer": "B", "input_tokens": 295, "output_tokens": 518, "seconds": 42.08}
+{"id": "culture-music-and-songs/005", "answer": "", "input_tokens": 291, "output_tokens": 4000, "seconds": 50.85}
+{"id": "culture-music-and-songs/006", "answer": "D", "input_tokens": 328, "output_tokens": 2, "seconds": 24.75}
+{"id": "culture-music-and-songs/007", "answer": "", "input_tokens": 260, "output_tokens": 4000, "seconds": 83.06}
+{"id": "culture-music-and-songs/008", "answer": "", "input_tokens": 259, "output_tokens": 4000, "seconds": 77.51}
+{"id": "culture-music-and-songs/009", "answer": "", "input_tokens": 257, "output_tokens": 4000, "seconds": 91.34}
+{"id": "culture-music-and-songs/004", "answer": "D", "input_tokens": 302, "output_tokens": 994, "seconds": 81.5}
+{"id": "culture-loose/001", "answer": "", "input_tokens": 296, "output_tokens": 4000, "seconds": 88.16}
+{"id": "culture-loose/002", "answer": "", "input_tokens": 307, "output_tokens": 4000, "seconds": 95.23}
+{"id": "culture-loose/003", "answer": "", "input_tokens": 262, "output_tokens": 4000, "seconds": 120.66}
+{"id": "culture-theatre/001", "answer": "B", "input_tokens": 296, "output_tokens": 246, "seconds": 97.26}
+{"id": "culture-theatre/002", "answer": "", "input_tokens": 284, "output_tokens": 4000, "seconds": 471.08}
+{"id": "culture-theatre/003", "answer": "", "input_tokens": 259, "output_tokens": 4000, "seconds": 100.81}
+{"id": "economy-banking-and-tax/001", "answer": "D", "input_tokens": 305, "output_tokens": 156, "seconds": 48.71}
+{"id": "economy-banking-and-tax/003", "answer": "A", "input_tokens": 283, "output_tokens": 482, "seconds": 67.29}
+{"id": "economy-banking-and-tax/004", "answer": "", "input_tokens": 308, "output_tokens": 4000, "seconds": 68.6}
+{"id": "economy-banking-and-tax/005", "answer": "", "input_tokens": 296, "output_tokens": 4000, "seconds": 73.92}
+{"id": "economy-banking-and-tax/006", "answer": "", "input_tokens": 297, "output_tokens": 4000, "seconds": 94.92}
+{"id": "economy-banking-and-tax/007", "answer": "", "input_tokens": 271, "output_tokens": 4000, "seconds": 87.49}
+{"id": "economy-banking-and-tax/008", "answer": "", "input_tokens": 273, "output_tokens": 4000, "seconds": 92.39}
+{"id": "economy-banking-and-tax/009", "answer": "Perquè aleshores la plaça Rebés era el nucli comercial més actiu i cèntric d’Andorra la Vella, on es concentraven els principals comerços i serveis. La seu ubicació hi proporcionava visibilitat i facilitava l’accés de la clientela.", "input_tokens": 268, "output_tokens": 3422, "seconds": 462.89}
+{"id": "economy-banking-and-tax/002", "answer": "C", "input_tokens": 313, "output_tokens": 301, "seconds": 35.7}
+{"id": "economy-trade/001", "answer": "", "input_tokens": 325, "output_tokens": 4000, "seconds": 64.26}
+{"id": "economy-trade/003", "answer": "C", "input_tokens": 312, "output_tokens": 374, "seconds": 50.83}
+{"id": "economy-trade/005", "answer": "A", "input_tokens": 315, "output_tokens": 597, "seconds": 17.29}
+{"id": "economy-trade/006", "error": "HTTP 429: {\"error\":\"too many concurrent requests\"}\n"}
+{"id": "economy-trade/007", "answer": "", "input_tokens": 275, "output_tokens": 4000, "seconds": 66.65}
+{"id": "economy-trade/008", "answer": "", "input_tokens": 269, "output_tokens": 4000, "seconds": 80.82}
+{"id": "economy-trade/009", "answer": "El «caballó» era una unitat tradicional d’uns 10,17 metres, pràctica per delimitar i calcular els trams dels camins. El seu nom reflects la importància històrica del cavall com a mitjà de transport a l’Andorra, abans de l’adopció del sistema mètric.", "input_tokens": 259, "output_tokens": 2245, "seconds": 78.71}
+{"id": "economy-trade/002", "answer": "D", "input_tokens": 291, "output_tokens": 910, "seconds": 44.42}
+{"id": "economy-trade/004", "answer": "A", "input_tokens": 298, "output_tokens": 1012, "seconds": 32.55}
+{"id": "economy-energy-and-utilities/001", "answer": "D", "input_tokens": 315, "output_tokens": 79, "seconds": 38.11}
+{"id": "economy-energy-and-utilities/002", "answer": "B", "input_tokens": 307, "output_tokens": 160, "seconds": 35.15}
+{"id": "economy-energy-and-utilities/003", "answer": "C", "input_tokens": 304, "output_tokens": 97, "seconds": 43.18}
+{"id": "economy-energy-and-utilities/004", "answer": "B", "input_tokens": 336, "output_tokens": 368, "seconds": 41.29}
+{"id": "economy-energy-and-utilities/005", "answer": "D", "input_tokens": 323, "output_tokens": 361, "seconds": 39.75}
+{"id": "economy-energy-and-utilities/006", "answer": "D", "input_tokens": 338, "output_tokens": 1299, "seconds": 42.5}
+{"id": "economy-energy-and-utilities/007", "answer": "", "input_tokens": 263, "output_tokens": 4000, "seconds": 67.03}
+{"id": "economy-energy-and-utilities/008", "answer": "", "input_tokens": 266, "output_tokens": 4000, "seconds": 75.17}
+{"id": "customs-festive-calendar/002", "answer": "C", "input_tokens": 346, "output_tokens": 3, "seconds": 1.16}
+{"id": "customs-festive-calendar/005", "answer": "", "input_tokens": 254, "output_tokens": 4000, "seconds": 25.68}
+{"id": "customs-festive-calendar/001", "answer": "B", "input_tokens": 299, "output_tokens": 377, "seconds": 3.48}
+{"id": "customs-festive-calendar/004", "answer": "C", "input_tokens": 287, "output_tokens": 443, "seconds": 8.56}
+{"id": "customs-festive-calendar/006", "answer": "", "input_tokens": 265, "output_tokens": 4000, "seconds": 43.84}
+{"id": "customs-caramelles/001", "answer": "B", "input_tokens": 310, "output_tokens": 867, "seconds": 9.78}
+{"id": "customs-dances/008", "answer": "", "input_tokens": 263, "output_tokens": 4000, "seconds": 26.9}
+{"id": "customs-rites-of-passage/004", "answer": "D", "input_tokens": 333, "output_tokens": 3, "seconds": 0.8}
+{"id": "culture-visual-arts/001", "answer": "B", "input_tokens": 296, "output_tokens": 1272, "seconds": 9.42}
+{"id": "culture-legends/006", "answer": "", "input_tokens": 303, "output_tokens": 4000, "seconds": 28.17}
+{"id": "economy-trade/006", "answer": "B", "input_tokens": 347, "output_tokens": 3, "seconds": 1.1}
+{"id": "economy-energy-and-utilities/009", "answer": "Perquè Andorra no disposava de fonts pròpies de generació elèctrica i necessitava un sistema nacional de subministrament. La central aprofitava les aigues del Valira per cobrir la demanda interna i reduir la dependència de l’exterior.", "input_tokens": 271, "output_tokens": 1073, "seconds": 12.43}
+{"id": "economy-great-families/001", "answer": "B", "input_tokens": 328, "output_tokens": 784, "seconds": 5.41}
+{"id": "economy-great-families/002", "answer": "C", "input_tokens": 307, "output_tokens": 3, "seconds": 1.34}
+{"id": "economy-great-families/003", "answer": "", "input_tokens": 263, "output_tokens": 4000, "seconds": 37.27}
+{"id": "economy-livestock-and-farming/001", "answer": "B", "input_tokens": 288, "output_tokens": 304, "seconds": 5.71}
+{"id": "economy-livestock-and-farming/002", "answer": "B", "input_tokens": 327, "output_tokens": 1683, "seconds": 13.29}
+{"id": "economy-livestock-and-farming/004", "answer": "A", "input_tokens": 339, "output_tokens": 203, "seconds": 2.04}
+{"id": "economy-livestock-and-farming/005", "answer": "C", "input_tokens": 306, "output_tokens": 3, "seconds": 0.75}
+{"id": "economy-livestock-and-farming/006", "answer": "D", "input_tokens": 348, "output_tokens": 3, "seconds": 1.23}
+{"id": "economy-livestock-and-farming/007", "answer": "", "input_tokens": 266, "output_tokens": 4000, "seconds": 30.91}
+{"id": "economy-livestock-and-farming/008", "answer": "", "input_tokens": 260, "output_tokens": 4000, "seconds": 29.25}
+{"id": "economy-livestock-and-farming/009", "answer": "La fil·loxera va atacar les arrels de les cepes europees, molt sensibles a la plaga, i va destruir la majoria de les vinyes. Com que no es va poder combatre eficaçment ni plantar massivament cepes americanes resistents, moltes vinyes es van abandonar.", "input_tokens": 255, "output_tokens": 614, "seconds": 6.63}
+{"id": "economy-livestock-and-farming/003", "answer": "", "input_tokens": 287, "output_tokens": 4000, "seconds": 64.47}
+{"id": "economy-tobacco/001", "answer": "C", "input_tokens": 307, "output_tokens": 2496, "seconds": 19.28}
+{"id": "economy-tobacco/002", "answer": "B", "input_tokens": 308, "output_tokens": 3225, "seconds": 34.76}
+{"id": "economy-tobacco/003", "answer": "A", "input_tokens": 301, "output_tokens": 161, "seconds": 8.72}
+{"id": "economy-tobacco/004", "answer": "", "input_tokens": 333, "output_tokens": 4000, "seconds": 28.85}
+{"id": "economy-tobacco/005", "answer": "B", "input_tokens": 299, "output_tokens": 2605, "seconds": 21.34}
+{"id": "economy-tobacco/006", "answer": "", "input_tokens": 305, "output_tokens": 4000, "seconds": 26.61}
+{"id": "economy-tobacco/007", "answer": "", "input_tokens": 272, "output_tokens": 4000, "seconds": 35.43}
+{"id": "economy-tobacco/008", "answer": "", "input_tokens": 275, "output_tokens": 4000, "seconds": 31.72}
+{"id": "economy-tobacco/009", "answer": "", "input_tokens": 268, "output_tokens": 4000, "seconds": 59.06}
+{"id": "economy-economic-transformation/001", "answer": "B", "input_tokens": 342, "output_tokens": 509, "seconds": 4.13}
+{"id": "economy-economic-transformation/002", "answer": "A", "input_tokens": 277, "output_tokens": 2940, "seconds": 18.62}
+{"id": "economy-economic-transformation/003", "answer": "B", "input_tokens": 293, "output_tokens": 1909, "seconds": 12.16}
+{"id": "economy-economic-transformation/004", "answer": "D", "input_tokens": 329, "output_tokens": 1464, "seconds": 10.83}
+{"id": "economy-economic-transformation/005", "answer": "B", "input_tokens": 292, "output_tokens": 1539, "seconds": 12.32}
+{"id": "economy-economic-transformation/006", "answer": "", "input_tokens": 279, "output_tokens": 4000, "seconds": 26.36}
+{"id": "economy-economic-transformation/007", "answer": "", "input_tokens": 275, "output_tokens": 4000, "seconds": 26.59}
+{"id": "economy-economic-transformation/008", "answer": "", "input_tokens": 260, "output_tokens": 4000, "seconds": 32.44}
+{"id": "economy-economic-transformation/009", "answer": "", "input_tokens": 264, "output_tokens": 4000, "seconds": 35.35}
+{"id": "economy-transport/002", "answer": "C", "input_tokens": 299, "output_tokens": 111, "seconds": 1.75}
+{"id": "economy-transport/004", "answer": "D", "input_tokens": 345, "output_tokens": 1178, "seconds": 7.94}
+{"id": "economy-transport/005", "answer": "A", "input_tokens": 317, "output_tokens": 2878, "seconds": 27.28}
+{"id": "economy-transport/006", "answer": "A", "input_tokens": 288, "output_tokens": 378, "seconds": 2.97}
+{"id": "economy-transport/007", "answer": "", "input_tokens": 254, "output_tokens": 4000, "seconds": 24.87}
+{"id": "economy-transport/008", "answer": "", "input_tokens": 260, "output_tokens": 4000, "seconds": 25.74}
+{"id": "economy-transport/009", "answer": "", "input_tokens": 278, "output_tokens": 4000, "seconds": 31.21}
+{"id": "economy-transport/001", "answer": "A", "input_tokens": 278, "output_tokens": 104, "seconds": 1.59}
+{"id": "economy-transport/003", "answer": "B", "input_tokens": 272, "output_tokens": 3, "seconds": 2.84}
+{"id": "economy-tourism-and-snow/001", "answer": "", "input_tokens": 282, "output_tokens": 4000, "seconds": 37.02}
+{"id": "economy-tourism-and-snow/002", "answer": "B", "input_tokens": 299, "output_tokens": 2065, "seconds": 14.62}
+{"id": "economy-tourism-and-snow/003", "answer": "A", "input_tokens": 329, "output_tokens": 407, "seconds": 4.17}
+{"id": "economy-tourism-and-snow/004", "answer": "C", "input_tokens": 286, "output_tokens": 93, "seconds": 2.65}
+{"id": "economy-tourism-and-snow/005", "answer": "B", "input_tokens": 300, "output_tokens": 1191, "seconds": 12.69}
+{"id": "economy-tourism-and-snow/006", "answer": "", "input_tokens": 0, "output_tokens": 0, "seconds": 260.46}
+{"id": "economy-tourism-and-snow/007", "answer": "", "input_tokens": 263, "output_tokens": 4000, "seconds": 29.47}
+{"id": "economy-tourism-and-snow/008", "answer": "", "input_tokens": 257, "output_tokens": 4000, "seconds": 29.45}
+{"id": "economy-tourism-and-snow/009", "answer": "", "input_tokens": 266, "output_tokens": 4000, "seconds": 60.81}
+{"id": "sports-other-sports/001", "answer": "A", "input_tokens": 311, "output_tokens": 907, "seconds": 8.89}
+{"id": "sports-other-sports/002", "answer": "C", "input_tokens": 301, "output_tokens": 3, "seconds": 0.73}
+{"id": "sports-other-sports/003", "answer": "A", "input_tokens": 331, "output_tokens": 155, "seconds": 1.47}
+{"id": "sports-other-sports/004", "answer": "A", "input_tokens": 303, "output_tokens": 1979, "seconds": 15.45}
+{"id": "sports-other-sports/005", "answer": "B", "input_tokens": 294, "output_tokens": 54, "seconds": 1.11}
+{"id": "sports-other-sports/006", "answer": "", "input_tokens": 309, "output_tokens": 4000, "seconds": 24.75}
+{"id": "sports-other-sports/007", "answer": "", "input_tokens": 256, "output_tokens": 4000, "seconds": 23.98}
+{"id": "sports-other-sports/008", "answer": "", "input_tokens": 258, "output_tokens": 4000, "seconds": 39.0}
+{"id": "sports-other-sports/009", "answer": "El 2005, Cyril Despres va guanyar el Dakar en la categoria de motos amb una KTM i, del 2010 al 2013, va encadenar quatre victòries més al volant d’un Toyota Hilux preparat per Prodrive. La seva experiència, la bona preparació i la regularitat hi van ser clau; tot i néixer a França, va obtenir la nacionalitat andorrana el 2013.", "input_tokens": 250, "output_tokens": 2363, "seconds": 23.83}
+{"id": "sports-competition/001", "answer": "C", "input_tokens": 289, "output_tokens": 271, "seconds": 2.58}
+{"id": "sports-competition/002", "answer": "C", "input_tokens": 308, "output_tokens": 3, "seconds": 0.67}
+{"id": "sports-competition/003", "answer": "C", "input_tokens": 298, "output_tokens": 365, "seconds": 3.19}
+{"id": "sports-competition/004", "answer": "B", "input_tokens": 283, "output_tokens": 1928, "seconds": 10.89}
+{"id": "sports-competition/005", "answer": "B", "input_tokens": 311, "output_tokens": 3, "seconds": 1.42}
+{"id": "sports-competition/006", "answer": "B", "input_tokens": 310, "output_tokens": 513, "seconds": 3.98}
+{"id": "sports-competition/007", "answer": "", "input_tokens": 264, "output_tokens": 4000, "seconds": 24.37}
+{"id": "sports-competition/008", "answer": "", "input_tokens": 261, "output_tokens": 4000, "seconds": 23.63}
+{"id": "sports-competition/009", "answer": "", "input_tokens": 262, "output_tokens": 4000, "seconds": 23.99}
+{"id": "sports-chess/001", "answer": "B", "input_tokens": 309, "output_tokens": 422, "seconds": 3.49}
+{"id": "sports-chess/002", "answer": "D", "input_tokens": 294, "output_tokens": 290, "seconds": 2.45}
+{"id": "sports-chess/003", "answer": "C", "input_tokens": 300, "output_tokens": 192, "seconds": 2.27}
+{"id": "sports-chess/004", "answer": "B", "input_tokens": 306, "output_tokens": 686, "seconds": 6.62}
+{"id": "sports-chess/005", "answer": "", "input_tokens": 301, "output_tokens": 4000, "seconds": 32.46}
+{"id": "sports-chess/006", "answer": "B", "input_tokens": 297, "output_tokens": 116, "seconds": 1.75}
+{"id": "sports-chess/008", "answer": "", "input_tokens": 264, "output_tokens": 4000, "seconds": 23.6}
+{"id": "sports-chess/009", "answer": "Òscar de la Riva va guanyar l’edició de 1998 perquè va acabar primer a la classificació general, amb el millor total de punts del tornneig.", "input_tokens": 259, "output_tokens": 2950, "seconds": 31.83}
+{"id": "sports-chess/007", "answer": "", "input_tokens": 267, "output_tokens": 4000, "seconds": 52.33}
+{"id": "sports-skiing/001", "answer": "B", "input_tokens": 297, "output_tokens": 3718, "seconds": 28.98}
+{"id": "sports-skiing/002", "answer": "C", "input_tokens": 299, "output_tokens": 3, "seconds": 0.69}
+{"id": "sports-skiing/003", "answer": "C", "input_tokens": 307, "output_tokens": 3804, "seconds": 22.72}
+{"id": "sports-skiing/006", "answer": "C", "input_tokens": 285, "output_tokens": 199, "seconds": 1.8}
+{"id": "sports-skiing/007", "answer": "", "input_tokens": 284, "output_tokens": 4000, "seconds": 25.1}
+{"id": "sports-skiing/008", "answer": "", "input_tokens": 275, "output_tokens": 4000, "seconds": 36.78}
+{"id": "sports-skiing/009", "answer": "Perquè cap esquiador de fons andorrà no complia els criteris de qualificació de la FIS. El 2010, a Vancouver, Jordi Ràdua va ser el primer representant d’Andorra en aquesta especialitat.", "input_tokens": 258, "output_tokens": 3078, "seconds": 30.75}
+{"id": "sports-skiing/004", "answer": "A", "input_tokens": 291, "output_tokens": 554, "seconds": 3.91}
+{"id": "sports-skiing/005", "answer": "D", "input_tokens": 300, "output_tokens": 807, "seconds": 8.2}
+{"id": "sports-summer/001", "answer": "A", "input_tokens": 292, "output_tokens": 83, "seconds": 1.59}
+{"id": "sports-summer/002", "answer": "B", "input_tokens": 291, "output_tokens": 1015, "seconds": 6.94}
+{"id": "sports-summer/003", "answer": "C", "input_tokens": 284, "output_tokens": 315, "seconds": 2.81}
+{"id": "sports-summer/004", "answer": "B", "input_tokens": 324, "output_tokens": 3, "seconds": 0.73}
+{"id": "sports-summer/005", "answer": "B", "input_tokens": 296, "output_tokens": 225, "seconds": 2.51}
+{"id": "sports-summer/006", "answer": "C", "input_tokens": 285, "output_tokens": 508, "seconds": 5.03}
+{"id": "sports-summer/009", "answer": "Antoni Bernadó va obtenir la bronze de manera indirecta: va quedar quart a la marató de Barcelona 1992, i se li va reatribuir la medalla quan el tercer classificat, el portuguès António Pinto, va ser desqualificat per dopatge.", "input_tokens": 245, "output_tokens": 2383, "seconds": 15.99}
+{"id": "sports-summer/007", "answer": "Va ser l’atleta Marc Muns, que a la inauguració de Tòquio 2020 va portar la bandera d’Andorra acompanyat per la judoista Maria Martín.", "input_tokens": 279, "output_tokens": 3192, "seconds": 22.92}
+{"id": "sports-summer/008", "answer": "", "input_tokens": 268, "output_tokens": 4000, "seconds": 23.28}
+{"id": "sports-sports-training/001", "answer": "A", "input_tokens": 317, "output_tokens": 204, "seconds": 3.14}
+{"id": "sports-sports-training/002", "answer": "C", "input_tokens": 281, "output_tokens": 644, "seconds": 4.16}
+{"id": "sports-sports-training/003", "answer": "", "input_tokens": 278, "output_tokens": 4000, "seconds": 26.93}
+{"id": "sports-football/001", "answer": "C", "input_tokens": 283, "output_tokens": 123, "seconds": 1.78}
+{"id": "sports-football/002", "answer": "C", "input_tokens": 285, "output_tokens": 97, "seconds": 1.71}
+{"id": "sports-football/003", "answer": "B", "input_tokens": 337, "output_tokens": 3, "seconds": 1.11}
+{"id": "sports-football/004", "answer": "C", "input_tokens": 302, "output_tokens": 128, "seconds": 1.95}
+{"id": "sports-football/005", "answer": "C", "input_tokens": 297, "output_tokens": 439, "seconds": 4.15}
+{"id": "sports-football/006", "answer": "", "input_tokens": 300, "output_tokens": 4000, "seconds": 25.32}
+{"id": "sports-football/007", "answer": "Juli Sánchez va ser l’entrenador de la selecció masculina d’Andorra tant en el primer partit oficial com en el partit de la seva primera victòria", "input_tokens": 258, "output_tokens": 4000, "seconds": 32.18}
+{"id": "sports-football/008", "answer": "", "input_tokens": 255, "output_tokens": 4000, "seconds": 27.89}
+{"id": "sports-football/009", "answer": "", "input_tokens": 257, "output_tokens": 4000, "seconds": 35.6}
+{"id": "sports-national-teams/001", "answer": "C", "input_tokens": 302, "output_tokens": 1377, "seconds": 9.27}
+{"id": "sports-national-teams/003", "answer": "A", "input_tokens": 298, "output_tokens": 510, "seconds": 7.57}
+{"id": "sports-national-teams/004", "answer": "", "input_tokens": 318, "output_tokens": 4000, "seconds": 25.12}
+{"id": "sports-national-teams/005", "answer": "C", "input_tokens": 313, "output_tokens": 121, "seconds": 1.86}
+{"id": "sports-national-teams/006", "answer": "A", "input_tokens": 287, "output_tokens": 2178, "seconds": 19.21}
+{"id": "sports-national-teams/007", "answer": "Malta va guanyar la final de l’U18 EuroBasket Divisió C per 74–68 davant Andorra, el 30 de juny de 2024.", "input_tokens": 263, "output_tokens": 2966, "seconds": 19.8}
+{"id": "sports-national-teams/002", "answer": "", "input_tokens": 304, "output_tokens": 4000, "seconds": 26.74}
+{"id": "sports-national-teams/008", "answer": "La selecció masculina d’Andorra va guanyar **4 Campionats d’Europa de països petits**, el **1998, 2003, 2005 i 2017**.", "input_tokens": 274, "output_tokens": 1880, "seconds": 15.97}
+{"id": "sports-national-teams/009", "answer": "", "input_tokens": 260, "output_tokens": 4000, "seconds": 35.62}
+{"id": "gastronomy-drinks/001", "answer": "B", "input_tokens": 298, "output_tokens": 1786, "seconds": 16.34}
+{"id": "gastronomy-drinks/002", "answer": "B", "input_tokens": 322, "output_tokens": 1481, "seconds": 10.01}
+{"id": "gastronomy-drinks/003", "answer": "Perquè a l’alta muntanya els rendiments són baixos i el cultiu és costós i poc mecanitzable, cosa que impedeix competir amb produccions de gran volum. Una qualitat diferenciada i una marca pròpia permeten vendre el vi a un preu superior, amortitzar la inversió iclaimed un posicionament propi.", "input_tokens": 280, "output_tokens": 435, "seconds": 4.32}
+{"id": "gastronomy-food-calendar/002", "answer": "C", "input_tokens": 326, "output_tokens": 190, "seconds": 2.05}
+{"id": "gastronomy-food-calendar/003", "answer": "Perquè no és una assignació arbitrària de plats a festes, sinó el resultat dels cicles climàtics, agrícoles i pastorals de la muntanya. Per exemple, el fred de l’hivern afavoreix l’escudella i la carn a l’olla, mentre que a la tardor l’abundància de bolets i de caça dona lloc a aquests ingredients.", "input_tokens": 270, "output_tokens": 3241, "seconds": 22.79}
+{"id": "gastronomy-food-calendar/001", "answer": "A", "input_tokens": 297, "output_tokens": 41, "seconds": 1.36}
+{"id": "gastronomy-food-history/001", "answer": "B", "input_tokens": 326, "output_tokens": 1225, "seconds": 8.27}
+{"id": "gastronomy-food-history/002", "answer": "C", "input_tokens": 287, "output_tokens": 93, "seconds": 2.03}
+{"id": "gastronomy-food-history/003", "answer": "", "input_tokens": 292, "output_tokens": 4000, "seconds": 25.98}
+{"id": "gastronomy-food-history/004", "answer": "D", "input_tokens": 313, "output_tokens": 370, "seconds": 5.32}
+{"id": "gastronomy-food-history/005", "answer": "C", "input_tokens": 310, "output_tokens": 240, "seconds": 2.38}
+{"id": "gastronomy-food-history/006", "answer": "B", "input_tokens": 323, "output_tokens": 3, "seconds": 1.05}
+{"id": "gastronomy-food-history/007", "answer": "Als anys seixanta, la cuina tradicional andorrana va perdre espai en les llars, tot i que es va començar a difondre en hotels i restaurants. L’emigració, l’abandonament de la vida rural i l’expansió del turisme, amb influències culinaris estrangeres, en van ser les principals causes.", "input_tokens": 254, "output_tokens": 3285, "seconds": 24.41}
+{"id": "gastronomy-food-history/008", "answer": "", "input_tokens": 277, "output_tokens": 4000, "seconds": 27.45}
+{"id": "gastronomy-food-history/009", "answer": "Perquè la taula era el centre de la vida domèstica rural: es preparava un sol àpat per a tothom, que s’hi asseia, sovint en bancs. Aquesta pràctica era alhora econòmica, per evitar àpats individuals, i social, per mantenir la cohesió i la jerarquia familiar.", "input_tokens": 268, "output_tokens": 3594, "seconds": 24.16}
+{"id": "gastronomy-dishes/001", "answer": "", "input_tokens": 290, "output_tokens": 4000, "seconds": 44.12}
+{"id": "gastronomy-dishes/002", "answer": "D", "input_tokens": 291, "output_tokens": 188, "seconds": 1.79}
+{"id": "gastronomy-dishes/003", "answer": "D", "input_tokens": 304, "output_tokens": 3036, "seconds": 38.93}
+{"id": "gastronomy-dishes/004", "answer": "C", "input_tokens": 296, "output_tokens": 356, "seconds": 3.92}
+{"id": "gastronomy-dishes/005", "answer": "A", "input_tokens": 295, "output_tokens": 3, "seconds": 1.44}
+{"id": "gastronomy-dishes/006", "answer": "A", "input_tokens": 279, "output_tokens": 600, "seconds": 4.8}
+{"id": "gastronomy-dishes/007", "answer": "", "input_tokens": 268, "output_tokens": 4000, "seconds": 28.92}
+{"id": "gastronomy-dishes/008", "answer": "", "input_tokens": 250, "output_tokens": 4000, "seconds": 28.74}
+{"id": "gastronomy-dishes/009", "answer": "El trinxat no és un plat inventat ni exclusiu d’Andorra: és una truita tradicional de bacallà que es preparing arreu dels Països Catalans i altres regions mediterrànies. A Andorra es va popularitzar amb carn d’ovella i es va convertir en un dels emblemes de la cuina nacional.", "input_tokens": 251, "output_tokens": 277, "seconds": 3.97}
+{"id": "gastronomy-products/001", "answer": "B", "input_tokens": 368, "output_tokens": 672, "seconds": 4.41}
+{"id": "gastronomy-products/003", "answer": "A", "input_tokens": 305, "output_tokens": 3547, "seconds": 24.02}
+{"id": "gastronomy-products/004", "answer": "B", "input_tokens": 362, "output_tokens": 3, "seconds": 1.12}
+{"id": "gastronomy-products/006", "answer": "«Trumfa» és una forma d’arrel occitana o gascona, conservada a Andorra per la proximitat històrica amb els parlars del sud de França. No fou un mot inventat a Andorra: la seva pràctica exclusivitat es deu a què va restar una forma dialectal local, mentre que «patata» s’imposà a la resta del domini català.", "input_tokens": 269, "output_tokens": 3622, "seconds": 25.97}
+{"id": "gastronomy-products/002", "answer": "C", "input_tokens": 297, "output_tokens": 3088, "seconds": 28.79}
+{"id": "gastronomy-products/005", "answer": "", "input_tokens": 269, "output_tokens": 4000, "seconds": 29.81}
+{"id": "gastronomy-pastry/001", "answer": "B", "input_tokens": 311, "output_tokens": 3, "seconds": 1.2}
+{"id": "gastronomy-pastry/002", "answer": "A", "input_tokens": 303, "output_tokens": 133, "seconds": 2.88}
+{"id": "gastronomy-pastry/003", "answer": "La coca massegada es fa amb lliga, una massa dolça fermentada que s’apedassa en forma d’anell, es freix en oli i es cobreix amb sucre, de vegades amb canyella. És tradicional de la Pasqua i d’altres celebracions, i es menja com a esmorada o berberia dolça.", "input_tokens": 246, "output_tokens": 874, "seconds": 7.82}
+{"id": "history-old-regime/001", "answer": "A", "input_tokens": 354, "output_tokens": 3, "seconds": 0.93}
+{"id": "history-old-regime/002", "answer": "C", "input_tokens": 361, "output_tokens": 297, "seconds": 3.35}
+{"id": "history-old-regime/003", "answer": "C", "input_tokens": 363, "output_tokens": 3, "seconds": 6.32}
+{"id": "history-old-regime/004", "answer": "B", "input_tokens": 390, "output_tokens": 375, "seconds": 3.59}
+{"id": "history-old-regime/005", "answer": "C", "input_tokens": 365, "output_tokens": 508, "seconds": 3.69}
+{"id": "history-old-regime/006", "answer": "B", "input_tokens": 351, "output_tokens": 2453, "seconds": 19.72}
+{"id": "history-old-regime/007", "answer": "", "input_tokens": 254, "output_tokens": 4000, "seconds": 38.58}
+{"id": "history-old-regime/008", "answer": "", "input_tokens": 271, "output_tokens": 4000, "seconds": 30.85}
+{"id": "history-old-regime/009", "answer": "Ho va establir el paratge de 1278: el comte de Foix exercia el poder temporal i assumia la protecció d’Andorra, mentre que el bisbe d’Urgell es reservava l’autoritat espiritual i els tributs eclesiàstics. Per això, la quèstia —un impost fiscal civil anual— es cobrava al comte de Foix.", "input_tokens": 259, "output_tokens": 3578, "seconds": 33.39}
+{"id": "history-constitution-1993/002", "answer": "B", "input_tokens": 300, "output_tokens": 3, "seconds": 0.66}
+{"id": "history-constitution-1993/004", "answer": "B", "input_tokens": 344, "output_tokens": 3, "seconds": 0.76}
+{"id": "history-constitution-1993/005", "answer": "Si la llei no queda signada per tots dos coprínceps dins dels 15 dies de sanció, es retorna al Consell General perquè l’esclareixi en un altre termini de 15 dies. Si continua sense la signatura d’algun, el president del Consell General la publica (art. 63 de la Constitució).", "input_tokens": 263, "output_tokens": 2672, "seconds": 11.67}
+{"id": "history-constitution-1993/006", "answer": "", "input_tokens": 264, "output_tokens": 4000, "seconds": 33.01}
+{"id": "history-constitution-1993/003", "answer": "C", "input_tokens": 350, "output_tokens": 3, "seconds": 0.68}
+{"id": "history-constitution-1993/001", "answer": "D", "input_tokens": 291, "output_tokens": 3, "seconds": 1.41}
+{"id": "history-smuggling/001", "answer": "B", "input_tokens": 301, "output_tokens": 161, "seconds": 1.87}
+{"id": "history-smuggling/002", "answer": "D", "input_tokens": 310, "output_tokens": 3, "seconds": 0.82}
+{"id": "history-smuggling/003", "answer": "A", "input_tokens": 340, "output_tokens": 512, "seconds": 4.45}
+{"id": "history-smuggling/004", "answer": "A", "input_tokens": 332, "output_tokens": 2748, "seconds": 18.65}
+{"id": "history-smuggling/005", "answer": "", "input_tokens": 265, "output_tokens": 4000, "seconds": 30.92}
+{"id": "history-smuggling/006", "answer": "Després de la Segona Guerra Mundial, França i Espanya van reforçar els controls fronterers i Andorra va perdre els avantatges fiscals que feienigionà el contraban. Amb l’eliminació de les diferències de preu entre els països veïns, aquesta activitat va deixar de ser rentable.", "input_tokens": 250, "output_tokens": 1577, "seconds": 13.35}
+{"id": "history-democratisation/001", "answer": "B", "input_tokens": 292, "output_tokens": 2265, "seconds": 15.51}
+{"id": "history-democratisation/002", "answer": "A", "input_tokens": 289, "output_tokens": 989, "seconds": 9.43}
+{"id": "history-democratisation/003", "answer": "A", "input_tokens": 317, "output_tokens": 148, "seconds": 3.64}
+{"id": "history-democratisation/004", "answer": "", "input_tokens": 319, "output_tokens": 4000, "seconds": 27.85}
+{"id": "history-democratisation/005", "answer": "B", "input_tokens": 316, "output_tokens": 1213, "seconds": 11.42}
+{"id": "history-democratisation/006", "answer": "A", "input_tokens": 302, "output_tokens": 539, "seconds": 10.81}
+{"id": "history-democratisation/007", "answer": "", "input_tokens": 261, "output_tokens": 4000, "seconds": 35.77}
+{"id": "history-democratisation/008", "answer": "Perquè a Andorra no gaudien de llibertat de premsa i els opositors eren reprimits. Des de l’exili, editaven a Barcelona i Béziers per difondre idees reformistes i socials, influenciar l’opinió pública i reclamar més democràcia per a Andorra.", "input_tokens": 262, "output_tokens": 511, "seconds": 7.91}
+{"id": "history-democratisation/009", "answer": "El decret va fruit de les peticions de les dones andorranes i de la voluntat del bisbe Francesc de la Conquista de modernitzar la vida política d’Andorra. Es va incloure la candidatura perquè es va considerar que les dones podien exercir la responsabilitat política de manera plena, no només elegir els seus representants.", "input_tokens": 265, "output_tokens": 3774, "seconds": 36.48}
+{"id": "history-middle-ages/001", "answer": "B", "input_tokens": 323, "output_tokens": 125, "seconds": 2.04}
+{"id": "history-middle-ages/002", "answer": "C", "input_tokens": 317, "output_tokens": 2582, "seconds": 15.45}
+{"id": "history-middle-ages/003", "answer": "A", "input_tokens": 287, "output_tokens": 448, "seconds": 3.61}
+{"id": "history-middle-ages/004", "answer": "A", "input_tokens": 320, "output_tokens": 249, "seconds": 2.64}
+{"id": "history-middle-ages/005", "answer": "D", "input_tokens": 333, "output_tokens": 1428, "seconds": 10.82}
+{"id": "history-middle-ages/006", "answer": "", "input_tokens": 314, "output_tokens": 4000, "seconds": 24.81}
+{"id": "history-middle-ages/007", "answer": "", "input_tokens": 289, "output_tokens": 4000, "seconds": 28.57}
+{"id": "history-middle-ages/008", "answer": "", "input_tokens": 282, "output_tokens": 4000, "seconds": 56.1}
+{"id": "history-middle-ages/009", "answer": "Perquè els llops i els óssos amenaçaven la seguretat de la gent i el bestiar de les sis parròquies. El Consell de la Terra va oferir una recompensa per encouraging els homes armats a matar-los.", "input_tokens": 265, "output_tokens": 915, "seconds": 6.63}
+{"id": "history-wars-and-neutrality/001", "answer": "C", "input_tokens": 287, "output_tokens": 2408, "seconds": 26.12}
+{"id": "history-wars-and-neutrality/002", "answer": "A", "input_tokens": 345, "output_tokens": 573, "seconds": 4.79}
+{"id": "history-wars-and-neutrality/003", "answer": "", "input_tokens": 303, "output_tokens": 4000, "seconds": 56.6}
+{"id": "history-wars-and-neutrality/006", "answer": "B", "input_tokens": 290, "output_tokens": 339, "seconds": 3.24}
+{"id": "history-wars-and-neutrality/007", "answer": "", "input_tokens": 282, "output_tokens": 4000, "seconds": 29.99}
+{"id": "history-wars-and-neutrality/008", "answer": "", "input_tokens": 266, "output_tokens": 4000, "seconds": 28.71}
+{"id": "history-wars-and-neutrality/009", "answer": "", "input_tokens": 257, "output_tokens": 4000, "seconds": 49.37}
+{"id": "history-wars-and-neutrality/004", "answer": "", "input_tokens": 314, "output_tokens": 4000, "seconds": 26.1}
+{"id": "history-wars-and-neutrality/005", "answer": "C", "input_tokens": 308, "output_tokens": 2502, "seconds": 24.47}
+{"id": "history-recent-history/001", "answer": "B", "input_tokens": 337, "output_tokens": 1066, "seconds": 10.6}
+{"id": "history-recent-history/002", "answer": "A", "input_tokens": 344, "output_tokens": 79, "seconds": 1.67}
+{"id": "history-recent-history/003", "answer": "D", "input_tokens": 327, "output_tokens": 645, "seconds": 5.67}
+{"id": "history-recent-history/004", "answer": "C", "input_tokens": 301, "output_tokens": 1982, "seconds": 15.6}
+{"id": "history-recent-history/005", "answer": "A", "input_tokens": 295, "output_tokens": 115, "seconds": 2.0}
+{"id": "history-recent-history/006", "answer": "D", "input_tokens": 330, "output_tokens": 214, "seconds": 2.84}
+{"id": "history-recent-history/007", "answer": "El Consell d’Europa volia que Andorra modernitzés el paréage medieval per garantir democràcia, drets humans i govern propi, en sintonia amb les condicions d’adhesió a l’organització. Va fer de l’accés al Consell una palanca per pressionar Espanya i França, que tenien poder de veto sobre la reforma, fins que acceptaren la Constitució de 1993.", "input_tokens": 258, "output_tokens": 2398, "seconds": 21.3}
+{"id": "history-recent-history/008", "answer": "Entre els anys 1950 i 1980, Andorra esdevingué un important refugi fiscal, centre turístic i destí d’inversió, cosa que impulsà la construcció, el comerç i l’arribada d’immigrants. Aquest creixement fou conegut com el «miracle andorrà», per la similitud amb el miracle econòmic espanyol.", "input_tokens": 268, "output_tokens": 532, "seconds": 4.6}
+{"id": "history-recent-history/009", "answer": "", "input_tokens": 263, "output_tokens": 4000, "seconds": 31.03}
+{"id": "history-historiography/001", "answer": "A", "input_tokens": 296, "output_tokens": 294, "seconds": 2.93}
+{"id": "history-historiography/002", "answer": "", "input_tokens": 302, "output_tokens": 4000, "seconds": 42.29}
+{"id": "history-historiography/003", "answer": "D", "input_tokens": 311, "output_tokens": 132, "seconds": 1.77}
+{"id": "history-historiography/004", "answer": "C", "input_tokens": 330, "output_tokens": 2746, "seconds": 17.11}
+{"id": "history-historiography/005", "answer": "A", "input_tokens": 286, "output_tokens": 143, "seconds": 2.47}
+{"id": "history-historiography/006", "answer": "A", "input_tokens": 307, "output_tokens": 908, "seconds": 5.75}
+{"id": "history-historiography/007", "answer": "", "input_tokens": 263, "output_tokens": 4000, "seconds": 20.27}
+{"id": "history-historiography/008", "answer": "", "input_tokens": 268, "output_tokens": 4000, "seconds": 30.63}
+{"id": "history-historiography/009", "answer": "", "input_tokens": 271, "output_tokens": 4000, "seconds": 44.45}
+{"id": "history-manual-digest/002", "answer": "D", "input_tokens": 323, "output_tokens": 3799, "seconds": 38.95}
+{"id": "history-manual-digest/003", "answer": "A", "input_tokens": 296, "output_tokens": 1730, "seconds": 12.24}
+{"id": "history-manual-digest/004", "answer": "", "input_tokens": 313, "output_tokens": 4000, "seconds": 26.1}
+{"id": "history-manual-digest/005", "answer": "", "input_tokens": 316, "output_tokens": 4000, "seconds": 36.42}
+{"id": "history-manual-digest/006", "answer": "", "input_tokens": 314, "output_tokens": 4000, "seconds": 24.92}
+{"id": "history-manual-digest/007", "answer": "", "input_tokens": 260, "output_tokens": 4000, "seconds": 31.41}
+{"id": "history-manual-digest/008", "answer": "", "input_tokens": 265, "output_tokens": 4000, "seconds": 29.72}
+{"id": "history-manual-digest/009", "answer": "Perquè la legislació andorrana era dispersa, antiga i de difícil consulta, i ell hi veia la necessitat d’un instrument pràctic de referència. Amb el *Manual Digest* volia facilitar el treball dels juristes i preservar i difondre el coneixement del dret del país.", "input_tokens": 261, "output_tokens": 2840, "seconds": 30.12}
+{"id": "history-manual-digest/001", "answer": "A", "input_tokens": 295, "output_tokens": 97, "seconds": 1.54}
+{"id": "history-historic-moments/001", "answer": "C", "input_tokens": 314, "output_tokens": 164, "seconds": 4.19}
+{"id": "history-historic-moments/003", "answer": "", "input_tokens": 287, "output_tokens": 4000, "seconds": 24.26}
+{"id": "history-historic-moments/002", "answer": "A", "input_tokens": 307, "output_tokens": 793, "seconds": 6.86}
+{"id": "history-historic-moments/004", "answer": "D", "input_tokens": 323, "output_tokens": 3, "seconds": 0.91}
+{"id": "history-historic-moments/005", "answer": "La Nova Reforma de 1866, vigent des de 1867, va modernitzar les institucions i separar més clarament els poders: el Consell General consolidà les funcions legislatives i el Consell d’Estat assumí les executives. També va regular els consells de parròquia, l’àmbit judicial i les competències dels coprínceps.", "input_tokens": 256, "output_tokens": 3559, "seconds": 27.98}
+{"id": "history-historic-moments/006", "answer": "El 1278, el primer paréage entre el comte de Foix i el bisbe d’Urgell va establir un govern compartit sobre Andorra. Amb aquest acord es va reconèixer el Consell de la Terra com l’òrgan de representació i govern de la comunitat andorrana.", "input_tokens": 256, "output_tokens": 1500, "seconds": 9.98}
+{"id": "history-origins/002", "answer": "A", "input_tokens": 336, "output_tokens": 3, "seconds": 1.13}
+{"id": "history-origins/003", "answer": "A", "input_tokens": 297, "output_tokens": 720, "seconds": 9.16}
+{"id": "history-origins/004", "answer": "C", "input_tokens": 347, "output_tokens": 523, "seconds": 6.93}
+{"id": "history-origins/005", "answer": "A", "input_tokens": 344, "output_tokens": 926, "seconds": 7.13}
+{"id": "history-origins/006", "answer": "B", "input_tokens": 345, "output_tokens": 296, "seconds": 2.99}
+{"id": "history-origins/007", "answer": "", "input_tokens": 255, "output_tokens": 4000, "seconds": 26.85}
+{"id": "history-origins/008", "answer": "", "input_tokens": 260, "output_tokens": 4000, "seconds": 26.96}
+{"id": "history-origins/009", "answer": "", "input_tokens": 267, "output_tokens": 4000, "seconds": 28.45}
+{"id": "history-origins/001", "answer": "", "input_tokens": 292, "output_tokens": 4000, "seconds": 41.09}
+{"id": "history-pareatge/001", "answer": "B", "input_tokens": 354, "output_tokens": 97, "seconds": 1.75}
+{"id": "history-pareatge/002", "answer": "B", "input_tokens": 295, "output_tokens": 92, "seconds": 1.85}
+{"id": "history-pareatge/003", "answer": "A", "input_tokens": 314, "output_tokens": 252, "seconds": 10.67}
+{"id": "history-pareatge/004", "answer": "C", "input_tokens": 366, "output_tokens": 319, "seconds": 2.99}
+{"id": "history-pareatge/005", "answer": "C", "input_tokens": 294, "output_tokens": 1633, "seconds": 10.33}
+{"id": "history-pareatge/006", "answer": "B", "input_tokens": 334, "output_tokens": 443, "seconds": 3.72}
+{"id": "history-pareatge/007", "answer": "", "input_tokens": 256, "output_tokens": 4000, "seconds": 26.8}
+{"id": "history-pareatge/008", "answer": "", "input_tokens": 271, "output_tokens": 4000, "seconds": 38.64}
+{"id": "history-pareatge/009", "answer": "El Pareatge del 1278 va ser l’acord entre el comte de Foix i el bisbe d’Urgell que va resoldre les disputes territorials i va delimitar les。整个。它 va establir la co-soberania, les lleis, els impostos i les garanties delshabitants, creant el primer marc polític i institucional d’Andorra. Per tant, no la va创造本页 from zero, sinó que va convertir un territori fragmentat en una comunitat política reconeguda.", "input_tokens": 253, "output_tokens": 551, "seconds": 5.28}
+{"id": "history-19th-century/001", "answer": "C", "input_tokens": 317, "output_tokens": 330, "seconds": 2.21}
+{"id": "history-19th-century/002", "answer": "", "input_tokens": 313, "output_tokens": 4000, "seconds": 32.13}
+{"id": "history-19th-century/003", "answer": "D", "input_tokens": 328, "output_tokens": 860, "seconds": 7.07}
+{"id": "history-19th-century/004", "answer": "A", "input_tokens": 349, "output_tokens": 42, "seconds": 1.34}
+{"id": "history-19th-century/005", "answer": "D", "input_tokens": 332, "output_tokens": 3, "seconds": 1.09}
+{"id": "history-19th-century/006", "answer": "A", "input_tokens": 329, "output_tokens": 1055, "seconds": 8.89}
+{"id": "history-19th-century/007", "answer": "", "input_tokens": 268, "output_tokens": 4000, "seconds": 36.72}
+{"id": "history-19th-century/008", "answer": "", "input_tokens": 269, "output_tokens": 4000, "seconds": 32.14}
+{"id": "history-19th-century/009", "answer": "Guillem d’Areny-Plandolit va ser el principal redactor i impulsor del projecte de Nova Reforma presentat al Consell General el 1866, i la seva autoritat com a advocat i conseller hi donà suport decidit. La reforma actualitzà la Constitució, amplià els drets i les llibertats ciutadanes i superà residis de l’antic sistema feudal.", "input_tokens": 265, "output_tokens": 2386, "seconds": 17.43}
+{"id": "history-20th-century-first-half/001", "answer": "B", "input_tokens": 325, "output_tokens": 2015, "seconds": 13.92}
+{"id": "history-20th-century-first-half/002", "answer": "", "input_tokens": 298, "output_tokens": 4000, "seconds": 37.74}
+{"id": "history-20th-century-first-half/003", "answer": "D", "input_tokens": 296, "output_tokens": 114, "seconds": 2.03}
+{"id": "history-20th-century-first-half/004", "answer": "C", "input_tokens": 309, "output_tokens": 947, "seconds": 7.16}
+{"id": "history-20th-century-first-half/006", "answer": "D", "input_tokens": 308, "output_tokens": 346, "seconds": 3.12}
+{"id": "history-20th-century-first-half/007", "answer": "", "input_tokens": 269, "output_tokens": 4000, "seconds": 40.97}
+{"id": "history-20th-century-first-half/008", "answer": "", "input_tokens": 252, "output_tokens": 4000, "seconds": 30.1}
+{"id": "history-20th-century-first-half/009", "answer": "A petició de França, que volia que els països neutrals s’incorporessin a la causa de l’Entesa. El bisbe i copríncep Josep Caixal i Estradé va declarar la guerra el 7 de novembre de 1914, però fou un gest simbòlic sense participació militar.", "input_tokens": 246, "output_tokens": 1571, "seconds": 12.7}
+{"id": "history-20th-century-first-half/005", "answer": "B", "input_tokens": 284, "output_tokens": 731, "seconds": 6.33}
+{"id": "institutions-communes-and-parishes/001", "answer": "A", "input_tokens": 387, "output_tokens": 1334, "seconds": 13.48}
+{"id": "institutions-communes-and-parishes/002", "answer": "B", "input_tokens": 373, "output_tokens": 1022, "seconds": 10.95}
+{"id": "institutions-communes-and-parishes/003", "answer": "B", "input_tokens": 320, "output_tokens": 3753, "seconds": 23.09}
+{"id": "institutions-communes-and-parishes/004", "answer": "B", "input_tokens": 418, "output_tokens": 3, "seconds": 1.19}
+{"id": "institutions-communes-and-parishes/005", "answer": "", "input_tokens": 310, "output_tokens": 4000, "seconds": 37.75}
+{"id": "institutions-communes-and-parishes/006", "answer": "C", "input_tokens": 328, "output_tokens": 276, "seconds": 2.61}
+{"id": "institutions-communes-and-parishes/007", "answer": "", "input_tokens": 284, "output_tokens": 4000, "seconds": 28.45}
+{"id": "institutions-communes-and-parishes/008", "answer": "La **taba** o «taula» era l’òrgan col·legiat de govern de cada comú, format pels caps de casa o els seus representants, que decidia sobre els assumptes i els béns comunals. El **mostassà** n’era el president i cap executiu, elegit anualment: presidia la taba, feia executar les decisions i representava el comú.", "input_tokens": 257, "output_tokens": 3904, "seconds": 36.08}
+{"id": "institutions-communes-and-parishes/009", "answer": "", "input_tokens": 262, "output_tokens": 4000, "seconds": 28.69}
+{"id": "institutions-general-council/001", "answer": "C", "input_tokens": 347, "output_tokens": 1339, "seconds": 9.09}
+{"id": "institutions-general-council/002", "answer": "A", "input_tokens": 297, "output_tokens": 297, "seconds": 2.42}
+{"id": "institutions-general-council/003", "answer": "B", "input_tokens": 376, "output_tokens": 3, "seconds": 1.09}
+{"id": "institutions-general-council/004", "answer": "C", "input_tokens": 305, "output_tokens": 3031, "seconds": 43.25}
+{"id": "institutions-general-council/005", "answer": "C", "input_tokens": 312, "output_tokens": 822, "seconds": 6.27}
+{"id": "institutions-general-council/006", "answer": "", "input_tokens": 311, "output_tokens": 4000, "seconds": 28.34}
+{"id": "institutions-general-council/007", "answer": "Perquè el *Llibre de la Terra* és una compilació del segle XV que transcrit ordinances més antigues, no els originals. Sense una datació contemporània verificable ni fonts independents que la corroborin, l’ordinació només és un indici indirecte de l’època, no una prova suficient.", "input_tokens": 268, "output_tokens": 1849, "seconds": 12.52}
+{"id": "institutions-general-council/009", "answer": "", "input_tokens": 264, "output_tokens": 4000, "seconds": 33.91}
+{"id": "institutions-general-council/008", "answer": "", "input_tokens": 268, "output_tokens": 4000, "seconds": 26.34}
+{"id": "institutions-co-principality/001", "answer": "A", "input_tokens": 319, "output_tokens": 1781, "seconds": 24.49}
+{"id": "institutions-co-principality/002", "answer": "", "input_tokens": 322, "output_tokens": 4000, "seconds": 33.08}
+{"id": "institutions-co-principality/003", "answer": "D", "input_tokens": 297, "output_tokens": 903, "seconds": 6.06}
+{"id": "institutions-co-principality/004", "answer": "C", "input_tokens": 302, "output_tokens": 569, "seconds": 4.69}
+{"id": "institutions-co-principality/005", "answer": "A", "input_tokens": 341, "output_tokens": 166, "seconds": 1.9}
+{"id": "institutions-co-principality/006", "answer": "B", "input_tokens": 347, "output_tokens": 2187, "seconds": 15.27}
+{"id": "institutions-co-principality/007", "answer": "", "input_tokens": 277, "output_tokens": 4000, "seconds": 31.88}
+{"id": "institutions-co-principality/008", "answer": "França va deixar de cobrar-la perquè, durant la Revolució francesa, Andorra fou annexionada temporalment a la República francesa i se’n va abolir el tribut feudal. El 1806, Napoleó Bonaparte va restablir la quèstia per decret imperial, tot recuperant el paréage tradicional entre Andorra, el bisbat d’Urgell i la corona francesa.", "input_tokens": 260, "output_tokens": 3965, "seconds": 55.7}
+{"id": "institutions-co-principality/009", "answer": "Els andorrans no l’escullen directament: el copríncep francès és d’ofici el president de la República francesa, elegit cada cinc anys en les eleccionsLOBALS franceses.", "input_tokens": 250, "output_tokens": 567, "seconds": 5.4}
+{"id": "institutions-government/001", "answer": "B", "input_tokens": 283, "output_tokens": 3071, "seconds": 26.35}
+{"id": "institutions-government/002", "answer": "C", "input_tokens": 288, "output_tokens": 172, "seconds": 2.34}
+{"id": "institutions-government/003", "answer": "", "input_tokens": 346, "output_tokens": 4000, "seconds": 26.08}
+{"id": "institutions-government/004", "answer": "", "input_tokens": 304, "output_tokens": 4000, "seconds": 44.56}
+{"id": "institutions-government/005", "answer": "", "input_tokens": 293, "output_tokens": 4000, "seconds": 29.29}
+{"id": "institutions-government/006", "answer": "A", "input_tokens": 305, "output_tokens": 717, "seconds": 5.28}
+{"id": "institutions-government/007", "answer": "El Raonador exercèix pressió institucional i social: emet recomanacions i exigeix una resposta motivada a l’administració. Si no hi ha acord o no es compleixen, pot presentar un informe de seguiment al Consell General i fer-ne difusió pública.", "input_tokens": 265, "output_tokens": 544, "seconds": 3.57}
+{"id": "institutions-government/008", "answer": "", "input_tokens": 266, "output_tokens": 4000, "seconds": 41.79}
+{"id": "institutions-government/009", "answer": "", "input_tokens": 252, "output_tokens": 4000, "seconds": 25.98}
+{"id": "institutions-justice/001", "answer": "C", "input_tokens": 319, "output_tokens": 3, "seconds": 0.6}
+{"id": "institutions-justice/002", "answer": "C", "input_tokens": 278, "output_tokens": 369, "seconds": 3.07}
+{"id": "institutions-justice/003", "answer": "C", "input_tokens": 278, "output_tokens": 161, "seconds": 2.02}
+{"id": "institutions-justice/004", "answer": "", "input_tokens": 322, "output_tokens": 4000, "seconds": 29.58}
+{"id": "institutions-justice/005", "answer": "", "input_tokens": 333, "output_tokens": 4000, "seconds": 27.82}
+{"id": "institutions-justice/006", "answer": "D", "input_tokens": 301, "output_tokens": 1693, "seconds": 12.18}
+{"id": "institutions-justice/007", "answer": "Els coprínceps designen cadascun quatre dels nou magistrats del Tribunal Constitucional; el novè l’appointa el president de la República francesa. També nomenen el president i els quatre membres del Consell Superior de la Justícia, a proposta del Consell de Govern.", "input_tokens": 263, "output_tokens": 2883, "seconds": 17.0}
+{"id": "institutions-justice/008", "answer": "La darrera persona executada a Andorra fou el pagès Calpena, el 13 de setembre de 1842. Fou decapitada a la Plaça del Poble per haver assassinat la seva dona.", "input_tokens": 246, "output_tokens": 1125, "seconds": 11.81}
+{"id": "institutions-justice/009", "answer": "Perquè el Tribunal Constitucional té una composició parella i la Constitució estableix que, en cas d’empat, el president ha de tenir el vot decisiu. Així s’evita que les decisions quedin bloquejades.", "input_tokens": 252, "output_tokens": 550, "seconds": 6.33}
+{"id": "institutions-nationality-and-residence/001", "answer": "B", "input_tokens": 326, "output_tokens": 2071, "seconds": 13.4}
+{"id": "institutions-nationality-and-residence/002", "answer": "D", "input_tokens": 333, "output_tokens": 558, "seconds": 4.56}
+{"id": "institutions-nationality-and-residence/003", "answer": "", "input_tokens": 307, "output_tokens": 4000, "seconds": 24.52}
+{"id": "institutions-nationality-and-residence/004", "answer": "C", "input_tokens": 323, "output_tokens": 1239, "seconds": 9.07}
+{"id": "institutions-nationality-and-residence/005", "answer": "A", "input_tokens": 324, "output_tokens": 401, "seconds": 3.0}
+{"id": "institutions-nationality-and-residence/006", "answer": "D", "input_tokens": 338, "output_tokens": 194, "seconds": 1.97}
+{"id": "institutions-nationality-and-residence/007", "answer": "", "input_tokens": 266, "output_tokens": 4000, "seconds": 35.22}
+{"id": "institutions-nationality-and-residence/008", "answer": "", "input_tokens": 265, "output_tokens": 4000, "seconds": 28.71}
+{"id": "institutions-nationality-and-residence/009", "answer": "", "input_tokens": 263, "output_tokens": 4000, "seconds": 61.08}
+{"id": "institutions-institutional-heritage/001", "answer": "B", "input_tokens": 374, "output_tokens": 3, "seconds": 0.88}
+{"id": "institutions-institutional-heritage/002", "answer": "", "input_tokens": 322, "output_tokens": 4000, "seconds": 42.94}
+{"id": "institutions-institutional-heritage/003", "answer": "", "input_tokens": 323, "output_tokens": 4000, "seconds": 28.33}
+{"id": "institutions-institutional-heritage/004", "answer": "D", "input_tokens": 321, "output_tokens": 1029, "seconds": 6.08}
+{"id": "institutions-institutional-heritage/005", "answer": "A", "input_tokens": 353, "output_tokens": 1248, "seconds": 8.87}
+{"id": "institutions-institutional-heritage/006", "answer": "", "input_tokens": 299, "output_tokens": 4000, "seconds": 28.78}
+{"id": "institutions-institutional-heritage/007", "answer": "", "input_tokens": 262, "output_tokens": 4000, "seconds": 28.57}
+{"id": "institutions-institutional-heritage/008", "answer": "", "input_tokens": 268, "output_tokens": 4000, "seconds": 30.78}
+{"id": "institutions-institutional-heritage/009", "answer": "", "input_tokens": 262, "output_tokens": 4000, "seconds": 26.87}
+{"id": "institutions-small-states/001", "answer": "B", "input_tokens": 306, "output_tokens": 1045, "seconds": 7.65}
+{"id": "institutions-small-states/002", "answer": "B", "input_tokens": 330, "output_tokens": 3, "seconds": 1.23}
+{"id": "institutions-small-states/003", "answer": "D", "input_tokens": 361, "output_tokens": 3, "seconds": 0.76}
+{"id": "institutions-small-states/004", "answer": "", "input_tokens": 306, "output_tokens": 4000, "seconds": 23.78}
+{"id": "institutions-small-states/005", "answer": "", "input_tokens": 273, "output_tokens": 4000, "seconds": 30.9}
+{"id": "institutions-small-states/006", "answer": "Perquè Andorra té una superfície molt petita (468 km²) i, el 2014, hi residien uns 76.000 habitants. La densitat era encara més alta a les valls urbanitzades, on es concentraven la majoria dels residents i dels treballadors immigrants; els turistes no s’hi compten.", "input_tokens": 262, "output_tokens": 2076, "seconds": 18.46}
+{"id": "institutions-quarts-and-veinats/001", "answer": "C", "input_tokens": 326, "output_tokens": 575, "seconds": 5.81}
+{"id": "institutions-quarts-and-veinats/002", "answer": "", "input_tokens": 298, "output_tokens": 4000, "seconds": 26.93}
+{"id": "institutions-quarts-and-veinats/004", "answer": "C", "input_tokens": 314, "output_tokens": 1768, "seconds": 9.21}
+{"id": "institutions-quarts-and-veinats/005", "answer": "", "input_tokens": 269, "output_tokens": 4000, "seconds": 34.19}
+{"id": "institutions-quarts-and-veinats/007", "answer": "C", "input_tokens": 314, "output_tokens": 1022, "seconds": 11.99}
+{"id": "institutions-quarts-and-veinats/006", "answer": "", "input_tokens": 256, "output_tokens": 4000, "seconds": 33.67}
+{"id": "institutions-foreign-relations/001", "answer": "C", "input_tokens": 338, "output_tokens": 189, "seconds": 2.45}
+{"id": "institutions-foreign-relations/002", "answer": "B", "input_tokens": 337, "output_tokens": 190, "seconds": 2.4}
+{"id": "institutions-foreign-relations/003", "answer": "A", "input_tokens": 287, "output_tokens": 124, "seconds": 2.41}
+{"id": "institutions-foreign-relations/004", "answer": "B", "input_tokens": 340, "output_tokens": 3, "seconds": 1.09}
+{"id": "institutions-foreign-relations/005", "answer": "", "input_tokens": 323, "output_tokens": 4000, "seconds": 29.18}
+{"id": "institutions-foreign-relations/007", "answer": "", "input_tokens": 260, "output_tokens": 4000, "seconds": 47.2}
+{"id": "institutions-foreign-relations/008", "answer": "", "input_tokens": 269, "output_tokens": 4000, "seconds": 34.0}
+{"id": "institutions-foreign-relations/009", "answer": "El pronunciament de 1963 va confirmar la personalitat estatal d’Andorra i va facilitar que França, que en representava els assumptes exteriors, presentés la seva candidatura a l’NU. Andorra hi va ingressar el 28 de juliol de 1971 per obtenir reconeixement internacional i participar en els organismes multilaterals.", "input_tokens": 261, "output_tokens": 3183, "seconds": 28.75}
+{"id": "institutions-foreign-relations/010", "answer": "D", "input_tokens": 292, "output_tokens": 979, "seconds": 7.94}
+{"id": "institutions-symbols/001", "answer": "C", "input_tokens": 295, "output_tokens": 48, "seconds": 0.86}
+{"id": "institutions-symbols/002", "answer": "A", "input_tokens": 308, "output_tokens": 112, "seconds": 4.28}
+{"id": "institutions-symbols/003", "answer": "", "input_tokens": 331, "output_tokens": 4000, "seconds": 26.8}
+{"id": "institutions-symbols/004", "answer": "B", "input_tokens": 305, "output_tokens": 3, "seconds": 1.11}
+{"id": "institutions-symbols/005", "answer": "B", "input_tokens": 303, "output_tokens": 75, "seconds": 1.6}
+{"id": "institutions-symbols/006", "answer": "A", "input_tokens": 319, "output_tokens": 398, "seconds": 3.95}
+{"id": "institutions-symbols/007", "answer": "", "input_tokens": 267, "output_tokens": 4000, "seconds": 30.29}
+{"id": "institutions-symbols/008", "answer": "", "input_tokens": 259, "output_tokens": 4000, "seconds": 26.33}
+{"id": "institutions-symbols/009", "answer": "La Nova Reforma de 1866 va reconèixer Andorra com a Estat sobirà i modernitzar-ne el sistema institucional. En aquest context es va oficialitzar la bandera blava, groga i vermella, amb l’escut al centre, com a atribut d’identitat i sobirania nacional.", "input_tokens": 251, "output_tokens": 692, "seconds": 5.55}
+{"id": "language-language-contact/001", "answer": "B", "input_tokens": 361, "output_tokens": 165, "seconds": 2.08}
+{"id": "language-language-contact/002", "answer": "C", "input_tokens": 307, "output_tokens": 189, "seconds": 4.34}
+{"id": "language-language-contact/003", "answer": "A", "input_tokens": 308, "output_tokens": 1195, "seconds": 8.35}
+{"id": "language-language-contact/004", "answer": "", "input_tokens": 334, "output_tokens": 4000, "seconds": 26.87}
+{"id": "language-language-contact/005", "answer": "B", "input_tokens": 313, "output_tokens": 1892, "seconds": 11.15}
+{"id": "language-language-contact/006", "answer": "A", "input_tokens": 369, "output_tokens": 185, "seconds": 4.16}
+{"id": "language-language-contact/007", "answer": "", "input_tokens": 283, "output_tokens": 4000, "seconds": 37.29}
+{"id": "language-language-contact/008", "answer": "", "input_tokens": 275, "output_tokens": 4000, "seconds": 63.92}
+{"id": "language-language-contact/009", "answer": "", "input_tokens": 281, "output_tokens": 4000, "seconds": 42.47}
+{"id": "language-dialectology/001", "answer": "", "input_tokens": 325, "output_tokens": 4000, "seconds": 24.87}
+{"id": "language-dialectology/003", "answer": "C", "input_tokens": 298, "output_tokens": 3019, "seconds": 20.81}
+{"id": "language-dialectology/004", "answer": "C", "input_tokens": 318, "output_tokens": 277, "seconds": 3.2}
+{"id": "language-dialectology/005", "answer": "C", "input_tokens": 295, "output_tokens": 310, "seconds": 2.46}
+{"id": "language-dialectology/006", "answer": "D", "input_tokens": 341, "output_tokens": 134, "seconds": 2.18}
+{"id": "language-dialectology/007", "answer": "Perquè la normalització lingüística ha difós un model estàndard del català inspirat sobretot en la varietat central, no en la local. Això ha reforçat l’ús del català, però ha desplaçat nombroses peculiaritats fonètiques, morfològiques i lèxiques de l’andorrà, reduint-ne la varietat dialectal.", "input_tokens": 271, "output_tokens": 550, "seconds": 4.88}
+{"id": "language-dialectology/008", "answer": "", "input_tokens": 269, "output_tokens": 4000, "seconds": 34.39}
+{"id": "language-dialectology/009", "answer": "Perquè durant el domini musulmà es van difondre noms àrabs per designar valls, rius, muntanyes i altres llocs de les Valls. Després de la reconquesta cristiana, molts d’aquests topònims es van mantenir i han quedat fossilitzats al mapa actual d’Andorra.", "input_tokens": 265, "output_tokens": 435, "seconds": 4.38}
+{"id": "language-dialectology/002", "answer": "A", "input_tokens": 298, "output_tokens": 943, "seconds": 9.12}
+{"id": "language-phonetics/001", "answer": "", "input_tokens": 287, "output_tokens": 4000, "seconds": 26.97}
+{"id": "language-phonetics/003", "answer": "D", "input_tokens": 301, "output_tokens": 665, "seconds": 5.91}
+{"id": "language-phonetics/004", "answer": "A", "input_tokens": 303, "output_tokens": 2182, "seconds": 30.81}
+{"id": "language-phonetics/006", "answer": "Mitjançant enquestes de camp del mètode directe: l’equip de l’ALDC va entrevistar i enregistrar parlants de totes les edats, professions i nivells d’instrucció, que havien de llegir, repetir i comentar mots i frases. En contrastar-ne les pronunciacions, va delimitar el nucli fonètic comú de l’andorrà i les seves variants locals, tot representant-los als mapes de l’Atles.", "input_tokens": 273, "output_tokens": 3410, "seconds": 30.32}
+{"id": "language-phonetics/002", "answer": "C", "input_tokens": 326, "output_tokens": 510, "seconds": 3.78}
+{"id": "language-phonetics/005", "answer": "", "input_tokens": 264, "output_tokens": 4000, "seconds": 32.19}
+{"id": "language-phraseology/002", "answer": "B", "input_tokens": 304, "output_tokens": 3, "seconds": 0.64}
+{"id": "language-phraseology/003", "answer": "Perquè els idiomes, les col·lisions i les construccions habituals s’adopren com automatismes de la llengua materna i es manifesten sense que el parlant se’n adoni. Mentre que l’accent es pot dissimular i la gramàtica tendeix a uniformar-se, la fraseologia és més estable i conserva traces més clares de la comunitat d’origen.", "input_tokens": 266, "output_tokens": 1674, "seconds": 27.45}
+{"id": "language-phraseology/001", "answer": "B", "input_tokens": 299, "output_tokens": 523, "seconds": 5.85}
+{"id": "language-history-of-the-language/001", "answer": "D", "input_tokens": 410, "output_tokens": 3, "seconds": 1.16}
+{"id": "language-history-of-the-language/002", "answer": "C", "input_tokens": 301, "output_tokens": 2409, "seconds": 29.98}
+{"id": "language-history-of-the-language/003", "answer": "B", "input_tokens": 385, "output_tokens": 3, "seconds": 1.04}
+{"id": "language-history-of-the-language/004", "answer": "", "input_tokens": 361, "output_tokens": 4000, "seconds": 29.78}
+{"id": "language-history-of-the-language/005", "answer": "", "input_tokens": 279, "output_tokens": 4000, "seconds": 45.27}
+{"id": "language-history-of-the-language/006", "answer": "", "input_tokens": 262, "output_tokens": 4000, "seconds": 37.05}
+{"id": "language-andorran-lexicon/001", "answer": "A", "input_tokens": 318, "output_tokens": 279, "seconds": 2.94}
+{"id": "language-andorran-lexicon/002", "answer": "C", "input_tokens": 301, "output_tokens": 228, "seconds": 2.26}
+{"id": "language-andorran-lexicon/003", "answer": "", "input_tokens": 303, "output_tokens": 4000, "seconds": 33.24}
+{"id": "language-andorran-lexicon/004", "answer": "D", "input_tokens": 345, "output_tokens": 1160, "seconds": 7.71}
+{"id": "language-andorran-lexicon/005", "answer": "B", "input_tokens": 294, "output_tokens": 42, "seconds": 5.88}
+{"id": "language-andorran-lexicon/006", "answer": "D", "input_tokens": 339, "output_tokens": 3, "seconds": 0.69}
+{"id": "language-andorran-lexicon/007", "answer": "", "input_tokens": 265, "output_tokens": 4000, "seconds": 32.17}
+{"id": "language-andorran-lexicon/008", "answer": "", "input_tokens": 251, "output_tokens": 4000, "seconds": 27.82}
+{"id": "language-andorran-lexicon/009", "answer": "[AD] no significa «administratiu», sinó que indica un ús particular d’Andorra. El DIEC2 el recull perquè hi és DOCUMENTS, no perquè sigui una creació andorrana: el mot és d’origen llatí.", "input_tokens": 257, "output_tokens": 1782, "seconds": 12.2}
+{"id": "language-loanwords/001", "answer": "B", "input_tokens": 294, "output_tokens": 962, "seconds": 8.01}
+{"id": "language-loanwords/002", "answer": "C", "input_tokens": 320, "output_tokens": 3, "seconds": 0.91}
+{"id": "language-loanwords/003", "answer": "C", "input_tokens": 298, "output_tokens": 2916, "seconds": 18.58}
+{"id": "language-loanwords/004", "answer": "A", "input_tokens": 296, "output_tokens": 421, "seconds": 6.2}
+{"id": "language-loanwords/005", "answer": "B", "input_tokens": 334, "output_tokens": 3102, "seconds": 32.81}
+{"id": "language-loanwords/006", "answer": "B", "input_tokens": 304, "output_tokens": 3, "seconds": 1.07}
+{"id": "language-loanwords/007", "answer": "", "input_tokens": 260, "output_tokens": 4000, "seconds": 29.72}
+{"id": "language-loanwords/008", "answer": "", "input_tokens": 249, "output_tokens": 4000, "seconds": 37.77}
+{"id": "language-loanwords/009", "answer": "Perquè l’esport d’hivern andorrà es va introduir i organitzar amb una forta influència d’instructors, clubs i institucions espanyols, que hi van establir molta terminologia. A més, el prestigi mediàtic i internacional del castellà féia que es preferís utilitzar-ne els termes en lloc de crear-ne o adaptar-los al català.", "input_tokens": 264, "output_tokens": 1624, "seconds": 13.16}
+{"id": "language-morphosyntax/002", "answer": "B", "input_tokens": 289, "output_tokens": 2098, "seconds": 23.07}
+{"id": "language-morphosyntax/003", "answer": "D", "input_tokens": 291, "output_tokens": 1938, "seconds": 12.33}
+{"id": "language-morphosyntax/004", "answer": "A", "input_tokens": 299, "output_tokens": 80, "seconds": 4.96}
+{"id": "language-morphosyntax/005", "answer": "D", "input_tokens": 302, "output_tokens": 3209, "seconds": 20.78}
+{"id": "language-morphosyntax/006", "answer": "", "input_tokens": 301, "output_tokens": 4000, "seconds": 35.71}
+{"id": "language-morphosyntax/008", "answer": "", "input_tokens": 258, "output_tokens": 4000, "seconds": 29.67}
+{"id": "language-morphosyntax/009", "answer": "", "input_tokens": 260, "output_tokens": 4000, "seconds": 26.25}
+{"id": "language-morphosyntax/001", "answer": "B", "input_tokens": 290, "output_tokens": 3, "seconds": 0.72}
+{"id": "language-morphosyntax/007", "answer": "", "input_tokens": 262, "output_tokens": 4000, "seconds": 28.83}
+{"id": "language-onomastics/001", "answer": "A", "input_tokens": 281, "output_tokens": 258, "seconds": 2.97}
+{"id": "language-onomastics/002", "answer": "", "input_tokens": 293, "output_tokens": 4000, "seconds": 22.58}
+{"id": "language-onomastics/003", "answer": "B", "input_tokens": 306, "output_tokens": 525, "seconds": 5.74}
+{"id": "language-onomastics/004", "answer": "", "input_tokens": 312, "output_tokens": 4000, "seconds": 33.32}
+{"id": "language-onomastics/005", "answer": "", "input_tokens": 297, "output_tokens": 4000, "seconds": 27.48}
+{"id": "language-onomastics/006", "answer": "B", "input_tokens": 307, "output_tokens": 3375, "seconds": 29.63}
+{"id": "language-onomastics/007", "answer": "", "input_tokens": 270, "output_tokens": 4000, "seconds": 34.34}
+{"id": "language-onomastics/008", "answer": "", "input_tokens": 264, "output_tokens": 4000, "seconds": 36.74}
+{"id": "language-onomastics/009", "answer": "«Encampenc» es forma a partir del topònim **Encamp** amb el sufix català **-enc/-enca**, com altres gentilicis geogràfics. Significa, literalment, «habitant d’Encamp».", "input_tokens": 248, "output_tokens": 1036, "seconds": 9.93}
+{"id": "language-language-policy/003", "answer": "", "input_tokens": 296, "output_tokens": 4000, "seconds": 56.25}
+{"id": "language-language-policy/004", "answer": "", "input_tokens": 286, "output_tokens": 4000, "seconds": 32.32}
+{"id": "language-language-policy/005", "answer": "C", "input_tokens": 295, "output_tokens": 3343, "seconds": 26.8}
+{"id": "language-language-policy/007", "answer": "", "input_tokens": 265, "output_tokens": 4000, "seconds": 25.83}
+{"id": "language-language-policy/008", "answer": "", "input_tokens": 273, "output_tokens": 4000, "seconds": 23.77}
+{"id": "language-language-policy/001", "answer": "A", "input_tokens": 297, "output_tokens": 1484, "seconds": 8.62}
+{"id": "language-language-policy/002", "answer": "B", "input_tokens": 298, "output_tokens": 462, "seconds": 5.9}
+{"id": "language-language-policy/006", "answer": "A", "input_tokens": 311, "output_tokens": 178, "seconds": 2.14}
+{"id": "language-language-policy/009", "answer": "L’immigració espanyola de les dècades precedents i l’assimilació lingüística dels seus fills van desplaçar la llengua materna cap al castellà. A més, el moviment demogràfic de residents d’origen estanger va reduir el pes relatiu dels parlants natius de català.", "input_tokens": 260, "output_tokens": 409, "seconds": 3.94}
+{"id": "language-registers/001", "answer": "B", "input_tokens": 298, "output_tokens": 659, "seconds": 6.39}
+{"id": "language-registers/003", "answer": "Si el text andorrà s’ha obtingut traduint o adaptant automàticament altres textos, potLOCKar-hi calcs, errors i patrons molt repetits. Aquesta llengua artificial i homogènia fa que el model soni rígid i poc natural, és a dir, «encarcarat».", "input_tokens": 266, "output_tokens": 618, "seconds": 5.08}
+{"id": "language-registers/002", "answer": "B", "input_tokens": 304, "output_tokens": 3, "seconds": 0.76}
+{"id": "language-forms-of-address/001", "answer": "C", "input_tokens": 305, "output_tokens": 87, "seconds": 1.71}
+{"id": "language-forms-of-address/002", "answer": "C", "input_tokens": 334, "output_tokens": 75, "seconds": 1.02}
+{"id": "language-forms-of-address/003", "answer": "Com a hipòtesi, es pot proposar que «vós» era una forma de tractament viva —potestamentalment de cortesia i amb possible influència occitana— en l’andorran dels anys cinquanta. Tanmateix, les fonts d’època no permeten extrapolar al present: caldrien dades recents per confirmar si el seu ús ha persistit o ha cedit davant «tu» i «vostè».", "input_tokens": 276, "output_tokens": 2134, "seconds": 14.41}
+{"id": "unseen-n01/001", "answer": "A", "input_tokens": 290, "output_tokens": 187, "seconds": 2.25}
+{"id": "unseen-n01/002", "answer": "", "input_tokens": 263, "output_tokens": 4000, "seconds": 29.33}
+{"id": "unseen-n02/001", "answer": "C", "input_tokens": 365, "output_tokens": 397, "seconds": 3.29}
+{"id": "unseen-n02/002", "answer": "", "input_tokens": 259, "output_tokens": 4000, "seconds": 31.16}
+{"id": "unseen-n02/003", "answer": "A", "input_tokens": 401, "output_tokens": 186, "seconds": 1.97}
+{"id": "unseen-n02/004", "answer": "", "input_tokens": 272, "output_tokens": 4000, "seconds": 29.91}
+{"id": "unseen-n02/005", "answer": "", "input_tokens": 340, "output_tokens": 4000, "seconds": 22.01}
+{"id": "unseen-n02/006", "answer": "", "input_tokens": 275, "output_tokens": 4000, "seconds": 24.98}
+{"id": "unseen-n03/001", "answer": "", "input_tokens": 301, "output_tokens": 4000, "seconds": 23.82}
+{"id": "unseen-n03/002", "answer": "", "input_tokens": 268, "output_tokens": 4000, "seconds": 27.26}
+{"id": "unseen-n03/003", "answer": "C", "input_tokens": 332, "output_tokens": 728, "seconds": 4.72}
+{"id": "unseen-n03/004", "answer": "", "input_tokens": 275, "output_tokens": 4000, "seconds": 26.76}
+{"id": "unseen-n03/005", "answer": "D", "input_tokens": 314, "output_tokens": 108, "seconds": 1.7}
+{"id": "unseen-n03/006", "answer": "", "input_tokens": 281, "output_tokens": 4000, "seconds": 22.57}
+{"id": "unseen-n03/007", "answer": "A", "input_tokens": 320, "output_tokens": 1636, "seconds": 10.61}
+{"id": "unseen-n03/008", "answer": "", "input_tokens": 272, "output_tokens": 4000, "seconds": 25.86}
+{"id": "unseen-n04/001", "answer": "D", "input_tokens": 289, "output_tokens": 310, "seconds": 2.86}
+{"id": "unseen-n04/002", "answer": "Va cofundar el fons d’inversió **Impara Capital** i, entre el 2015 i el 2019, en va ser el **cap d’inversió (CIO)**.", "input_tokens": 270, "output_tokens": 3994, "seconds": 44.38}
+{"id": "unseen-n04/003", "answer": "C", "input_tokens": 295, "output_tokens": 118, "seconds": 2.3}
+{"id": "unseen-n04/005", "answer": "B", "input_tokens": 294, "output_tokens": 432, "seconds": 3.14}
+{"id": "unseen-n04/006", "answer": "Andorra va debutar a Salt Lake City amb un únic esportista, l’esquiàlsta Albert Jover, que va competir en proves d’esquí alpí. La delegació andorrana no va obtenir cap medalla.", "input_tokens": 258, "output_tokens": 2744, "seconds": 17.61}
+{"id": "unseen-n04/007", "answer": "B", "input_tokens": 295, "output_tokens": 3241, "seconds": 19.74}
+{"id": "unseen-n04/008", "answer": "", "input_tokens": 260, "output_tokens": 4000, "seconds": 25.69}
+{"id": "unseen-n04/009", "answer": "B", "input_tokens": 294, "output_tokens": 58, "seconds": 1.55}
+{"id": "unseen-n04/010", "answer": "", "input_tokens": 266, "output_tokens": 4000, "seconds": 33.23}
+{"id": "unseen-n04/004", "answer": "Al Roland Garros del 2007, Laurent Recouderc va guanyar Sam Querrey en primera roda, però va perdre davant Novak Djokovic en segona i va quedar eliminat.", "input_tokens": 259, "output_tokens": 3233, "seconds": 32.34}
+{"id": "unseen-n05/001", "answer": "A", "input_tokens": 337, "output_tokens": 454, "seconds": 3.87}
+{"id": "unseen-n05/002", "answer": "", "input_tokens": 268, "output_tokens": 4000, "seconds": 58.35}
+{"id": "unseen-n06/001", "answer": "", "input_tokens": 303, "output_tokens": 4000, "seconds": 29.05}
+{"id": "unseen-n06/002", "answer": "", "input_tokens": 260, "output_tokens": 4000, "seconds": 30.45}
+{"id": "unseen-n06/003", "answer": "C", "input_tokens": 318, "output_tokens": 170, "seconds": 3.41}
+{"id": "unseen-n06/004", "answer": "", "input_tokens": 262, "output_tokens": 4000, "seconds": 29.66}
+{"id": "unseen-n06/005", "answer": "D", "input_tokens": 306, "output_tokens": 154, "seconds": 2.03}
+{"id": "unseen-n06/006", "answer": "", "input_tokens": 259, "output_tokens": 4000, "seconds": 26.29}
+{"id": "unseen-n06/007", "answer": "C", "input_tokens": 317, "output_tokens": 986, "seconds": 12.29}
+{"id": "unseen-n06/008", "answer": "", "input_tokens": 268, "output_tokens": 4000, "seconds": 26.72}
+{"id": "unseen-n06/009", "answer": "", "input_tokens": 306, "output_tokens": 4000, "seconds": 40.65}
+{"id": "unseen-n06/010", "answer": "El dot l’aportava la pròpia pubilla; el jove no hereu hi contribüïa amb els seus béns.", "input_tokens": 259, "output_tokens": 2046, "seconds": 18.2}
+{"id": "unseen-n06/011", "answer": "C", "input_tokens": 350, "output_tokens": 1512, "seconds": 12.76}
+{"id": "unseen-n06/012", "answer": "", "input_tokens": 263, "output_tokens": 4000, "seconds": 35.01}
+{"id": "unseen-n06/013", "answer": "D", "input_tokens": 322, "output_tokens": 3815, "seconds": 23.58}
+{"id": "unseen-n06/014", "answer": "", "input_tokens": 270, "output_tokens": 4000, "seconds": 45.1}
+{"id": "unseen-n07/001", "answer": "A", "input_tokens": 314, "output_tokens": 477, "seconds": 7.48}
+{"id": "unseen-n07/002", "answer": "", "input_tokens": 263, "output_tokens": 4000, "seconds": 28.17}
+{"id": "unseen-n07/003", "answer": "C", "input_tokens": 331, "output_tokens": 159, "seconds": 1.56}
+{"id": "unseen-n07/004", "answer": "", "input_tokens": 275, "output_tokens": 4000, "seconds": 27.64}
+{"id": "unseen-n07/006", "answer": "", "input_tokens": 269, "output_tokens": 4000, "seconds": 37.91}
+{"id": "unseen-n07/007", "answer": "", "input_tokens": 282, "output_tokens": 4000, "seconds": 26.93}
+{"id": "unseen-n07/008", "answer": "", "input_tokens": 260, "output_tokens": 4000, "seconds": 25.06}
+{"id": "unseen-n07/009", "answer": "D", "input_tokens": 331, "output_tokens": 2132, "seconds": 14.43}
+{"id": "unseen-n07/010", "answer": "", "input_tokens": 278, "output_tokens": 4000, "seconds": 27.49}
+{"id": "unseen-n07/011", "answer": "", "input_tokens": 331, "output_tokens": 4000, "seconds": 29.64}
+{"id": "unseen-n07/012", "answer": "", "input_tokens": 271, "output_tokens": 4000, "seconds": 29.93}
+{"id": "unseen-n07/013", "answer": "B", "input_tokens": 315, "output_tokens": 1368, "seconds": 10.17}
+{"id": "unseen-n07/014", "answer": "", "input_tokens": 257, "output_tokens": 4000, "seconds": 39.94}
+{"id": "unseen-n07/015", "answer": "", "input_tokens": 342, "output_tokens": 4000, "seconds": 27.44}
+{"id": "unseen-n07/016", "answer": "", "input_tokens": 267, "output_tokens": 4000, "seconds": 26.03}
+{"id": "unseen-n07/005", "answer": "A", "input_tokens": 322, "output_tokens": 178, "seconds": 3.56}
+{"id": "unseen-n08/001", "answer": "", "input_tokens": 421, "output_tokens": 4000, "seconds": 27.27}
+{"id": "unseen-n08/002", "answer": "", "input_tokens": 267, "output_tokens": 4000, "seconds": 37.66}
+{"id": "unseen-n09/001", "answer": "B", "input_tokens": 291, "output_tokens": 109, "seconds": 1.75}
+{"id": "unseen-n09/002", "answer": "", "input_tokens": 265, "output_tokens": 4000, "seconds": 32.36}
+{"id": "unseen-n10/001", "answer": "C", "input_tokens": 350, "output_tokens": 3, "seconds": 0.72}
+{"id": "unseen-n10/002", "answer": "", "input_tokens": 264, "output_tokens": 4000, "seconds": 43.8}
+{"id": "unseen-n11/001", "answer": "", "input_tokens": 330, "output_tokens": 4000, "seconds": 24.48}
+{"id": "unseen-n11/002", "answer": "", "input_tokens": 265, "output_tokens": 4000, "seconds": 24.92}
+{"id": "unseen-n11/003", "answer": "", "input_tokens": 298, "output_tokens": 4000, "seconds": 24.52}
+{"id": "unseen-n11/004", "answer": "", "input_tokens": 278, "output_tokens": 4000, "seconds": 22.38}
+{"id": "unseen-n11/005", "answer": "C", "input_tokens": 312, "output_tokens": 1182, "seconds": 6.85}
+{"id": "unseen-n11/006", "answer": "", "input_tokens": 261, "output_tokens": 4000, "seconds": 29.11}
+{"id": "unseen-n11/007", "answer": "", "input_tokens": 291, "output_tokens": 4000, "seconds": 24.17}
+{"id": "unseen-n11/008", "answer": "", "input_tokens": 262, "output_tokens": 4000, "seconds": 58.15}
+{"id": "unseen-n11/009", "answer": "D", "input_tokens": 305, "output_tokens": 307, "seconds": 6.24}
+{"id": "unseen-n11/010", "answer": "", "input_tokens": 254, "output_tokens": 4000, "seconds": 50.94}
+{"id": "unseen-n11/011", "answer": "D", "input_tokens": 294, "output_tokens": 2109, "seconds": 13.19}
+{"id": "unseen-n11/012", "answer": "Segons la Llei 13/1996 de formació professional, el contracte d’aprenentatge dura entre **un i dos anys**, es pot signar entre els **16 i els 25 anys** i comporta una jornada de **40 hores setmanals**.", "input_tokens": 276, "output_tokens": 1803, "seconds": 14.93}
+{"id": "unseen-n12/001", "answer": "C", "input_tokens": 302, "output_tokens": 1862, "seconds": 10.42}
+{"id": "unseen-n12/002", "answer": "A Andorra, la precipitació anual presenta una tendència a la baixa, tot i que amb fortes oscil·lacions entre anys. Al Pirineu, el senyal és menys homogeni —amb increments en moltes zones i davallades al sud—, de manera que el descens és relativament més marcat a Andorra.", "input_tokens": 254, "output_tokens": 3842, "seconds": 26.49}
+{"id": "unseen-n12/003", "answer": "", "input_tokens": 273, "output_tokens": 4000, "seconds": 38.67}
+{"id": "unseen-n12/004", "answer": "", "input_tokens": 263, "output_tokens": 4000, "seconds": 28.32}
+{"id": "unseen-n13/001", "answer": "B", "input_tokens": 287, "output_tokens": 278, "seconds": 3.2}
+{"id": "unseen-n13/002", "answer": "El pagament voluntari dins dels deu dies hàbils comporta un descompte del 50% de la multa. El contraventant renuncia expressament a presentar recurs contra la multa.", "input_tokens": 267, "output_tokens": 688, "seconds": 6.43}
+{"id": "people/001", "answer": "C", "input_tokens": 280, "output_tokens": 3123, "seconds": 18.22}
+{"id": "people/002", "answer": "D", "input_tokens": 288, "output_tokens": 819, "seconds": 11.04}
+{"id": "people/003", "answer": "C", "input_tokens": 381, "output_tokens": 1916, "seconds": 12.02}
+{"id": "people/004", "answer": "", "input_tokens": 300, "output_tokens": 4000, "seconds": 47.08}
+{"id": "people/005", "answer": "A", "input_tokens": 308, "output_tokens": 2913, "seconds": 23.79}
+{"id": "people/006", "answer": "A", "input_tokens": 286, "output_tokens": 243, "seconds": 2.9}
+{"id": "people/007", "answer": "", "input_tokens": 263, "output_tokens": 4000, "seconds": 23.81}
+{"id": "people/008", "answer": "", "input_tokens": 278, "output_tokens": 4000, "seconds": 21.35}
+{"id": "people/009", "answer": "Perquè va obtenir el bronze a la prova individual de Valmalenco (Itàlia), primera parada de la Copa del Món de l’FIS el 2023. Amb aquest resultat, es va convertir en el primer andorrà de la història a pujar a un podi de la competició.", "input_tokens": 267, "output_tokens": 762, "seconds": 5.88}
+{"id": "politics-political-identity/001", "answer": "C", "input_tokens": 360, "output_tokens": 285, "seconds": 6.64}
+{"id": "politics-political-identity/002", "answer": "C", "input_tokens": 309, "output_tokens": 468, "seconds": 6.83}
+{"id": "politics-political-identity/003", "answer": "C", "input_tokens": 308, "output_tokens": 1195, "seconds": 8.41}
+{"id": "politics-political-identity/004", "answer": "", "input_tokens": 325, "output_tokens": 4000, "seconds": 26.36}
+{"id": "politics-political-identity/005", "answer": "B", "input_tokens": 303, "output_tokens": 684, "seconds": 7.02}
+{"id": "politics-political-identity/006", "answer": "A", "input_tokens": 302, "output_tokens": 957, "seconds": 15.59}
+{"id": "politics-political-identity/007", "answer": "", "input_tokens": 273, "output_tokens": 4000, "seconds": 26.62}
+{"id": "politics-political-identity/008", "answer": "La concòrdia de 1163 va ser signada per 15 representants andorrans i la de 1180 per 24. L’increment del nombre de signataris indica el creixement demogràfic i la consolidació de la comunitat d’Andorra.", "input_tokens": 272, "output_tokens": 3057, "seconds": 18.42}
+{"id": "politics-political-identity/009", "answer": "Andorra va entrar a la Societat de Nacions el 1925 per obtenir reconeixement internacional i protegir els seus interessos malgrat no ser un estat sobirà. La representà França.", "input_tokens": 248, "output_tokens": 797, "seconds": 7.94}
+{"id": "politics-parliamentarism/001", "answer": "C", "input_tokens": 300, "output_tokens": 289, "seconds": 3.33}
+{"id": "politics-parliamentarism/002", "answer": "B", "input_tokens": 357, "output_tokens": 1453, "seconds": 11.2}
+{"id": "politics-parliamentarism/003", "answer": "C", "input_tokens": 294, "output_tokens": 2003, "seconds": 17.42}
+{"id": "politics-parliamentarism/004", "answer": "A", "input_tokens": 307, "output_tokens": 2139, "seconds": 26.27}
+{"id": "politics-parliamentarism/005", "answer": "", "input_tokens": 306, "output_tokens": 4000, "seconds": 33.12}
+{"id": "politics-parliamentarism/006", "answer": "C", "input_tokens": 305, "output_tokens": 220, "seconds": 6.27}
+{"id": "politics-parliamentarism/007", "answer": "", "input_tokens": 264, "output_tokens": 4000, "seconds": 48.75}
+{"id": "politics-parliamentarism/008", "answer": "Perquè el model andorrà, dissenyat a la Constitució de 1993, combina legitimitat nacional i territorial: 28 consellers representen el país de manera proporcional i 12, un per parròquia, garanteixen la veu de cada territori. Una única circumscripció com la de San Marino seria més simple, però podriamarginar els interessos locals i les identitats parroquials.", "input_tokens": 265, "output_tokens": 1114, "seconds": 8.81}
+{"id": "politics-parliamentarism/009", "answer": "Perquè, amb la consolidació democràtica i l’aparició de diversos partits, calia ampliar la representació al Consell General. La reforma va mantenir els 28 representants de les parròquies i va augmentar de 9 a 14 els elegits per les forces polítiques mitjançant un sistema proporcional.", "input_tokens": 255, "output_tokens": 553, "seconds": 7.11}
+{"id": "politics-parties/001", "answer": "A", "input_tokens": 297, "output_tokens": 72, "seconds": 1.53}
+{"id": "politics-parties/002", "answer": "C", "input_tokens": 308, "output_tokens": 502, "seconds": 3.08}
+{"id": "politics-parties/003", "answer": "B", "input_tokens": 312, "output_tokens": 334, "seconds": 3.29}
+{"id": "politics-parties/005", "answer": "C", "input_tokens": 295, "output_tokens": 174, "seconds": 2.83}
+{"id": "politics-parties/006", "answer": "D", "input_tokens": 299, "output_tokens": 391, "seconds": 5.61}
+{"id": "politics-parties/007", "answer": "", "input_tokens": 266, "output_tokens": 4000, "seconds": 39.05}
+{"id": "politics-parties/009", "answer": "El Partit Socialdemòcrata va aprofitar el rebuig popular al pacte Reform–Liberals i va presentar-se com l’alternativa de govern. A més, la inelegibilitat de molts candidats adversaris per qüestions de nacionalitat va deixarNomés una minoria d'escons va correspondre al Partit Socialdemòcrata, que va obtenir els 28 escons i una majoria absoluta. El seu èxit es va deure al rebuig popular del pacte Reform-Liberals i a la declaració d’inelegibilitat de molts candidats adversaris per doble nacionalitat, fet que va deixar el PS sense competència en moltes circumsCRIPCIÓ. Va guanyar els 28 escons i, per tant, va obtenir la majoria absoluta.", "input_tokens": 257, "output_tokens": 3777, "seconds": 30.31}
+{"id": "politics-parties/008", "answer": "", "input_tokens": 262, "output_tokens": 4000, "seconds": 25.99}
+{"id": "politics-parties/010", "answer": "C", "input_tokens": 321, "output_tokens": 156, "seconds": 2.24}
+{"id": "politics-electoral-system/001", "answer": "A", "input_tokens": 319, "output_tokens": 247, "seconds": 2.59}
+{"id": "politics-electoral-system/002", "answer": "D", "input_tokens": 335, "output_tokens": 249, "seconds": 2.17}
+{"id": "politics-electoral-system/003", "answer": "D", "input_tokens": 301, "output_tokens": 706, "seconds": 5.16}
+{"id": "politics-electoral-system/004", "answer": "C", "input_tokens": 345, "output_tokens": 1280, "seconds": 10.64}
+{"id": "politics-electoral-system/005", "answer": "B", "input_tokens": 330, "output_tokens": 343, "seconds": 4.91}
+{"id": "politics-electoral-system/006", "answer": "D", "input_tokens": 296, "output_tokens": 1681, "seconds": 12.25}
+{"id": "politics-electoral-system/007", "answer": "", "input_tokens": 266, "output_tokens": 4000, "seconds": 26.74}
+{"id": "politics-electoral-system/008", "answer": "", "input_tokens": 265, "output_tokens": 4000, "seconds": 24.0}
+{"id": "politics-electoral-system/009", "answer": "", "input_tokens": 262, "output_tokens": 4000, "seconds": 28.95}
+{"id": "society-associations/001", "answer": "B", "input_tokens": 283, "output_tokens": 135, "seconds": 2.01}
+{"id": "society-associations/003", "answer": "La Llei 14/2000 exigeix l’acord d’un mínim de tres persones interessades, l’aprovació dels estatuts, la designació dels òrgans de govern i una finalitat lícita i no lucrativa. L’associació s’ha d’inscriure al Registre especial d’associacions, depenent del departament competent en matèria de Justícia, per poder desenvolupar les seves activitats.", "input_tokens": 262, "output_tokens": 2224, "seconds": 15.41}
+{"id": "society-associations/002", "answer": "C", "input_tokens": 295, "output_tokens": 445, "seconds": 5.29}
+{"id": "society-demography/001", "answer": "", "input_tokens": 294, "output_tokens": 4000, "seconds": 24.26}
+{"id": "society-demography/002", "answer": "C", "input_tokens": 305, "output_tokens": 833, "seconds": 5.86}
+{"id": "society-demography/003", "answer": "B", "input_tokens": 309, "output_tokens": 402, "seconds": 3.84}
+{"id": "society-demography/004", "answer": "A", "input_tokens": 319, "output_tokens": 744, "seconds": 7.05}
+{"id": "society-demography/005", "answer": "C", "input_tokens": 287, "output_tokens": 422, "seconds": 3.84}
+{"id": "society-demography/006", "answer": "B", "input_tokens": 284, "output_tokens": 509, "seconds": 3.68}
+{"id": "society-demography/007", "answer": "", "input_tokens": 275, "output_tokens": 4000, "seconds": 30.79}
+{"id": "society-demography/008", "answer": "", "input_tokens": 285, "output_tokens": 4000, "seconds": 30.81}
+{"id": "society-demography/009", "answer": "No ho demostra: una taxa de mortalitat menor que la de Catalunya el 1996 no implica que els andorrans fossin els ciutadans més sans d’Europa. Podria reflectir una estructura d’edats més jove, migracions o diferències en el registre de les defuncions; caldria comparar taxes estandarditzades i dades fiables de tots els països.", "input_tokens": 279, "output_tokens": 255, "seconds": 2.51}
+{"id": "society-women/001", "answer": "C", "input_tokens": 302, "output_tokens": 128, "seconds": 1.76}
+{"id": "society-women/002", "answer": "D", "input_tokens": 305, "output_tokens": 279, "seconds": 1.8}
+{"id": "society-women/003", "answer": "A", "input_tokens": 336, "output_tokens": 210, "seconds": 6.32}
+{"id": "society-women/004", "answer": "", "input_tokens": 297, "output_tokens": 4000, "seconds": 28.88}
+{"id": "society-women/005", "answer": "C", "input_tokens": 282, "output_tokens": 89, "seconds": 1.44}
+{"id": "society-women/006", "answer": "B", "input_tokens": 271, "output_tokens": 1455, "seconds": 14.9}
+{"id": "society-women/009", "answer": "", "input_tokens": 270, "output_tokens": 4000, "seconds": 40.56}
+{"id": "society-women/007", "answer": "", "input_tokens": 281, "output_tokens": 4000, "seconds": 26.91}
+{"id": "society-women/008", "answer": "", "input_tokens": 270, "output_tokens": 4000, "seconds": 25.49}
+{"id": "society-education/002", "answer": "A", "input_tokens": 315, "output_tokens": 45, "seconds": 1.2}
+{"id": "society-education/003", "answer": "B", "input_tokens": 290, "output_tokens": 483, "seconds": 5.06}
+{"id": "society-education/004", "answer": "D", "input_tokens": 294, "output_tokens": 560, "seconds": 4.06}
+{"id": "society-education/005", "answer": "C", "input_tokens": 285, "output_tokens": 2026, "seconds": 11.4}
+{"id": "society-education/006", "answer": "C", "input_tokens": 290, "output_tokens": 318, "seconds": 2.99}
+{"id": "society-education/007", "answer": "", "input_tokens": 269, "output_tokens": 4000, "seconds": 51.79}
+{"id": "society-education/008", "answer": "", "input_tokens": 264, "output_tokens": 4000, "seconds": 51.1}
+{"id": "society-education/009", "answer": "Per corregir una situació deficient: l’ensenyament depenia de les parròquies, hi havia poques escoles i mestres formats, i l’analfabetisme era alt. La llei de 1882 va crear un sistema educatiu públic unificat, i el col·legi de Canillo en va ser el primerdipositari.", "input_tokens": 266, "output_tokens": 981, "seconds": 8.02}
+{"id": "society-education/001", "answer": "B", "input_tokens": 298, "output_tokens": 154, "seconds": 2.26}
+{"id": "society-sport/001", "answer": "D", "input_tokens": 298, "output_tokens": 328, "seconds": 3.39}
+{"id": "society-sport/003", "answer": "", "input_tokens": 266, "output_tokens": 4000, "seconds": 34.66}
+{"id": "society-sport/002", "answer": "D", "input_tokens": 323, "output_tokens": 3, "seconds": 1.18}
+{"id": "society-family/001", "answer": "C", "input_tokens": 401, "output_tokens": 1298, "seconds": 9.6}
+{"id": "society-family/002", "answer": "D", "input_tokens": 328, "output_tokens": 708, "seconds": 5.26}
+{"id": "society-family/003", "answer": "B", "input_tokens": 304, "output_tokens": 205, "seconds": 3.21}
+{"id": "society-family/004", "answer": "", "input_tokens": 311, "output_tokens": 4000, "seconds": 28.82}
+{"id": "society-family/005", "answer": "B", "input_tokens": 370, "output_tokens": 3, "seconds": 1.16}
+{"id": "society-family/007", "answer": "", "input_tokens": 273, "output_tokens": 4000, "seconds": 30.01}
+{"id": "society-family/008", "answer": "", "input_tokens": 273, "output_tokens": 4000, "seconds": 17.35}
+{"id": "society-family/009", "answer": "", "input_tokens": 263, "output_tokens": 4000, "seconds": 30.3}
+{"id": "society-family/006", "answer": "A", "input_tokens": 309, "output_tokens": 3045, "seconds": 16.19}
+{"id": "society-housing/001", "answer": "", "input_tokens": 300, "output_tokens": 4000, "seconds": 28.84}
+{"id": "society-housing/002", "answer": "", "input_tokens": 303, "output_tokens": 4000, "seconds": 26.74}
+{"id": "society-housing/003", "answer": "B", "input_tokens": 307, "output_tokens": 1939, "seconds": 12.62}
+{"id": "society-housing/004", "answer": "C", "input_tokens": 296, "output_tokens": 913, "seconds": 7.05}
+{"id": "society-housing/005", "answer": "C", "input_tokens": 312, "output_tokens": 1369, "seconds": 9.87}
+{"id": "society-housing/006", "answer": "", "input_tokens": 311, "output_tokens": 4000, "seconds": 36.37}
+{"id": "society-housing/007", "answer": "", "input_tokens": 269, "output_tokens": 4000, "seconds": 26.65}
+{"id": "society-housing/008", "answer": "", "input_tokens": 285, "output_tokens": 4000, "seconds": 26.6}
+{"id": "society-housing/009", "answer": "", "input_tokens": 264, "output_tokens": 4000, "seconds": 36.19}
+{"id": "society-immigration/001", "answer": "", "input_tokens": 382, "output_tokens": 4000, "seconds": 27.46}
+{"id": "society-immigration/002", "answer": "D", "input_tokens": 310, "output_tokens": 3, "seconds": 1.46}
+{"id": "society-immigration/003", "answer": "A", "input_tokens": 342, "output_tokens": 676, "seconds": 7.45}
+{"id": "society-immigration/004", "answer": "A", "input_tokens": 297, "output_tokens": 1885, "seconds": 12.06}
+{"id": "society-immigration/005", "answer": "", "input_tokens": 339, "output_tokens": 4000, "seconds": 22.2}
+{"id": "society-immigration/006", "answer": "A", "input_tokens": 306, "output_tokens": 1366, "seconds": 8.55}
+{"id": "society-immigration/007", "answer": "", "input_tokens": 278, "output_tokens": 4000, "seconds": 30.26}
+{"id": "society-immigration/008", "answer": "", "input_tokens": 283, "output_tokens": 4000, "seconds": 26.4}
+{"id": "society-immigration/009", "answer": "Perquè el conveni establia la igualtat de tracte entre els ciutadans d’Espanya, França i Andorra i eliminava la limitació nacional prèvia en l’accés al treball públic. Així, els espanyols i els francesos podien presentar-se ja a la primera convocatòria dels edictes.", "input_tokens": 289, "output_tokens": 3721, "seconds": 30.56}
+{"id": "society-media/001", "answer": "B", "input_tokens": 320, "output_tokens": 1515, "seconds": 13.59}
+{"id": "society-media/002", "answer": "A", "input_tokens": 299, "output_tokens": 125, "seconds": 1.29}
+{"id": "society-media/003", "answer": "B", "input_tokens": 298, "output_tokens": 222, "seconds": 2.38}
+{"id": "society-media/004", "answer": "D", "input_tokens": 294, "output_tokens": 3267, "seconds": 24.26}
+{"id": "society-media/005", "answer": "D", "input_tokens": 304, "output_tokens": 3, "seconds": 1.15}
+{"id": "society-media/006", "answer": "B", "input_tokens": 382, "output_tokens": 63, "seconds": 1.48}
+{"id": "society-media/008", "answer": "", "input_tokens": 269, "output_tokens": 4000, "seconds": 28.15}
+{"id": "society-media/009", "answer": "", "input_tokens": 251, "output_tokens": 4000, "seconds": 37.68}
+{"id": "society-media/007", "answer": "", "input_tokens": 269, "output_tokens": 4000, "seconds": 28.62}
+{"id": "society-social-protection/001", "answer": "B", "input_tokens": 368, "output_tokens": 3, "seconds": 0.94}
+{"id": "society-social-protection/002", "answer": "C", "input_tokens": 298, "output_tokens": 1655, "seconds": 13.58}
+{"id": "society-social-protection/003", "answer": "A", "input_tokens": 314, "output_tokens": 42, "seconds": 1.31}
+{"id": "society-social-protection/004", "answer": "B", "input_tokens": 304, "output_tokens": 1076, "seconds": 6.0}
+{"id": "society-social-protection/005", "answer": "A", "input_tokens": 292, "output_tokens": 343, "seconds": 5.53}
+{"id": "society-social-protection/006", "answer": "A", "input_tokens": 294, "output_tokens": 515, "seconds": 5.89}
+{"id": "society-social-protection/007", "answer": "", "input_tokens": 273, "output_tokens": 4000, "seconds": 24.32}
+{"id": "society-social-protection/008", "answer": "", "input_tokens": 275, "output_tokens": 4000, "seconds": 39.45}
+{"id": "society-social-protection/009", "answer": "L’esclat del turisme i la modernització econòmica del país feren necessària una protecció social més àmplia que les antigues caixes locals. A més de malaltia i vellesa, es van cobrir els riscos de les famílies —especialment maternitat i infància— i l’atur, agreujat per la temporalitat del treball turístic i de la construcció.", "input_tokens": 279, "output_tokens": 2843, "seconds": 27.71}
+{"id": "society-healthcare/001", "answer": "B", "input_tokens": 303, "output_tokens": 3, "seconds": 1.13}
+{"id": "society-healthcare/002", "answer": "C", "input_tokens": 312, "output_tokens": 151, "seconds": 1.84}
+{"id": "society-healthcare/003", "answer": "B", "input_tokens": 303, "output_tokens": 408, "seconds": 3.73}
+{"id": "society-healthcare/004", "answer": "A", "input_tokens": 327, "output_tokens": 171, "seconds": 1.96}
+{"id": "society-healthcare/005", "answer": "B", "input_tokens": 305, "output_tokens": 199, "seconds": 2.66}
+{"id": "society-healthcare/006", "answer": "C", "input_tokens": 311, "output_tokens": 712, "seconds": 6.31}
+{"id": "society-healthcare/007", "answer": "", "input_tokens": 256, "output_tokens": 4000, "seconds": 27.74}
+{"id": "society-healthcare/008", "answer": "", "input_tokens": 271, "output_tokens": 4000, "seconds": 43.6}
+{"id": "society-healthcare/009", "answer": "El 1968 es va reformar el sistema sanitari andorrà per estendre la cobertura sanitària i coordinar els serveis públics. Es van crear la CASS per finançar-la mitjançant quotes i el SAAS per prestar i gestionar l’assistència sanitària als assegurats i a la resta de la población.", "input_tokens": 265, "output_tokens": 599, "seconds": 6.08}
+{"id": "society-loose/001", "answer": "C", "input_tokens": 324, "output_tokens": 3, "seconds": 0.67}
+{"id": "society-loose/002", "answer": "A", "input_tokens": 303, "output_tokens": 151, "seconds": 2.02}
+{"id": "society-loose/003", "answer": "", "input_tokens": 280, "output_tokens": 4000, "seconds": 37.04}
+{"id": "society-work/001", "answer": "B", "input_tokens": 292, "output_tokens": 1304, "seconds": 9.78}
+{"id": "society-work/002", "answer": "", "input_tokens": 281, "output_tokens": 4000, "seconds": 26.99}
+{"id": "society-work/003", "answer": "D", "input_tokens": 305, "output_tokens": 226, "seconds": 2.31}
+{"id": "society-work/004", "answer": "A", "input_tokens": 287, "output_tokens": 2110, "seconds": 13.04}
+{"id": "society-work/005", "answer": "A", "input_tokens": 297, "output_tokens": 2566, "seconds": 15.74}
+{"id": "society-work/006", "answer": "C", "input_tokens": 359, "output_tokens": 3, "seconds": 0.97}
+{"id": "society-work/007", "answer": "", "input_tokens": 268, "output_tokens": 4000, "seconds": 30.66}
+{"id": "society-work/009", "answer": "El Sindicat Andorrà de Treballaders va néixer el 1976 per representar els treballadors, que fins aleshores no tenien cap organisme col·lectiu propi per negociar i defensar els seus drets. La seva fundació reflectia l’obertura política i la progressiva llibertat d’associació al país.", "input_tokens": 258, "output_tokens": 851, "seconds": 12.98}
+{"id": "society-work/008", "answer": "Preveia una compensació de **15 dies de salari per cada any de servei**, prorratejada per la fracció d’any i amb un màxim de **24 mesos de salari**. El treballador també tenia dret a un **preavís de 15 dies**.", "input_tokens": 274, "output_tokens": 3779, "seconds": 19.59}
+{"id": "society-civic-life/001", "answer": "C", "input_tokens": 288, "output_tokens": 945, "seconds": 6.34}
+{"id": "society-civic-life/002", "answer": "C", "input_tokens": 300, "output_tokens": 607, "seconds": 5.34}
+{"id": "society-civic-life/003", "answer": "D", "input_tokens": 290, "output_tokens": 277, "seconds": 4.62}
+{"id": "society-civic-life/004", "answer": "A", "input_tokens": 290, "output_tokens": 642, "seconds": 6.37}
+{"id": "society-civic-life/005", "answer": "B", "input_tokens": 282, "output_tokens": 633, "seconds": 5.28}
+{"id": "society-civic-life/006", "answer": "", "input_tokens": 326, "output_tokens": 4000, "seconds": 29.51}
+{"id": "society-civic-life/007", "answer": "No hi ha contradicció: «confiar en la gent» mesura la confiança generalitzada o social, mentre que la família implica vincles emocionals, coneixença i reciprocitat. Es pot confiar plenament en els familiars i, alhora, ser més prudent amb persones desconegudes o amb la societat en general.", "input_tokens": 267, "output_tokens": 383, "seconds": 4.1}
+{"id": "society-civic-life/008", "answer": "", "input_tokens": 252, "output_tokens": 4000, "seconds": 32.83}
+{"id": "society-civic-life/009", "answer": "Segons Canturri, l’aïllament geogràfic dels valls pirinencs i la duresa del medi han afavorit una vida tancada al grup local. Aquesta autosuficiència comunitària ha incentivat un fort individualisme.", "input_tokens": 259, "output_tokens": 369, "seconds": 4.29}
+{"id": "territory-climate-and-mountain/001", "answer": "C", "input_tokens": 293, "output_tokens": 120, "seconds": 1.49}
+{"id": "territory-climate-and-mountain/003", "answer": "D", "input_tokens": 306, "output_tokens": 244, "seconds": 2.09}
+{"id": "territory-climate-and-mountain/005", "answer": "B", "input_tokens": 326, "output_tokens": 506, "seconds": 4.21}
+{"id": "territory-climate-and-mountain/007", "answer": "", "input_tokens": 271, "output_tokens": 4000, "seconds": 43.21}
+{"id": "territory-climate-and-mountain/008", "answer": "", "input_tokens": 263, "output_tokens": 4000, "seconds": 32.22}
+{"id": "territory-climate-and-mountain/009", "answer": "El mapa ATES identifica les zones onades es poden produir i els llocs exposats al seu impacte. Combinat amb l’estat de la neu i les previsions meteorològiques, permet valorar cada dia el grau de perill d’allaus i les zones més afectades.", "input_tokens": 262, "output_tokens": 800, "seconds": 8.95}
+{"id": "territory-climate-and-mountain/010", "answer": "C", "input_tokens": 294, "output_tokens": 2636, "seconds": 17.15}
+{"id": "territory-climate-and-mountain/004", "answer": "C", "input_tokens": 286, "output_tokens": 165, "seconds": 1.83}
+{"id": "territory-climate-and-mountain/006", "answer": "", "input_tokens": 350, "output_tokens": 4000, "seconds": 40.01}
+{"id": "territory-fauna-and-flora/001", "answer": "C", "input_tokens": 317, "output_tokens": 457, "seconds": 3.91}
+{"id": "territory-fauna-and-flora/002", "answer": "C", "input_tokens": 297, "output_tokens": 766, "seconds": 5.56}
+{"id": "territory-fauna-and-flora/003", "answer": "", "input_tokens": 300, "output_tokens": 4000, "seconds": 34.15}
+{"id": "territory-fauna-and-flora/004", "answer": "C", "input_tokens": 285, "output_tokens": 503, "seconds": 4.19}
+{"id": "territory-fauna-and-flora/005", "answer": "C", "input_tokens": 311, "output_tokens": 236, "seconds": 2.81}
+{"id": "territory-fauna-and-flora/006", "answer": "B", "input_tokens": 275, "output_tokens": 528, "seconds": 7.32}
+{"id": "territory-fauna-and-flora/007", "answer": "Cal tenir 18 anys complits, a més de pagar la taxa corresponent.", "input_tokens": 265, "output_tokens": 1000, "seconds": 10.9}
+{"id": "territory-fauna-and-flora/008", "answer": "", "input_tokens": 258, "output_tokens": 4000, "seconds": 27.48}
+{"id": "territory-fauna-and-flora/009", "answer": "Perquè, segons el principi de legalitat, la caça només es permet en zones expressament autoritzades i amb les condicions, espècies i períodes fixats per la Llei general de caça. Aquesta limitació en controla l’activitat i en protegeix de manera sostenible la fauna i els hàbitats.", "input_tokens": 260, "output_tokens": 618, "seconds": 6.79}
+{"id": "territory-physical-geography/001", "answer": "A", "input_tokens": 296, "output_tokens": 361, "seconds": 3.96}
+{"id": "territory-physical-geography/002", "answer": "A", "input_tokens": 320, "output_tokens": 1722, "seconds": 13.47}
+{"id": "territory-physical-geography/004", "answer": "C", "input_tokens": 343, "output_tokens": 1064, "seconds": 7.84}
+{"id": "territory-physical-geography/005", "answer": "C", "input_tokens": 308, "output_tokens": 996, "seconds": 9.77}
+{"id": "territory-physical-geography/006", "answer": "", "input_tokens": 321, "output_tokens": 4000, "seconds": 34.65}
+{"id": "territory-physical-geography/007", "answer": "", "input_tokens": 257, "output_tokens": 4000, "seconds": 34.44}
+{"id": "territory-physical-geography/008", "answer": "", "input_tokens": 254, "output_tokens": 4000, "seconds": 26.51}
+{"id": "territory-physical-geography/009", "answer": "", "input_tokens": 267, "output_tokens": 4000, "seconds": 39.08}
+{"id": "territory-physical-geography/003", "answer": "A", "input_tokens": 280, "output_tokens": 511, "seconds": 5.36}
+{"id": "territory-built-landscape/001", "answer": "B", "input_tokens": 356, "output_tokens": 742, "seconds": 6.7}
+{"id": "territory-built-landscape/002", "answer": "A", "input_tokens": 332, "output_tokens": 2266, "seconds": 14.58}
+{"id": "territory-built-landscape/003", "answer": "C", "input_tokens": 327, "output_tokens": 3197, "seconds": 26.96}
+{"id": "territory-built-landscape/004", "answer": "", "input_tokens": 323, "output_tokens": 4000, "seconds": 24.92}
+{"id": "territory-built-landscape/005", "answer": "", "input_tokens": 323, "output_tokens": 4000, "seconds": 35.6}
+{"id": "territory-built-landscape/006", "answer": "B", "input_tokens": 354, "output_tokens": 536, "seconds": 5.45}
+{"id": "territory-built-landscape/008", "answer": "", "input_tokens": 264, "output_tokens": 4000, "seconds": 29.65}
+{"id": "territory-built-landscape/009", "answer": "La Reforma de 1864 va obrir Andorra al comerç exterior i va superar el seu aïllament. Entre 1880 i 1904 es van construir les rutes principals d’Andorra la Vella i Escaldes cap a França, per Sant Julià i el Pas de la Casa, i cap a Espanya, per la Farga de Moles i Ibersa. Encara eren camins de terra, però ja permetien la circulació de carros i diligències.", "input_tokens": 262, "output_tokens": 2626, "seconds": 24.94}
+{"id": "territory-built-landscape/007", "answer": "", "input_tokens": 284, "output_tokens": 4000, "seconds": 36.59}
+{"id": "territory-parishes/001", "answer": "B", "input_tokens": 285, "output_tokens": 194, "seconds": 2.19}
+{"id": "territory-parishes/004", "answer": "", "input_tokens": 303, "output_tokens": 4000, "seconds": 28.23}
+{"id": "territory-parishes/006", "answer": "", "input_tokens": 298, "output_tokens": 4000, "seconds": 24.39}
+{"id": "territory-parishes/007", "answer": "Escaldes-Engordany es va crear el **1978**, per segregació de la parròquia d’**Andorra la Vella**. Ocupa el **sisè lloc** en l’ordre protocol·lari de les set parròquies d’Andorra.", "input_tokens": 270, "output_tokens": 999, "seconds": 6.44}
+{"id": "territory-parishes/009", "answer": "Andorra la Vella no és la parròquia més extensa: Canillo ho és, amb uns 53,3 km², davant dels 33,7 km² de la capital. La capital sí que és la més poblada, perquè hi es concentren l’administració, els serveis, el comerç i l’activitat residencial i turística.", "input_tokens": 250, "output_tokens": 609, "seconds": 4.36}
+{"id": "territory-parishes/003", "answer": "A", "input_tokens": 289, "output_tokens": 617, "seconds": 5.93}
+{"id": "territory-parishes/005", "answer": "D", "input_tokens": 288, "output_tokens": 31, "seconds": 1.31}
+{"id": "territory-parishes/008", "answer": "Amb 57 km², Canillo és la segona parròquia més extensa, per darrere d’Encamp. Ocupa el primer lloc de l’ordre protocol·lari i es divideix en tres poblacions: Canillo, Soldeu i El Tarter.", "input_tokens": 266, "output_tokens": 3789, "seconds": 35.91}
+{"id": "territory-parishes/002", "answer": "B", "input_tokens": 285, "output_tokens": 126, "seconds": 3.09}
+{"id": "territory-natural-heritage/001", "answer": "C", "input_tokens": 302, "output_tokens": 94, "seconds": 1.5}
+{"id": "territory-natural-heritage/003", "answer": "B", "input_tokens": 307, "output_tokens": 231, "seconds": 3.44}
+{"id": "territory-natural-heritage/004", "answer": "D", "input_tokens": 311, "output_tokens": 196, "seconds": 4.45}
+{"id": "territory-natural-heritage/005", "answer": "Tot i que el seu valor natural és elevat, la UNESCO la va inscriure com a paisatge cultural perquè el territori ha estat modelat durant segles per activitats humanes tradicionals. Hi va reconèixer, amb els criteris (iii) i (iv), un exemple excepcional de gestió sostenible del territori i de relació harmònica entre les comunitats rurals i la natura, que ha conservat la biodiversitat i el patrimoni cultural pirinenc.", "input_tokens": 276, "output_tokens": 1508, "seconds": 11.97}
+{"id": "territory-natural-heritage/006", "answer": "Andorra no és membre de la Unió Europea, sinó de l’Espai Econòmic Europeu i de la Unió Duanera amb la UE. Per això, ha d’aplicar moltes directives europees sobre residus i reciclatge, transposades a la seva legislació. Els percentatges de reciclatgeLng European, però, no s’apliquen de manera idèntica a Andorra.", "input_tokens": 260, "output_tokens": 487, "seconds": 4.15}
+{"id": "territory-natural-heritage/002", "answer": "", "input_tokens": 296, "output_tokens": 4000, "seconds": 22.27}
+{"id": "territory-toponymy/001", "answer": "C", "input_tokens": 304, "output_tokens": 3466, "seconds": 33.48}
+{"id": "territory-toponymy/002", "answer": "B", "input_tokens": 285, "output_tokens": 103, "seconds": 1.72}
+{"id": "territory-toponymy/005", "answer": "C", "input_tokens": 299, "output_tokens": 366, "seconds": 6.25}
+{"id": "territory-toponymy/007", "answer": "", "input_tokens": 276, "output_tokens": 4000, "seconds": 26.57}
+{"id": "territory-toponymy/008", "answer": "", "input_tokens": 262, "output_tokens": 4000, "seconds": 29.01}
+{"id": "territory-toponymy/009", "answer": "", "input_tokens": 253, "output_tokens": 4000, "seconds": 26.86}
+{"id": "territory-toponymy/003", "answer": "B", "input_tokens": 280, "output_tokens": 589, "seconds": 4.8}
+{"id": "territory-toponymy/004", "answer": "", "input_tokens": 280, "output_tokens": 4000, "seconds": 32.9}
+{"id": "territory-toponymy/006", "answer": "A", "input_tokens": 325, "output_tokens": 2218, "seconds": 14.41}
+{"id": "territory-urban-planning/001", "answer": "B", "input_tokens": 307, "output_tokens": 235, "seconds": 2.48}
+{"id": "territory-urban-planning/002", "answer": "C", "input_tokens": 275, "output_tokens": 355, "seconds": 3.38}
+{"id": "territory-urban-planning/003", "answer": "D", "input_tokens": 327, "output_tokens": 83, "seconds": 1.98}
+{"id": "territory-urban-planning/004", "answer": "A", "input_tokens": 299, "output_tokens": 2750, "seconds": 17.53}
+{"id": "territory-urban-planning/006", "answer": "", "input_tokens": 258, "output_tokens": 4000, "seconds": 25.65}
+{"id": "territory-urban-planning/005", "answer": "", "input_tokens": 272, "output_tokens": 4000, "seconds": 26.43}
+{"id": "daily-life-how-things-work/001", "answer": "A", "input_tokens": 295, "output_tokens": 3, "seconds": 1.21}
+{"id": "daily-life-how-things-work/002", "answer": "B", "input_tokens": 287, "output_tokens": 309, "seconds": 3.0}
+{"id": "daily-life-how-things-work/003", "answer": "S’anomena **conseller de capçalera**; és el membre del consell comunal que el presideix i dirigeix el comú.", "input_tokens": 252, "output_tokens": 883, "seconds": 6.61}
+{"id": "daily-life-how-things-work/004", "answer": "B", "input_tokens": 295, "output_tokens": 3, "seconds": 1.14}
+{"id": "daily-life-how-things-work/005", "answer": "D", "input_tokens": 313, "output_tokens": 987, "seconds": 7.39}
+{"id": "daily-life-how-things-work/006", "answer": "No: la garantia comercial complementa la legal i no en substitueix ni redueix els drets; si cobreix el mateix risc, el comprador podrà reclamar la indemnització més favorable, sense duplicar-la.  \nHa de constar per escrit o en suport durador i especificar la identitat del garante, la durada, l’abast, les exclusions o limitacions, les condicions de validesa i el procediment de reclamació.", "input_tokens": 265, "output_tokens": 3770, "seconds": 28.43}
+{"id": "daily-life-how-things-work/007", "answer": "B", "input_tokens": 295, "output_tokens": 109, "seconds": 1.92}
+{"id": "daily-life-how-things-work/008", "answer": "C", "input_tokens": 311, "output_tokens": 235, "seconds": 2.76}
+{"id": "daily-life-how-things-work/009", "answer": "", "input_tokens": 269, "output_tokens": 4000, "seconds": 27.2}
+{"id": "daily-life-social-conventions/001", "answer": "C", "input_tokens": 301, "output_tokens": 3, "seconds": 0.87}
+{"id": "daily-life-social-conventions/002", "answer": "A", "input_tokens": 384, "output_tokens": 3, "seconds": 0.95}
+{"id": "daily-life-social-conventions/003", "answer": "", "input_tokens": 348, "output_tokens": 4000, "seconds": 39.68}
+{"id": "daily-life-social-conventions/004", "answer": "Perquè, segons Badia, el català havia de ser una llengua de vida quotidienne a Andorra, no només oficial. Parlar-lo a casa i amb els amics n’assegurava la vitalitat i la transmissió, enfortia la identitat nacional i evitava que l’espanyol el desplaçés.", "input_tokens": 275, "output_tokens": 1610, "seconds": 14.64}
+{"id": "daily-life-social-conventions/005", "answer": "", "input_tokens": 264, "output_tokens": 4000, "seconds": 37.1}
+{"id": "daily-life-social-conventions/006", "answer": "B", "input_tokens": 326, "output_tokens": 397, "seconds": 7.46}
+{"id": "daily-life-social-conventions/007", "answer": "A", "input_tokens": 331, "output_tokens": 620, "seconds": 5.93}
+{"id": "daily-life-social-conventions/008", "answer": "A", "input_tokens": 321, "output_tokens": 86, "seconds": 2.21}
+{"id": "daily-life-social-conventions/009", "answer": "", "input_tokens": 258, "output_tokens": 4000, "seconds": 29.3}
+{"id": "daily-life-beliefs/001", "answer": "A", "input_tokens": 298, "output_tokens": 189, "seconds": 2.26}
+{"id": "daily-life-beliefs/002", "answer": "C", "input_tokens": 290, "output_tokens": 414, "seconds": 8.05}
+{"id": "daily-life-beliefs/003", "answer": "", "input_tokens": 267, "output_tokens": 4000, "seconds": 30.28}
+{"id": "daily-life-mental-geography/001", "answer": "A", "input_tokens": 303, "output_tokens": 83, "seconds": 3.88}
+{"id": "daily-life-mental-geography/002", "answer": "D", "input_tokens": 300, "output_tokens": 232, "seconds": 4.53}
+{"id": "daily-life-mental-geography/003", "answer": "", "input_tokens": 252, "output_tokens": 4000, "seconds": 25.54}
+{"id": "daily-life-humour/001", "answer": "B", "input_tokens": 285, "output_tokens": 3, "seconds": 1.34}
+{"id": "daily-life-humour/002", "answer": "D", "input_tokens": 296, "output_tokens": 3, "seconds": 1.19}
+{"id": "daily-life-humour/003", "answer": "«Fer-se l’andorrà» vol dir fer-se el qui no sent o no vol entendre. És autoirònica perquè, a Andorra, el català és la llengua oficial imajoritàriament parlada, de manera que simular que no l’enten és poc creïble.", "input_tokens": 252, "output_tokens": 736, "seconds": 6.12}
+{"id": "daily-life-shared-references/001", "answer": "D", "input_tokens": 286, "output_tokens": 302, "seconds": 3.46}
+{"id": "daily-life-shared-references/003", "answer": "", "input_tokens": 265, "output_tokens": 4000, "seconds": 48.95}
+{"id": "daily-life-shared-references/002", "answer": "A", "input_tokens": 291, "output_tokens": 3, "seconds": 0.76}
+{"id": "customs-festive-calendar/005", "error": "HTTP 429: {\"error\":{\"message\":\"you (erisco) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add usage credits: https://ollama.com/settings (ref: 3826007c-65d7-4eab-9154-948a70e97749)\",\"type\":\"api_error\",\"param\":null,\"code\":null}}\n"}
+{"id": "customs-festive-calendar/003", "error": "HTTP 429: {\"error\":{\"message\":\"you (erisco) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add usage credits: https://ollama.com/settings (ref: 74e872c6-df6c-4af3-a2c1-f7dec6db93af)\",\"type\":\"api_error\",\"param\":null,\"code\":null}}\n"}
+{"id": "customs-festive-calendar/006", "error": "HTTP 429: {\"error\":{\"message\":\"you (erisco) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add usage credits: https://ollama.com/settings (ref: e5cf948a-1109-432d-b26a-ac3ad57f70d7)\",\"type\":\"api_error\",\"param\":null,\"code\":null}}\n"}
+{"id": "customs-caramelles/002", "error": "HTTP 429: {\"error\":{\"message\":\"you (erisco) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add usage credits: https://ollama.com/settings (ref: fe36f098-1ec5-4d9f-836c-91c579383b1e)\",\"type\":\"api_error\",\"param\":null,\"code\":null}}\n"}
+{"id": "customs-dances/003", "error": "HTTP 429: {\"error\":{\"message\":\"you (erisco) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add usage credits: https://ollama.com/settings (ref: 970a275c-8662-44d4-b82d-426308057c5a)\",\"type\":\"api_error\",\"param\":null,\"code\":null}}\n"}
+{"id": "customs-dances/004", "error": "HTTP 429: {\"error\":{\"message\":\"you (erisco) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add usage credits: https://ollama.com/settings (ref: 8c0f3490-1fee-4b19-b6f8-79eca38f6006)\",\"type\":\"api_error\",\"param\":null,\"code\":null}}\n"}
+{"id": "customs-dances/007", "error": "HTTP 429: {\"error\":{\"message\":\"you (erisco) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add usage credits: https://ollama.com/settings (ref: aa68143b-7c56-4471-9913-413ee17bc68b)\",\"type\":\"api_error\",\"param\":null,\"code\":null}}\n"}
+{"id": "customs-dances/008", "error": "HTTP 429: {\"error\":{\"message\":\"you (erisco) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add usage credits: https://ollama.com/settings (ref: 83b3d2ed-f6b8-4f16-8328-904a61c02741)\",\"type\":\"api_error\",\"param\":null,\"code\":null}}\n"}
+{"id": "customs-giants/003", "error": "HTTP 429: {\"error\":{\"message\":\"you (erisco) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add usage credits: https://ollama.com/settings (ref: b4462767-13ea-4165-8ebc-d65ec8d44334)\",\"type\":\"api_error\",\"param\":null,\"code\":null}}\n"}
+{"id": "customs-meritxell/002", "error": "HTTP 429: {\"error\":{\"message\":\"you (erisco) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add usage credits: https://ollama.com/settings (ref: 0fcf9a01-a52f-472c-b03d-2d188fe743cb)\",\"type\":\"api_error\",\"param\":null,\"code\":null}}\n"}
+{"id": "customs-religiosity/008", "error": "HTTP 429: {\"error\":{\"message\":\"you (erisco) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add usage credits: https://ollama.com/settings (ref: 729e27f5-a9a4-4b99-847e-b15cdbd445d6)\",\"type\":\"api_error\",\"param\":null,\"code\":null}}\n"}
+{"id": "customs-rites-of-passage/005", "error": "HTTP 429: {\"error\":{\"message\":\"you (erisco) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add usage credits: https://ollama.com/settings (ref: 284a215e-eca2-43e9-a61a-4778767b9a50)\",\"type\":\"api_error\",\"param\":null,\"code\":null}}\n"}
+{"id": "customs-rites-of-passage/006", "error": "HTTP 429: {\"error\":{\"message\":\"you (erisco) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add usage credits: https://ollama.com/settings (ref: f6b650cf-7a6b-4332-9c26-7cb7b900b039)\",\"type\":\"api_error\",\"param\":null,\"code\":null}}\n"}
+{"id": "customs-sant-antoni/003", "error": "HTTP 429: {\"error\":{\"message\":\"you (erisco) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add usage credits: https://ollama.com/settings (ref: 65109902-7e5e-46b2-a583-c1c650693a56)\",\"type\":\"api_error\",\"param\":null,\"code\":null}}\n"}
+{"id": "culture-andorra-seen-from-abroad/001", "error": "HTTP 429: {\"error\":{\"message\":\"you (erisco) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add usage credits: https://ollama.com/settings (ref: 90352b18-407f-4be5-9732-4f740efeee63)\",\"type\":\"api_error\",\"param\":null,\"code\":null}}\n"}
+{"id": "culture-architecture/004", "error": "HTTP 429: {\"error\":{\"message\":\"you (erisco) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add usage credits: https://ollama.com/settings (ref: bc31f7b3-6d48-4b87-8196-cfe391162d8d)\",\"type\":\"api_error\",\"param\":null,\"code\":null}}\n"}
+{"id": "culture-architecture/006", "error": "HTTP 429: {\"error\":{\"message\":\"you (erisco) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add usage credits: https://ollama.com/settings (ref: 1831576d-37c1-4176-bbdc-5f25c37b9d1e)\",\"type\":\"api_error\",\"param\":null,\"code\":null}}\n"}
+{"id": "culture-architecture/007", "error": "HTTP 429: {\"error\":{\"message\":\"you (erisco) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add usage credits: https://ollama.com/settings (ref: 729c1a27-adf2-4d4f-b784-b4ed49ea1841)\",\"type\":\"api_error\",\"param\":null,\"code\":null}}\n"}
+{"id": "culture-architecture/008", "error": "HTTP 429: {\"error\":{\"message\":\"you (erisco) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add usage credits: https://ollama.com/settings (ref: c0fdb1b9-f00b-47c8-8279-75f203d11c59)\",\"type\":\"api_error\",\"param\":null,\"code\":null}}\n"}
+{"id": "culture-crafts/006", "error": "HTTP 429: {\"error\":{\"message\":\"you (erisco) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add usage credits: https://ollama.com/settings (ref: 22eca322-255e-4524-8654-8e7fe35f1bee)\",\"type\":\"api_error\",\"param\":null,\"code\":null}}\n"}
+{"id": "culture-crafts/007", "error": "HTTP 429: {\"error\":{\"message\":\"you (erisco) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add usage credits: https://ollama.com/settings (ref: 3fe6dec3-d807-4b57-acdd-5527a27ba32d)\",\"type\":\"api_error\",\"param\":null,\"code\":null}}\n"}
+{"id": "culture-visual-arts/007", "error": "HTTP 429: {\"error\":{\"message\":\"you (erisco) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add usage credits: https://ollama.com/settings (ref: 8289fc1a-2384-49d1-8102-16668fc67e11)\",\"type\":\"api_error\",\"param\":null,\"code\":null}}\n"}
+{"id": "culture-popular-culture/005", "error": "HTTP 429: {\"error\":{\"message\":\"you (erisco) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add usage credits: https://ollama.com/settings (ref: a780cab2-99f4-44bf-b40d-f12788dfb9f8)\",\"type\":\"api_error\",\"param\":null,\"code\":null}}\n"}
+{"id": "culture-literature/003", "error": "HTTP 429: {\"error\":{\"message\":\"you (erisco) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add usage credits: https://ollama.com/settings (ref: b6f0e098-8382-4f0b-b15b-fed7fca87d55)\",\"type\":\"api_error\",\"param\":null,\"code\":null}}\n"}
+{"id": "culture-legends/004", "error": "HTTP 429: {\"error\":{\"message\":\"you (erisco) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add usage credits: https://ollama.com/settings (ref: 7f8637c3-82db-4e4c-9ad2-1ee51fc6a2e9)\",\"type\":\"api_error\",\"param\":null,\"code\":null}}\n"}
+{"id": "culture-legends/006", "error": "HTTP 429: {\"error\":{\"message\":\"you (erisco) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add usage credits: https://ollama.com/settings (ref: 54966022-e129-4cc0-9580-91330a309f1d)\",\"type\":\"api_error\",\"param\":null,\"code\":null}}\n"}
+{"id": "culture-legends/008", "error": "HTTP 429: {\"error\":{\"message\":\"you (erisco) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade or add usage credits: https://ollama.com/settings (ref: 8f5fed42-448a-4556-ba04-81d8e34cbbbd)\",\"type\":\"api_error\",\"param\":null,\"code\":null}}\n"}

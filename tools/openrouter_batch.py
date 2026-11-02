@@ -2,10 +2,10 @@
 """Runs the knowledge questions on one OpenRouter model through the Batch API (half price) and saves the answers.
 
 Usage:  python3 tools/openrouter_batch.py --model anthropic/claude-haiku-5.5 [--limit 20] [--effort low]
-        then: python3 tools/judge_batch.py resultats/openrouter_<model>   and   python3 tools/puntua.py ... --sense-jutge
+        then: python3 tools/judge_batch.py results/openrouter_<model>   and   python3 tools/score.py ... --no-judge
 
-Same prompt and system message as executa.py; only the transport changes. Answers go to
-resultats/openrouter_<model>/respostes.jsonl in executa.py's format, so judge_batch.py, puntua.py and the page read
+Same prompt and system message as run.py; only the transport changes. Answers go to
+results/openrouter_<model>/answers.jsonl in run.py's format, so judge_batch.py, score.py and the page read
 them unchanged. Only questions without a non-empty answer are sent, so a rerun fills the gaps (and --limit makes a
 cheap pilot). The batch id is kept in the folder while it runs: rerunning the command resumes waiting for it instead
 of paying for a second batch. Needs OPENROUTER_API_KEY (01-TOOLS/OPENROUTER/.env).
@@ -22,7 +22,7 @@ import urllib.error
 import urllib.request
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from executa import ARREL, SISTEMA, VERSIO_PROMPT, empremta_dataset, missatges, nom_carpeta, preguntes  # noqa: E402
+from run import PROMPT_VERSION, ROOT, SYSTEM, dataset_fingerprint, folder_name, load_questions, messages  # noqa: E402
 
 API = "https://openrouter.ai/api/v1/batches"
 FINAL = ("completed", "failed", "expired", "cancelled")
@@ -57,7 +57,7 @@ def answered(path):
     if os.path.exists(path):
         for line in open(path, encoding="utf-8"):
             r = json.loads(line)
-            if not r.get("error") and r.get("resposta", "").strip():
+            if not r.get("error") and r.get("answer", "").strip():
                 done.add(r["id"])
     return done
 
@@ -71,19 +71,19 @@ def main():
     a = ap.parse_args()
 
     model = f"openrouter:{a.model}"
-    folder = os.path.join(ARREL, "resultats", nom_carpeta(model))
+    folder = os.path.join(ROOT, "results", folder_name(model))
     os.makedirs(folder, exist_ok=True)
-    answers_path = os.path.join(folder, "respostes.jsonl")
+    answers_path = os.path.join(folder, "answers.jsonl")
     pending_path = os.path.join(folder, ".batch_id")
-    rows = preguntes()
+    rows = load_questions()
 
     meta_path = os.path.join(folder, "meta.json")
     meta = json.load(open(meta_path)) if os.path.exists(meta_path) else {}
-    git = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=ARREL, capture_output=True, text=True).stdout.strip()
-    meta.update({"model": model, "origen": meta.get("origen", ""), "prompt": VERSIO_PROMPT, "sistema": SISTEMA,
-                 "temperatura": 0, "max_tokens": a.max_tokens, "raonament": a.effort, "transport": "openrouter-batch",
-                 "dataset": empremta_dataset(rows), "preguntes_dataset": len(rows), "commit": git})
-    meta.setdefault("inici", datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"))
+    git = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=ROOT, capture_output=True, text=True).stdout.strip()
+    meta.update({"model": model, "origin": meta.get("origin", ""), "prompt": PROMPT_VERSION, "system": SYSTEM,
+                 "temperature": 0, "max_tokens": a.max_tokens, "reasoning": a.effort, "transport": "openrouter-batch",
+                 "dataset": dataset_fingerprint(rows), "dataset_questions": len(rows), "commit": git})
+    meta.setdefault("started", datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"))
     json.dump(meta, open(meta_path, "w"), ensure_ascii=False, indent=1)
 
     if os.path.exists(pending_path):
@@ -98,7 +98,7 @@ def main():
         # endpoint and model go before requests: OpenRouter reads the body as a stream
         batch = api(API, {"endpoint": "/v1/chat/completions", "model": a.model,
                           "requests": [{"custom_id": to_custom_id(r["id"]),
-                                        "body": {"messages": missatges(r), "temperature": 0,
+                                        "body": {"messages": messages(r), "temperature": 0,
                                                  "max_tokens": a.max_tokens, "reasoning": {"effort": a.effort}}}
                                        for r in todo]})
         batch_id = batch["id"]
@@ -123,13 +123,13 @@ def main():
             else:
                 usage = body.get("usage") or {}
                 text = (body["choices"][0]["message"].get("content") or "").strip()
-                row = {"id": qid, "resposta": text, "tokens_entrada": usage.get("prompt_tokens", 0),
-                       "tokens_sortida": usage.get("completion_tokens", 0), "raonament": a.effort}
+                row = {"id": qid, "answer": text, "input_tokens": usage.get("prompt_tokens", 0),
+                       "output_tokens": usage.get("completion_tokens", 0), "reasoning": a.effort}
                 empty += not text
                 written += 1
             out.write(json.dumps(row, ensure_ascii=False) + "\n")
     os.remove(pending_path)
-    meta["fi"] = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
+    meta["finished"] = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
     meta["cost_usd"] = round(meta.get("cost_usd", 0) + ((batch.get("usage") or {}).get("cost") or 0), 4)
     json.dump(meta, open(meta_path, "w"), ensure_ascii=False, indent=1)
     print(f"done: {written} answers ({empty} empty), {errors} errors, batch cost {batch.get('usage', {}) and batch['usage'].get('cost')} $,"

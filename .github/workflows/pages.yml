@@ -1,4 +1,4 @@
-name: Pàgina de resultats
+name: Results page
 
 on:
   push:
@@ -16,17 +16,17 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  publica:
+  publish:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.desplega.outputs.page_url }}
+      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - run: rm -f web/plantilla.html web/textos.json
+      - run: rm -f web/template.html web/strings.json
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: web
-      - id: desplega
+      - id: deploy
         uses: actions/deploy-pages@v4
