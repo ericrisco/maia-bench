@@ -730,6 +730,27 @@
    }
   },
   {
+   "model": "ollama:maia-e4b:20261102-1437",
+   "folder": "maia_e4b_v3",
+   "scored": 926,
+   "score": 0.3294,
+   "by_domain": {
+    "culture": 0.3293,
+    "customs": 0.3868,
+    "daily-life": 0.3438,
+    "economy": 0.3373,
+    "gastronomy": 0.3571,
+    "history": 0.3397,
+    "institutions": 0.4083,
+    "language": 0.3198,
+    "people": 0.2273,
+    "politics": 0.3421,
+    "society": 0.3042,
+    "sports": 0.2368,
+    "territory": 0.2786
+   }
+  },
+  {
    "model": "ollamacloud:minimax-m3",
    "folder": "ollamacloud_minimax-m3",
    "scored": 926,

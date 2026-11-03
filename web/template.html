@@ -210,6 +210,18 @@ section { margin-top: 120px; }
 .clauses { display: flex; gap: 6px; padding: 18px var(--m) 0; }
 .clauses p { flex-basis: 0; min-width: 12%; font-size: var(--step-body); padding-right: 20px; }
 
+/* ── success case ── */
+.cboard { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 180px; gap: var(--gap); padding: 0 var(--m); }
+.ccap { grid-column: 1 / 7; grid-row: span 2; background: var(--surface); padding: 22px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px; }
+.ccap p { font-size: var(--step-lead); line-height: 1.25; max-width: 40ch; }
+.ccap a { color: var(--accent); }
+.cfact { grid-column: span 3; background: var(--surface-2); padding: 22px; display: flex; flex-direction: column; justify-content: space-between; }
+.cfact b { font-size: var(--step-head); font-weight: 700; letter-spacing: -0.03em; line-height: 1; }
+.cfact.c-recall { grid-column: 7 / 13; background: var(--accent); color: var(--accent-ink); }
+.cfact.c-bench { grid-column: 7 / 13; }
+.cnote { grid-column: 7 / 13; background: var(--blue); color: var(--blue-ink); padding: 22px; display: flex; align-items: flex-end; }
+.cnote p { font-size: var(--step-lead); line-height: 1.25; max-width: 52ch; }
+
 /* ── origin ── */
 .oboard { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 180px; gap: var(--gap); padding: 0 var(--m); }
 .ocap { grid-column: 1 / 7; grid-row: span 2; background: var(--surface); padding: 22px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px; }
@@ -313,6 +325,10 @@ footer { margin-top: 120px; background: var(--surface); padding: 40px var(--m) 2
   .stages { flex-direction: column; height: 70svh; }
   .stages > div { min-height: 72px; min-width: 0; }
   .clauses { flex-direction: column; gap: 10px; }
+  .cboard { grid-template-columns: 1fr 1fr; grid-auto-rows: auto; }
+  .ccap, .cfact.c-recall, .cfact.c-bench, .cnote { grid-column: 1 / -1; grid-row: auto; }
+  .cfact { grid-column: 1 / -1; flex-direction: row; align-items: baseline; justify-content: flex-start; gap: 16px; padding: 16px; }
+  .cfact b, .cfact span { font-size: var(--step-lead); letter-spacing: -0.01em; }
   .oboard { grid-template-columns: 1fr 1fr; grid-auto-rows: auto; }
   .ocap, .ovid, .ophoto, .otext { grid-column: 1 / -1; grid-row: auto; }
   .ovid, .ophoto { aspect-ratio: 4 / 3; }
@@ -392,6 +408,17 @@ __ROWS__
 </section>
 
 <div class="marquee" aria-hidden="true"><div>__T:marquee__</div></div>
+
+<section class="case" id="case" aria-labelledby="t-case">
+  <div class="cboard">
+    <div class="ccap">__T:h_case____T:case_txt__</div>
+    <div class="cfact c-recall">__T:case_recall__</div>
+    <div class="cfact c-bench">__T:case_bench__</div>
+    <div class="cfact">__T:case_gain__</div>
+    <div class="cfact">__T:case_none__</div>
+    <div class="cnote">__T:case_note__</div>
+  </div>
+</section>
 
 <section class="domains" id="domains" aria-labelledby="t-dom">
   <div class="ctl" id="domain-models" role="group" __T:aria_pick__></div>
