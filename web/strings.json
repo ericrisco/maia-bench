@@ -15,9 +15,9 @@
   "es": "aria-label=\"Secciones\""
  },
  "nav": {
-  "en": "<a href=\"#ranking\">Ranking</a><a href=\"#domains\">By domain</a><a href=\"#try\">Try it</a><a href=\"#method\">Method</a>",
-  "ca": "<a href=\"#ranking\">Classificació</a><a href=\"#domains\">Per dominis</a><a href=\"#try\">Prova-ho</a><a href=\"#method\">Mètode</a>",
-  "es": "<a href=\"#ranking\">Clasificación</a><a href=\"#domains\">Por dominios</a><a href=\"#try\">Pruébalo</a><a href=\"#method\">Método</a>"
+  "en": "<a href=\"#ranking\">Ranking</a><a href=\"#case\">maia</a><a href=\"#domains\">By domain</a><a href=\"#try\">Try it</a><a href=\"#method\">Method</a>",
+  "ca": "<a href=\"#ranking\">Classificació</a><a href=\"#case\">maia</a><a href=\"#domains\">Per dominis</a><a href=\"#try\">Prova-ho</a><a href=\"#method\">Mètode</a>",
+  "es": "<a href=\"#ranking\">Clasificación</a><a href=\"#case\">maia</a><a href=\"#domains\">Por dominios</a><a href=\"#try\">Pruébalo</a><a href=\"#method\">Método</a>"
  },
  "alt_coma": {
   "en": "Snow-covered Coma Pedrosa, seen from the Coll d'Ordino.",
@@ -403,5 +403,40 @@
   "en": "<span>maia-bench · a maia project</span><a class=\"btn\" href=\"#top\">Back to top</a>",
   "ca": "<span>maia-bench · un projecte de maia</span><a class=\"btn\" href=\"#top\">Tornar a dalt</a>",
   "es": "<span>maia-bench · un proyecto de maia</span><a class=\"btn\" href=\"#top\">Volver arriba</a>"
+ },
+ "h_case": {
+  "en": "<h2 id=\"t-case\">Success case: maia</h2>",
+  "ca": "<h2 id=\"t-case\">Cas d'èxit: maia</h2>",
+  "es": "<h2 id=\"t-case\">Caso de éxito: maia</h2>"
+ },
+ "case_txt": {
+  "en": "<p>maia is this project's own model: Gemma 4 E4B fine-tuned with QLoRA on a single GPU, on 28,679 conversations in Andorran Catalan, including 830 verified facts asked in many different ways. It is scored exactly like every other model. <a href=\"https://huggingface.co/ericrisco/gemma-maia-e4b\">Model</a> · <a href=\"https://huggingface.co/datasets/ericrisco/maia-training-data\">training data</a></p>",
+  "ca": "<p>maia és el model del projecte: Gemma 4 E4B ajustat amb QLoRA en una sola GPU, amb 28.679 converses en català d'Andorra, entre les quals 830 fets verificats preguntats de moltes maneres. Es puntua exactament com qualsevol altre model. <a href=\"https://huggingface.co/ericrisco/gemma-maia-e4b\">Model</a> · <a href=\"https://huggingface.co/datasets/ericrisco/maia-training-data\">dades d'entrenament</a></p>",
+  "es": "<p>maia es el modelo del proyecto: Gemma 4 E4B ajustado con QLoRA en una sola GPU, con 28.679 conversaciones en catalán de Andorra, entre ellas 830 hechos verificados preguntados de muchas formas. Se puntúa exactamente igual que cualquier otro modelo. <a href=\"https://huggingface.co/ericrisco/gemma-maia-e4b\">Modelo</a> · <a href=\"https://huggingface.co/datasets/ericrisco/maia-training-data\">datos de entrenamiento</a></p>"
+ },
+ "case_recall": {
+  "en": "<b class=\"num\">7 % → 36 %</b><span>facts recalled, on 338 questions it never saw in training (Gemma 4 E4B → maia)</span>",
+  "ca": "<b class=\"num\">7 % → 36 %</b><span>fets recordats, en 338 preguntes que no va veure a l'entrenament (Gemma 4 E4B → maia)</span>",
+  "es": "<b class=\"num\">7 % → 36 %</b><span>hechos recordados, en 338 preguntas que no vio en el entrenamiento (Gemma 4 E4B → maia)</span>"
+ },
+ "case_bench": {
+  "en": "<b class=\"num\">__CASE_BASE__ → __CASE_MAIA__</b><span>maia-bench, Gemma 4 E4B → maia (__CASE_DIFF__ points)</span>",
+  "ca": "<b class=\"num\">__CASE_BASE__ → __CASE_MAIA__</b><span>maia-bench, Gemma 4 E4B → maia (__CASE_DIFF__ punts)</span>",
+  "es": "<b class=\"num\">__CASE_BASE__ → __CASE_MAIA__</b><span>maia-bench, Gemma 4 E4B → maia (__CASE_DIFF__ puntos)</span>"
+ },
+ "case_gain": {
+  "en": "<b class=\"num\">103 / 7</b><span>facts gained / lost against the base model</span>",
+  "ca": "<b class=\"num\">103 / 7</b><span>fets guanyats / perduts respecte del model base</span>",
+  "es": "<b class=\"num\">103 / 7</b><span>hechos ganados / perdidos respecto al modelo base</span>"
+ },
+ "case_none": {
+  "en": "<b class=\"num\">0</b><span>question types where it does worse</span>",
+  "ca": "<b class=\"num\">0</b><span>tipus de pregunta on empitjora</span>",
+  "es": "<b class=\"num\">0</b><span>tipos de pregunta en los que empeora</span>"
+ },
+ "case_note": {
+  "en": "<p>Read it carefully: the benchmark gain is not statistically significant yet, because the benchmark deliberately asks about facts that never enter training. Fine-tuning shows where it should: in remembering the facts it was taught.</p>",
+  "ca": "<p>Llegiu-ho bé: la millora al benchmark encara no és estadísticament significativa, perquè el benchmark pregunta a propòsit per fets que mai entren a l'entrenament. L'ajust es nota on toca: a recordar els fets que se li han ensenyat.</p>",
+  "es": "<p>Léelo con cuidado: la mejora en el benchmark aún no es estadísticamente significativa, porque el benchmark pregunta a propósito por hechos que nunca entran en el entrenamiento. El ajuste se nota donde debe: en recordar los hechos que se le han enseñado.</p>"
  }
 }

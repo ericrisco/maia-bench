@@ -1,0 +1,14 @@
+{
+ "model": "ollama:maia-e4b:20261102-1437",
+ "origin": "",
+ "prompt": "p1",
+ "system": "Respon en català les preguntes sobre Andorra que et facin.",
+ "temperature": 0,
+ "dataset": "923388fb2690",
+ "dataset_questions": 926,
+ "commit": "",
+ "max_tokens": 4000,
+ "reasoning": null,
+ "started": "2026-11-03T03:47:52+00:00",
+ "finished": "2026-11-03T04:29:42+00:00"
+}
