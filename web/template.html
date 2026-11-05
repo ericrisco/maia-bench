@@ -212,6 +212,8 @@ section { margin-top: 120px; }
 
 /* ── success case ── */
 .cboard { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 180px; gap: var(--gap); padding: 0 var(--m); }
+.cboard + .cboard { margin-top: var(--gap); }
+.ccap h3 { font-size: var(--step-head); font-weight: 700; letter-spacing: -0.03em; line-height: 1; }
 .ccap { grid-column: 1 / 7; grid-row: span 2; background: var(--surface); padding: 22px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px; }
 .ccap p { font-size: var(--step-lead); line-height: 1.25; max-width: 40ch; }
 .ccap a { color: var(--accent); }
@@ -417,6 +419,14 @@ __ROWS__
     <div class="cfact">__T:case_gain__</div>
     <div class="cfact">__T:case_none__</div>
     <div class="cnote">__T:case_note__</div>
+  </div>
+  <div class="cboard">
+    <div class="ccap">__T:case12_txt__</div>
+    <div class="cfact c-recall">__T:case12_recall__</div>
+    <div class="cfact c-bench">__T:case12_bench__</div>
+    <div class="cfact">__T:case12_gain__</div>
+    <div class="cfact">__T:case12_clean__</div>
+    <div class="cnote">__T:case12_note__</div>
   </div>
 </section>
 

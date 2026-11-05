@@ -438,5 +438,35 @@
   "en": "<p>Read it carefully: the benchmark gain is not statistically significant yet, because the benchmark deliberately asks about facts that never enter training. Fine-tuning shows where it should: in remembering the facts it was taught.</p>",
   "ca": "<p>Llegiu-ho bé: la millora al benchmark encara no és estadísticament significativa, perquè el benchmark pregunta a propòsit per fets que mai entren a l'entrenament. L'ajust es nota on toca: a recordar els fets que se li han ensenyat.</p>",
   "es": "<p>Léelo con cuidado: la mejora en el benchmark aún no es estadísticamente significativa, porque el benchmark pregunta a propósito por hechos que nunca entran en el entrenamiento. El ajuste se nota donde debe: en recordar los hechos que se le han enseñado.</p>"
+ },
+ "case12_txt": {
+  "en": "<h3>maia 12B</h3><p>The same recipe on Gemma 4 12B, with 30,288 conversations, 1,609 of them multiple-choice practice about the verified facts. <a href=\"https://huggingface.co/ericrisco/gemma-maia-12b\">Model</a> · <a href=\"https://huggingface.co/datasets/ericrisco/maia-training-data\">training data</a></p>",
+  "ca": "<h3>maia 12B</h3><p>La mateixa recepta sobre Gemma 4 12B, amb 30.288 converses, 1.609 de les quals són pràctica de tipus test sobre els fets verificats. <a href=\"https://huggingface.co/ericrisco/gemma-maia-12b\">Model</a> · <a href=\"https://huggingface.co/datasets/ericrisco/maia-training-data\">dades d'entrenament</a></p>",
+  "es": "<h3>maia 12B</h3><p>La misma receta sobre Gemma 4 12B, con 30.288 conversaciones, 1.609 de ellas práctica de tipo test sobre los hechos verificados. <a href=\"https://huggingface.co/ericrisco/gemma-maia-12b\">Modelo</a> · <a href=\"https://huggingface.co/datasets/ericrisco/maia-training-data\">datos de entrenamiento</a></p>"
+ },
+ "case12_recall": {
+  "en": "<b class=\"num\">12 % → 47 %</b><span>facts recalled, on 338 questions it never saw in training (Gemma 4 12B → maia)</span>",
+  "ca": "<b class=\"num\">12 % → 47 %</b><span>fets recordats, en 338 preguntes que no va veure a l'entrenament (Gemma 4 12B → maia)</span>",
+  "es": "<b class=\"num\">12 % → 47 %</b><span>hechos recordados, en 338 preguntas que no vio en el entrenamiento (Gemma 4 12B → maia)</span>"
+ },
+ "case12_bench": {
+  "en": "<b class=\"num\">__CASE12_BASE__ → __CASE12_MAIA__</b><span>maia-bench, Gemma 4 12B → maia (__CASE12_DIFF__ points, inflated: see the note)</span>",
+  "ca": "<b class=\"num\">__CASE12_BASE__ → __CASE12_MAIA__</b><span>maia-bench, Gemma 4 12B → maia (__CASE12_DIFF__ punts, inflat: vegeu la nota)</span>",
+  "es": "<b class=\"num\">__CASE12_BASE__ → __CASE12_MAIA__</b><span>maia-bench, Gemma 4 12B → maia (__CASE12_DIFF__ puntos, inflado: mira la nota)</span>"
+ },
+ "case12_gain": {
+  "en": "<b class=\"num\">126 / 7</b><span>facts gained / lost against the base model</span>",
+  "ca": "<b class=\"num\">126 / 7</b><span>fets guanyats / perduts respecte del model base</span>",
+  "es": "<b class=\"num\">126 / 7</b><span>hechos ganados / perdidos respecto al modelo base</span>"
+ },
+ "case12_clean": {
+  "en": "<b class=\"num\">+0.8</b><span>points on questions with no similar practice question</span>",
+  "ca": "<b class=\"num\">+0,8</b><span>punts en preguntes sense cap pràctica semblant</span>",
+  "es": "<b class=\"num\">+0,8</b><span>puntos en preguntas sin ninguna práctica parecida</span>"
+ },
+ "case12_note": {
+  "en": "<p>Read it carefully: most of this benchmark gain comes from practice questions similar to the benchmark's. Without them the gain is +0.8 points [−2.6, +4.1], not significant.</p>",
+  "ca": "<p>Llegiu-ho bé: la major part d'aquesta millora ve de preguntes de pràctica semblants a les del benchmark. Sense elles, la millora és de +0,8 punts [−2,6, +4,1], no significativa.</p>",
+  "es": "<p>Léelo con cuidado: la mayor parte de esta mejora viene de preguntas de práctica parecidas a las del benchmark. Sin ellas, la mejora es de +0,8 puntos [−2,6, +4,1], no significativa.</p>"
  }
 }

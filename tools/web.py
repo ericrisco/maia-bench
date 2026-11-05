@@ -110,6 +110,7 @@ def domain_name(d):
 MODEL_NAMES = {
     "ollama:gemma4:e4b": ("Gemma 4 E4B", "Google · open · local"),
     "ollama:maia-e4b:20261102-1437": ("maia E4B", "maia project · open · Gemma 4 E4B fine-tuned on Andorra"),
+    "ollama:maia-12b:20261104-0036": ("maia 12B", "maia project · open · Gemma 4 12B fine-tuned on Andorra"),
     "ollama:gemma4:e2b": ("Gemma 4 E2B", "Google · open · local"),
     "ollama:gemma4:12b": ("Gemma 4 12B", "Google · open · local"),
     "ollama:gemma3:12b": ("Gemma 3 12B", "Google · open · local"),
@@ -310,20 +311,25 @@ def domain_tiles(models):
     return "\n".join(out)
 
 
-# Success case: the project's fine-tuned model against the base model it starts from.
-CASE_MODEL, CASE_BASE = "ollama:maia-e4b:20261102-1437", "ollama:gemma4:e4b"
+# Success cases: the project's fine-tuned models against the base models they start from, by placeholder prefix.
+CASES = {"CASE": ("ollama:maia-e4b:20261102-1437", "ollama:gemma4:e4b"),
+         "CASE12": ("ollama:maia-12b:20261104-0036", "ollama:gemma4:12b")}
 
 
 def case_numbers(models):
     """Base and maia knowledge scores and the difference in points, as page strings (empty without both)."""
     by_id = {m["model"]: m for m in models}
-    if CASE_MODEL not in by_id or CASE_BASE not in by_id:
-        return {"__CASE_BASE__": "–", "__CASE_MAIA__": "–", "__CASE_DIFF__": "–"}
-    base, maia = by_id[CASE_BASE]["knowledge"]["score"], by_id[CASE_MODEL]["knowledge"]["score"]
-    # From the rounded percentages on the page, so the three figures always agree.
-    diff = f"{round(maia * 100, 1) - round(base * 100, 1):+.1f}"
-    return {"__CASE_BASE__": pct(base), "__CASE_MAIA__": pct(maia),
-            "__CASE_DIFF__": diff if LANG == "en" else diff.replace(".", ",")}
+    out = {}
+    for prefix, (model, base_model) in CASES.items():
+        if model not in by_id or base_model not in by_id:
+            out.update({f"__{prefix}_BASE__": "–", f"__{prefix}_MAIA__": "–", f"__{prefix}_DIFF__": "–"})
+            continue
+        base, maia = by_id[base_model]["knowledge"]["score"], by_id[model]["knowledge"]["score"]
+        # From the rounded percentages on the page, so the three figures always agree.
+        diff = f"{round(maia * 100, 1) - round(base * 100, 1):+.1f}"
+        out.update({f"__{prefix}_BASE__": pct(base), f"__{prefix}_MAIA__": pct(maia),
+                    f"__{prefix}_DIFF__": diff if LANG == "en" else diff.replace(".", ",")})
+    return out
 
 
 def question_sample(models, dataset):
