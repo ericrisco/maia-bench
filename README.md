@@ -36,6 +36,9 @@ this variety well, which is exactly what is being measured.
 3. **No data that expires:** no laws in force, prices, current office-holders or timetables.
 4. **Same conditions for every model:** same prompt, temperature 0.
 5. **Contamination.** Every question is compared against maia's training data and discarded if it is too similar.
+   Training data generated after a benchmark version is frozen is filtered the other way round, against the
+   benchmark questions. That filter was too loose for maia 12B, whose score is inflated:
+   [how maia was trained](https://ericrisco.github.io/maia-bench/training.html).
 
 ## Everything is public
 

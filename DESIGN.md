@@ -54,6 +54,8 @@ General Sans 400/500/700, five sizes: `--step-small`, `--step-body`, `--step-lea
 - FAQ with `<details name="faq">`, one open at a time; the plus sign is two 3 px bars.
 - Footer: the name built from coloured blocks of different heights.
 - The only element with a shadow is the bar tooltip, because it floats.
+- The training page (`web/training-template.html`) reuses these tiles and styles; intervals are drawn as a block on an
+  axis with a white mark at zero.
 
 ## Layout
 

@@ -1,0 +1,282 @@
+{
+ "tr_title": {
+  "en": "<title>How maia was trained · maia-bench</title>",
+  "ca": "<title>Com es va entrenar maia · maia-bench</title>",
+  "es": "<title>Cómo se entrenó maia · maia-bench</title>"
+ },
+ "tr_meta": {
+  "en": "The six attempts behind maia, a Gemma 4 model fine-tuned on Andorra: the data, the cloud pipeline, what went wrong and how far to trust the results.",
+  "ca": "Els sis intents darrere de maia, un Gemma 4 ajustat sobre Andorra: les dades, la cadena al núvol, què va fallar i fins on es pot confiar en els resultats.",
+  "es": "Los seis intentos detrás de maia, un Gemma 4 ajustado sobre Andorra: los datos, la cadena en la nube, qué falló y hasta dónde fiarse de los resultados."
+ },
+ "tr_nav": {
+  "en": "<a href=\"index.html#ranking\">Ranking</a><a href=\"index.html#case\">maia</a><a href=\"index.html#domains\">By domain</a><a href=\"index.html#try\">Try it</a><a href=\"index.html#method\">Method</a><a href=\"training.html\" aria-current=\"page\">Training</a>",
+  "ca": "<a href=\"ca.html#ranking\">Classificació</a><a href=\"ca.html#case\">maia</a><a href=\"ca.html#domains\">Per dominis</a><a href=\"ca.html#try\">Prova-ho</a><a href=\"ca.html#method\">Mètode</a><a href=\"training-ca.html\" aria-current=\"page\">Entrenament</a>",
+  "es": "<a href=\"es.html#ranking\">Clasificación</a><a href=\"es.html#case\">maia</a><a href=\"es.html#domains\">Por dominios</a><a href=\"es.html#try\">Pruébalo</a><a href=\"es.html#method\">Método</a><a href=\"training-es.html\" aria-current=\"page\">Entrenamiento</a>"
+ },
+ "tr_h1": {
+  "en": "How maia was trained",
+  "ca": "Com es va entrenar maia",
+  "es": "Cómo se entrenó maia"
+ },
+ "tr_intro": {
+  "en": "<p>maia is Gemma 4 fine-tuned to know Andorra. It took six attempts. Teaching style was easy; teaching facts was not. The current models remember far more of what they were taught, but they do not yet know more about what they were not taught.</p>",
+  "ca": "<p>maia és Gemma 4 ajustat per conèixer Andorra. Han calgut sis intents. Ensenyar-li l'estil va ser fàcil; ensenyar-li fets, no. Els models actuals recorden molt més del que se'ls ha ensenyat, però encara no saben més del que no se'ls ha ensenyat.</p>",
+  "es": "<p>maia es Gemma 4 ajustado para conocer Andorra. Han hecho falta seis intentos. Enseñarle el estilo fue fácil; enseñarle hechos, no. Los modelos actuales recuerdan mucho más de lo que se les ha enseñado, pero todavía no saben más de lo que no se les ha enseñado.</p>"
+ },
+ "tr_recall_h": {
+  "en": "Facts it was taught",
+  "ca": "Fets que se li han ensenyat",
+  "es": "Hechos que se le han enseñado"
+ },
+ "tr_recall_txt": {
+  "en": "338 questions about facts in the training data, in wording it never saw. The answer must contain the expected keywords.",
+  "ca": "338 preguntes sobre fets de les dades d'entrenament, amb una redacció que no va veure mai. La resposta ha de contenir les paraules clau esperades.",
+  "es": "338 preguntas sobre hechos de los datos de entrenamiento, con una redacción que nunca vio. La respuesta debe contener las palabras clave esperadas."
+ },
+ "tr_bench_h": {
+  "en": "maia-bench",
+  "ca": "maia-bench",
+  "es": "maia-bench"
+ },
+ "tr_bench_txt": {
+  "en": "926 questions about Andorra, the same test as every other model. The best model in the ranking scores 71.4 %.",
+  "ca": "926 preguntes sobre Andorra, la mateixa prova que qualsevol altre model. El millor model de la classificació treu un 71,4 %.",
+  "es": "926 preguntas sobre Andorra, la misma prueba que cualquier otro modelo. El mejor modelo de la clasificación saca un 71,4 %."
+ },
+ "tr_v303": {
+  "en": "30.3 %",
+  "ca": "30,3 %",
+  "es": "30,3 %"
+ },
+ "tr_v329": {
+  "en": "32.9 %",
+  "ca": "32,9 %",
+  "es": "32,9 %"
+ },
+ "tr_v374": {
+  "en": "37.4 %",
+  "ca": "37,4 %",
+  "es": "37,4 %"
+ },
+ "tr_v433": {
+  "en": "43.3 %",
+  "ca": "43,3 %",
+  "es": "43,3 %"
+ },
+ "tr_warn": {
+  "en": "<p>Do not read the 43.3 % as it stands: that gain is inflated. On questions with no similar practice question, the gain is +0.8 points, and that is not significant.</p>",
+  "ca": "<p>No llegiu el 43,3 % tal qual: aquesta millora està inflada. En les preguntes sense cap pràctica semblant, la millora és de +0,8 punts, i no és significativa.</p>",
+  "es": "<p>No leas el 43,3 % tal cual: esta mejora está inflada. En las preguntas sin ninguna práctica parecida, la mejora es de +0,8 puntos, y no es significativa.</p>"
+ },
+ "tr_tries_h": {
+  "en": "Six attempts",
+  "ca": "Sis intents",
+  "es": "Seis intentos"
+ },
+ "tr_tries_txt": {
+  "en": "<p>Each attempt changed one thing and was measured against the base model it started from.</p>",
+  "ca": "<p>Cada intent va canviar una cosa i es va mesurar contra el model base del qual partia.</p>",
+  "es": "<p>Cada intento cambió una cosa y se midió contra el modelo base del que partía.</p>"
+ },
+ "tr_try1": {
+  "en": "<p class=\"tmuted num\">1 · E4B, 17,885 conversations</p><h3 style=\"margin-top:14px\">It learned the style, not the facts</h3><p>Fluent Catalan with an Andorran tone, and more confident errors. Benchmark 30.3 → 31.0 %, no real change. Open questions fell from 9.1 to 5.6 %.</p><p class=\"tmuted\">Lesson: seeing a fact once in a sentence does not make it retrievable.</p>",
+  "ca": "<p class=\"tmuted num\">1 · E4B, 17.885 converses</p><h3 style=\"margin-top:14px\">Va aprendre l'estil, no els fets</h3><p>Català fluid amb to d'Andorra, i errors dits amb més seguretat. Benchmark 30,3 → 31,0 %, cap canvi real. Les preguntes obertes van baixar del 9,1 al 5,6 %.</p><p class=\"tmuted\">Lliçó: veure un fet una vegada en una frase no el fa recuperable.</p>",
+  "es": "<p class=\"tmuted num\">1 · E4B, 17.885 conversaciones</p><h3 style=\"margin-top:14px\">Aprendió el estilo, no los hechos</h3><p>Catalán fluido con tono de Andorra, y errores dichos con más seguridad. Benchmark 30,3 → 31,0 %, ningún cambio real. Las preguntas abiertas bajaron del 9,1 al 5,6 %.</p><p class=\"tmuted\">Lección: ver un hecho una vez en una frase no lo hace recuperable.</p>"
+ },
+ "tr_try2": {
+  "en": "<p class=\"tmuted num\">2 · E4B, 18,738 conversations</p><h3 style=\"margin-top:14px\">Cleaner data was not enough</h3><p>284 answers that cited an invisible document were rewritten, and 943 basic questions were added. Benchmark 30.0 %. Open questions stayed at 5.8 %.</p><p class=\"tmuted\">Lesson: 5 % more facts does not move the needle.</p>",
+  "ca": "<p class=\"tmuted num\">2 · E4B, 18.738 converses</p><h3 style=\"margin-top:14px\">Netejar les dades no va ser prou</h3><p>Es van reescriure 284 respostes que citaven un document invisible i es van afegir 943 preguntes bàsiques. Benchmark 30,0 %. Les obertes es van quedar al 5,8 %.</p><p class=\"tmuted\">Lliçó: un 5 % més de fets no mou l'agulla.</p>",
+  "es": "<p class=\"tmuted num\">2 · E4B, 18.738 conversaciones</p><h3 style=\"margin-top:14px\">Limpiar los datos no bastó</h3><p>Se reescribieron 284 respuestas que citaban un documento invisible y se añadieron 943 preguntas básicas. Benchmark 30,0 %. Las abiertas se quedaron en el 5,8 %.</p><p class=\"tmuted\">Lección: un 5 % más de hechos no mueve la aguja.</p>"
+ },
+ "tr_try3": {
+  "en": "<p class=\"tmuted num\">3 · E4B pilot, 50 facts</p><h3 style=\"margin-top:14px\">A small test that worked</h3><p>Each fact was asked 11 different ways, with answers worded differently each time. Recall on 50 new questions rose from 6 to 66 %. A new error appeared: it mixed up similar facts.</p><p class=\"tmuted\">Lesson: repetition with variation works, and similar facts need contrast examples.</p>",
+  "ca": "<p class=\"tmuted num\">3 · Pilot E4B, 50 fets</p><h3 style=\"margin-top:14px\">Una prova petita que va funcionar</h3><p>Cada fet es va preguntar d'11 maneres, amb respostes redactades cada vegada de manera diferent. El record en 50 preguntes noves va pujar del 6 al 66 %. Va aparèixer un error nou: confonia fets semblants.</p><p class=\"tmuted\">Lliçó: la repetició amb variació funciona, i els fets semblants necessiten exemples de contrast.</p>",
+  "es": "<p class=\"tmuted num\">3 · Piloto E4B, 50 hechos</p><h3 style=\"margin-top:14px\">Una prueba pequeña que funcionó</h3><p>Cada hecho se preguntó de 11 maneras, con respuestas redactadas cada vez de forma distinta. El recuerdo en 50 preguntas nuevas subió del 6 al 66 %. Apareció un error nuevo: confundía hechos parecidos.</p><p class=\"tmuted\">Lección: la repetición con variación funciona, y los hechos parecidos necesitan ejemplos de contraste.</p>"
+ },
+ "tr_try4": {
+  "en": "<p class=\"tmuted num\">4 · E4B, 28,679 conversations</p><h3 style=\"margin-top:14px\">The recipe at full size</h3><p>830 verified facts, 124 contrast groups. Recall rose from 7 to 36 %. Benchmark 30.3 → 32.9 %, +2.6 points with a 95 % interval of −0.6 to +5.9, so not significant.</p><p class=\"tmuted\">Lesson: the taught facts stick, and the open questions no longer get worse.</p>",
+  "ca": "<p class=\"tmuted num\">4 · E4B, 28.679 converses</p><h3 style=\"margin-top:14px\">La recepta a mida completa</h3><p>830 fets verificats, 124 grups de contrast. El record va pujar del 7 al 36 %. Benchmark 30,3 → 32,9 %, +2,6 punts amb un interval del 95 % de −0,6 a +5,9, per tant no significatiu.</p><p class=\"tmuted\">Lliçó: els fets ensenyats es queden, i les obertes ja no empitjoren.</p>",
+  "es": "<p class=\"tmuted num\">4 · E4B, 28.679 conversaciones</p><h3 style=\"margin-top:14px\">La receta a tamaño completo</h3><p>830 hechos verificados, 124 grupos de contraste. El recuerdo subió del 7 al 36 %. Benchmark 30,3 → 32,9 %, +2,6 puntos con un intervalo del 95 % de −0,6 a +5,9, así que no significativo.</p><p class=\"tmuted\">Lección: los hechos enseñados se quedan, y las abiertas ya no empeoran.</p>"
+ },
+ "tr_try5": {
+  "en": "<p class=\"tmuted num\">5 · 12B, 28,679 conversations</p><h3 style=\"margin-top:14px\">A bigger model that scored worse</h3><p>Benchmark 35.0 % against 37.4 % for its base. It answered with a sentence instead of a letter in 67 of 604 multiple-choice questions, because the training data had no multiple-choice conversation at all.</p><p class=\"tmuted\">Lesson: fine-tuning can erase a format the base model already knew.</p>",
+  "ca": "<p class=\"tmuted num\">5 · 12B, 28.679 converses</p><h3 style=\"margin-top:14px\">Un model més gran que treia menys</h3><p>Benchmark 35,0 % contra el 37,4 % del seu base. Responia amb una frase en lloc d'una lletra en 67 de 604 preguntes de tipus test, perquè les dades no tenien cap conversa de tipus test.</p><p class=\"tmuted\">Lliçó: l'ajust pot esborrar un format que el model base ja sabia.</p>",
+  "es": "<p class=\"tmuted num\">5 · 12B, 28.679 conversaciones</p><h3 style=\"margin-top:14px\">Un modelo más grande que sacaba menos</h3><p>Benchmark 35,0 % contra el 37,4 % de su base. Respondía con una frase en lugar de una letra en 67 de 604 preguntas de tipo test, porque los datos no tenían ninguna conversación de tipo test.</p><p class=\"tmuted\">Lección: el ajuste puede borrar un formato que el modelo base ya sabía.</p>"
+ },
+ "tr_try6": {
+  "en": "<p class=\"tmuted num\">6 · 12B, 30,288 conversations</p><h3 style=\"margin-top:14px\">Format fixed, figure inflated</h3><p>1,609 multiple-choice practice questions were added. No answer without a letter now. Recall rose from 12 to 47 %. Benchmark 37.4 → 43.3 %, but most of that gain is not knowledge.</p><p class=\"tmuted\">Lesson: the filter against similar questions was too loose.</p>",
+  "ca": "<p class=\"tmuted num\">6 · 12B, 30.288 converses</p><h3 style=\"margin-top:14px\">Format arreglat, xifra inflada</h3><p>Es van afegir 1.609 preguntes de pràctica de tipus test. Ja no hi ha cap resposta sense lletra. El record va pujar del 12 al 47 %. Benchmark 37,4 → 43,3 %, però la major part d'aquesta millora no és coneixement.</p><p class=\"tmuted\">Lliçó: el filtre contra preguntes semblants era massa fluix.</p>",
+  "es": "<p class=\"tmuted num\">6 · 12B, 30.288 conversaciones</p><h3 style=\"margin-top:14px\">Formato arreglado, cifra inflada</h3><p>Se añadieron 1.609 preguntas de práctica de tipo test. Ya no hay ninguna respuesta sin letra. El recuerdo subió del 12 al 47 %. Benchmark 37,4 → 43,3 %, pero la mayor parte de esa mejora no es conocimiento.</p><p class=\"tmuted\">Lección: el filtro contra preguntas parecidas era demasiado flojo.</p>"
+ },
+ "tr_data_h": {
+  "en": "The data",
+  "ca": "Les dades",
+  "es": "Los datos"
+ },
+ "tr_data_txt": {
+  "en": "<p>Everything starts from a public corpus about Andorra, with a provenance record for every source. Benchmark questions and the articles the benchmark reserves are kept out of training.</p>",
+  "ca": "<p>Tot surt d'un corpus públic sobre Andorra, amb un registre de procedència per a cada font. Les preguntes del benchmark i els articles que reserva queden fora de l'entrenament.</p>",
+  "es": "<p>Todo parte de un corpus público sobre Andorra, con un registro de procedencia para cada fuente. Las preguntas del benchmark y los artículos que reserva quedan fuera del entrenamiento.</p>"
+ },
+ "tr_mix_h": {
+  "en": "What the 12B trained on: 30,288 conversations",
+  "ca": "Amb què es va entrenar el 12B: 30.288 converses",
+  "es": "Con qué se entrenó el 12B: 30.288 conversaciones"
+ },
+ "tr_mix_aria": {
+  "en": "18,738 corpus conversations, 9,941 canon conversations and 1,609 multiple-choice practice conversations",
+  "ca": "18.738 converses del corpus, 9.941 del cànon i 1.609 de pràctica de tipus test",
+  "es": "18.738 conversaciones del corpus, 9.941 del canon y 1.609 de práctica de tipo test"
+ },
+ "tr_mix_txt": {
+  "en": "<p><b>18,738</b> conversations written from the corpus and basic questions. <b>9,941</b> from the canon: 830 atomic facts, each asked about 11 ways, plus contrast between facts that are easy to confuse. <b>1,609</b> multiple-choice questions on the same facts (the thin red block), answered with the letter only.</p>",
+  "ca": "<p><b>18.738</b> converses escrites a partir del corpus i preguntes bàsiques. <b>9.941</b> del cànon: 830 fets atòmics, cadascun preguntat d'unes 11 maneres, més contrast entre fets fàcils de confondre. <b>1.609</b> preguntes de tipus test sobre els mateixos fets (el bloc vermell estret), respostes només amb la lletra.</p>",
+  "es": "<p><b>18.738</b> conversaciones escritas a partir del corpus y preguntas básicas. <b>9.941</b> del canon: 830 hechos atómicos, cada uno preguntado de unas 11 maneras, más contraste entre hechos fáciles de confundir. <b>1.609</b> preguntas de tipo test sobre los mismos hechos (el bloque rojo estrecho), respondidas solo con la letra.</p>"
+ },
+ "tr_params_h": {
+  "en": "Training",
+  "ca": "Entrenament",
+  "es": "Entrenamiento"
+ },
+ "tr_params": {
+  "en": "<tr><th scope=\"row\">Method</th><td>QLoRA, Unsloth</td></tr><tr><th scope=\"row\">GPU</th><td>1 NVIDIA L4, spot</td></tr><tr><th scope=\"row\">LoRA r / alpha</th><td>32 / 32</td></tr><tr><th scope=\"row\">Epochs</th><td>2</td></tr><tr><th scope=\"row\">Learning rate</th><td>2e-4</td></tr><tr><th scope=\"row\">Batch</th><td>E4B 4×4 · 12B 2×8</td></tr><tr><th scope=\"row\">Steps</th><td>E4B 3,586 · 12B 3,786</td></tr><tr><th scope=\"row\">Loss</th><td>answers only</td></tr>",
+  "ca": "<tr><th scope=\"row\">Mètode</th><td>QLoRA, Unsloth</td></tr><tr><th scope=\"row\">GPU</th><td>1 NVIDIA L4, spot</td></tr><tr><th scope=\"row\">LoRA r / alpha</th><td>32 / 32</td></tr><tr><th scope=\"row\">Èpoques</th><td>2</td></tr><tr><th scope=\"row\">Taxa d'aprenentatge</th><td>2e-4</td></tr><tr><th scope=\"row\">Lot</th><td>E4B 4×4 · 12B 2×8</td></tr><tr><th scope=\"row\">Passos</th><td>E4B 3.586 · 12B 3.786</td></tr><tr><th scope=\"row\">Pèrdua</th><td>només respostes</td></tr>",
+  "es": "<tr><th scope=\"row\">Método</th><td>QLoRA, Unsloth</td></tr><tr><th scope=\"row\">GPU</th><td>1 NVIDIA L4, spot</td></tr><tr><th scope=\"row\">LoRA r / alpha</th><td>32 / 32</td></tr><tr><th scope=\"row\">Épocas</th><td>2</td></tr><tr><th scope=\"row\">Tasa de aprendizaje</th><td>2e-4</td></tr><tr><th scope=\"row\">Lote</th><td>E4B 4×4 · 12B 2×8</td></tr><tr><th scope=\"row\">Pasos</th><td>E4B 3.586 · 12B 3.786</td></tr><tr><th scope=\"row\">Pérdida</th><td>solo respuestas</td></tr>"
+ },
+ "tr_photo_alt": {
+  "en": "The Abelletes lake.",
+  "ca": "L'estany de les Abelletes.",
+  "es": "El lago de las Abelletes."
+ },
+ "tr_privacy": {
+  "en": "<h3>Personal data</h3><p>Before publishing, the data was swept for emails, phone numbers and identity documents, and none were found. The multiple-choice wrong options are invented, and some named full names found nowhere else in the corpus. Andorra has about 85,000 people, so such a name could match a real private person.</p><p>43 of those conversations were trained on but are not published, so the public file has 30,245 of the 30,288. The names were picked by hand and not checked against sources, so the filter is not proof that the data is clean.</p>",
+  "ca": "<h3>Dades personals</h3><p>Abans de publicar, es van buscar correus, telèfons i documents d'identitat a les dades, i no se'n va trobar cap. Les opcions falses de tipus test són inventades, i algunes tenien noms complets que no surten enlloc més del corpus. Andorra té unes 85.000 persones, així que un nom així podria coincidir amb un particular real.</p><p>43 d'aquestes converses es van fer servir per entrenar però no es publiquen, de manera que el fitxer públic té 30.245 de les 30.288. Els noms es van triar a mà i no es van contrastar amb fonts, així que el filtre no prova que les dades estiguin netes.</p>",
+  "es": "<h3>Datos personales</h3><p>Antes de publicar, se buscaron correos, teléfonos y documentos de identidad en los datos, y no se encontró ninguno. Las opciones falsas de tipo test son inventadas, y algunas tenían nombres completos que no salen en ningún otro punto del corpus. Andorra tiene unas 85.000 personas, así que un nombre así podría coincidir con un particular real.</p><p>43 de esas conversaciones se usaron para entrenar pero no se publican, de modo que el fichero público tiene 30.245 de las 30.288. Los nombres se eligieron a mano y no se contrastaron con fuentes, así que el filtro no prueba que los datos estén limpios.</p>"
+ },
+ "tr_cloud_h": {
+  "en": "The cloud pipeline",
+  "ca": "La cadena al núvol",
+  "es": "La cadena en la nube"
+ },
+ "tr_cloud_txt": {
+  "en": "<p>One command starts everything on Google Cloud. Nothing runs on a laptop.</p>",
+  "ca": "<p>Una sola ordre ho engega tot a Google Cloud. Res no corre en un portàtil.</p>",
+  "es": "<p>Un solo comando lo arranca todo en Google Cloud. Nada corre en un portátil.</p>"
+ },
+ "tr_steps": {
+  "en": "<li><b>Train</b><span class=\"tmuted\">QLoRA on a spot VM with one L4, with a checkpoint every 200 steps.</span></li><li><b>Watch</b><span class=\"tmuted\">A small VM restarts the spot VM when Google reclaims it, or moves it to another zone if it cannot start.</span></li><li><b>Merge</b><span class=\"tmuted\">The adapter goes onto the 16-bit base weights.</span></li><li><b>Quantize</b><span class=\"tmuted\">GGUF, then Q4_K_M, the same format as the base model it is compared with.</span></li><li><b>Probe</b><span class=\"tmuted\">Fact recall through Ollama at temperature 0, base and maia.</span></li><li><b>Benchmark</b><span class=\"tmuted\">All 926 questions, in the same conditions as every other model.</span></li><li><b>Judge</b><span class=\"tmuted\">Open and trap questions go to a Vertex batch job with Gemini 3.8 Flash.</span></li><li><b>Publish</b><span class=\"tmuted\">Adapter, GGUF, data and evaluation go to Hugging Face as a tagged version.</span></li>",
+  "ca": "<li><b>Entrenar</b><span class=\"tmuted\">QLoRA en una VM spot amb una L4, amb un checkpoint cada 200 passos.</span></li><li><b>Vigilar</b><span class=\"tmuted\">Una VM petita reengega la VM spot quan Google la recupera, o la mou a una altra zona si no pot arrencar.</span></li><li><b>Fusionar</b><span class=\"tmuted\">L'adaptador va sobre els pesos base de 16 bits.</span></li><li><b>Quantitzar</b><span class=\"tmuted\">GGUF i després Q4_K_M, el mateix format que el model base amb què es compara.</span></li><li><b>Sondejar</b><span class=\"tmuted\">Record de fets amb Ollama a temperatura 0, base i maia.</span></li><li><b>Benchmark</b><span class=\"tmuted\">Les 926 preguntes, en les mateixes condicions que qualsevol altre model.</span></li><li><b>Jutjar</b><span class=\"tmuted\">Les obertes i les trampes van a un lot de Vertex amb Gemini 3.8 Flash.</span></li><li><b>Publicar</b><span class=\"tmuted\">Adaptador, GGUF, dades i avaluació van a Hugging Face com a versió etiquetada.</span></li>",
+  "es": "<li><b>Entrenar</b><span class=\"tmuted\">QLoRA en una VM spot con una L4, con un checkpoint cada 200 pasos.</span></li><li><b>Vigilar</b><span class=\"tmuted\">Una VM pequeña reinicia la VM spot cuando Google la recupera, o la mueve a otra zona si no puede arrancar.</span></li><li><b>Fusionar</b><span class=\"tmuted\">El adaptador va sobre los pesos base de 16 bits.</span></li><li><b>Cuantizar</b><span class=\"tmuted\">GGUF y después Q4_K_M, el mismo formato que el modelo base con el que se compara.</span></li><li><b>Sondear</b><span class=\"tmuted\">Recuerdo de hechos con Ollama a temperatura 0, base y maia.</span></li><li><b>Benchmark</b><span class=\"tmuted\">Las 926 preguntas, en las mismas condiciones que cualquier otro modelo.</span></li><li><b>Juzgar</b><span class=\"tmuted\">Las abiertas y las trampas van a un lote de Vertex con Gemini 3.8 Flash.</span></li><li><b>Publicar</b><span class=\"tmuted\">Adaptador, GGUF, datos y evaluación van a Hugging Face como versión etiquetada.</span></li>"
+ },
+ "tr_spot": {
+  "en": "<h3>Why spot VMs</h3><p>They are cheap, but Google can reclaim them at any time. In the first full run, the VM was reclaimed at step 831, and no L4 was free in that whole region. The run lost about 18 minutes of GPU and resumed from a checkpoint in another region.</p>",
+  "ca": "<h3>Per què VM spot</h3><p>Són barates, però Google les pot recuperar en qualsevol moment. Al primer entrenament complet, la VM es va perdre al pas 831 i no hi havia cap L4 lliure a tota la regió. Es van perdre uns 18 minuts de GPU i es va reprendre des d'un checkpoint en una altra regió.</p>",
+  "es": "<h3>Por qué VM spot</h3><p>Son baratas, pero Google puede recuperarlas en cualquier momento. En el primer entrenamiento completo, la VM se perdió en el paso 831 y no había ninguna L4 libre en toda la región. Se perdieron unos 18 minutos de GPU y se reanudó desde un checkpoint en otra región.</p>"
+ },
+ "tr_fail": {
+  "en": "<h3>What still breaks</h3><p>An interruption in the middle of a build left corrupt files, and the quantization step failed at link time. It now rebuilds from clean. The watchdog only changes zone when a VM fails to start, so a zone that keeps interrupting a running VM still costs time.</p>",
+  "ca": "<h3>El que encara falla</h3><p>Una interrupció a mitja compilació va deixar fitxers corruptes i la quantització va fallar en enllaçar. Ara es compila de zero. El vigilant només canvia de zona quan una VM no arrenca, així que una zona que interromp sovint una VM en marxa continua costant temps.</p>",
+  "es": "<h3>Lo que aún falla</h3><p>Una interrupción a mitad de compilación dejó ficheros corruptos y la cuantización falló al enlazar. Ahora se compila desde cero. El vigilante solo cambia de zona cuando una VM no arranca, así que una zona que interrumpe a menudo una VM en marcha sigue costando tiempo.</p>"
+ },
+ "tr_infl_h": {
+  "en": "Why the 12B figure is inflated",
+  "ca": "Per què la xifra del 12B està inflada",
+  "es": "Por qué la cifra del 12B está inflada"
+ },
+ "tr_infl_txt": {
+  "en": "<p>The multiple-choice practice was written from the facts, without seeing the benchmark. But both ask about the same facts, so many practice questions look like benchmark questions. Only near-copies were dropped, with a word overlap of 0.5 or more. That limit was too loose.</p>",
+  "ca": "<p>La pràctica de tipus test es va escriure a partir dels fets, sense veure el benchmark. Però tots dos pregunten pels mateixos fets, així que moltes preguntes de pràctica s'assemblen a les del benchmark. Només es van descartar les gairebé idèntiques, amb una coincidència de paraules de 0,5 o més. Aquell límit era massa fluix.</p>",
+  "es": "<p>La práctica de tipo test se escribió a partir de los hechos, sin ver el benchmark. Pero ambos preguntan por los mismos hechos, así que muchas preguntas de práctica se parecen a las del benchmark. Solo se descartaron las casi idénticas, con una coincidencia de palabras de 0,5 o más. Ese límite era demasiado flojo.</p>"
+ },
+ "tr_infl_key": {
+  "en": "Gain against Gemma 4 12B, in points, with its 95 % interval (paired bootstrap). The white mark is zero. An interval that crosses it is not significant. Similarity is the word overlap with the closest practice question.",
+  "ca": "Millora contra Gemma 4 12B, en punts, amb l'interval del 95 % (bootstrap aparellat). La marca blanca és el zero. Un interval que la creua no és significatiu. La similitud és la coincidència de paraules amb la pregunta de pràctica més propera.",
+  "es": "Mejora contra Gemma 4 12B, en puntos, con su intervalo del 95 % (bootstrap emparejado). La marca blanca es el cero. Un intervalo que la cruza no es significativo. La similitud es la coincidencia de palabras con la pregunta de práctica más cercana."
+ },
+ "tr_ci1": {
+  "en": "Multiple choice, similarity 0.2 or more (341)",
+  "ca": "Tipus test, similitud de 0,2 o més (341)",
+  "es": "Tipo test, similitud de 0,2 o más (341)"
+ },
+ "tr_ci2": {
+  "en": "Multiple choice, similarity below 0.2 (263)",
+  "ca": "Tipus test, similitud inferior a 0,2 (263)",
+  "es": "Tipo test, similitud inferior a 0,2 (263)"
+ },
+ "tr_ci3": {
+  "en": "No similar practice question: the above, plus open and trap (585)",
+  "ca": "Sense pràctica semblant: l'anterior, més obertes i trampes (585)",
+  "es": "Sin práctica parecida: lo anterior, más abiertas y trampas (585)"
+ },
+ "tr_ci4": {
+  "en": "Topics the training data never covers (82)",
+  "ca": "Temes que les dades no cobreixen mai (82)",
+  "es": "Temas que los datos nunca cubren (82)"
+ },
+ "tr_ci1v": {
+  "en": "+14.7 [+8.8, +20.5]",
+  "ca": "+14,7 [+8,8, +20,5]",
+  "es": "+14,7 [+8,8, +20,5]"
+ },
+ "tr_ci2v": {
+  "en": "+1.1 [−5.3, +8.0]",
+  "ca": "+1,1 [−5,3, +8,0]",
+  "es": "+1,1 [−5,3, +8,0]"
+ },
+ "tr_ci3v": {
+  "en": "+0.8 [−2.6, +4.1]",
+  "ca": "+0,8 [−2,6, +4,1]",
+  "es": "+0,8 [−2,6, +4,1]"
+ },
+ "tr_ci4v": {
+  "en": "−3.1 [−11.0, +4.9]",
+  "ca": "−3,1 [−11,0, +4,9]",
+  "es": "−3,1 [−11,0, +4,9]"
+ },
+ "tr_learned": {
+  "en": "<h3>What did improve</h3><p>Recall of taught facts is real, because those 338 questions are kept out of training. The format is fixed too: no answer without a letter, against 6 for the base model and 67 in the earlier attempt.</p>",
+  "ca": "<h3>El que sí que ha millorat</h3><p>El record dels fets ensenyats és real, perquè aquestes 338 preguntes queden fora de l'entrenament. El format també està arreglat: cap resposta sense lletra, contra 6 del model base i 67 de l'intent anterior.</p>",
+  "es": "<h3>Lo que sí ha mejorado</h3><p>El recuerdo de los hechos enseñados es real, porque esas 338 preguntas quedan fuera del entrenamiento. El formato también está arreglado: ninguna respuesta sin letra, contra 6 del modelo base y 67 del intento anterior.</p>"
+ },
+ "tr_limits": {
+  "en": "<h3>Limits</h3><p>These models are experimental. They still make things up. Asked about the Querimònia, which appears nowhere in the training data, the 12B confidently describes something else. Trap questions did not improve: 6.0 → 5.5 %, within the noise. A cleaner figure needs a stricter filter and a new training run.</p>",
+  "ca": "<h3>Límits</h3><p>Aquests models són experimentals. Encara s'inventen coses. Preguntat per la Querimònia, que no surt enlloc a les dades d'entrenament, el 12B descriu amb seguretat una altra cosa. Les trampes no han millorat: 6,0 → 5,5 %, dins del soroll. Una xifra més neta demana un filtre més estricte i un entrenament nou.</p>",
+  "es": "<h3>Límites</h3><p>Estos modelos son experimentales. Todavía se inventan cosas. Preguntado por la Querimònia, que no sale en ningún punto de los datos de entrenamiento, el 12B describe con seguridad otra cosa. Las trampas no han mejorado: 6,0 → 5,5 %, dentro del ruido. Una cifra más limpia pide un filtro más estricto y un entrenamiento nuevo.</p>"
+ },
+ "tr_repro_h": {
+  "en": "Everything is public",
+  "ca": "Tot és públic",
+  "es": "Todo es público"
+ },
+ "tr_repro_txt": {
+  "en": "<p>Models, data and code, with one tagged version per training run.</p>",
+  "ca": "<p>Models, dades i codi, amb una versió etiquetada per entrenament.</p>",
+  "es": "<p>Modelos, datos y código, con una versión etiquetada por entrenamiento.</p>"
+ },
+ "tr_link_model": {
+  "en": "<h3>Models</h3><p><a href=\"https://huggingface.co/ericrisco/gemma-maia-12b\">gemma-maia-12b</a><br><a href=\"https://huggingface.co/ericrisco/gemma-maia-e4b\">gemma-maia-e4b</a></p>",
+  "ca": "<h3>Models</h3><p><a href=\"https://huggingface.co/ericrisco/gemma-maia-12b\">gemma-maia-12b</a><br><a href=\"https://huggingface.co/ericrisco/gemma-maia-e4b\">gemma-maia-e4b</a></p>",
+  "es": "<h3>Modelos</h3><p><a href=\"https://huggingface.co/ericrisco/gemma-maia-12b\">gemma-maia-12b</a><br><a href=\"https://huggingface.co/ericrisco/gemma-maia-e4b\">gemma-maia-e4b</a></p>"
+ },
+ "tr_link_data": {
+  "en": "<h3>Data</h3><p><a href=\"https://huggingface.co/datasets/ericrisco/maia-training-data\">maia-training-data</a></p>",
+  "ca": "<h3>Dades</h3><p><a href=\"https://huggingface.co/datasets/ericrisco/maia-training-data\">maia-training-data</a></p>",
+  "es": "<h3>Datos</h3><p><a href=\"https://huggingface.co/datasets/ericrisco/maia-training-data\">maia-training-data</a></p>"
+ },
+ "tr_link_code": {
+  "en": "<h3>Code</h3><p><a href=\"https://github.com/ericrisco/maia/blob/main/training/README.md\">Training guide</a><br><a href=\"https://github.com/ericrisco/maia\">ericrisco/maia</a></p>",
+  "ca": "<h3>Codi</h3><p><a href=\"https://github.com/ericrisco/maia/blob/main/training/README.md\">Guia d'entrenament</a><br><a href=\"https://github.com/ericrisco/maia\">ericrisco/maia</a></p>",
+  "es": "<h3>Código</h3><p><a href=\"https://github.com/ericrisco/maia/blob/main/training/README.md\">Guía de entrenamiento</a><br><a href=\"https://github.com/ericrisco/maia\">ericrisco/maia</a></p>"
+ },
+ "tr_n1": {
+  "en": "18,738",
+  "ca": "18.738",
+  "es": "18.738"
+ },
+ "tr_n2": {
+  "en": "9,941",
+  "ca": "9.941",
+  "es": "9.941"
+ }
+}

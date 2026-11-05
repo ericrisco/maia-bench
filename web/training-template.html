@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="__LANG__">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+__T:tr_title__
+<meta name="description" content="__T:tr_meta__">
+__SOCIAL__
+<link rel="alternate" hreflang="en" href="training.html">
+<link rel="alternate" hreflang="ca" href="training-ca.html">
+<link rel="alternate" hreflang="es" href="training-es.html">
+<link rel="alternate" hreflang="x-default" href="training.html">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,700&display=swap" rel="stylesheet">
+__STYLE__
+<style>
+.thead { padding: var(--m); display: grid; gap: var(--gap); }
+.thead .band { height: 170px; text-decoration: none; }
+.tboard { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gap); padding: 0 var(--m); }
+.tboard > * { min-width: 0; }
+.tcap { grid-column: 1 / -1; background: var(--surface); padding: 22px; display: grid; gap: 24px; }
+.tcap p { font-size: var(--step-lead); line-height: 1.25; max-width: 58ch; }
+.tcap a, .tile a { color: var(--accent); }
+h1.tlead { font-size: clamp(3rem, 1.6rem + 6vw, 7rem); letter-spacing: -0.04em; line-height: 0.9; }
+.tile h3 { margin-bottom: 14px; }
+.tile p + p { margin-top: 12px; }
+.tmuted { color: var(--muted); font-size: var(--step-small); }
+.w3 { grid-column: span 3; } .w4 { grid-column: span 4; } .w6 { grid-column: span 6; } .w8 { grid-column: span 8; }
+.tnote { grid-column: 1 / -1; background: var(--blue); color: var(--blue-ink); padding: 22px; }
+.tnote p { font-size: var(--step-lead); line-height: 1.25; max-width: 62ch; }
+.tphoto { margin: 0; overflow: hidden; min-height: 240px; }
+
+/* Bars and intervals: widths come from --v (0-1), the interval from --lo and --hi (0-1 on the axis). */
+.tbar { display: grid; grid-template-columns: 13ch 1fr 7ch; gap: 8px 12px; align-items: center; margin-top: 10px; }
+.tbar .ttrack { height: 34px; background: var(--surface-2); }
+.tbar .ttrack i { display: block; height: 100%; width: calc(var(--v) * 100%); background: var(--bar); border-radius: 0 4px 4px 0; }
+.tbar.maia .ttrack i { background: var(--accent); }
+.tbar b { font-weight: 500; text-align: right; }
+.mix { display: flex; gap: 4px; height: 96px; margin: 18px 0 14px; }
+.mix span { flex: var(--n) 1 0; min-width: 8px; padding: 10px; overflow: hidden; font-weight: 500; background: var(--bar); }
+.mix .m2 { background: var(--blue); color: var(--blue-ink); }
+.mix .m3 { background: var(--red); color: var(--red-ink); padding: 0; }
+.ttable { width: 100%; border-collapse: collapse; font-size: var(--step-small); }
+.ttable th, .ttable td { padding: 6px 0; text-align: left; vertical-align: top; font-weight: 400; }
+.ttable th { color: var(--muted); padding-right: 16px; }
+.steps { list-style: none; margin: 0; padding: 0; grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap); counter-reset: s; }
+.steps li { background: var(--surface); padding: 22px; counter-increment: s; }
+.steps li::before { content: counter(s); display: block; font-size: var(--step-head); font-weight: 700; letter-spacing: -0.03em; line-height: 1; margin-bottom: 14px; color: var(--muted); }
+.steps b { display: block; font-weight: 500; font-size: var(--step-lead); line-height: 1.1; margin-bottom: 8px; }
+.ci { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr) 17ch; gap: 8px 16px; align-items: center; padding: 14px 0; }
+.ci .axis { position: relative; height: 34px; background: var(--surface-2); }
+.ci .axis::before { content: ""; position: absolute; top: 0; bottom: 0; left: calc(var(--zero) * 100%); width: 3px; background: var(--ink); }
+.ci .axis i { position: absolute; top: 8px; bottom: 8px; left: calc(var(--lo) * 100%); width: calc((var(--hi) - var(--lo)) * 100%); background: var(--bar); border-radius: 4px; }
+.ci.key .axis i { background: var(--accent); }
+.ci b { font-weight: 500; }
+.ci span.v { text-align: right; }
+pre { margin: 12px 0 0; background: var(--bg); padding: 14px; overflow-x: auto; font-size: var(--step-small); }
+.thead + main section:first-child { margin-top: 0; }
+@media (max-width: 900px) {
+  .thead .band { height: 96px; }
+  .thead .band > span { font-size: 15vw; }
+  .tboard { grid-template-columns: 1fr; gap: 6px; }
+  .tboard > *, .w3, .w4, .w6, .w8, .tcap, .tnote { grid-column: 1 / -1; }
+  .steps { grid-template-columns: 1fr; gap: 6px; }
+  .ci { grid-template-columns: 1fr auto; }
+  .ci .axis { grid-column: 1 / -1; grid-row: 2; }
+  .mix span { padding: 8px; font-size: var(--step-small); }
+}
+</style>
+</head>
+<body>
+<header class="thead">
+  <a class="band" href="__HOME__" aria-label="maia-bench"><span aria-hidden="true">maia-bench</span></a>
+  <nav class="links" __T:aria_sections__>
+    __T:tr_nav__
+    <span class="langs">__LANGS__</span>
+  </nav>
+</header>
+
+<main>
+<section>
+  <div class="tboard">
+    <div class="tcap">
+      <h1 class="tlead">__T:tr_h1__</h1>
+      __T:tr_intro__
+    </div>
+    <div class="tile w6">
+      <h3>__T:tr_recall_h__</h3>
+      <p class="tmuted">__T:tr_recall_txt__</p>
+      <div class="tbar" style="--v:.07"><span>Gemma 4 E4B</span><div class="ttrack"><i></i></div><b class="num">7 %</b></div>
+      <div class="tbar maia" style="--v:.36"><span>maia E4B</span><div class="ttrack"><i></i></div><b class="num">36 %</b></div>
+      <div class="tbar" style="--v:.12"><span>Gemma 4 12B</span><div class="ttrack"><i></i></div><b class="num">12 %</b></div>
+      <div class="tbar maia" style="--v:.47"><span>maia 12B</span><div class="ttrack"><i></i></div><b class="num">47 %</b></div>
+    </div>
+    <div class="tile w6">
+      <h3>__T:tr_bench_h__</h3>
+      <p class="tmuted">__T:tr_bench_txt__</p>
+      <div class="tbar" style="--v:.303"><span>Gemma 4 E4B</span><div class="ttrack"><i></i></div><b class="num">__T:tr_v303__</b></div>
+      <div class="tbar maia" style="--v:.329"><span>maia E4B</span><div class="ttrack"><i></i></div><b class="num">__T:tr_v329__</b></div>
+      <div class="tbar" style="--v:.374"><span>Gemma 4 12B</span><div class="ttrack"><i></i></div><b class="num">__T:tr_v374__</b></div>
+      <div class="tbar maia" style="--v:.433"><span>maia 12B</span><div class="ttrack"><i></i></div><b class="num">__T:tr_v433__</b></div>
+    </div>
+    <div class="tnote">__T:tr_warn__</div>
+  </div>
+</section>
+
+<section>
+  <div class="tboard">
+    <div class="tcap">
+      <h2>__T:tr_tries_h__</h2>
+      __T:tr_tries_txt__
+    </div>
+    <article class="tile w4">__T:tr_try1__</article>
+    <article class="tile w4">__T:tr_try2__</article>
+    <article class="tile w4">__T:tr_try3__</article>
+    <article class="tile w4">__T:tr_try4__</article>
+    <article class="tile w4">__T:tr_try5__</article>
+    <article class="tile w4">__T:tr_try6__</article>
+  </div>
+</section>
+
+<section>
+  <div class="tboard">
+    <div class="tcap">
+      <h2>__T:tr_data_h__</h2>
+      __T:tr_data_txt__
+    </div>
+    <div class="tile w8">
+      <h3>__T:tr_mix_h__</h3>
+      <div class="mix" role="img" aria-label="__T:tr_mix_aria__">
+        <span style="--n:18738">__T:tr_n1__</span>
+        <span class="m2" style="--n:9941">__T:tr_n2__</span>
+        <span class="m3" style="--n:1609"></span>
+      </div>
+      __T:tr_mix_txt__
+    </div>
+    <div class="tile w4">
+      <h3>__T:tr_params_h__</h3>
+      <table class="ttable num">
+        __T:tr_params__
+      </table>
+    </div>
+    <figure class="tphoto w4"><img class="photo" src="assets/estany-de-les-abelletes-1.jpg" width="1600" height="1065" loading="lazy" alt="__T:tr_photo_alt__"></figure>
+    <div class="tile w8">__T:tr_privacy__</div>
+  </div>
+</section>
+
+<section>
+  <div class="tboard">
+    <div class="tcap">
+      <h2>__T:tr_cloud_h__</h2>
+      __T:tr_cloud_txt__
+    </div>
+    <ol class="steps">__T:tr_steps__</ol>
+    <div class="tile w6">__T:tr_spot__</div>
+    <div class="tile w6">__T:tr_fail__</div>
+  </div>
+</section>
+
+<section>
+  <div class="tboard">
+    <div class="tcap">
+      <h2>__T:tr_infl_h__</h2>
+      __T:tr_infl_txt__
+    </div>
+    <div class="tile" style="grid-column:1 / -1">
+      <p class="tmuted">__T:tr_infl_key__</p>
+      <div class="ci" style="--zero:.4;--lo:.595;--hi:.888"><b>__T:tr_ci1__</b><div class="axis"><i></i></div><span class="v num">__T:tr_ci1v__</span></div>
+      <div class="ci" style="--zero:.4;--lo:.2425;--hi:.575"><b>__T:tr_ci2__</b><div class="axis"><i></i></div><span class="v num">__T:tr_ci2v__</span></div>
+      <div class="ci key" style="--zero:.4;--lo:.336;--hi:.5025"><b>__T:tr_ci3__</b><div class="axis"><i></i></div><span class="v num">__T:tr_ci3v__</span></div>
+      <div class="ci" style="--zero:.4;--lo:.125;--hi:.5225"><b>__T:tr_ci4__</b><div class="axis"><i></i></div><span class="v num">__T:tr_ci4v__</span></div>
+    </div>
+    <div class="tile w6">__T:tr_learned__</div>
+    <div class="tile w6">__T:tr_limits__</div>
+  </div>
+</section>
+
+<section>
+  <div class="tboard">
+    <div class="tcap">
+      <h2>__T:tr_repro_h__</h2>
+      __T:tr_repro_txt__
+    </div>
+    <div class="tile w4">__T:tr_link_model__</div>
+    <div class="tile w4">__T:tr_link_data__</div>
+    <div class="tile w4">__T:tr_link_code__</div>
+  </div>
+</section>
+</main>
+
+<footer>
+  __BLOCKS__
+  <div class="footer-cols">
+    <p class="credits" style="grid-column:1 / -1">__CREDITS__</p>
+  </div>
+</footer>
+</body>
+</html>
