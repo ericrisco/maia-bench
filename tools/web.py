@@ -2,6 +2,8 @@
 """Builds the public results page from results/*/summary.json, in three languages:
 web/index.html (English, the default), web/ca.html and web/es.html. The template's strings live in web/strings.json;
 the ones assembled here live in TXT. Dataset questions are always shown in Catalan.
+It also builds web/training.html, training-ca.html and training-es.html (how maia was trained) from
+web/training-template.html and web/training-strings.json, with the same styles.
 
 Usage:  python3 tools/web.py
 
@@ -15,6 +17,7 @@ import html
 import json
 import os
 import random
+import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -25,6 +28,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SUMMIT = 2942  # metres of Coma Pedrosa: the 100 %
 SAMPLE_SIZE = 80
 LANGS = {"en": "index.html", "ca": "ca.html", "es": "es.html"}
+TRAINING = {"en": "training.html", "ca": "training-ca.html", "es": "training-es.html"}
+SITE = "https://ericrisco.github.io/maia-bench/"
 LANG_LABEL = {"en": "EN", "ca": "CA", "es": "ES"}
 LANG = "en"  # the one being generated; set by main()
 TYPES = ("multiple_choice", "open", "trap")
@@ -332,6 +337,31 @@ def case_numbers(models):
     return out
 
 
+def social_tags(title, description, filename):
+    """Open Graph and Twitter tags for a page, from its already translated title and description."""
+    tags = {"og:type": "website", "og:site_name": "maia-bench", "og:title": title, "og:description": description,
+            "og:url": SITE + ("" if filename == "index.html" else filename), "og:image": SITE + "assets/og.png",
+            "og:image:width": "1200", "og:image:height": "630"}
+    out = [f'<meta property="{k}" content="{html.escape(v)}">' for k, v in tags.items()]
+    return "\n".join(out + ['<meta name="twitter:card" content="summary_large_image">'])
+
+
+def training_page(lang, template, strings, train_template, train_strings, credits_html):
+    """One language of the page that explains how maia was trained; it reuses the results page's styles."""
+    page = train_template.replace("__STYLE__", re.search(r"<style>.*?</style>", template, re.S).group(0))
+    page = page.replace("__BLOCKS__", re.search(r'<div class="blocks".*?</div>', template, re.S).group(0))
+    for key, t in {**strings, **train_strings}.items():
+        page = page.replace(f"__T:{key}__", t[lang])
+    langs = "".join(f'<a href="{f}" hreflang="{i}" lang="{i}"' + (' aria-current="page"' if i == lang else "")
+                    + f">{LANG_LABEL[i]}</a>" for i, f in TRAINING.items())
+    title = re.sub(r"</?title>", "", train_strings["tr_title"][lang])
+    subst = {"__LANG__": lang, "__HOME__": LANGS[lang], "__LANGS__": langs, "__CREDITS__": credits_html,
+             "__SOCIAL__": social_tags(title, train_strings["tr_meta"][lang], TRAINING[lang])}
+    for k, v in subst.items():
+        page = page.replace(k, v)
+    return page
+
+
 def question_sample(models, dataset):
     complete = [m for m in models if m["knowledge"].get("n") and m["comparable"]]
     by_model = {}
@@ -381,6 +411,8 @@ def main():
     template = open(os.path.join(ROOT, "web", "template.html"), encoding="utf-8").read()
     strings = json.load(open(os.path.join(ROOT, "web", "strings.json"), encoding="utf-8"))
     credits = json.load(open(os.path.join(ROOT, "web", "assets", "credits.json"), encoding="utf-8"))
+    train_template = open(os.path.join(ROOT, "web", "training-template.html"), encoding="utf-8").read()
+    train_strings = json.load(open(os.path.join(ROOT, "web", "training-strings.json"), encoding="utf-8"))
     version = f"v1-draft ({dataset_fingerprint(rows)})"
     type_counts = {t: sum(1 for r in rows if r["type"] == t) for t in TYPES}
     n_complete = sum(1 for m in models if m["complete"])
@@ -421,6 +453,8 @@ def main():
             **case_numbers(models),
             "__LANGS__": langs,
             "__LANG__": lang,
+            "__TRAINING__": TRAINING[lang],
+            "__SOCIAL__": social_tags(re.sub(r"</?title>", "", strings["title"][lang]), strings["meta"][lang], filename),
             "__N_MODELS__": str(len(models)),
             "__N_COMPARABLE__": str(n_comparable),
             "__BEST_NAME__": html.escape(model_name(models[0]["model"])[0]) if models else "–",
@@ -449,6 +483,10 @@ def main():
         out = os.path.join(ROOT, "web", filename)
         open(out, "w", encoding="utf-8").write(page)
         print(f"{out}: {len(models)} models, {len(payload['sample'])} questions in «Try it»")
+        out = os.path.join(ROOT, "web", TRAINING[lang])
+        page = training_page(lang, template, strings, train_template, train_strings, credits_html)
+        open(out, "w", encoding="utf-8").write(page)
+        print(out)
 
 
 if __name__ == "__main__":

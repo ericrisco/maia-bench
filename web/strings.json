@@ -15,9 +15,9 @@
   "es": "aria-label=\"Secciones\""
  },
  "nav": {
-  "en": "<a href=\"#ranking\">Ranking</a><a href=\"#case\">maia</a><a href=\"#domains\">By domain</a><a href=\"#try\">Try it</a><a href=\"#method\">Method</a>",
-  "ca": "<a href=\"#ranking\">Classificació</a><a href=\"#case\">maia</a><a href=\"#domains\">Per dominis</a><a href=\"#try\">Prova-ho</a><a href=\"#method\">Mètode</a>",
-  "es": "<a href=\"#ranking\">Clasificación</a><a href=\"#case\">maia</a><a href=\"#domains\">Por dominios</a><a href=\"#try\">Pruébalo</a><a href=\"#method\">Método</a>"
+  "en": "<a href=\"#ranking\">Ranking</a><a href=\"#case\">maia</a><a href=\"#domains\">By domain</a><a href=\"#try\">Try it</a><a href=\"#method\">Method</a><a href=\"__TRAINING__\">Training</a>",
+  "ca": "<a href=\"#ranking\">Classificació</a><a href=\"#case\">maia</a><a href=\"#domains\">Per dominis</a><a href=\"#try\">Prova-ho</a><a href=\"#method\">Mètode</a><a href=\"__TRAINING__\">Entrenament</a>",
+  "es": "<a href=\"#ranking\">Clasificación</a><a href=\"#case\">maia</a><a href=\"#domains\">Por dominios</a><a href=\"#try\">Pruébalo</a><a href=\"#method\">Método</a><a href=\"__TRAINING__\">Entrenamiento</a>"
  },
  "alt_coma": {
   "en": "Snow-covered Coma Pedrosa, seen from the Coll d'Ordino.",
@@ -410,9 +410,9 @@
   "es": "<h2 id=\"t-case\">Caso de éxito: maia</h2>"
  },
  "case_txt": {
-  "en": "<p>maia is this project's own model: Gemma 4 E4B fine-tuned with QLoRA on a single GPU, on 28,679 conversations in Andorran Catalan, including 830 verified facts asked in many different ways. It is scored exactly like every other model. <a href=\"https://huggingface.co/ericrisco/gemma-maia-e4b\">Model</a> · <a href=\"https://huggingface.co/datasets/ericrisco/maia-training-data\">training data</a></p>",
-  "ca": "<p>maia és el model del projecte: Gemma 4 E4B ajustat amb QLoRA en una sola GPU, amb 28.679 converses en català d'Andorra, entre les quals 830 fets verificats preguntats de moltes maneres. Es puntua exactament com qualsevol altre model. <a href=\"https://huggingface.co/ericrisco/gemma-maia-e4b\">Model</a> · <a href=\"https://huggingface.co/datasets/ericrisco/maia-training-data\">dades d'entrenament</a></p>",
-  "es": "<p>maia es el modelo del proyecto: Gemma 4 E4B ajustado con QLoRA en una sola GPU, con 28.679 conversaciones en catalán de Andorra, entre ellas 830 hechos verificados preguntados de muchas formas. Se puntúa exactamente igual que cualquier otro modelo. <a href=\"https://huggingface.co/ericrisco/gemma-maia-e4b\">Modelo</a> · <a href=\"https://huggingface.co/datasets/ericrisco/maia-training-data\">datos de entrenamiento</a></p>"
+  "en": "<p>maia is this project's own model: Gemma 4 E4B fine-tuned with QLoRA on a single GPU, on 28,679 conversations in Andorran Catalan, including 830 verified facts asked in many different ways. It is scored exactly like every other model. <a href=\"https://huggingface.co/ericrisco/gemma-maia-e4b\">Model</a> · <a href=\"https://huggingface.co/datasets/ericrisco/maia-training-data\">training data</a> · <a href=\"__TRAINING__\">how it was trained</a></p>",
+  "ca": "<p>maia és el model del projecte: Gemma 4 E4B ajustat amb QLoRA en una sola GPU, amb 28.679 converses en català d'Andorra, entre les quals 830 fets verificats preguntats de moltes maneres. Es puntua exactament com qualsevol altre model. <a href=\"https://huggingface.co/ericrisco/gemma-maia-e4b\">Model</a> · <a href=\"https://huggingface.co/datasets/ericrisco/maia-training-data\">dades d'entrenament</a> · <a href=\"__TRAINING__\">com es va entrenar</a></p>",
+  "es": "<p>maia es el modelo del proyecto: Gemma 4 E4B ajustado con QLoRA en una sola GPU, con 28.679 conversaciones en catalán de Andorra, entre ellas 830 hechos verificados preguntados de muchas formas. Se puntúa exactamente igual que cualquier otro modelo. <a href=\"https://huggingface.co/ericrisco/gemma-maia-e4b\">Modelo</a> · <a href=\"https://huggingface.co/datasets/ericrisco/maia-training-data\">datos de entrenamiento</a> · <a href=\"__TRAINING__\">cómo se entrenó</a></p>"
  },
  "case_recall": {
   "en": "<b class=\"num\">7 % → 36 %</b><span>facts recalled, on 338 questions it never saw in training (Gemma 4 E4B → maia)</span>",
@@ -440,9 +440,9 @@
   "es": "<p>Léelo con cuidado: la mejora en el benchmark aún no es estadísticamente significativa, porque el benchmark pregunta a propósito por hechos que nunca entran en el entrenamiento. El ajuste se nota donde debe: en recordar los hechos que se le han enseñado.</p>"
  },
  "case12_txt": {
-  "en": "<h3>maia 12B</h3><p>The same recipe on Gemma 4 12B, with 30,288 conversations, 1,609 of them multiple-choice practice about the verified facts. <a href=\"https://huggingface.co/ericrisco/gemma-maia-12b\">Model</a> · <a href=\"https://huggingface.co/datasets/ericrisco/maia-training-data\">training data</a></p>",
-  "ca": "<h3>maia 12B</h3><p>La mateixa recepta sobre Gemma 4 12B, amb 30.288 converses, 1.609 de les quals són pràctica de tipus test sobre els fets verificats. <a href=\"https://huggingface.co/ericrisco/gemma-maia-12b\">Model</a> · <a href=\"https://huggingface.co/datasets/ericrisco/maia-training-data\">dades d'entrenament</a></p>",
-  "es": "<h3>maia 12B</h3><p>La misma receta sobre Gemma 4 12B, con 30.288 conversaciones, 1.609 de ellas práctica de tipo test sobre los hechos verificados. <a href=\"https://huggingface.co/ericrisco/gemma-maia-12b\">Modelo</a> · <a href=\"https://huggingface.co/datasets/ericrisco/maia-training-data\">datos de entrenamiento</a></p>"
+  "en": "<h3>maia 12B</h3><p>The same recipe on Gemma 4 12B, with 30,288 conversations, 1,609 of them multiple-choice practice about the verified facts. <a href=\"https://huggingface.co/ericrisco/gemma-maia-12b\">Model</a> · <a href=\"https://huggingface.co/datasets/ericrisco/maia-training-data\">training data</a> · <a href=\"__TRAINING__\">how it was trained</a></p>",
+  "ca": "<h3>maia 12B</h3><p>La mateixa recepta sobre Gemma 4 12B, amb 30.288 converses, 1.609 de les quals són pràctica de tipus test sobre els fets verificats. <a href=\"https://huggingface.co/ericrisco/gemma-maia-12b\">Model</a> · <a href=\"https://huggingface.co/datasets/ericrisco/maia-training-data\">dades d'entrenament</a> · <a href=\"__TRAINING__\">com es va entrenar</a></p>",
+  "es": "<h3>maia 12B</h3><p>La misma receta sobre Gemma 4 12B, con 30.288 conversaciones, 1.609 de ellas práctica de tipo test sobre los hechos verificados. <a href=\"https://huggingface.co/ericrisco/gemma-maia-12b\">Modelo</a> · <a href=\"https://huggingface.co/datasets/ericrisco/maia-training-data\">datos de entrenamiento</a> · <a href=\"__TRAINING__\">cómo se entrenó</a></p>"
  },
  "case12_recall": {
   "en": "<b class=\"num\">12 % → 47 %</b><span>facts recalled, on 338 questions it never saw in training (Gemma 4 12B → maia)</span>",
