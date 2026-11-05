@@ -604,6 +604,27 @@
    }
   },
   {
+   "model": "ollama:maia-12b:20261104-0036",
+   "folder": "maia_12b",
+   "scored": 926,
+   "score": 0.433,
+   "by_domain": {
+    "culture": 0.4268,
+    "customs": 0.4057,
+    "daily-life": 0.5781,
+    "economy": 0.4458,
+    "gastronomy": 0.5714,
+    "history": 0.4618,
+    "institutions": 0.4954,
+    "language": 0.4128,
+    "people": 0.2273,
+    "politics": 0.3289,
+    "society": 0.4083,
+    "sports": 0.3882,
+    "territory": 0.3643
+   }
+  },
+  {
    "model": "vertex:xai/grok-4.20-non-reasoning",
    "folder": "vertex_xai_grok-4.20-non-reasoning",
    "scored": 926,
